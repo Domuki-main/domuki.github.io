@@ -183,12 +183,13 @@
                     
                         Author: <a itemprop="author" rel="author" href="/">Domuki</a>
                     
-
+                    &nbsp;&nbsp;
                     
                         <span class="post-time">
                         Date: <a href="#">March 18, 2021&nbsp;&nbsp;20:50:34</a>
                         </span>
                     
+                    &nbsp;&nbsp;
                     
                         <span class="post-category">
                     Category:
@@ -362,6 +363,142 @@
 <p>return statement <strong>not only breaks out of the loop</strong> <strong>but also the entire function</strong> definition and shifts the control to the statements after the calling function.</p>
 </li>
 </ul>
+<h1 id="Expression"><a href="#Expression" class="headerlink" title="Expression"></a>Expression</h1><blockquote>
+<p>Use operators to connect constants or variables to symbolic Java grammar formulas can be called expressions.</p>
+</blockquote>
+<h2 id="Precedence"><a href="#Precedence" class="headerlink" title="Precedence"></a>Precedence</h2><table>
+<thead>
+<tr>
+<th align="center">Category</th>
+<th align="center">Operator</th>
+<th align="center">Associativity</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Postfix</td>
+<td align="center">expression++ expression–</td>
+<td align="center">Left to right</td>
+</tr>
+<tr>
+<td align="center">Unary</td>
+<td align="center">++expression –-expression +expression –expression ~ !</td>
+<td align="center">Right to left</td>
+</tr>
+<tr>
+<td align="center">Multiplicative</td>
+<td align="center">* / %</td>
+<td align="center">Left to right</td>
+</tr>
+<tr>
+<td align="center">Additive</td>
+<td align="center">+ -</td>
+<td align="center">Left to right</td>
+</tr>
+<tr>
+<td align="center">Shift</td>
+<td align="center">&lt;&lt; &gt;&gt; &gt;&gt;&gt;</td>
+<td align="center">Left to right</td>
+</tr>
+<tr>
+<td align="center">Relational</td>
+<td align="center">&lt; &gt; &lt;= &gt;= instanceof</td>
+<td align="center">Left to right</td>
+</tr>
+<tr>
+<td align="center">Equality</td>
+<td align="center">== !=</td>
+<td align="center">Left to right</td>
+</tr>
+<tr>
+<td align="center">Bitwise AND</td>
+<td align="center">&amp;</td>
+<td align="center">Left to right</td>
+</tr>
+<tr>
+<td align="center">Bitwise XOR</td>
+<td align="center">^</td>
+<td align="center">Left to right</td>
+</tr>
+<tr>
+<td align="center">Bitwise OR</td>
+<td align="center">|</td>
+<td align="center">Left to right</td>
+</tr>
+<tr>
+<td align="center">Logical AND</td>
+<td align="center">&amp;&amp;</td>
+<td align="center">Left to right</td>
+</tr>
+<tr>
+<td align="center">Logical OR</td>
+<td align="center">||</td>
+<td align="center">Left to right</td>
+</tr>
+<tr>
+<td align="center">Conditional</td>
+<td align="center">?:</td>
+<td align="center">Right to left</td>
+</tr>
+<tr>
+<td align="center">Assignment</td>
+<td align="center">= += -= *= /= %= ^= |= &lt;&lt;= &gt;&gt;= &gt;&gt;&gt;=</td>
+<td align="center">Right to left</td>
+</tr>
+</tbody></table>
+<h2 id="Conditional-ternary-operator"><a href="#Conditional-ternary-operator" class="headerlink" title="Conditional (ternary) operator"></a>Conditional (ternary) operator</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(condition)?expression1:expression2</span><br><span class="line"><span class="comment">/* same as the selection below */</span></span><br><span class="line"><span class="keyword">if</span>(condition)&#123;</span><br><span class="line">	expression1;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	expression2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Variable"><a href="#Variable" class="headerlink" title="Variable"></a>Variable</h1><blockquote>
+<p>The data which can be changed is saved in memory</p>
+</blockquote>
+<h2 id="Category"><a href="#Category" class="headerlink" title="Category"></a>Category</h2><h3 id="Member-variable"><a href="#Member-variable" class="headerlink" title="Member variable"></a>Member variable</h3><p>Variables defined outside the method and inside the class. </p>
+<ol>
+<li><p>static variable</p>
+<ul>
+<li>most of the static variables are visible. (public)</li>
+<li>Static variables are created when they are accessed for the first time and destroyed at the end of the program.</li>
+</ul>
+</li>
+<li><p>non-static variable</p>
+<ul>
+<li>most of the non-static variables are invisible. (private)</li>
+<li>Instance variables are created when the object is created, and destroyed when the object is destroyed</li>
+</ul>
+</li>
+<li><p>Difference</p>
+<table>
+<thead>
+<tr>
+<th align="left">Static variable</th>
+<th align="left">Non static variable</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Static variables can be accessed using class name</td>
+<td align="left">Non static variables can be accessed using instance of a class</td>
+</tr>
+<tr>
+<td align="left">Static variables can be accessed by static and non static methods</td>
+<td align="left">Non static variables cannot be accessed inside a static method.</td>
+</tr>
+<tr>
+<td align="left">Static variables reduce the amount of memory used by a program.</td>
+<td align="left">Non static variables do not reduce the amount of memory used by a program</td>
+</tr>
+<tr>
+<td align="left">Static variables are shared among all instances of a class.</td>
+<td align="left">Non static variables are specific to that instance of a class.</td>
+</tr>
+<tr>
+<td align="left">Static variable is like a global variable and is available to all methods.</td>
+<td align="left">Non static variable is like a local variable and they can be accessed through only instance of a class.</td>
+</tr>
+<tr>
+<td align="left">Static variables are stored in the static area in the method area.</td>
+<td align="left">Non static variables are stored in heap memory.</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
 
         </div>
 
