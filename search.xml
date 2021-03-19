@@ -390,6 +390,229 @@
 </tbody></table>
 </li>
 </ol>
+<h3 id="Local-variable"><a href="#Local-variable" class="headerlink" title="Local variable"></a>Local variable</h3><blockquote>
+<p>Variables in the methods of the class.</p>
+</blockquote>
+<p>Local variables are declared <strong>in methods, construction methods, or statement blocks</strong>;</p>
+<p>Local variables are created when methods, constructors, or statement blocks are executed. When they are executed, the variables will be destroyed;</p>
+<p>Access modifiers cannot be used for local variables;</p>
+<p>Local variables are only visible in the method, construction method, or statement block that declares it;</p>
+<p>Local variables are allocated on the <strong>stack</strong>.</p>
+<p><strong>Local variables have no default value</strong>, so after the local variables are declared, they must be initialized before they can be used.</p>
+<h3 id="Difference"><a href="#Difference" class="headerlink" title="Difference"></a>Difference</h3><table>
+<thead>
+<tr>
+<th>Member variables</th>
+<th>Local variables</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>can be used in the whole class</td>
+<td>only work in some certain area</td>
+</tr>
+<tr>
+<td>Heap memory</td>
+<td>Stack memory</td>
+</tr>
+<tr>
+<td>exist with object</td>
+<td>exist with statement executing</td>
+</tr>
+<tr>
+<td>have default value</td>
+<td>have no default value</td>
+</tr>
+</tbody></table>
+<h2 id="Basic-data-types"><a href="#Basic-data-types" class="headerlink" title="Basic data types"></a>Basic data types</h2><h3 id="Basic-data-type"><a href="#Basic-data-type" class="headerlink" title="Basic data type"></a>Basic data type</h3><p>byte, short, int, long, float, double, char, boolean</p>
+<h3 id="Variable-definition-format"><a href="#Variable-definition-format" class="headerlink" title="Variable definition format"></a>Variable definition format</h3><p><strong>Data type</strong> <em>variable name</em> = initialization value;</p>
+<h3 id="note"><a href="#note" class="headerlink" title="note"></a>note</h3><p>Integers are <em>int</em> by default. When defining data of <em>long</em>, add L after the value.<br>Float numbers are <em>double</em> by default. When defining <em>float</em> data, add F after the value</p>
+<h1 id="Constant-1"><a href="#Constant-1" class="headerlink" title="Constant"></a>Constant</h1><blockquote>
+<p>Value cannot be changed during the execution of the program.</p>
+</blockquote>
+<h2 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h2><p><em><strong>final</strong></em> is used to define a constant:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="keyword">int</span> COUNT = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">final</span> <span class="keyword">float</span> HEIGHT = <span class="number">100F</span>;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Datatypes"><a href="#Datatypes" class="headerlink" title="Datatypes"></a>Datatypes</h1><blockquote>
+<p>For each type of data, a clear and specific data type is defined and different sizes of memory space are allocated in the memory.</p>
+</blockquote>
+<h2 id="Category-1"><a href="#Category-1" class="headerlink" title="Category"></a>Category</h2><p>Primitive</p>
+<ul>
+<li>Numeric<ul>
+<li>Integral <ul>
+<li>Integer (byte, short, int, long)</li>
+<li>Floating point (float, double)</li>
+</ul>
+</li>
+<li>Character (char)</li>
+</ul>
+</li>
+<li>Boolean</li>
+</ul>
+<p>Non-Primitive</p>
+<ul>
+<li>Class</li>
+<li>String</li>
+<li>Interface</li>
+<li>Array</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Data Type</strong></th>
+<th align="left"><strong>Default Value</strong></th>
+<th align="left"><strong>Default size</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">boolean</td>
+<td align="left">false</td>
+<td align="left">1 bit</td>
+</tr>
+<tr>
+<td align="left">char</td>
+<td align="left">‘\u0000’</td>
+<td align="left">2 byte</td>
+</tr>
+<tr>
+<td align="left">byte</td>
+<td align="left">0</td>
+<td align="left">1 byte</td>
+</tr>
+<tr>
+<td align="left">short</td>
+<td align="left">0</td>
+<td align="left">2 byte</td>
+</tr>
+<tr>
+<td align="left">int</td>
+<td align="left">0</td>
+<td align="left">4 byte</td>
+</tr>
+<tr>
+<td align="left">long</td>
+<td align="left">0L</td>
+<td align="left">8 byte</td>
+</tr>
+<tr>
+<td align="left">float</td>
+<td align="left">0.0f</td>
+<td align="left">4 byte</td>
+</tr>
+<tr>
+<td align="left">double</td>
+<td align="left">0.0d</td>
+<td align="left">8 byte</td>
+</tr>
+</tbody></table>
+<h2 id="Transform"><a href="#Transform" class="headerlink" title="Transform"></a>Transform</h2><h3 id="Visible-transform"><a href="#Visible-transform" class="headerlink" title="Visible transform"></a>Visible transform</h3><p>Target type variable name = (target type) (data to be converted)</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> b = (<span class="keyword">byte</span>)(a + b)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Invisible-transform"><a href="#Invisible-transform" class="headerlink" title="Invisible transform"></a>Invisible transform</h3><p>Conversion of numeric data: byte→short→int→long→float→double.<br>Character type is converted to integer type: char→int</p>
+<h3 id="Conditions"><a href="#Conditions" class="headerlink" title="Conditions"></a>Conditions</h3><ol>
+<li>The two data types are compatible with each other.</li>
+<li>The value range of the target type is larger than the original data type (low-level type data is converted into high-level type data).</li>
+</ol>
+<h1 id="Reflection"><a href="#Reflection" class="headerlink" title="Reflection"></a>Reflection</h1><blockquote>
+<p>The Java reflection is in the running state, for any class, you can <strong>know</strong> all the properties and methods of this class; for any object, you can <strong>call</strong> any of its methods and properties.</p>
+</blockquote>
+<p>The most important use of reflection is <strong>to develop various general frameworks</strong></p>
+<ul>
+<li>Figure out the class of any object at runtime</li>
+<li>Construct an object of any class at runtime</li>
+<li>Figure out the member variables and methods of any class at runtime</li>
+<li>Call any object’s method at runtime</li>
+</ul>
+<p><a href="https://domuki.top/2021/03/19/The-reflection-of-Java/">Learn more</a></p>
+]]></content>
+      <categories>
+        <category>Basic Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>The reflection of Java</title>
+    <url>/2021/03/19/The-reflection-of-Java/</url>
+    <content><![CDATA[<blockquote>
+<p>The Java reflection is in the running state, for any class, you can <strong>know</strong> all the properties and methods of this class; for any object, you can <strong>call</strong> any of its methods and properties.</p>
+</blockquote>
+<p>The most important use of reflection is <strong>to develop various general frameworks</strong></p>
+<ul>
+<li>Figure out the class of any object at runtime</li>
+<li>Construct an object of any class at runtime</li>
+<li>Figure out the member variables and methods of any class at runtime</li>
+<li>Call any object’s method at runtime</li>
+</ul>
+<h1 id="Relative-Class-of-Reflect"><a href="#Relative-Class-of-Reflect" class="headerlink" title="Relative Class of Reflect"></a>Relative Class of Reflect</h1><table>
+<thead>
+<tr>
+<th>Class name</th>
+<th>Function (presenting)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html">Class</a></td>
+<td>The entity of the class, representing the class and interface in the running Java application</td>
+</tr>
+<tr>
+<td>Field</td>
+<td>Class member variables</td>
+</tr>
+<tr>
+<td>Method</td>
+<td>Methods in class</td>
+</tr>
+<tr>
+<td>Constructor</td>
+<td>Constructor in class</td>
+</tr>
+</tbody></table>
+<h2 id="Field"><a href="#Field" class="headerlink" title="Field"></a>Field</h2><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>equals(Object obj)</td>
+<td>Returns true if the attribute is equal to obj</td>
+</tr>
+<tr>
+<td>get(Object obj)</td>
+<td>get the corresponding attribute value in obj</td>
+</tr>
+<tr>
+<td>set(Object obj, Object value)</td>
+<td>Set the corresponding attribute value in obj</td>
+</tr>
+</tbody></table>
+<h2 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h2><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>invoke(Object obj, Object… args)</td>
+<td>Pass the object object and parameters to call the corresponding method of the object</td>
+</tr>
+</tbody></table>
+<h2 id="Constructor"><a href="#Constructor" class="headerlink" title="Constructor"></a>Constructor</h2><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>newInstance(Object… initargs)</td>
+<td>Create objects of the class based on the passed parameters</td>
+</tr>
+</tbody></table>
+<p><a href="https://thinkwon.blog.csdn.net/article/details/100128361">EXAMPLE</a></p>
 ]]></content>
       <categories>
         <category>Basic Java</category>
