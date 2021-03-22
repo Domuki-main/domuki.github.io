@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Domuki">
+
+
+
+
+
+<title>Annotations in Java | Domuki</title>
+
+
+
+    <link rel="icon" href="/domukiico.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+    <!-- firework -->
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/firework.js"></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Domuki&#39;s Site</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Domuki&#39;s Site</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Annotations in Java</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Domuki</a>
+                    
+                    &nbsp;&nbsp;
+                    
+                        <span class="post-time">
+                        Date: <a href="#">March 22, 2021&nbsp;&nbsp;17:13:01</a>
+                        </span>
+                    
+                    &nbsp;&nbsp;
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Basic-Java/">Basic Java</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <blockquote>
+<p>Annotations are used to provide supplement information about a program.</p>
+</blockquote>
+<h1 id="What-is-Annotations"><a href="#What-is-Annotations" class="headerlink" title="What is Annotations"></a>What is Annotations</h1><p>Annotations are also called metadata,a data used to describe data, such as, <code>@Override</code> and <code>@Deprecated</code>.</p>
+<p>It was imported in JDK1.5 and used to explain the code.</p>
+<ul>
+<li>Annotations start with ‘@’.</li>
+<li>Annotations do not change action of a compiled program.</li>
+<li>Annotations help to associate metadata (information) to the program elements.</li>
+<li>Annotations are not pure comments as they can change the way a program is treated by compiler. </li>
+</ul>
+<h1 id="Usages"><a href="#Usages" class="headerlink" title="Usages"></a>Usages</h1><ol>
+<li>Creating <em>javadoc</em> Documents via metadata from annotations in code.</li>
+<li>Checking compile</li>
+<li>Dynamic processing at compile time</li>
+<li>Dynamic processing at runtime</li>
+</ol>
+<h1 id="Categories"><a href="#Categories" class="headerlink" title="Categories"></a>Categories</h1><ol>
+<li><p><strong>Java default annotations</strong> </p>
+<p>Including <em>@Override</em>, <em>@Deprecated</em> (Indicate that a class or method is out of date) and <em>@SuppressWarnings</em> (Mark the warnings to be ignored)</p>
+</li>
+<li><p><strong>Meta annotations</strong></p>
+<p>meta annotations are annotations used to define annotations.</p>
+<p>Including <em>@Retention</em> (indicating the stage at which the annotation is retained), <em>@Targe</em>t (indicating the scope of the annotation use), <em>@Inherited</em> (indicating that the annotation can be inherited), <em>@Documented</em> (indicating whether to generate a javadoc document)</p>
+</li>
+<li><p><strong>Customize</strong></p>
+<p>Defining by user</p>
+</li>
+</ol>
+<h1 id="Default-annotations"><a href="#Default-annotations" class="headerlink" title="Default annotations"></a>Default annotations</h1><h2 id="Deprecated"><a href="#Deprecated" class="headerlink" title="@Deprecated"></a>@Deprecated</h2><p>Indicating the <strong>elements which are out of date</strong>. The warning will be throwed by compiler to tell developer that he is calling a out-of-date element.</p>
+<h3 id="Override"><a href="#Override" class="headerlink" title="@Override"></a>@Override</h3><p>Mark that this method <strong>covers the method of the parent class</strong>.</p>
+<h3 id="SuppressWarnings"><a href="#SuppressWarnings" class="headerlink" title="@SuppressWarnings"></a>@SuppressWarnings</h3><p>Used to selectively <strong>turn off the compiler’s warnings</strong> for classes, methods, member variables, and variable initialization.</p>
+<h3 id="SafeVarargs"><a href="#SafeVarargs" class="headerlink" title="@SafeVarargs"></a>@SafeVarargs</h3><p>Parameter safety type annotation. Its purpose is to remind developers not to <strong>use parameters to do some unsafe operations</strong>. Its existence will prevent the compiler from generating <em>unchecked warnings</em>. It was added in the Java 1.7.</p>
+<h3 id="FunctionalInterface"><a href="#FunctionalInterface" class="headerlink" title="@FunctionalInterface"></a>@FunctionalInterface</h3><p><a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html">https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html</a></p>
+<h1 id="Meta-annotations"><a href="#Meta-annotations" class="headerlink" title="Meta annotations"></a>Meta annotations</h1><h3 id="Retention"><a href="#Retention" class="headerlink" title="@Retention"></a>@Retention</h3><p>The RetentionPolicy.SOURCE annotation is only reserved in the source code phase, and it will be discarded and ignored when the compiler compiles.</p>
+<p>The RetentionPolicy.CLASS annotation is only retained until compilation is in progress, and it will not be loaded into the JVM. Such as Java built-in annotations, @Override, @Deprecated, @SuppressWarnning, etc.</p>
+<p>The RetentionPolicy.RUNTIME annotation can be retained until the program is running, it will be loaded into the JVM, so they can be obtained when the program is running. Such as @Controller, @Autowired, @RequestMapping, etc. in SpringMvc.</p>
+<h3 id="Documented"><a href="#Documented" class="headerlink" title="@Documented"></a>@Documented</h3><p>Its function is to be able to include the elements in the annotations into the Javadoc.</p>
+<h3 id="Target"><a href="#Target" class="headerlink" title="@Target"></a>@Target</h3><ul>
+<li>ElementType.ANNOTATION_TYPE can annotate an annotation</li>
+<li>ElementType.CONSTRUCTOR can annotate the construction method</li>
+<li>ElementType.FIELD can annotate attributes</li>
+<li>ElementType.LOCAL_VARIABLE can annotate local variables</li>
+<li>ElementType.METHOD can annotate methods</li>
+<li>ElementType.PACKAGE can annotate a package</li>
+<li>ElementType.PARAMETER can annotate the parameters in a method</li>
+<li>ElementType.TYPE can annotate a type, such as class, interface, enumeration</li>
+</ul>
+<h3 id="Inherite"><a href="#Inherite" class="headerlink" title="@Inherite"></a>@Inherite</h3><p>This is a annotation for annotations. It means that subclasses of annotated classes are considered having the same annotation as their superclass.</p>
+<h3 id="Repeatable"><a href="#Repeatable" class="headerlink" title="@Repeatable"></a>@Repeatable</h3><p>Repeatable usage scenarios: When you need to use the same annotation multiple times, you often need to use @Repeatable.</p>
+<h1 id="State-annotations"><a href="#State-annotations" class="headerlink" title="State annotations"></a>State annotations</h1><p>Java language uses <em><strong>@interface</strong></em> syntax to define annotations (Annotation), and its format is as follows:</p>
+<p>For example:</p>
+<h2 id="Use-interface-to-define"><a href="#Use-interface-to-define" class="headerlink" title="Use @interface to define"></a>Use @interface to define</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Report &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Add-parameters-and-default-values"><a href="#Add-parameters-and-default-values" class="headerlink" title="Add parameters and default values"></a>Add parameters and default values</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Report &#123;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">type</span><span class="params">()</span> <span class="keyword">default</span> 0</span>;</span><br><span class="line">    <span class="function">String <span class="title">level</span><span class="params">()</span> <span class="keyword">default</span> &quot;info&quot;</span>;</span><br><span class="line">    <span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> &quot;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Use-Meta-annotations"><a href="#Use-Meta-annotations" class="headerlink" title="Use Meta annotations"></a>Use Meta annotations</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Target(ElementType.TYPE)</span></span><br><span class="line"><span class="meta">@Retention(RetentionPolicy.RUNTIME)</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Report &#123;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">type</span><span class="params">()</span> <span class="keyword">default</span> 0</span>;</span><br><span class="line">    <span class="function">String <span class="title">level</span><span class="params">()</span> <span class="keyword">default</span> &quot;info&quot;</span>;</span><br><span class="line">    <span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> &quot;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Tomorrow will be better.</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/Java/"># Java</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2021/03/19/The-reflection-of-Java/">The reflection of Java</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Domuki | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
