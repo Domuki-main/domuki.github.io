@@ -775,9 +775,8 @@
   <entry>
     <title>Music</title>
     <url>/music/index.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="What’s-New"><a href="#What’s-New" class="headerlink" title="What’s New?"></a>What’s New?</h1><p>nothing</p>
-<h1 id="List-of-My-Works"><a href="#List-of-My-Works" class="headerlink" title="List of My Works"></a>List of My Works</h1>
-    <div id="aplayer-qjzfRnpQ" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="5268261524" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#FF4081"></div>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="What’s-New"><a href="#What’s-New" class="headerlink" title="What’s New?"></a>What’s New?</h1><h1 id="List-of-My-Works"><a href="#List-of-My-Works" class="headerlink" title="List of My Works"></a>List of My Works</h1>
+    <div id="aplayer-iYrtnmWZ" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="5268261524" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#FF4081"></div>
 
 
 

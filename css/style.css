@@ -1805,6 +1805,11 @@ pre .javascript .function {
     border-radius: 3px;
   }
 }
+.page-template-container .study-page-title {
+  font-size: 40px;
+  text-align: center;
+  padding: 40px;
+}
 .page-template-container .page-template-content {
   color: var(--default-text-color);
 }
