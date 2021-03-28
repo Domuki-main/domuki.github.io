@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Weekly Summary no.1 in 2021</title>
+      <link href="2021/03/26/Weekly-Summary-no-1-in-2021/"/>
+      <url>2021/03/26/Weekly-Summary-no-1-in-2021/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="BASIC-MYANMAR-LANGUAGE-I"><a href="#BASIC-MYANMAR-LANGUAGE-I" class="headerlink" title="BASIC MYANMAR LANGUAGE I"></a>BASIC MYANMAR LANGUAGE I</h1><ol><li>We learned the basic sounds in Myanmar</li><li>The most hard one to pronounce is the sound beginning with “h”</li><li>And Basic words and Phrase</li></ol><h1 id="USER-INTERFACE-AND-USER-EXPERIENCE"><a href="#USER-INTERFACE-AND-USER-EXPERIENCE" class="headerlink" title="USER INTERFACE AND USER EXPERIENCE"></a>USER INTERFACE AND USER EXPERIENCE</h1><p>WRITING ACADEMIC TEXTS<br>SOFTWARE TESTING</p><h1 id="SOFTWARE-ARCHITECTURE"><a href="#SOFTWARE-ARCHITECTURE" class="headerlink" title="SOFTWARE ARCHITECTURE"></a>SOFTWARE ARCHITECTURE</h1><h2 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1:"></a>Chapter 1:</h2><ol><li>IT Systems Application Domain</li><li>What is Software Architecture</li><li>Definitions</li><li>What does an architect do</li><li>Architectures and technologies</li><li>Further reading</li></ol><h2 id="Group-Meeting-2021-03-26"><a href="#Group-Meeting-2021-03-26" class="headerlink" title="Group Meeting(2021/03/26):"></a>Group Meeting(2021/03/26):</h2><ol><li>   Platform: web-app</li><li>   Language: java, html, css, jsp </li><li>   Server: apache (reject)</li></ol><p>lead event</p><ol><li>SIA - tech. dec., Implementation</li><li>WANG – SQA(first one)</li><li>MA – documentation</li><li>LAI – Arch. Design.</li></ol><p>MA do the prototype (base on the laptop) first within 2 weeks</p><h1 id="TELL-A-TALE"><a href="#TELL-A-TALE" class="headerlink" title="TELL-A-TALE"></a>TELL-A-TALE</h1><p>nothing happened yet.</p><h1 id="WEB-APPLICATION-DEVELOPMENT"><a href="#WEB-APPLICATION-DEVELOPMENT" class="headerlink" title="WEB APPLICATION DEVELOPMENT"></a>WEB APPLICATION DEVELOPMENT</h1><h1 id="OPERATING-SYSTEM"><a href="#OPERATING-SYSTEM" class="headerlink" title="OPERATING SYSTEM"></a>OPERATING SYSTEM</h1><h2 id="Chapter-1-1"><a href="#Chapter-1-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h2><h2 id="Chapter-2"><a href="#Chapter-2" class="headerlink" title="Chapter 2"></a>Chapter 2</h2><h2 id="Lab-1"><a href="#Lab-1" class="headerlink" title="Lab 1"></a>Lab 1</h2><h3 id="Part-A"><a href="#Part-A" class="headerlink" title="Part A"></a>Part A</h3><p>Computer Information</p><h3 id="Part-B"><a href="#Part-B" class="headerlink" title="Part B"></a>Part B</h3><p><em><strong>dir</strong></em> - Displaying Directory Content</p><p>*<strong>cd\*</strong> - change to the root directory</p><p><em><strong>cd [dir-name]</strong></em> - change to the [dir-name] directory</p><p><em><strong>dir .</strong></em> - Displaying current directory content</p><p><em><strong>dir ..</strong></em> - Displaying parent directory content</p><p><em><strong>dir [file-name]</strong></em> - Displaying current directory content</p><p>*<strong>dir c:\mydir | find “file1.txt”\*</strong> - determine the existence of a file named ‘file1.txt’ in a directory named ‘mydir’ in the upper level </p><p><em><strong>md [dir-name]</strong></em> - Create an [dir-name] directory </p><p><em><strong>copy con [file-name]</strong></em> - create an file</p><p><em><strong>copy [file1] [file2]</strong></em> - Make a backup of the file2.doc file with other name file1.doc</p><p><em><strong>ren [file1] [file2]</strong></em> - rename file1 to file2</p><p><em><strong>del [file]</strong></em> - delete a file</p><p><em><strong>rd [directory_name]</strong></em>  - Delete a void directory</p><p><em><strong>rmdir [directory_name]</strong></em> - Delete a directory</p><h2 id="Quiz-1"><a href="#Quiz-1" class="headerlink" title="Quiz 1"></a>Quiz 1</h2><p>Base on Chapter 1</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Weekly Summary </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Diary </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Annotations in Java</title>
       <link href="2021/03/22/Annotations-in-Java/"/>
       <url>2021/03/22/Annotations-in-Java/</url>
