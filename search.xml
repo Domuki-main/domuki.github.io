@@ -6039,10 +6039,86 @@
       </tags>
   </entry>
   <entry>
+    <title>User Interface and User Experience Week 1</title>
+    <url>/2021/04/05/User-Interface-and-User-Experience-Week-1/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2><span id="abstract">Abstract</span></h2><p>As the beginning of the new term, this week we did the ice break in the meeting and learned the basic introduction of <strong>User Interface and User Experience</strong>.</p>
+<h2><span id="contents">Contents</span></h2><h3><span id="difference-between-ui-and-ux">Difference between UI and UX</span></h3><table>
+<thead>
+<tr>
+<th>UI</th>
+<th>UX</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>What Users Do</td>
+<td>How Users Feel</td>
+</tr>
+<tr>
+<td>Sketch App</td>
+<td>Stick Notes</td>
+</tr>
+<tr>
+<td>Visuals</td>
+<td>Research</td>
+</tr>
+<tr>
+<td>Prototyping</td>
+<td>Wireframing</td>
+</tr>
+</tbody></table>
+<h3><span id="basic-concepts">Basic concepts</span></h3><h4><span id="user-interface">User Interface:</span></h4><p>Front-end application view to which user interacts in order to use the software. User can manipulate and control the software as well as hardware by means of UI.</p>
+<h4><span id="usability">Usability:</span></h4><p>Usability is a <em>quality attribute</em> (see chapter 2 in S.Arch) that assesses how easy user interfaces are to use.</p>
+<ol>
+<li><p><strong>Learnability</strong>: How easy is it for users to accomplish basic tasks the first time they encounter the design?</p>
+</li>
+<li><p><strong>Efficiency</strong>: Once users have learned the design, how quickly can they perform tasks?</p>
+</li>
+<li><p><strong>Memorability</strong>: When users return to the design after a period of not using it, how easily can they re-establish proficiency?</p>
+</li>
+<li><p><strong>Errors</strong>: How many errors do users make, how severe are these errors, and how easily can they recover from the errors?</p>
+</li>
+<li><p><strong>Satisfaction</strong>: How pleasant is it to use the design?</p>
+</li>
+</ol>
+<h4><span id="user-experience">User Experience:</span></h4><p>User experience” encompasses all aspects of the end-user’s interaction with the company, its services, and its products (Nielsen).</p>
+<p><strong>Main Aspect of UX</strong></p>
+<ol>
+<li><strong>Subjectivity</strong>: UX exists in the mind of the user, not in the object (or artefact). </li>
+<li><strong>Contributing agents</strong>: UX is the consequence of interaction between the following three contributors: <em>object</em>, <em>user</em>, and <em>context</em>.</li>
+<li><strong>Singular and accumulated experiences</strong>: Singular experiences is a result of an interaction with a touch-point, whereas the accumulated experience is the result of all singular experiences.</li>
+</ol>
+<h4><span id="interaction-design-ixd">Interaction Design (IxD)</span></h4><p>the design of interactive products and services in which a designer’s focus goes beyond the item in development to include the <em>way</em> users will interact with it.</p>
+<h4><span id="5-dimensions">5 Dimensions</span></h4><ol>
+<li>Words</li>
+<li>Visual representations</li>
+<li>Physical objects or space</li>
+<li>Time</li>
+<li>Behaviour</li>
+</ol>
+]]></content>
+      <categories>
+        <category>UIUX</category>
+      </categories>
+      <tags>
+        <tag>UIUX</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>User Interface and User Experience Week 4</title>
+    <url>/2021/04/27/User-Interface-and-User-Experience-Week-4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
+      <categories>
+        <category>UIUX</category>
+      </categories>
+      <tags>
+        <tag>UIUX</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>About Me</title>
     <url>/about/index.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1><span id="domuki-ma-zy">Domuki (Ma Z.Y.)</span></h1><p>Domuki (Ma ZhiYuan) is a musician, programmer and a lifelong learner. He currently is studying Software Engineering in UPM. He likes to share what he has learnt with the others. </p>
-<img src="/about/index/avatar.png">]]></content>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1><span id="domuki-ma-zy">Domuki (Ma Z.Y.)</span></h1><p>Domuki (Ma ZhiYuan) is a musician, programmer and a lifelong learner. He currently is studying Software Engineering in UPM. He likes to share what he has learnt with the others.</p>
+]]></content>
   </entry>
   <entry>
     <title>tags</title>
