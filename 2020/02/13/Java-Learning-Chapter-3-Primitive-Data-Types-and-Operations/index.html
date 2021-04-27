@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Domuki">
+    
+    <title>
+        
+            Java Learning Chapter 3 Primitive Data Types and Operations |
+        
+        Domuki&#39;s Site
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/images/domukiico.ico">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"domuki.top","root":"/","language":"en","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/domukipfp.jpeg","favicon":"/images/domukiico.ico","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"SSE3307 Group 1 - 201464 E-Portfolio"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.1"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            <a class="logo-title" href="/">
+                Domuki&#39;s Site
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/music"
+                            >
+                                MUSIC
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/music">MUSIC</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">Java Learning Chapter 3 Primitive Data Types and Operations</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/domukipfp.jpeg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Domuki</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2020-02-13 15:54:40
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/Java-Study/">Java Study</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Java/">Java</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h2><span id="learning-outcomes">Learning Outcomes</span></h2><blockquote>
+<p>At the end of this chapter, student should be able to:</p>
+<p>​            <em>Construct program  from flowchart (C3, P4)</em></p>
+<p>​            <em>Construct simple program (C3, P4)</em> </p>
+<p>​            <em>Explain the basic programming concepts in developing simple program (C2, A3)</em></p>
+</blockquote>
+<span id="more"></span>
+
+<h2><span id="structuring-a-program">Structuring a Program</span></h2><h4><span id="develop-efficient-computer-solutions-to-solve-problems">Develop efficient computer solutions to solve problems:</span></h4><ol>
+<li><p>Use Modules</p>
+</li>
+<li><p>Use four logic structures</p>
+<p>a. Sequential structure</p>
+<p>​    Executes instructions one after another in a sequence.</p>
+<p>b. Decision structure</p>
+<p>​    Branches to execute one of two possible sets of instructions.</p>
+<p>c. Loop structure</p>
+<p>​    Executes a set of instructions many times.</p>
+<p>d. Case structure</p>
+<p>​    Executes one set of instructions out of several sets.</p>
+</li>
+<li><p>Eliminate rewriting of identical process by using modules.</p>
+</li>
+<li><p>Use techniques to improve readability including four logic structures, proper naming of variables, internal documentation and proper indentation.</p>
+</li>
+</ol>
+<h2><span id="simple-program-structure">Simple Program Structure</span></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">____________</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//Steps to be performed</span></span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2><span id="writing-simple-programs">Writing Simple Programs</span></h2><h4><span id="1-algorithm">1. Algorithm:</span></h4><ol>
+<li><p>Read the radius</p>
+</li>
+<li><p>Compute the area using the following formula:</p>
+<p>​            area = radius x radius x pi</p>
+</li>
+<li><p>Display the area</p>
+</li>
+</ol>
+<h4><span id="2-coding">2. Coding</span></h4><ol>
+<li>Framework</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Circle</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="comment">//Step 1: Read the radius</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">//Step 2: Compute area</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">//Step 3: Display the area</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>Define Variables</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> radius;</span><br><span class="line"><span class="keyword">double</span> area;	<span class="comment">//Variables</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>Assign Variables: </li>
+</ol>
+<p><code>radius = 20;</code> in Step 1 </p>
+<ol start="4">
+<li>Define the Formula:</li>
+</ol>
+<p>Adding <code>area = radius * radius * 3.14159;</code>in Step 2.</p>
+<ol start="5">
+<li>Calling Method</li>
+</ol>
+<p><code>System.out.println(area);</code></p>
+<ol start="6">
+<li>Completed</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Example Computing the Area of a Circle</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Circle</span> </span>&#123;</span><br><span class="line">  <span class="comment">/** Main method */</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">     <span class="keyword">double</span> radius;</span><br><span class="line">     <span class="keyword">double</span> area;</span><br><span class="line">     <span class="comment">// Assign a radius</span></span><br><span class="line">     radius = <span class="number">20</span>;</span><br><span class="line">     <span class="comment">// Compute area</span></span><br><span class="line">     area = radius * radius * <span class="number">3.14159</span>;</span><br><span class="line">     <span class="comment">// Display results</span></span><br><span class="line">     System.out.println(<span class="string">&quot;The area for the circle of radius &quot;</span> + radius + <span class="string">&quot; is &quot;</span> + area);</span><br><span class="line">  &#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+
+
+<h2><span id="getting-input-using-scanner">Getting Input Using Scanner</span></h2><h4><span id="1-create-a-scanner-object">1. Create a Scanner object</span></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br></pre></td></tr></table></figure>
+
+<p>Only need to create once, and can be used many times in the same program.</p>
+<h4><span id="2-use-the-methods">2. Use the methods</span></h4><p><code>next()</code>, <code>nextByte()</code>, <code>nextShort()</code>, <code>nextInt()</code>, <code>nextLong()</code>, <code>nextFloat()</code>, <code>nextDouble()</code>, or <code>nextBoolean()</code> to obtain to a <strong>string, byte, short, int, long, float, double,</strong> or <strong>boolean</strong> value. For example,</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"></span><br><span class="line">System.out.print(<span class="string">&quot;Enter a double value: &quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">double</span> d = scanner.nextDouble();</span><br></pre></td></tr></table></figure>
+
+<h4><span id="3-modify-example-code">3. Modify Example Code</span></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Example Computing the Area of a Circle</span></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Circle</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">	<span class="comment">/** Main method */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">      </span><br><span class="line">		<span class="keyword">double</span> radius;</span><br><span class="line">		<span class="keyword">double</span> area;</span><br><span class="line">      </span><br><span class="line">		<span class="comment">// Assign a radius</span></span><br><span class="line">		<span class="comment">/*radius = 20;*/</span></span><br><span class="line">		Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		System.out.print(<span class="string">&quot;Enter radius: &quot;</span>);</span><br><span class="line">		radius = scanner.nextDouble();</span><br><span class="line"></span><br><span class="line">     </span><br><span class="line">		<span class="comment">// Compute area</span></span><br><span class="line">		area = radius * radius * <span class="number">3.14159</span>;</span><br><span class="line">      </span><br><span class="line">		<span class="comment">// Display results</span></span><br><span class="line">		System.out.println(<span class="string">&quot;The area for the circle of radius &quot;</span> + radius </span><br><span class="line">                           + <span class="string">&quot; is &quot;</span> + area);</span><br><span class="line">      </span><br><span class="line">  &#125;</span><br><span class="line">    </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+
+
+<h2><span id="programming-style-and-documentation">Programming Style and Documentation</span></h2><h4><span id="1-appropriate-comments">1. Appropriate Comments</span></h4><p>a. Include a summary at the beginning of the program to explain what the program does, its key features, its supporting data structures, and any unique techniques it uses. </p>
+<p>b. Include your name, class section, instructor, date, and a brief description at the beginning of the program. </p>
+<h4><span id="2-naming-conventions">2. Naming Conventions</span></h4><h5><span id="a-choose-meaningful-and-descriptive-names">a. Choose meaningful and descriptive names.</span></h5><h5><span id="b-variables-and-method-names">b. Variables and method names:</span></h5><p>–Use lowercase. If the name consists of several words, concatenate all in one, use lowercase for the first word, and capitalize the first letter of each subsequent word in the name. For example, the variables <em><strong>radius</strong></em> and <em><strong>area</strong></em>, and the method <em><strong>computeArea</strong></em>. </p>
+<h4><span id="3-proper-indentation-and-spacing-lines">3. Proper Indentation and Spacing Lines</span></h4><h5><span id="a-class-names">a. Class names:</span></h5><p>​    –Capitalize the first letter of each word in the name. For example, the class name <em><strong>ComputeArea</strong></em>.</p>
+<h5><span id="b-constants">b. Constants:</span></h5><p>​    –Capitalize all letters in constants, and use underscores to connect words. For example, the constant <em><strong>PI</strong></em> and <em><strong>MAX_VALUE</strong></em></p>
+<h5><span id="c-indentation">c. Indentation</span></h5><p>​    -Indent two spaces.</p>
+<h5><span id="d-spacing">d. Spacing</span></h5><p>​    -Use blank line to separate segments of the code.</p>
+<h4><span id="4-block-styles">4. Block Styles</span></h4><p>Use end-of-line style for braces.</p>
+<p><img src="/2020/02/13/Java-Learning-Chapter-3-Primitive-Data-Types-and-Operations/001.png" alt="BlockStyles"></p>
+<h2><span id="programming-errors">Programming Errors</span></h2><h4><span id="1-syntax-errors">1. Syntax Errors</span></h4><p>​    Detected by the compiler</p>
+<p>​    Result from errors in code construction, such as mistyping a keyword.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ShowSyntaxErrors</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    i = <span class="number">30</span>;</span><br><span class="line">    System.out.println(i + <span class="number">4</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4><span id="2-runtime-errors">2. Runtime Errors</span></h4><p>​    Causes the program to abort</p>
+<p>​    Occur while an application is running  such as input error (unexpected value that the program cannot handle) or division by zero.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ShowRuntimeErrors</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span> / <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4><span id="3-logic-errors">3. Logic Errors</span></h4><p>​    Produces incorrect result</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Program to compute the sum of two integer numbers</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Sum</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"><span class="keyword">int</span> num1 = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">int</span> num2 = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">int</span> sum = num1 + num2;</span><br><span class="line">sum = <span class="number">0</span>;</span><br><span class="line">	  System.out.println(“Total is <span class="string">&quot; + sum);</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string"></span></span><br></pre></td></tr></table></figure>
+
+<p>Which displays:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Total is 0</span><br></pre></td></tr></table></figure>
+
+<p>But the result that we want is 5.</p>
+<h2><span id="debugging">Debugging</span></h2><blockquote>
+<p>Logic errors are called <em>bugs</em>. The process of finding and correcting errors is called debugging. </p>
+</blockquote>
+<p>BreakPoint;</p>
+<h2><span id="identifiers">Identifiers</span></h2><p>Special symbols to name such programming entities as variables, constants, methods, classes and packages.</p>
+<p>Examples in the previous simple program: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">	Circle			- class name</span><br><span class="line"></span><br><span class="line">​	radius			- data name</span><br><span class="line"></span><br><span class="line">​	area			- data name</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p>An identifier is a sequence of characters that consist of letters, digits, underscores (_), and dollar signs ($). _</p>
+</li>
+<li><p>An identifier must begin with a letter, an underscore (_), or a dollar sign ($). </p>
+</li>
+<li><p>An identifier <strong>cannot</strong>:</p>
+<blockquote>
+<p>​        be a reserved word, e.g. true, false, or null</p>
+<p>​        start with a digit</p>
+<p>​        contain a (blank) space</p>
+<p>​        contain special characters, except _ and $</p>
+</blockquote>
+</li>
+<li><p>An identifier can be of any length.</p>
+</li>
+<li><p>Conventions for choosing identifier names: </p>
+<p>​    a. Name according to what it represents</p>
+<p>​    b. Consistent in the use of variable names</p>
+<p>​    c. Consistent when using upper and lowercase characters</p>
+<p>​            –<strong>Variable</strong> name – <em>lowercase</em>, or <em>mix-case</em></p>
+<p>​            –<strong>Constant</strong> name – <em>uppercase</em> (all caps)</p>
+</li>
+</ol>
+<h2><span id="data">Data</span></h2><blockquote>
+<p>Data used in processing</p>
+</blockquote>
+<h4><span id="1-constant-and-variable">1. Constant and Variable</span></h4><p>​        <strong>Constant</strong> is a value that never changes during the processing of all instructions in a solution</p>
+<p>​                –Constant is given a location in memory and a name.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="keyword">double</span> PI = <span class="number">3.14159</span>; </span><br></pre></td></tr></table></figure>
+
+<p>​        <strong>Variable</strong> – value may change during processing</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> Pi = <span class="number">3.14159</span>; </span><br></pre></td></tr></table></figure>
+
+
+
+<h4><span id="2-data-types">2. Data Types</span></h4><blockquote>
+<p>Data are unorganized facts</p>
+<p>Goes as input and is processed to produce output, information</p>
+<p>Computers must be told the data type of each variable and constant</p>
+<p>Three common types: <strong>numeric, character</strong>, and <strong>logical</strong></p>
+<p>Other data types: date data type and user-defined data types</p>
+</blockquote>
+<pre><code>    1. Numeric Data Types
+</code></pre>
+<table>
+<thead>
+<tr>
+<th><strong>Integers (in Java):</strong></th>
+<th><strong>Floating-point numbers:</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>byte</td>
+<td>float</td>
+</tr>
+<tr>
+<td>short</td>
+<td><strong>double</strong></td>
+</tr>
+<tr>
+<td><strong>int</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>long</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2><span id="operators">Operators</span></h2><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Meaning</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>+</td>
+<td>Addition</td>
+<td>34  + 1</td>
+<td>35</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Substraction</td>
+<td>34.0  – 0.1</td>
+<td>33.9</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Multiplication</td>
+<td>300  * 30</td>
+<td>9000</td>
+</tr>
+<tr>
+<td>/</td>
+<td>Division</td>
+<td>1.0/2.0</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>%</td>
+<td>Remainder</td>
+<td>20  % 3</td>
+<td>2</td>
+</tr>
+</tbody></table>
+<p>Shortcut Assignment Operators:</p>
+<h4><span id="note">Note</span></h4><blockquote>
+<p>Calculations involving floating-point numbers are approximated because these numbers are not stored with complete accuracy. </p>
+</blockquote>
+<p>For example, </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="number">1</span> - <span class="number">0.1</span> - <span class="number">0.1</span> - <span class="number">0.1</span> - <span class="number">0.1</span> - <span class="number">0.1</span>);</span><br></pre></td></tr></table></figure>
+
+<p>​    <strong>displays 0.5000000000000001, not 0.5</strong>, and </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="number">1.0</span> - <span class="number">0.9</span>);</span><br></pre></td></tr></table></figure>
+
+<p>​    <strong>displays 0.09999999999999998, not 0.1</strong>. </p>
+<p><strong>Integers are stored precisely</strong>. Therefore, <u>calculations with integers yield a precise integer result</u>. </p>
+<h2><span id="escape-sequences-for-special-characters">Escape Sequences for Special Characters</span></h2><img src="/2020/02/13/Java-Learning-Chapter-3-Primitive-Data-Types-and-Operations/002.png" alt="specialC" style="zoom: 50%;">
+
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：Java Learning Chapter 3 Primitive Data Types and Operations</li>
+        <li>Post author：Domuki</li>
+        <li>Create time：2020-02-13 15:54:40</li>
+        <li>
+            Post link：https://domuki.top/2020/02/13/Java-Learning-Chapter-3-Primitive-Data-Types-and-Operations/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2020/02/13/Java-Learning-Chapter-4-Selection/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Java Learning Chapter 4 Selection</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2020/02/12/Me-Hexo-and-Problems/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Install Hexo and Solve Problems</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Domuki</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">Learning Outcomes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">Structuring a Program</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">Develop efficient computer solutions to solve problems:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">Simple Program Structure</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">Writing Simple Programs</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">1. Algorithm:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">2. Coding</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">Getting Input Using Scanner</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">1. Create a Scanner object</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">2. Use the methods</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">3. Modify Example Code</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">Programming Style and Documentation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">1. Appropriate Comments</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">2. Naming Conventions</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link"><span class="nav-text">a. Choose meaningful and descriptive names.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link"><span class="nav-text">b. Variables and method names:</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">3. Proper Indentation and Spacing Lines</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link"><span class="nav-text">a. Class names:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link"><span class="nav-text">b. Constants:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link"><span class="nav-text">c. Indentation</span></a></li><li class="nav-item nav-level-5"><a class="nav-link"><span class="nav-text">d. Spacing</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">4. Block Styles</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">Programming Errors</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">1. Syntax Errors</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">2. Runtime Errors</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">3. Logic Errors</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">Debugging</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">Identifiers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">Data</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">1. Constant and Variable</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">2. Data Types</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">Operators</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">Note</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">Escape Sequences for Special Characters</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+<script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/header-shrink.js"></script><script src="/js/back2top.js"></script><script src="/js/dark-light-toggle.js"></script>
+
+
+    <script src="/js/local-search.js"></script>
+
+
+
+    <script src="/js/code-copy.js"></script>
+
+
+
+
+<div class="post-scripts">
+    
+        <script src="/js/left-side-toggle.js"></script><script src="/js/libs/anime.min.js"></script><script src="/js/toc.js"></script>
+    
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Domuki">
+    
+    <title>
+        
+            Java Learning Chapter 2 Problem Analyse |
+        
+        Domuki&#39;s Site
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/images/domukiico.ico">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"domuki.top","root":"/","language":"en","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/domukipfp.jpeg","favicon":"/images/domukiico.ico","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"SSE3307 Group 1 - 201464 E-Portfolio"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.1"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            <a class="logo-title" href="/">
+                Domuki&#39;s Site
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/music"
+                            >
+                                MUSIC
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/music">MUSIC</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">Java Learning Chapter 2 Problem Analyse</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/domukipfp.jpeg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Domuki</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2020-02-12 21:54:51
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/Java-Study/">Java Study</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Java/">Java</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h4><span id="learning-outcome">Learning Outcome</span></h4><p>At the end of this chapter, student should be able to:</p>
+<p>​    <em>Explain the step by step in problem solving (C1, A3)</em></p>
+<p>​    <em>Analyse problem and identify the problem requirements (CTPS)</em></p>
+<p>​    <em>Using the correct symbol/notations in developing a flow chart (P3)</em></p>
+<p>​    <em>Write a simple program to display the output (A2)</em></p>
+<span id="more"></span>
+
+
+
+<h2><span id="what-problem-can-be-solved-by-computer">What Problem Can Be Solved By Computer</span></h2><blockquote>
+<p>•    When the solution can be produced by a set of step-by-step procedures or actions.<br>•    This step-by-step action is called an algorithm.<br>•    The algorithm will process some inputs and produced output.<br>•    Solving problem by computer undergo two phases:</p>
+</blockquote>
+<h4><span id="phase-1">Phase 1:</span></h4><p>​    Organizing the problem or pre-programming phase.</p>
+<h4><span id="phase-2">Phase 2:</span></h4><p>​    Programming phase.</p>
+<h2><span id="1-pre-programming-phase">1. Pre-Programming Phase</span></h2><p>This phase involves:</p>
+<blockquote>
+<ol>
+<li>   Analysing the problem.</li>
+<li>   Developing the Input-Process-Output (IPO) Chart.</li>
+<li>   Writing the algorithms.</li>
+<li>   Drawing the flowchart, or Pseudocode</li>
+</ol>
+</blockquote>
+<h3><span id="11-problem-analysis-pac-chart">1.1. Problem Analysis (PAC) Chart</span></h3><blockquote>
+<p>–    All these requirements can be presented in a Problem Analysis Chart (PAC)</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Processing</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Given in the problem or provided by the user</td>
+<td>List of processing required or procedures</td>
+<td>Out requirement</td>
+</tr>
+</tbody></table>
+<p><strong>Practicing:</strong> Write a problem analysis chart (PAC) that asks a user to enter the distance of a trip in miles, the miles per gallon estimate for the user’s car, and the average cost of a gallon of fuel. Calculate and display the number of gallons of fuel needed and the estimated cost of the trip.</p>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Processing</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>distance</td>
+<td>Calculate fuel</td>
+<td>fuel needed</td>
+</tr>
+<tr>
+<td>miles per gallon</td>
+<td>Calculate estimated cost</td>
+<td>estimated cost</td>
+</tr>
+<tr>
+<td>cost per gallon</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3><span id="12-input-process-output-ipo-chart">1.2. Input Process Output (IPO) Chart</span></h3><p>Has four sections:</p>
+<blockquote>
+<p>​    Input</p>
+<p>​    Contains all input data from the problem analysis chart</p>
+<p>​    Processing</p>
+<p>​    Contains all processing, evident and implied, from problem analysis chart</p>
+<p>​    Module/method Reference</p>
+<p>​    Contains number for method reference</p>
+<p>​    Output</p>
+<p>​    All required output as designated by the problem and/or the user</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Processing</th>
+<th>Method Reference</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Distance in miles</td>
+<td>Enter distance</td>
+<td></td>
+<td>Total fuel needed</td>
+</tr>
+<tr>
+<td>Miles per gallon</td>
+<td>Enter miles per gallon</td>
+<td></td>
+<td>Estimated cost</td>
+</tr>
+<tr>
+<td>Cost fuel per gallon</td>
+<td>fuel needed = distance / miles per gallon</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Enter cost fuel per gallon</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>estimated cost = cost per gallon * fuel needed</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Display total fuel and estimated cost</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>End</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3><span id="13-flowchart">1.3. Flowchart</span></h3><p><img src="/2020/02/12/Java-Learning-Chapter-2-Problem-Analyse/flowchartusage001.png" alt="flowchartusage001"></p>
+<p><img src="/2020/02/12/Java-Learning-Chapter-2-Problem-Analyse/flowchartusage002.png" alt="flowchartusage002"></p>
+<p><em>Miles per gallon = the driving distance by consuming a gallon fuel</em></p>
+<p>Already known:            Total distance (TD) &amp; Miles per gallon (MG);</p>
+<p>Purpose:                        Figure out the amount of oil required (Needed);</p>
+<p>Method:                         Needed = TD / MG;</p>
+<p><img src="/2020/02/12/Java-Learning-Chapter-2-Problem-Analyse/flowchartusage003.png" alt="flowchartusage003"></p>
+<h3><span id="14-pseudocode">1.4. Pseudocode</span></h3><blockquote>
+<p>​    It is used in place of symbols or a flowchart to describe the logic of a program</p>
+<p>​    Pseudocode is close to the actual programming language.</p>
+</blockquote>
+<p><img src="/2020/02/12/Java-Learning-Chapter-2-Problem-Analyse/flowchartusage004.png" alt="flowchartusage004"></p>
+<h2><span id="2-programming-implementation-phase">2. Programming / Implementation Phase</span></h2><blockquote>
+<p>Transcribing the logical flow of solution steps in flowchart or algorithm to program code and run the program code on a computer using a programming language.</p>
+</blockquote>
+<p><strong>•    Programming phase takes 5 stages:</strong></p>
+<ol>
+<li>Coding</li>
+<li>Compiling</li>
+<li>Debugging</li>
+<li>Run or Testing</li>
+<li>Documentation and maintenance</li>
+</ol>
+<p><img src="/2020/02/12/Java-Learning-Chapter-2-Problem-Analyse/programmingloop.png" alt="programmingloop"></p>
+<p><strong>•    Coding</strong><br>    Translation operation in the flowchart or algorithm (pseudocode) into programming language.</p>
+<p>​    follow the format of the chosen programming language.</p>
+<p>​    Many types or levels of computer programming language such as:</p>
+<blockquote>
+<p>​    Machine language</p>
+<p>​    Symbolic language or assembly language</p>
+<p>​    Procedure-oriented language</p>
+<p>​    The first two are called low-level programming language. The last one is called high-level </p>
+</blockquote>
+<p>programming language.</p>
+<p><strong>•    Compiling</strong></p>
+<p>​    Compiling is a process of a compiler translates a program written in a particular high–level programming language into a form that the computer can execute.</p>
+<p>​    The compiler will check the program code also known as source code so that any part of the source code that does not follow the format or any other language requirements will be flagged as syntax error.</p>
+<p><strong>•    Debugging</strong></p>
+<p>​    This syntax error in also called bug, when error is found the programmer will debug or correct the error and then recompile the source code again.</p>
+<p>​    The debugging process is continued until there is no more error in the program.</p>
+<p><strong>•    Run or Testing</strong></p>
+<p>​    The program code that contains no more error is called executable program. It is ready to be tested.</p>
+<p>​    When it is tested, the data is given and the result is verified so that it should be produced output as intended.</p>
+<p>​    Though the program is error free, sometimes it does not be produced the correct result. In this case the program faces logic error.</p>
+<p>​    Incorrect sequence of instruction is an example that causes logic error. </p>
+<p><strong>•    Documentation and Maintenance</strong></p>
+<p>​    When the program is thoroughly tested for a substantial period of time and it is consistently producing the right output, it can be documented.</p>
+<p>​    Documentation is important for future reference. Other programmer may take over the operation of the program and the best way to understand a program is by studying the documentation.</p>
+<p>​    Trying to understand the logic of the program by looking at the source code is not a good approach.</p>
+<p>​    Studying the documentation is necessary when the program is subjected to enhancement or modification. </p>
+<p>​    Documentation is also necessary for management use as well as audit purposes.</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：Java Learning Chapter 2 Problem Analyse</li>
+        <li>Post author：Domuki</li>
+        <li>Create time：2020-02-12 21:54:51</li>
+        <li>
+            Post link：https://domuki.top/2020/02/12/Java-Learning-Chapter-2-Problem-Analyse/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2020/02/12/Me-Hexo-and-Problems/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Install Hexo and Solve Problems</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2020/02/12/Java-Learning-Chapter-1-Introduction/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Java Learning Chapter 1 Introduction</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Domuki</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">Learning Outcome</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">What Problem Can Be Solved By Computer</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">Phase 1:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">Phase 2:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">1. Pre-Programming Phase</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">1.1. Problem Analysis (PAC) Chart</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">1.2. Input Process Output (IPO) Chart</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">1.3. Flowchart</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">1.4. Pseudocode</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">2. Programming &#x2F; Implementation Phase</span></a>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+<script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/header-shrink.js"></script><script src="/js/back2top.js"></script><script src="/js/dark-light-toggle.js"></script>
+
+
+    <script src="/js/local-search.js"></script>
+
+
+
+    <script src="/js/code-copy.js"></script>
+
+
+
+
+<div class="post-scripts">
+    
+        <script src="/js/left-side-toggle.js"></script><script src="/js/libs/anime.min.js"></script><script src="/js/toc.js"></script>
+    
+</div>
+
+
+
+</body>
+</html>

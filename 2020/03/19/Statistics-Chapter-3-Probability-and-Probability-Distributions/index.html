@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Domuki">
+    
+    <title>
+        
+            Statistics Chapter 3 Probability and Probability Distributions |
+        
+        Domuki&#39;s Site
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/images/domukiico.ico">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"domuki.top","root":"/","language":"en","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/domukipfp.jpeg","favicon":"/images/domukiico.ico","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"SSE3307 Group 1 - 201464 E-Portfolio"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.1"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            <a class="logo-title" href="/">
+                Domuki&#39;s Site
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/music"
+                            >
+                                MUSIC
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/music">MUSIC</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">Statistics Chapter 3 Probability and Probability Distributions</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/domukipfp.jpeg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Domuki</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2020-03-19 10:12:19
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/Statistics-Study/">Statistics Study</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Statistics/">Statistics</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <span id="more"></span>
+
+<h2><span id="1-what-is-probability">1. What is Probability</span></h2><p>We measured “how often” using: <strong>RELATIVE FREQUENCY = F / N</strong>;</p>
+<p>As n gets larger, the sample will be replaced by <strong>Population</strong></p>
+<p>Relative Frequency will be replaced by <strong>Probability</strong></p>
+<h2><span id="2-basic-concepts">2. Basic Concepts</span></h2><h4><span id="1-experiment">1. EXPERIMENT:</span></h4><p>The process by an obtained observation(or measurement).</p>
+<p>example:    *Run a program to measure its CPU time</p>
+<p>​                    *Toss two coins</p>
+<h4><span id="2-simple-event">2. SIMPLE EVENT:</span></h4><p>The outcome observed on a single repetition of the experiment.</p>
+<p>/*One and only one simple event can occur when the experiment is performed.</p>
+<p>The set of all simple events of an experiment is called the <em>sample space</em>, <strong>S</strong>.</p>
+<p>example:</p>
+<img src="/2020/03/19/Statistics-Chapter-3-Probability-and-Probability-Distributions/001.png" style="zoom:50%;">
+
+<p><strong>S(sample space)</strong> = {E1, E2, E3, E4, E5, E6}</p>
+<p>The die toss:</p>
+<p>​        -A: an odd number</p>
+<p>​        -B: a number &gt; 2</p>
+<p>A = {E1, E3, E5}</p>
+<p>B = {E3, E4, E5, E6}</p>
+<h4><span id="3-mutually-exclusive">3. MUTUALLY EXCLUSIVE</span></h4><p>Two events are <strong>mutually exclusive</strong> if, when one event occurs, the other cannot, and vice versa.</p>
+<p>*day and night</p>
+<h2><span id="3-the-probability-of-an-event">3. The Probability of an Event</span></h2><p><strong>P(A)</strong>: The probability of an event A measures “how often” </p>
+<p><strong>P(A)</strong> must be between 0 and 1</p>
+<p>The relative frequency for an event A is:</p>
+<p>n = an experiment is performed <em>n</em> times. </p>
+<img src="/2020/03/19/Statistics-Chapter-3-Probability-and-Probability-Distributions/002.png" style="zoom: 33%;">
+
+<p>The <strong>P(A)</strong> is found by adding the probabilities of all the simple events contained in A.</p>
+<p>If we let <em>n</em> get infinitely large </p>
+<img src="/2020/03/19/Statistics-Chapter-3-Probability-and-Probability-Distributions/003.png" style="zoom: 25%;">
+
+<p>example:</p>
+<p>​        Toss a fair coin.</p>
+<p>Toss two fair coins and record the outcome. What is the probability of observing at least one head?</p>
+<img src="/2020/03/19/Statistics-Chapter-3-Probability-and-Probability-Distributions/004.png" style="zoom: 67%;">
+
+<p>P(at least 1 head) </p>
+<p>= P(E1)+P(E2)+P(E3)</p>
+<p>= 1/4 + 1/4 +1/4</p>
+<p>= 3/4</p>
+<h2><span id="4-counting-rules">4. Counting Rules</span></h2><h4><span id="1-simple-counting">1. SIMPLE COUNTING</span></h4><p>If the simple events in an experiment are <strong>equally likely,</strong> you can calculate</p>
+<img src="/2020/03/19/Statistics-Chapter-3-Probability-and-Probability-Distributions/005.png" style="zoom: 33%;">
+
+<h4><span id="2-the-mn-rule">2. <strong>The</strong> m*n Rule</span></h4><p>If an experiment is performed in <u>two stages</u>, with <u><strong>m</strong> ways to accomplish the first stage</u> and <u><strong>n</strong> ways to accomplish the second stage</u>, then there are <strong>mn</strong> ways to accomplish the experiment.</p>
+<h4><span id="3-permutations">3. Permutations</span></h4><p>The number of ways you can arrange <strong>n</strong> distinct objects, taking them <strong>r</strong> at a time is</p>
+<img src="/2020/03/19/Statistics-Chapter-3-Probability-and-Probability-Distributions/006.png" style="zoom: 33%;">
+
+<p>The number of distinct combinations of <strong>n</strong> distinct objects that can be formed, taking them <strong>r</strong> at a time is</p>
+<img src="/2020/03/19/Statistics-Chapter-3-Probability-and-Probability-Distributions/blog\blog\source\_posts\Statistics-Chapter-3-Probability-and-Probability-Distributions\007.png" style="zoom:33%;">
+
+<h4><span id="4-category">4. Category</span></h4><img src="/2020/03/19/Statistics-Chapter-3-Probability-and-Probability-Distributions/008.png" style="zoom:50%;">
+
+
+
+<h2><span id="5-event-relations">5. Event Relations</span></h2><p>The <strong>union</strong> of two events, A and B, is the event that <u>either A <strong>or</strong> B <strong>or both</strong></u> (all colour parts) occur when the experiment is performed. We write <strong>A ∪ B</strong></p>
+<img src="/2020/03/19/Statistics-Chapter-3-Probability-and-Probability-Distributions/blog\blog\source\_posts\Statistics-Chapter-3-Probability-and-Probability-Distributions\009.png" style="zoom:60%;">
+
+<p>The <strong>intersection</strong> of two events, <strong>A</strong> and <strong>B</strong>, is the event that <u>both A <strong>and</strong> B</u> (green part) occur when the experiment is performed. We write <strong>A ∩ B</strong>. </p>
+<p>*If two events A and B are <strong>mutually exclusive (only one result can happen),</strong> then <strong>P(A ∩ B) = 0</strong>.</p>
+<p>The <strong>complement</strong> of an event <strong>A</strong> consists of all outcomes of the experiment that do not result in event A. We write <strong>∁uA</strong> </p>
+<img src="/2020/03/19/Statistics-Chapter-3-Probability-and-Probability-Distributions/010.png" style="zoom:60%;">
+
+<p>**∁uA={x|x∈U且x∉A}**，B-A={x|x∈B且x∉A}(blue - green)</p>
+<h4><span id="calculating-probabilities-for-unions-and-complements"><strong>Calculating Probabilities for Unions and Complements</strong></span></h4><p><strong>The Additive Rule for Unions:</strong> P(A ∪ B) = P(A) + P(B) - P(A ∩ B)</p>
+<p>example:</p>
+<p>Select a student from the classroom and record his/her <strong>hair colour</strong> and <strong>gender.</strong></p>
+<p><strong>-A:</strong> student has brown hair</p>
+<p><strong>-B:</strong> student is female</p>
+<p><strong>-C:</strong> student is male</p>
+<img src="/2020/03/19/Statistics-Chapter-3-Probability-and-Probability-Distributions/blog\blog\source\_posts\Statistics-Chapter-3-Probability-and-Probability-Distributions\011.png" style="zoom:48%;">
+
+<p>Suppose that there were 120 students in the classroom, and that they could be classified as follows:</p>
+<p><strong>A</strong>: brown hair</p>
+<p> <strong>P(A) = 50/120</strong></p>
+<p><strong>B:</strong> female</p>
+<p> <strong>P(B) = 60/120</strong></p>
+<p>P(A ∪ B) = P(A) + P(B) - P(A ∩ B)</p>
+<p>= 50/120 + 60/120 - 30/120 </p>
+<p>= 80/120 = 2/3</p>
+<p>(Special situation)</p>
+<p>When two events A and B are <strong>mutually exclusive,</strong>  P(A ∩ B) = 0 </p>
+<p>and <strong>P(A ∪ B) = P(A) + P(B).</strong></p>
+<p><strong>A:</strong> male with brown hair</p>
+<p> <strong>P(A) = 20/120</strong></p>
+<p><strong>B:</strong> female with brown hair</p>
+<p> <strong>P(B) = 30/120</strong></p>
+<p>P(A ∪ B) = P(A) + P(B) - 0</p>
+<p>= 20/120 + 30/120</p>
+<p>= 50/120</p>
+<h4><span id="calculating-probabilities-for-complements">Calculating Probabilities for Complements</span></h4><p><strong>P(A∁) = 1 – P(A)</strong></p>
+<p>Select a student at random from the classroom. Define:</p>
+<p><strong>A:</strong> male  </p>
+<p> P(A) = 60/120</p>
+<p><strong>B:</strong> female</p>
+<p>P(B) = 1 - P(A)</p>
+<p>= 1- 60/120 = 60/120</p>
+<h4><span id="calculating-probabilities-for-intersections">Calculating Probabilities for Intersections</span></h4><p>the different between P(AB) and P(B|A)</p>
+<ol>
+<li><p>P(AB) is the probability of event A and B happening at same time in unite event</p>
+</li>
+<li><p>P(B|A) is the probability of event B happening when A already happened. Calculate the probability of simultaneous occurrence of AB based on 100% of all occurrences of A events.</p>
+</li>
+</ol>
+<img src="/2020/03/19/Statistics-Chapter-3-Probability-and-Probability-Distributions/012.png" style="zoom: 33%;">
+
+<p>Two events A and B are independent if and only if</p>
+<p> <strong>P(A|B) = P(A)</strong>  or <strong>P(B|A) = P(B)</strong></p>
+<p>Otherwise, they are dependent.</p>
+<p>For any two events, <strong>A</strong> and <strong>B</strong>, the probability that both <strong>A</strong> and <strong>B</strong> occur is</p>
+<p><strong>P(A∩B) = P(A)P(B|A)</strong></p>
+<p>If the events <strong>A</strong> and <strong>B</strong> are independent, then the probability that both <strong>A</strong> and <strong>B</strong> occur is</p>
+<p><strong>P(A∩B) = P(A)P(B)</strong></p>
+<p>example:</p>
+<p>In a certain population, <u><strong>10%</strong> of the people can be</u> classified as being <u>high risk</u> for a heart attack. <u><strong>Three people</strong> are randomly selected from this population</u>. What is the probability that exactly one of the three are high risk?</p>
+<p>Define H: high risk N: not high risk</p>
+<p>P(H) = 0.1</p>
+<p>P(N) = 1 - P(H) = 0.9</p>
+<p>P(exactly one high risk) = P(HNN) + P(NHN) + P(NNH)</p>
+<p>= P(H)P(N)P(N) + P(N)P(H)P(N) + P(N)P(N)P(H)</p>
+<p>= (.1)(.9)(.9) + (.9)(.1)(.9) + (.9)(.9)(.1)= 3(.1)(.9)2 </p>
+<p>= .243</p>
+<p>Suppose we have additional information in the previous example. We know that only <u><strong>49%</strong> of the population are female</u>. Also, of the <u>female patients, <strong>8%</strong> are high risk</u>. A single person is selected at random. What is the probability that it is a high risk female?</p>
+<p>Define H: high risk F: female</p>
+<p>P(F) = 0.49</p>
+<p>P(H|F) = 0.08</p>
+<p>Use the <strong>Multiplicative Rule</strong>:</p>
+<p>P(high risk female) = P(H ∩ F)</p>
+<p>= P(F)P(H|F) =.49(.08) = .0392</p>
+<h2><span id="6-probability-distributions-for-discrete-random-variables">6. Probability Distributions for Discrete Random Variables</span></h2><p>The <strong>probability distribution for a discrete random variable</strong> <strong>x</strong> resembles the relative frequency distributions we constructed in Chapter 2. It is a graph, table or formula that gives the possible values of <em>x</em> and the probability <em>p(x)</em> associated with each value.</p>
+<p>​                    <strong>0 &lt;= P(X) &lt;= 1 and ∑P(X) = 1</strong></p>
+<p><strong>Example</strong></p>
+<p>Toss a fair coin three times and define <strong>x = number of heads</strong></p>
+<p>P = {HHH, HHT, HTH, THH, HTT, THT, TTH, TTT}</p>
+<table>
+<thead>
+<tr>
+<th>X</th>
+<th>P(X)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>1/8</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3/8</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3/8</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1/8</td>
+</tr>
+</tbody></table>
+<h4><span id="1-probability-distributions">1. Probability Distributions</span></h4><p>•Probability distributions can be used to describe the population, just as we described samples in <a class="link" target="_blank" rel="noopener" href="https://domuki-main.github.io/2020/02/18/Statistics-Chapter-2-Descriptive-Statistics/">Chapter 2.<i class="fas fa-external-link-alt"></i></a></p>
+<p>–<strong>Shape:</strong> Symmetric, skewed, mound-shaped…</p>
+<p>–<strong>Outliers:</strong> unusual or unlikely measurements </p>
+<p>–<strong>Center and spread:</strong> mean and standard deviation. A population mean is called <strong>μ</strong> and a population standard deviation is called <strong>σ.</strong> </p>
+<p><strong>The Mean and Standard Deviation</strong></p>
+<p>Let <em>x</em> be a discrete random variable with probability distribution <em>p(x)</em>. Then the mean, variance and standard deviation of <em>x</em> are given as</p>
+<img src="/2020/03/19/Statistics-Chapter-3-Probability-and-Probability-Distributions/013.png" style="zoom: 33%;">
+
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>p(x)</th>
+<th>xp(x)</th>
+<th>(x - μ)^2p(x)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>1/8</td>
+<td>0</td>
+<td>(-1.5)^2(1/8)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3/8</td>
+<td>3/8</td>
+<td>(-0.5)^2(3/8)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3/8</td>
+<td>6/8</td>
+<td>(0.5)^2(3/8)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1/8</td>
+<td>3/8</td>
+<td>(1.5)^2(1/8)</td>
+</tr>
+</tbody></table>
+<p>μ = ∑xp(x) = 12/8 = 1.5</p>
+<p>σ^2 = ∑(x - μ)^2p(x) = .28125 + .09375 + .09375 + .28125 = .75</p>
+<p>σ = .688</p>
+<p>Thus, in this question</p>
+<p>Shape? <strong>Symmetric mound</strong></p>
+<p>Outliers? <strong>None</strong></p>
+<p>Centre? <strong>μ = 1.5</strong></p>
+<p>Spread? <strong>σ = .688</strong></p>
+<h4><span id="2-the-binomial-random-variable">2. The Binomial Random Variable</span></h4><p>Many situations in real life resemble the coin toss, but the coin is not necessarily fair, so that P(H) != 1/2.</p>
+<p><strong>Example:</strong> A geneticist samples <u><strong>10</strong> people and counts</u> the number who have a gene linked to Alzheimer’s disease</p>
+<p>1.The experiment consists of <strong>n</strong> <strong>identical trials.</strong></p>
+<p>2.Each trial results in <strong>one of two outcomes</strong>, success (S) or failure (F).</p>
+<p>3.The probability of success on a single trial is <em>p</em> and <strong>remains constant</strong> from trial to trial. The probability of failure is <em>q = 1 – p.</em> </p>
+<p>4.The trials are <strong>independent</strong>.</p>
+<p>5.We are interested in <strong>x</strong>, the number of successes in <strong>n</strong> <strong>trials.</strong></p>
+<p>For a binomial experiment with <em>n</em> trials and probability <em>p</em> of success on a given trial, the probability of <em>k</em> successes in <em>n</em> trials is</p>
+<img src="/2020/03/19/Statistics-Chapter-3-Probability-and-Probability-Distributions/014.png" style="zoom: 33%;">
+
+<p><strong>The Mean and Standard Deviation</strong></p>
+<img src="/2020/03/19/Statistics-Chapter-3-Probability-and-Probability-Distributions/015.png" style="zoom:33%;">
+
+<p>Example:</p>
+<p>A marksman <u>hits a target <strong>80%</strong> of the time</u>. He fires <u><strong>five</strong> shots</u> at the target. What is the probability that <u>exactly <strong>3</strong> shots</u> hit the target?</p>
+<p>Thus, </p>
+<p><em><strong>n = 5;</strong></em> </p>
+<p><em><strong>success = hit;</strong></em> </p>
+<p><em><strong>p = 0.8;</strong></em> </p>
+<p><em><strong>x = 3(hits);</strong></em> </p>
+<p><em><strong>q = 1-p = 0.2</strong></em></p>
+<p><em>P(X = 3) = C(5, 3)p^3q^(5-3) = .2048</em></p>
+<p>What is the probability that <strong>more than 3</strong> shots hit the target?</p>
+<p><em>P(X &gt; 3) = P(X = 4) + P(X = 5) = .7373</em></p>
+<p><strong>Cumulative Probability Tables</strong> (SECOND METHOD)</p>
+<p>You can use the <strong>cumulative probability tables</strong> to find probabilities for selected binomial distributions.</p>
+<table>
+<thead>
+<tr>
+<th>K</th>
+<th>P = .80</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0.007</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.058</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.263</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.672</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1.000</td>
+</tr>
+</tbody></table>
+<p>What is the probability that exactly 3 shots hit the target?</p>
+<p><em><strong>P(X = 3) = P(X &lt;= 3) - P(X &lt;= 2) = 0.263 - 0.058 = 0.205</strong></em></p>
+<p>What is the probability that more than 3 shots hit the target?</p>
+<p><em><strong>P(x &gt; 3) = 1 - P(x &lt;= 3)</strong></em></p>
+<p><em><strong>= 1 - .263 = .737</strong></em></p>
+<p>EXAMPLE:</p>
+<p>Here is the probability distribution for <strong>x</strong> <strong>= number of hits.</strong> What are the mean and standard deviation for <em>x</em>?</p>
+<p><img src="/2020/03/19/Statistics-Chapter-3-Probability-and-Probability-Distributions/016.png"></p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：Statistics Chapter 3 Probability and Probability Distributions</li>
+        <li>Post author：Domuki</li>
+        <li>Create time：2020-03-19 10:12:19</li>
+        <li>
+            Post link：https://domuki.top/2020/03/19/Statistics-Chapter-3-Probability-and-Probability-Distributions/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2020/03/31/Bubble-Sorting/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Bubble Sorting</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2020/03/08/Jp2-L2-2/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Java Programming 2 Lab 2 Additional File</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Domuki</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">1. What is Probability</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">2. Basic Concepts</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">1. EXPERIMENT:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">2. SIMPLE EVENT:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">3. MUTUALLY EXCLUSIVE</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">3. The Probability of an Event</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">4. Counting Rules</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">1. SIMPLE COUNTING</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">2. The m*n Rule</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">3. Permutations</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">4. Category</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">5. Event Relations</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">Calculating Probabilities for Unions and Complements</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">Calculating Probabilities for Complements</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">Calculating Probabilities for Intersections</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">6. Probability Distributions for Discrete Random Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">1. Probability Distributions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">2. The Binomial Random Variable</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+<script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/header-shrink.js"></script><script src="/js/back2top.js"></script><script src="/js/dark-light-toggle.js"></script>
+
+
+    <script src="/js/local-search.js"></script>
+
+
+
+    <script src="/js/code-copy.js"></script>
+
+
+
+
+<div class="post-scripts">
+    
+        <script src="/js/left-side-toggle.js"></script><script src="/js/libs/anime.min.js"></script><script src="/js/toc.js"></script>
+    
+</div>
+
+
+
+</body>
+</html>

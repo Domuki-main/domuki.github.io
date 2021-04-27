@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Domuki">
+    
+    <title>
+        
+            Java Learning Chapter 8.2 FILE Operation |
+        
+        Domuki&#39;s Site
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/images/domukiico.ico">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"domuki.top","root":"/","language":"en","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/domukipfp.jpeg","favicon":"/images/domukiico.ico","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"SSE3307 Group 1 - 201464 E-Portfolio"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.1"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            <a class="logo-title" href="/">
+                Domuki&#39;s Site
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/music"
+                            >
+                                MUSIC
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/music">MUSIC</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">Java Learning Chapter 8.2 FILE Operation</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/domukipfp.jpeg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Domuki</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2020-02-15 11:19:45
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/Java-Study/">Java Study</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Java/">Java</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h4><span id="learning-outcome">Learning Outcome</span></h4><p><em>Character and Input/Output class (C3, P4)</em> </p>
+<span id="more"></span>
+
+
+
+<h2><span id="1-inputoutput-file-stream">1. INPUT/OUTPUT FILE <strong>stream</strong></span></h2><blockquote>
+<p>Is an object that allows for the flow of data between your program and some I/O device or some file.</p>
+</blockquote>
+<h4><span id="11-input-stream">1.1. Input Stream</span></h4><p>–The flow is into the program</p>
+<p>–Example: <code>System.in </code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Scanner scan = <span class="keyword">new</span> Scanner (System.in);</span><br></pre></td></tr></table></figure>
+
+<h4><span id="12-output-stream">1.2. Output Stream</span></h4><p>–The flow is out of the program</p>
+<p>–Example: <code>System.out</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println();</span><br></pre></td></tr></table></figure>
+
+
+
+<h2><span id="2-create-file-object">2. Create File object</span></h2><p>using <code>File</code> to create a file</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java.io.File fileObject = <span class="keyword">new</span> java.io.File(filename);</span><br><span class="line"><span class="comment">//example</span></span><br><span class="line">java.io.File file = <span class="keyword">new</span> java.io.File(“score.txt”);</span><br></pre></td></tr></table></figure>
+
+<p><strong>Notice</strong></p>
+<p>But using <code>File</code> to create a file, the file just is assigned in RAM not in actually disk. If you wanna make your file came to “reality”, use <code>fileName.createNewFile();</code> method.</p>
+<p>this is an example which select from Class <code>Initialization</code> of Subject <a class="link" target="_blank" rel="noopener" href="https://domuki-main.github.io/2020/02/13/Book-Management-System/">BookManagementSystem<i class="fas fa-external-link-alt"></i></a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">String f1=<span class="string">&quot;data.txt&quot;</span>;</span><br><span class="line"></span><br><span class="line">File fdata = <span class="keyword">new</span> File(f1);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(fdata.exists())&#123;</span><br><span class="line"></span><br><span class="line">	System.out.println(<span class="string">&quot;\tFile &quot;</span>+f1+<span class="string">&quot; already exists&quot;</span>);</span><br><span class="line"></span><br><span class="line">	firstTime = <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line">    fdata.createNewFile();<span class="comment">//creating true file in hardware</span></span><br><span class="line"></span><br><span class="line">    PrintWriter pw = <span class="keyword">new</span> PrintWriter(f1);</span><br><span class="line"></span><br><span class="line">    pw.println(<span class="string">&quot;BookName\tAuthor\tClassify\tIdentity\tAmount&quot;</span>);</span><br><span class="line"></span><br><span class="line">    pw.close();</span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">&quot;\tSystem---&gt; File &quot;</span>+f1+<span class="string">&quot; was created successfully&quot;</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="2-check-existed">2. Check Existed</span></h2><p>Using <code>file.exists()</code> check whether file already created or not</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(file.exists())&#123;</span><br><span class="line"></span><br><span class="line">	System.out.println(<span class="string">&quot;\tFile &quot;</span>+f1+<span class="string">&quot; already exists&quot;</span>);</span><br><span class="line">	</span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line">	file.createNewFile();<span class="comment">//creating true file in hardware</span></span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="3-delete-the-file">3. Delete the file</span></h2><p><code>if (file.delete())</code> will return true if the deletion succeed</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (file.delete())</span><br><span class="line">	System.out.println(“File deleted”);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2><span id="4-example-using-the-file-class">4. Example: Using the File Class</span></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestFileClass</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    java.io.File file = <span class="keyword">new</span> java.io.File(<span class="string">&quot;image/us.gif&quot;</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot;Does it exist? &quot;</span> + file.exists());</span><br><span class="line">    System.out.println(<span class="string">&quot;Can it be read? &quot;</span> + file.canRead());</span><br><span class="line">    System.out.println(<span class="string">&quot;Can it be written? &quot;</span> + file.canWrite());</span><br><span class="line">    System.out.println(<span class="string">&quot;Is it a directory? &quot;</span> + file.isDirectory());</span><br><span class="line">    System.out.println(<span class="string">&quot;Is it a file? &quot;</span> + file.isFile());</span><br><span class="line">    System.out.println(<span class="string">&quot;Is it absolute? &quot;</span> + file.isAbsolute());</span><br><span class="line">    System.out.println(<span class="string">&quot;Is it hidden? &quot;</span> + file.isHidden());</span><br><span class="line">    System.out.println(<span class="string">&quot;Absolute path is &quot;</span> +file.getAbsolutePath());</span><br><span class="line">    System.out.println(<span class="string">&quot;Last modified on &quot;</span> +</span><br><span class="line">      <span class="keyword">new</span> java.util.Date(file.lastModified()));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2><span id="5-writing-to-a-text-file">5. Writing to a Text File</span></h2><p>Class <strong>PrintWriter</strong> is the preferred stream class for writing to a text file.</p>
+<p><strong>PrinterWriter</strong> has methods print and <strong>println</strong>.</p>
+<p>Create a stream to associate the output stream with the file</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java.io.File file = <span class="keyword">new</span> java.io.File(“score.txt”);</span><br><span class="line"></span><br><span class="line">PrintWriter output = <span class="keyword">new</span> PrintWriter(file);</span><br></pre></td></tr></table></figure>
+
+<p>EXAMPLE:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WriteDataToFile</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">		String fname=<span class="string">&quot;phonebook.txt&quot;</span>;</span><br><span class="line">		File file = <span class="keyword">new</span> File(fname);</span><br><span class="line">		<span class="keyword">if</span>(file.exists())&#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;File &quot;</span>+fname+<span class="string">&quot; already exists&quot;</span>);</span><br><span class="line">			System.exit(<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// Create a file</span></span><br><span class="line">		PrintWriter output = <span class="keyword">new</span> PrintWriter(file);</span><br><span class="line">		<span class="comment">// Write formatted output to the file</span></span><br><span class="line">		output.printf(<span class="string">&quot;%-15s %-15s\n&quot;</span>,<span class="string">&quot;Name&quot;</span>,<span class="string">&quot;Phone Number&quot;</span>);</span><br><span class="line">		output.printf(<span class="string">&quot;%-15s %-15s\n&quot;</span>,<span class="string">&quot;Ah Chong&quot;</span>,<span class="string">&quot;012-2121669&quot;</span>);</span><br><span class="line">		output.printf(<span class="string">&quot;%-15s %-15s\n&quot;</span>,<span class="string">&quot;Ahmad Jais&quot;</span>,<span class="string">&quot;016-21634340&quot;</span>);</span><br><span class="line">		output.close();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2><span id="6-reading-from-a-text-file">6. Reading from a Text File</span></h2><p>Two common stream classes</p>
+<h3><span id="61-scanner">6.1. Scanner</span></h3><p>Replace the argument <strong>System.in</strong> with suitable stream that is connected to the text file.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Scanner input = <span class="keyword">new</span> Scanner (file);</span><br></pre></td></tr></table></figure>
+
+<p>Or</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Scanner input = <span class="keyword">new</span> Scanner (<span class="keyword">new</span> java.io.File(“scores.txt”));</span><br></pre></td></tr></table></figure>
+
+<p>Throw <em>FileNotFoundException</em> if the file is failed to open. (you need to import <em>java.io.FileNotFoundException</em>)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Scanner input = <span class="keyword">null</span>;</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">	input = <span class="keyword">new</span> Scanner(file);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">	System.out.println(file + <span class="string">&quot; not found&quot;</span>);</span><br><span class="line">	System.exit(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="62-file-reader">6.2. File Reader</span></h3><p>Constructors of File-Reader class:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Constructor</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">FileReader(String file)</td>
+<td align="left">It gets filename in <a class="link" target="_blank" rel="noopener" href="https://www.javatpoint.com/java-string">string<i class="fas fa-external-link-alt"></i></a>. It opens the given file in read mode. If file doesn’t exist, it throws <em>FileNotFoundException</em>.</td>
+</tr>
+<tr>
+<td align="left">FileReader(File file)</td>
+<td align="left">It gets filename in <a class="link" target="_blank" rel="noopener" href="https://www.javatpoint.com/java-file-class">file<i class="fas fa-external-link-alt"></i></a> instance. It opens the given file in read mode. If file doesn’t exist, it throws <em>FileNotFoundException</em>.</td>
+</tr>
+</tbody></table>
+<p>Methods of File-Reader class:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">int read()</td>
+<td align="left">It is used to return a character in ASCII form. It returns -1 at the end of file.</td>
+</tr>
+<tr>
+<td align="left">void close()</td>
+<td align="left">It is used to close the FileReader class.</td>
+</tr>
+</tbody></table>
+<p>Java File-Reader Example</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.javatpoint;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">import</span> java.io.FileReader;  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileReaderExample</span> </span>&#123;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span><span class="keyword">throws</span> Exception</span>&#123;    </span><br><span class="line">          FileReader fr=<span class="keyword">new</span> FileReader(<span class="string">&quot;D:\\testout.txt&quot;</span>);    </span><br><span class="line">          <span class="keyword">int</span> i;    </span><br><span class="line">          <span class="keyword">while</span>((i = fr.read())!=-<span class="number">1</span>)</span><br><span class="line">          <span class="comment">// </span></span><br><span class="line">          System.out.print((<span class="keyword">char</span>)i);    </span><br><span class="line">          fr.close();    </span><br><span class="line">    &#125;    </span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
+
+<p>Here, are the following data in “testout.txt”:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">welcome to java</span><br></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">welcome to java</span><br></pre></td></tr></table></figure>
+
+
+
+<h3><span id="63-buffered-reader">6.3. Buffered Reader</span></h3><p>This method is used to accompany with <strong>Reader</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//with InputStreamReader</span></span><br><span class="line">InputStreamReader r=<span class="keyword">new</span> InputStreamReader(System.in);    </span><br><span class="line">    BufferedReader br=<span class="keyword">new</span> BufferedReader(r);</span><br><span class="line"></span><br><span class="line"><span class="comment">//with FileReader</span></span><br><span class="line">FileReader fr=<span class="keyword">new</span> FileReader(<span class="string">&quot;D:\\testout.txt&quot;</span>);    </span><br><span class="line">          BufferedReader br=<span class="keyword">new</span> BufferedReader(fr); </span><br></pre></td></tr></table></figure>
+
+<p>Constructors of Buffered-Reader class:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Constructor</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">BufferedReader(Reader rd)</td>
+<td align="left">It is used to create a buffered character input stream that uses the default size for an input buffer.</td>
+</tr>
+<tr>
+<td align="left">BufferedReader(Reader rd, int size)</td>
+<td align="left">It is used to create a buffered character input stream that uses the specified size for an input buffer.</td>
+</tr>
+</tbody></table>
+<p>Java Buffered-Reader class methods</p>
+<table>
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">int read()</td>
+<td align="left">It is used for reading a single character.</td>
+</tr>
+<tr>
+<td align="left">int read(char[] cbuf, int off, int len)</td>
+<td align="left">It is used for reading characters into a portion of an <a class="link" target="_blank" rel="noopener" href="https://www.javatpoint.com/array-in-java">array<i class="fas fa-external-link-alt"></i></a>.</td>
+</tr>
+<tr>
+<td align="left">String readLine()</td>
+<td align="left">It is used for reading a line of text.</td>
+</tr>
+<tr>
+<td align="left">void close()</td>
+<td align="left">It closes the input stream and releases any of the system resources associated with the stream.</td>
+</tr>
+</tbody></table>
+<p>Java Buffered-Reader Example:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.javatpoint;  </span><br><span class="line"><span class="keyword">import</span> java.io.*;  </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BufferedReaderExample</span> </span>&#123;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span><span class="keyword">throws</span> Exception</span>&#123;    </span><br><span class="line">          FileReader fr=<span class="keyword">new</span> FileReader(<span class="string">&quot;D:\\testout.txt&quot;</span>);    </span><br><span class="line">          BufferedReader br=<span class="keyword">new</span> BufferedReader(fr);    </span><br><span class="line">  </span><br><span class="line">          <span class="keyword">int</span> i;    </span><br><span class="line">          <span class="keyword">while</span>((i=br.read())!=-<span class="number">1</span>)&#123;  </span><br><span class="line">          System.out.print((<span class="keyword">char</span>)i);  </span><br><span class="line">          &#125;  </span><br><span class="line">          br.close();    </span><br><span class="line">          fr.close();    </span><br><span class="line">    &#125;    </span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
+
+<p>Here, are the following data in “testout.txt” file:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Welcome to javaTpoint.</span><br></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Welcome to javaTpoint.</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：Java Learning Chapter 8.2 FILE Operation</li>
+        <li>Post author：Domuki</li>
+        <li>Create time：2020-02-15 11:19:45</li>
+        <li>
+            Post link：https://domuki.top/2020/02/15/Java-Learning-Chapter-8-2-FILE-Operation/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2020/02/15/Java-Learning-Chapter-9-Object-and-Classes/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Java Learning Chapter 9 Introduction (Object and Classes)</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2020/02/15/Java-Learning-Chapter-8-String/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Java Learning Chapter 8 String</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Domuki</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">Learning Outcome</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">1. INPUT&#x2F;OUTPUT FILE stream</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">1.1. Input Stream</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">1.2. Output Stream</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">2. Create File object</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">2. Check Existed</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">3. Delete the file</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">4. Example: Using the File Class</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">5. Writing to a Text File</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">6. Reading from a Text File</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">6.1. Scanner</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">6.2. File Reader</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">6.3. Buffered Reader</span></a>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+<script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/header-shrink.js"></script><script src="/js/back2top.js"></script><script src="/js/dark-light-toggle.js"></script>
+
+
+    <script src="/js/local-search.js"></script>
+
+
+
+    <script src="/js/code-copy.js"></script>
+
+
+
+
+<div class="post-scripts">
+    
+        <script src="/js/left-side-toggle.js"></script><script src="/js/libs/anime.min.js"></script><script src="/js/toc.js"></script>
+    
+</div>
+
+
+
+</body>
+</html>

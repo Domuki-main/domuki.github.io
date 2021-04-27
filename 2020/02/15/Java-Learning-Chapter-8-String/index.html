@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Domuki">
+    
+    <title>
+        
+            Java Learning Chapter 8 String |
+        
+        Domuki&#39;s Site
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/images/domukiico.ico">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"domuki.top","root":"/","language":"en","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/domukipfp.jpeg","favicon":"/images/domukiico.ico","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"SSE3307 Group 1 - 201464 E-Portfolio"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.1"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            <a class="logo-title" href="/">
+                Domuki&#39;s Site
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/music"
+                            >
+                                MUSIC
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/music">MUSIC</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">Java Learning Chapter 8 String</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/domukipfp.jpeg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Domuki</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2020-02-15 00:06:30
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/Java-Study/">Java Study</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Java/">Java</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h4><span id="learning-outcome">Learning Outcome</span></h4><p><em>Construct program by manipulating String</em></p>
+<span id="more"></span>
+
+
+
+<h2><span id="1-constructing-strings">1. Constructing Strings</span></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String newString = <span class="keyword">new</span> String(stringLiteral);</span><br><span class="line"> </span><br><span class="line">String message = <span class="keyword">new</span> String(<span class="string">&quot;Welcome to Java&quot;</span>);</span><br><span class="line"></span><br><span class="line">String message = <span class="string">&quot;Welcome to Java&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>A String variable holds a reference to a String object that stores a string value.</p>
+<p>Since strings are used frequently, Java provides a shorthand initializer for creating a string:</p>
+<p><strong>Strings Are Immutable</strong></p>
+<p>A String object is immutable; its contents cannot be changed.</p>
+<p><em>Does the following code change the contents of the string?</em> </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String s = <span class="string">&quot;Java&quot;</span>;</span><br><span class="line">s = <span class="string">&quot;HTML&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<img src="/2020/02/15/Java-Learning-Chapter-8-String/001.png" style="zoom:50%;">
+
+<p> The interesting thing is that String is <strong>Pass By Reference</strong>, like Array.</p>
+<img src="/2020/02/15/Java-Learning-Chapter-8-String/002.png" style="zoom:48%;">
+
+<h2><span id="2-finding-string-length">2. Finding String Length</span></h2><p>Finding a string length using the <code>length()</code> method:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">message = <span class="string">&quot;Welcome&quot;</span>;</span><br><span class="line">message.length(); (returns <span class="number">7</span>)</span><br><span class="line"><span class="comment">//notice that the length method here is different from Array</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span>[] array = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">12</span>];</span><br><span class="line">array.length;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2><span id="3-retrieving-individual-characters-in-a-string">3. Retrieving Individual Characters in a String</span></h2><p>Do not use message[0] – compilation error</p>
+<p>Use <code>message.charAt(index);</code></p>
+<p>Index starts from 0</p>
+<img src="/2020/02/15/Java-Learning-Chapter-8-String/003.png" style="zoom: 50%;">
+
+
+
+<h2><span id="4-string-concatenation">4. String Concatenation</span></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String s3 = s1.concat(s2);</span><br><span class="line"></span><br><span class="line">String s3 = s1 + s2;</span><br><span class="line"></span><br><span class="line">s1 + s2 + s3 + s4 + s5 same as</span><br><span class="line">(((s1.concat(s2)).concat(s3)).concat(s4)).concat(s5);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2><span id="5-extracting-substrings">5. Extracting Substrings</span></h2><p>You can extract a single character from a string using the <u>charAt</u> method. </p>
+<p>You can also extract a substring from a string using the <u>substring</u> method in the <u>String</u> class</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String message = <span class="string">&quot;Welcome to Java&quot;</span>;</span><br><span class="line"></span><br><span class="line">String s1 = message.substring(<span class="number">0</span>, <span class="number">11</span>);</span><br><span class="line">String s2 = message.substring(<span class="number">11</span>);</span><br><span class="line">String s3 = message.substring(<span class="number">0</span>, <span class="number">11</span>) + <span class="string">&quot;HTML&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<img src="/2020/02/15/Java-Learning-Chapter-8-String/004.png" style="zoom:50%;">
+
+<p>(s3 is “Welcome to HTML”;)</p>
+<h2><span id="6-string-comparisons">6. String Comparisons</span></h2><p>Equals</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">String s1 = <span class="keyword">new</span> String(<span class="string">&quot;Welcome“);</span></span><br><span class="line"><span class="string">	String s2 = &quot;</span>welcome<span class="string">&quot;;</span></span><br><span class="line"><span class="string">	</span></span><br><span class="line"><span class="string">  if (s1.equals(s2))&#123;  </span></span><br><span class="line"><span class="string">    // s1 and s2 have the same contents  </span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string"> </span></span><br><span class="line"><span class="string">  if (s1 == s2) &#123;</span></span><br><span class="line"><span class="string">    // s1 and s2 have the same reference </span></span><br><span class="line"><span class="string">  &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>Difference</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">String s1 = <span class="keyword">new</span> String(<span class="string">&quot;Welcome“);</span></span><br><span class="line"><span class="string">	String s2 = &quot;</span>welcome<span class="string">&quot;;</span></span><br><span class="line"><span class="string">	</span></span><br><span class="line"><span class="string">  if (s1.compareTo(s2) &gt; 0) &#123;  </span></span><br><span class="line"><span class="string">    // s1 is greater than s2 </span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  else if (s1.compareTo(s2) == 0) &#123; </span></span><br><span class="line"><span class="string">    // s1 and s2 have the same contents </span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  else </span></span><br><span class="line"><span class="string">     // s1 is less than s2</span></span><br></pre></td></tr></table></figure>
+
+<p>by the way, <code>compareTo</code> method uses the length of s1 minus length of s2. It seems like…</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(String pre, String fin)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> pre.length() - fin.length();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2><span id="7-string-conversions">7. String Conversions</span></h2><h3><span id="71-to-lower-case">7.1. to-Lower-Case</span></h3><p>​    <code>“WelCOme”.toLowerCase()</code> returns a new string, <em>welcome</em>.</p>
+<h3><span id="72-to-upper-case">7.2. to-Upper-Case</span></h3><p>​    <code>“Welcome”.toUpperCase()</code> returns a new string, <em>WELCOME</em></p>
+<h3><span id="73-trim">7.3. trim</span></h3><p>​    Returns a new string by eliminating blank characters from both ends of the string.</p>
+<p>​    <code>“            Welcome”.toUpperCase()</code> returns a new string, “Welcome”</p>
+<h3><span id="74-replace">7.4. replace</span></h3><p>​    <code>“Welcome”.replace(‘e’, ‘A’)</code> returns <em>WAlcomA</em></p>
+<p>​    <code>“Welcome”.replace(”el”, “EL”)</code> returns <em>WELcome</em></p>
+<h2><span id="8-finding-a-character-or-a-substring-in-a-string">8. Finding a Character or a Substring in a String</span></h2><h3><span id="81-simple-searching">8.1. Simple searching</span></h3><p><code>&quot;Welcome to Java&quot;.indexOf(&#39;W&#39;);</code> returns 0.</p>
+<p>Return the index of the first character in the string that matches the specified character.</p>
+<p><code>&quot;Welcome to Java&quot;.indexOf(&quot;come&quot;);</code> returns 3.</p>
+<p>Returns the index of the first character in the string starting from the specified index that matches the specified character.</p>
+<p><strong>if there’s no searching letter in String</strong></p>
+<p><code>&quot;Welcome to Java&quot;.indexOf(&#39;x&#39;);</code> returns -1.</p>
+<h3><span id="82-accurate-searching">8.2. Accurate searching</span></h3><p><code>&quot;Welcome to Java&quot;.indexOf(&#39;o&#39;, 5)</code> returns 9.</p>
+<p><code>&quot;Welcome to Java&quot;.indexOf(&quot;Java&quot;, 5)</code> returns 11.</p>
+<p>Returns the index of the first character of the substring in the string that matches the specified string.</p>
+<h2><span id="9-convert">9. Convert</span></h2><h3><span id="91-character-and-numbers-to-strings">9.1. Character and Numbers to Strings</span></h3><p>The String class provides several static <code>valueOf();</code> methods for converting a character, an array of characters, and numeric values to strings. </p>
+<p>For example, to convert a double value to a string, use <code>String.valueOf (5.44);</code>. The return value is a string that consists of characters ‘5’, ‘.’, ‘4’, and ‘4’. </p>
+<h3><span id="92-strings-to-number">9.2. Strings to Number</span></h3><p>use method <code>Integer.parseInt()</code> and <code>Double.parseDouble()</code> .</p>
+<h3><span id="93-convert-string-to-array">9.3. Convert String to Array</span></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span>[] chars = “Java”.toCharArray();</span><br></pre></td></tr></table></figure>
+
+<p>chars[0] is ‘J’, chars[1] is ‘a’, chars[2] is ‘v’ and chars[3] is ‘a’.</p>
+<p>method <code>getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">char[] dst &#x3D; &#123;‘J’,’a’,’v’,’a’,’1’,’3’,’0’,’1’&#125;;</span><br><span class="line"></span><br><span class="line">“CS3720”.getChars(2, 6, dst, 4);</span><br></pre></td></tr></table></figure>
+
+<p>dst becomes {‘J’,’a’,’v’,’a’,’3’,’7’,’2’,’0’}</p>
+<h3><span id="10-traversal-of-a-string">10. Traversal of a String</span></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String str = sc.nextLine();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; str.length(); i++)&#123;</span><br><span class="line">	<span class="keyword">char</span> c = str.charAt(i);</span><br><span class="line">    System.out.print(c + <span class="string">&quot;\t&quot;</span>);</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：Java Learning Chapter 8 String</li>
+        <li>Post author：Domuki</li>
+        <li>Create time：2020-02-15 00:06:30</li>
+        <li>
+            Post link：https://domuki.top/2020/02/15/Java-Learning-Chapter-8-String/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2020/02/15/Java-Learning-Chapter-8-2-FILE-Operation/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Java Learning Chapter 8.2 FILE Operation</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2020/02/14/Java-Learning-Chapter-7-Arrays/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Java Learning Chapter 7 Arrays</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Domuki</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">Learning Outcome</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">1. Constructing Strings</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">2. Finding String Length</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">3. Retrieving Individual Characters in a String</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">4. String Concatenation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">5. Extracting Substrings</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">6. String Comparisons</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">7. String Conversions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">7.1. to-Lower-Case</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">7.2. to-Upper-Case</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">7.3. trim</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">7.4. replace</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">8. Finding a Character or a Substring in a String</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">8.1. Simple searching</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">8.2. Accurate searching</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">9. Convert</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">9.1. Character and Numbers to Strings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">9.2. Strings to Number</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">9.3. Convert String to Array</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">10. Traversal of a String</span></a>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+<script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/header-shrink.js"></script><script src="/js/back2top.js"></script><script src="/js/dark-light-toggle.js"></script>
+
+
+    <script src="/js/local-search.js"></script>
+
+
+
+    <script src="/js/code-copy.js"></script>
+
+
+
+
+<div class="post-scripts">
+    
+        <script src="/js/left-side-toggle.js"></script><script src="/js/libs/anime.min.js"></script><script src="/js/toc.js"></script>
+    
+</div>
+
+
+
+</body>
+</html>

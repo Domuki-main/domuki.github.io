@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Domuki">
+    
+    <title>
+        
+            Urllib in Python |
+        
+        Domuki&#39;s Site
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/images/domukiico.ico">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"domuki.top","root":"/","language":"en","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/domukipfp.jpeg","favicon":"/images/domukiico.ico","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"SSE3307 Group 1 - 201464 E-Portfolio"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.1"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            <a class="logo-title" href="/">
+                Domuki&#39;s Site
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/music"
+                            >
+                                MUSIC
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/music">MUSIC</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">Urllib in Python</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/domukipfp.jpeg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Domuki</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2020-10-09 23:25:13
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/Python-Study/">Python Study</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Python/">Python</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/AI/">AI</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Web-Crawler/">Web Crawler</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h2><span id="introduction">Introduction</span></h2><h3><span id="what-is-urllib">What is Urllib?</span></h3><blockquote>
+<p><code>urllib</code> is a package that collects several modules for working with URLs</p>
+</blockquote>
+<p>This package has 4 modules: <code>urllib.request</code>, <code>urllib.error</code>, <code>urllib.parse</code> and <code>urllib.robotparser</code>.</p>
+<ul>
+<li><code>urllib.request</code> for opening and reading URLs</li>
+<li><code>urllib.error</code> containing the exceptions raised by <code>urllib.request</code></li>
+<li><code>urllib.parse</code> for parsing URLs</li>
+<li><code>urllib.robotparser</code> for parsing <code>robots.txt</code> files</li>
+</ul>
+<p><code>urllib.request</code> and <code>urllib.error</code> are usually used in Web crawler program.</p>
+<h2><span id="send-request">Send Request</span></h2><p>We need <code>urllib.request</code> when sending a HTTP request as the Chrome. It can be used not only to send requests but also to gain the return. Just <code>urllopen()</code> alone can help us to do the work. This is the API.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">urllib.request.urlopen(url, data&#x3D;None, [timeout, ]*, cafile&#x3D;None, capath&#x3D;None, cadefault&#x3D;False, context&#x3D;None)</span><br></pre></td></tr></table></figure>
+
+<p>the parameters:</p>
+<ol>
+<li>string type: URL address</li>
+<li><code>data</code> is the content in bytes type. It can be converted into a byte stream by the bytes() function. It is also an optional parameter. Using the data parameter, the request method becomes a POST method to submit the form. The standard format used is <code>application/x-www-form-urlencoded</code></li>
+<li><code>timeout</code> is Request timeout in second.</li>
+<li><code>cafile</code> and <code>capath</code> represents the CA certificate and the path of the CA certificate. You need to use HTTPS.</li>
+<li><code>context</code> must be <code>ssl.SSLContext</code> type, which is used to set <code>ssl</code></li>
+<li> <code>cedefault</code> are abandoned</li>
+</ol>
+<p>The method will return a object of <code>http.client.HTTPResponse</code></p>
+<h3><span id="simply-grabbing-website">simply grabbing website</span></h3><p>We can use <code>urllib.request.urllopen()</code> to request my blog site and grab the source code of the page.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://domuki.top&quot;</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">  response = urllib.request.urlopen(url)</span><br><span class="line">  html = response.read()		<span class="comment"># get the source code of page</span></span><br><span class="line">  print(html.decode(<span class="string">&#x27;utf-8&#x27;</span>))	<span class="comment"># transform to utf-8</span></span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">  print(<span class="string">&quot;request failed&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3><span id="setting-request-timeout">Setting request Timeout</span></h3><p>Some requests cannot be replied, which may be caused by network problem. Therefore, we can set timeout for our requests. We can abandon the requests we sent or send it one more time, if it times out. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response = urllib.request.urlopen(url, timeout=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<h3><span id="using-data-parameter-to-submit-data">Using Data parameter to submit data</span></h3><p>We need to use data parameter when requesting some websites requiring it.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urilib.parse</span><br><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://127.0.0.1:8000&quot;</span></span><br><span class="line">params = &#123;</span><br><span class="line">  <span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;Alex&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;matric&#x27;</span>:<span class="string">&#x27;991204&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">data = <span class="built_in">bytes</span>(urllib.parse.urlencode(params), encoding=<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">response = urllib.request.urlopen(url, data=data)</span><br><span class="line">print(response.read().decode(<span class="string">&#x27;utf-8&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<p>variable <code>params</code> is a dictionary actually, so we need <code>urllib.parse.urlencode()</code> help us to transform it to Strings. Then, use <code>bytes()</code> to convert it to a byte stream. Finally, use <code>urlopen()</code> to initiate a request that simulates the submission of form data in POST.</p>
+<h3><span id="using-request">Using Request</span></h3><p>Request Constructor: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">urllib.request.Request(url, data&#x3D;None, headers&#x3D;&#123;&#125;, origin_req_host&#x3D;None, unverifiable&#x3D;False, method&#x3D;None)</span><br></pre></td></tr></table></figure>
+
+<p><code>url</code>: address link</p>
+<p><code>data</code>: its usage is same as <code>data</code>  in <code>urlopen()</code></p>
+<p><code>headers</code>: should be a dictionary, and will be treated as if <code>add_header()</code> was called with each key and value as arguments.</p>
+<p><code>origin_req_host</code>: the host name and IP address of Requestor</p>
+<p><code>unverifiable</code>: showing whether this request cannot be verified and it’s false by default. If we, for example, request for images in HTML but we don’t have the permission to do that automatically, so we have to turn the value True.</p>
+<p><code>method</code>: the ways of sending HTTP requests, such as GET, POST, DELETE, PUT and so on.</p>
+<h4><span id="simply-using">Simply using</span></h4><p>Use <code>Request</code> to send a HTTP requests as browser. If the <code>User-Agent</code> in the <code>headers</code> is not set, the <code>User-Agent</code> is <code>Python-urllib/3.5</code> by default. Some websites may reject the request, if your requests is not send as browser. The <code>User-Agent</code> I use is the Chrome.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://tieba.baidu.com/&quot;</span></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">request = urllib.request.Request(url=url, headers=headers)</span><br><span class="line">response = urllib.request.urlopen(request)</span><br><span class="line">print(response.read().decode(<span class="string">&#x27;utf-8&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<h5><span id="looking-for-the-latest-chrome-user-agent">Looking for the latest Chrome user agent?</span></h5><p>Check this out:  <a class="link" target="_blank" rel="noopener" href="https://www.whatismybrowser.com/guides/the-latest-user-agent/chrome">latest Chrome User agent<i class="fas fa-external-link-alt"></i></a> </p>
+<h4><span id="advanced-using">Advanced using</span></h4><p>If we need to add a proxy to the request and process the <strong>cookies</strong> of the request, we need to use <code>Handler</code> and <code>OpenerDirector</code>.</p>
+<h3><span id="using-proxy">Using proxy</span></h3><p>Some websites set the limitation of viewing frequency. So if we request the websites highly frequently, the websites will ban our IP. Therefore, we need:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://domuki.top/&quot;</span></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">proxy_handler = urllib.request.ProxyHandler(&#123;</span><br><span class="line">    <span class="string">&#x27;http&#x27;</span>: <span class="string">&#x27;web-proxy.oa.com:8080&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;https&#x27;</span>: <span class="string">&#x27;web-proxy.oa.com:8080&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line">opener = urllib.request.build_opener(proxy_handler)</span><br><span class="line">urllib.request.install_opener(opener)</span><br><span class="line"></span><br><span class="line">request = urllib.request.Request(url=url, headers=headers)</span><br><span class="line">response = urllib.request.urlopen(request)</span><br><span class="line">print(response.read().decode(<span class="string">&#x27;utf-8&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<h3><span id="login">Login</span></h3><p>Some websites can be visited as long as we login it with correct username and password. When we meet this situation, we need use <code>HTTPPasswordMgrWithDefaultRealm()</code> to instantiate an object to manage account. Use <code>add_password()</code> add account and password. Then use <code>HTTPBasicAuthHandler()</code> to get hander. And get the opener object by <code>build_opener()</code>. Finally, use <code>open()</code> to send requests.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://▯▯▯▯▯.com/&quot;</span></span><br><span class="line">user = <span class="string">&#x27;user&#x27;</span>			<span class="comment"># username</span></span><br><span class="line">password = <span class="string">&#x27;password&#x27;</span>	<span class="comment"># password</span></span><br><span class="line">pwdmgr = urllib.request.HTTPPasswordMgrWithDefaultRealm()</span><br><span class="line">pwdmgr.add_password(<span class="literal">None</span>，url ，user ，password)</span><br><span class="line"></span><br><span class="line">auth_handler = urllib.request.HTTPBasicAuthHandler(pwdmgr)</span><br><span class="line">opener = urllib.request.build_opener(auth_handler)</span><br><span class="line">response = opener.<span class="built_in">open</span>(url)</span><br><span class="line">print(response.read().decode(<span class="string">&#x27;utf-8&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<h3><span id="setting-cookies">Setting Cookies</span></h3><p>If we need login every time we requesting, we can use cookies to do it automatically. </p>
+<p>To obtain cookies, you need to use <code>http.cookiejar.CookieJar()</code> to instantiate a Cookies . Then use <code>urllib.request.HTTPCookieProcessor</code> to construct a handler object. Finally, use the <code>open()</code>.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> http.cookiejar</span><br><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://tieba.baidu.com/&quot;</span></span><br><span class="line">fileName = <span class="string">&#x27;cookie.txt&#x27;</span></span><br><span class="line"></span><br><span class="line">cookie = http.cookiejar.CookieJar()</span><br><span class="line">handler = urllib.request.HTTPCookieProcessor(cookie)</span><br><span class="line">opener = urllib.request.build_opener(handler)</span><br><span class="line">response = opener.<span class="built_in">open</span>(url)</span><br><span class="line"></span><br><span class="line">f = <span class="built_in">open</span>(fileName,<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> cookie:</span><br><span class="line">    f.write(item.name+<span class="string">&quot; = &quot;</span>+item.value+<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：Urllib in Python</li>
+        <li>Post author：Domuki</li>
+        <li>Create time：2020-10-09 23:25:13</li>
+        <li>
+            Post link：https://domuki.top/2020/10/09/Urllib-in-Python/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2020/10/10/How-I-write-my-notes/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">How I write my notes</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2020/10/09/PracticalAI-Note-4-Pandas/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">PracticalAI Note 4: Pandas</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Domuki</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">What is Urllib?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">Send Request</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">simply grabbing website</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">Setting request Timeout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">Using Data parameter to submit data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">Using Request</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">Simply using</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link"><span class="nav-text">Looking for the latest Chrome user agent?</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text">Advanced using</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">Using proxy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">Login</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">Setting Cookies</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+<script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/header-shrink.js"></script><script src="/js/back2top.js"></script><script src="/js/dark-light-toggle.js"></script>
+
+
+    <script src="/js/local-search.js"></script>
+
+
+
+    <script src="/js/code-copy.js"></script>
+
+
+
+
+<div class="post-scripts">
+    
+        <script src="/js/left-side-toggle.js"></script><script src="/js/libs/anime.min.js"></script><script src="/js/toc.js"></script>
+    
+</div>
+
+
+
+</body>
+</html>
