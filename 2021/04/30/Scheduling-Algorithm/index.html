@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Domuki">
+    
+    <title>
+        
+            Scheduling Algorithm |
+        
+        Domuki&#39;s Site
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/images/domukiico.ico">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"domuki.top","root":"/","language":"en","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/domukipfp.jpeg","favicon":"/images/domukiico.ico","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"SSE3307 Group 1 - 201464 E-Portfolio"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.1"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            <a class="logo-title" href="/">
+                Domuki&#39;s Site
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                CATEGORIES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                TAGS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/music"
+                            >
+                                MUSIC
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">CATEGORIES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">TAGS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/music">MUSIC</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">Scheduling Algorithm</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/domukipfp.jpeg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Domuki</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-04-30 12:03:21
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/Operating-System/">Operating System</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/OS/">OS</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h2><span id="scheduling-algorithms-1-first-come-first-serve-fcfs">Scheduling Algorithms 1 – First-Come-First-Serve (FCFS)</span></h2><p>You are given a scheduling problem in Table 1 below, which involved 5 processes with the given arrival time and burst time:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Process</strong></th>
+<th><strong>Arrival Time</strong></th>
+<th><strong>Burst Time</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Process A</td>
+<td>0</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Process B</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Process C</td>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Process D</td>
+<td>6</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Process E</td>
+<td>9</td>
+<td>5</td>
+</tr>
+</tbody></table>
+<p>Implement a Java program to calculate the waiting time and turnaround time for each process involved using First-Come-First-Serve (FCFS) algorithm, and fill up the Table 2. Then calculate the average waiting time produced by FCFS scheduling algorithm.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Process</strong></th>
+<th><strong>Waiting  Time</strong></th>
+<th><strong>Turnaround  Time</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Process A</td>
+<td>0</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Process B</td>
+<td>4</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Process C</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Process D</td>
+<td>5</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Process E</td>
+<td>5</td>
+<td>10</td>
+</tr>
+</tbody></table>
+<p>Avg Waiting Time =<em><strong><strong><strong>3.8</strong></strong></strong></em>______</p>
+<h3><span id="source-code">Source Code</span></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Process</span></span>&#123;</span><br><span class="line">	<span class="keyword">public</span> String id;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">int</span> arrivalTime;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">int</span> burstTime;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">int</span> turnAroundTime;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">int</span> waitingTime;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">int</span> startTime;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">int</span> completeTime;</span><br><span class="line">	<span class="keyword">public</span> String slices;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Process</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Process</span><span class="params">(String id, <span class="keyword">int</span> burstTime, <span class="keyword">int</span> arrivalTime)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.id = id;</span><br><span class="line">		<span class="keyword">this</span>.burstTime = burstTime;</span><br><span class="line">		<span class="keyword">this</span>.arrivalTime = arrivalTime;</span><br><span class="line">		<span class="keyword">this</span>.waitingTime = -<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">this</span>.turnAroundTime = -<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">this</span>.startTime = -<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">this</span>.completeTime = -<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Process</span><span class="params">(String id, <span class="keyword">int</span> burstTime)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.id = id;</span><br><span class="line">		<span class="keyword">this</span>.burstTime = burstTime;</span><br><span class="line">		<span class="keyword">this</span>.arrivalTime = -<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">this</span>.waitingTime = -<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">this</span>.turnAroundTime = -<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">this</span>.startTime = -<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">this</span>.completeTime = -<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">this</span>.slices = <span class="string">&quot;&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>this is the class of process</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FCFS</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sortArray</span><span class="params">(Process[] pt)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; pt.length; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j &lt; pt.length - i; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span>(pt[j].arrivalTime &gt; pt[j+<span class="number">1</span>].arrivalTime) &#123;</span><br><span class="line">					Process np = <span class="keyword">new</span> Process();</span><br><span class="line">					np = pt[j];</span><br><span class="line">					pt[j] = pt[j+<span class="number">1</span>];</span><br><span class="line">					pt[j+<span class="number">1</span>] = np;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">runningMachine</span><span class="params">(Process[] pt)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		String Gantt = <span class="string">&quot;&quot;</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//First-Come-First-Serve </span></span><br><span class="line">		<span class="keyword">int</span> clock = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> processTime = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; pt.length; i++) &#123;</span><br><span class="line">			<span class="keyword">while</span>(<span class="keyword">true</span>) &#123;</span><br><span class="line">				<span class="keyword">if</span>(clock &gt;= pt[i].arrivalTime) &#123;</span><br><span class="line">					processTime = pt[i].burstTime;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">					clock++;</span><br><span class="line">					Gantt = Gantt.concat(<span class="string">&quot;[_]&quot;</span>);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">while</span>(<span class="keyword">true</span>) &#123;</span><br><span class="line">				clock++;</span><br><span class="line">				processTime--;</span><br><span class="line">				Gantt = Gantt.concat(<span class="string">&quot;[&quot;</span>+pt[i].id+<span class="string">&quot;]&quot;</span>);</span><br><span class="line">				<span class="keyword">if</span>(processTime == <span class="number">0</span>) &#123;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			pt[i].completeTime = clock;</span><br><span class="line">			pt[i].turnAroundTime = pt[i].completeTime - pt[i].arrivalTime;</span><br><span class="line">			pt[i].waitingTime = pt[i].turnAroundTime - pt[i].burstTime;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> Gantt;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printOutput</span><span class="params">(Process[] pt)</span> </span>&#123;</span><br><span class="line">		String Gantt = runningMachine(pt);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//Display Gantt</span></span><br><span class="line">		System.out.println(<span class="string">&quot;Gantt: (1 [_] = 1 microsecong)&quot;</span>);</span><br><span class="line">		System.out.println(Gantt);</span><br><span class="line">		System.out.println();</span><br><span class="line">		System.out.println(<span class="string">&quot;----------------------------------------------------------------&quot;</span>);</span><br><span class="line">		<span class="comment">//Display processes along with all details</span></span><br><span class="line">        System.out.printf(<span class="string">&quot;Processes	Completion time	Waiting&quot;</span></span><br><span class="line">                       +<span class="string">&quot; time	Turn around time\n&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;----------------------------------------------------------------&quot;</span>);</span><br><span class="line">        <span class="comment">// Calculate total waiting time and total turn</span></span><br><span class="line">        <span class="comment">// around time</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; pt.length; i++) &#123;</span><br><span class="line">            System.out.print(pt[i].id);</span><br><span class="line">            System.out.printf(<span class="string">&quot;		%d &quot;</span>, pt[i].completeTime);</span><br><span class="line">            System.out.printf(<span class="string">&quot;		%d&quot;</span>, pt[i].waitingTime);</span><br><span class="line">            System.out.printf(<span class="string">&quot;		%d\n&quot;</span>, pt[i].turnAroundTime);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;----------------------------------------------------------------&quot;</span>);</span><br><span class="line">        <span class="keyword">double</span> avgTAT = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">double</span> avgWT = <span class="number">0</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span>(Process p: pt) &#123;</span><br><span class="line">			avgTAT+= p.turnAroundTime;</span><br><span class="line">			avgWT+=p.waitingTime;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		avgTAT /= pt.length;</span><br><span class="line">		avgWT /= pt.length;</span><br><span class="line">		System.out.println();</span><br><span class="line">        System.out.printf(<span class="string">&quot;Average waiting time = %f&quot;</span>, avgWT);</span><br><span class="line">        System.out.printf(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        System.out.printf(<span class="string">&quot;Average turn around time = %f &quot;</span>, avgTAT);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] arg)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		Process[] pt = <span class="keyword">new</span> Process[<span class="number">5</span>];</span><br><span class="line">		pt[<span class="number">0</span>] = <span class="keyword">new</span> Process(<span class="string">&quot;A&quot;</span>,<span class="number">6</span>,<span class="number">0</span>);</span><br><span class="line">		pt[<span class="number">1</span>] = <span class="keyword">new</span> Process(<span class="string">&quot;B&quot;</span>,<span class="number">4</span>,<span class="number">2</span>);</span><br><span class="line">		pt[<span class="number">2</span>] = <span class="keyword">new</span> Process(<span class="string">&quot;C&quot;</span>,<span class="number">1</span>,<span class="number">5</span>);</span><br><span class="line">		pt[<span class="number">3</span>] = <span class="keyword">new</span> Process(<span class="string">&quot;D&quot;</span>,<span class="number">3</span>,<span class="number">6</span>);</span><br><span class="line">		pt[<span class="number">4</span>] = <span class="keyword">new</span> Process(<span class="string">&quot;E&quot;</span>,<span class="number">5</span>,<span class="number">9</span>);</span><br><span class="line">		</span><br><span class="line">		sortArray(pt);</span><br><span class="line">		printOutput(pt);</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>this is the program of FCFS</p>
+<h3><span id="output">output:</span></h3><p><img src="/2021/04/30/Scheduling-Algorithm/Q1.png"></p>
+<h2><span id="scheduling-algorithms-2-round-robin-rr">Scheduling Algorithms 2 – Round-Robin (RR)</span></h2><p>Implement a Java program to calculate the waiting time and turnaround time involving N processes using Round-Robin scheduling algorithm. The user should be allowed to enter the following information: </p>
+<p>·    N, or the total of processes involved (N should be between 4 to 10 inclusive)</p>
+<p>·    Burst time for each process</p>
+<p>·    The quantum time to be used by the RR algorithm. </p>
+<p>Arrival time is not needed as it is assumed all processes arrived at the same time (t=0). Using the information provided, calculate </p>
+<p>·    Waiting times for all the processes</p>
+<p>·    Turnaround times for all the processes</p>
+<p>·    The average waiting time produced by the RR algorithm for the given situation/problem.</p>
+<table>
+<thead>
+<tr>
+<th>No.  of Processes = 4<br>Time  Quantum = 3</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Process</strong></td>
+<td><strong>Burst Time</strong></td>
+</tr>
+<tr>
+<td>A</td>
+<td>7</td>
+</tr>
+<tr>
+<td>B</td>
+<td>4</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1</td>
+</tr>
+<tr>
+<td>D</td>
+<td>4</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th><strong>Process</strong></th>
+<th><strong>Waiting  Time</strong></th>
+<th><strong>Turnaround  Time</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>9</td>
+<td>16</td>
+</tr>
+<tr>
+<td>B</td>
+<td>10</td>
+<td>14</td>
+</tr>
+<tr>
+<td>C</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>D</td>
+<td>11</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Avg Waiting  Time = 9</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">N: 4</span><br><span class="line">Burst time: 7 4 1 4</span><br><span class="line">Q: 3</span><br><span class="line">Process	Exec. slices (t)		Waiting	Turnaround</span><br><span class="line">A		0, 10, 15 			9		16</span><br><span class="line">B		3, 13   			10		14</span><br><span class="line">C		6           		6		7</span><br><span class="line">D		7, 14  			11		15</span><br><span class="line"></span><br><span class="line">Avg. waiting time for 4 processes &#x3D; 9</span><br></pre></td></tr></table></figure>
+
+<h3><span id="source-code">Source Code:</span></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RR</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isAllDone</span><span class="params">(<span class="keyword">int</span>[] loadingTime)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">boolean</span> mark = <span class="keyword">true</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; loadingTime.length; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(loadingTime[i] != <span class="number">0</span>)</span><br><span class="line">				mark = <span class="keyword">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> mark;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">runningMachine</span><span class="params">(<span class="keyword">int</span> num, <span class="keyword">int</span> queue, Process[] pt)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span>[] loadingTime = <span class="keyword">new</span> <span class="keyword">int</span>[num];</span><br><span class="line">		<span class="keyword">int</span> clock = <span class="number">0</span>;</span><br><span class="line">		String Gantt = <span class="string">&quot;&quot;</span>;</span><br><span class="line">		<span class="comment">//load in the time of how long the system can done each the process</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; pt.length; i++) &#123;</span><br><span class="line">			loadingTime[i] = pt[i].burstTime;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">while</span>(!isAllDone(loadingTime)) &#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; pt.length; i++) &#123;</span><br><span class="line">				<span class="keyword">if</span>(loadingTime[i] != <span class="number">0</span>) &#123;</span><br><span class="line">					pt[i].slices = pt[i].slices.concat(clock+<span class="string">&quot;,&quot;</span>);</span><br><span class="line">					<span class="keyword">int</span> n = <span class="number">0</span>;</span><br><span class="line">					<span class="keyword">while</span>(n &lt; queue) &#123;</span><br><span class="line">						<span class="keyword">if</span>(loadingTime[i] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">							loadingTime[i]--;</span><br><span class="line">							Gantt = Gantt.concat(<span class="string">&quot;[&quot;</span>+pt[i].id+<span class="string">&quot;]&quot;</span>);</span><br><span class="line">							clock++;</span><br><span class="line">							n++;</span><br><span class="line">						&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">							<span class="keyword">break</span>;</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">					pt[i].arrivalTime = <span class="number">0</span>;</span><br><span class="line">					pt[i].completeTime = clock;</span><br><span class="line">					pt[i].turnAroundTime = pt[i].completeTime - pt[i].arrivalTime;</span><br><span class="line">					pt[i].waitingTime = pt[i].turnAroundTime - pt[i].burstTime;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> Gantt;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Process[] pt = <span class="keyword">new</span> Process[<span class="number">4</span>];</span><br><span class="line">		pt[<span class="number">0</span>] = <span class="keyword">new</span> Process(<span class="string">&quot;A&quot;</span>, <span class="number">7</span>);</span><br><span class="line">		pt[<span class="number">1</span>] = <span class="keyword">new</span> Process(<span class="string">&quot;B&quot;</span>, <span class="number">4</span>);</span><br><span class="line">		pt[<span class="number">2</span>] = <span class="keyword">new</span> Process(<span class="string">&quot;C&quot;</span>, <span class="number">1</span>);</span><br><span class="line">		pt[<span class="number">3</span>] = <span class="keyword">new</span> Process(<span class="string">&quot;D&quot;</span>, <span class="number">4</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> num = pt.length;</span><br><span class="line">		<span class="keyword">int</span> queue = <span class="number">3</span>;</span><br><span class="line">		String Gantt = runningMachine(num, queue, pt);</span><br><span class="line">		<span class="comment">//Display num, Burst time and queue</span></span><br><span class="line">        System.out.print(<span class="string">&quot;N: &quot;</span>+num+<span class="string">&quot;\nBurst time: &quot;</span>);</span><br><span class="line">        <span class="keyword">for</span>(Process p: pt) &#123;</span><br><span class="line">        	System.out.print(p.burstTime+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;\nQ: &quot;</span>+queue);</span><br><span class="line">        System.out.println();</span><br><span class="line">        System.out.println(<span class="string">&quot;----------------------------------------------------------------&quot;</span>);</span><br><span class="line">		<span class="comment">//Display processes along with all details</span></span><br><span class="line">        System.out.printf(<span class="string">&quot;Processes\tExec. slices (t)\tWaiting&quot;</span></span><br><span class="line">                       +<span class="string">&quot; time\t\tTurn around time\n&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;----------------------------------------------------------------&quot;</span>);</span><br><span class="line">        <span class="comment">// Calculate total waiting time and total turn</span></span><br><span class="line">        <span class="comment">// around time</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; pt.length; i++) &#123;</span><br><span class="line">            System.out.print(pt[i].id);</span><br><span class="line">            System.out.printf(<span class="string">&quot;\t\t&quot;</span>+pt[i].slices);</span><br><span class="line">            System.out.printf(<span class="string">&quot;\t\t\t%d&quot;</span>, pt[i].waitingTime);</span><br><span class="line">            System.out.printf(<span class="string">&quot;\t\t\t%d\n&quot;</span>, pt[i].turnAroundTime);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;----------------------------------------------------------------&quot;</span>);</span><br><span class="line">        System.out.println();</span><br><span class="line">        System.out.println(<span class="string">&quot;Gantt: (1 [_] = 1 microsecong)&quot;</span>);</span><br><span class="line">		System.out.println(Gantt);</span><br><span class="line">		System.out.println(<span class="string">&quot;----------------------------------------------------------------&quot;</span>);</span><br><span class="line">		<span class="keyword">double</span> avgTAT = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">double</span> avgWT = <span class="number">0</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span>(Process p: pt) &#123;</span><br><span class="line">			avgTAT+= p.turnAroundTime;</span><br><span class="line">			avgWT+=p.waitingTime;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		avgTAT /= pt.length;</span><br><span class="line">		avgWT /= pt.length;</span><br><span class="line">		System.out.println();</span><br><span class="line">        System.out.printf(<span class="string">&quot;Average waiting time for &quot;</span>+num+<span class="string">&quot; processes = &quot;</span>+avgWT);</span><br><span class="line">        System.out.printf(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        System.out.printf(<span class="string">&quot;Average turn around time = %f &quot;</span>, avgTAT);</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="output">output:</span></h3><p><img src="/2021/04/30/Scheduling-Algorithm/Q2.png"></p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：Scheduling Algorithm</li>
+        <li>Post author：Domuki</li>
+        <li>Create time：2021-04-30 12:03:21</li>
+        <li>
+            Post link：https://domuki.top/2021/04/30/Scheduling-Algorithm/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/04/28/How-I-install-Linux-on-my-old-laptop/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">How I install Linux on my old laptop</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Domuki</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">Scheduling Algorithms 1 – First-Come-First-Serve (FCFS)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">Source Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">output:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">Scheduling Algorithms 2 – Round-Robin (RR)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">Source Code:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">output:</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+<script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/header-shrink.js"></script><script src="/js/back2top.js"></script><script src="/js/dark-light-toggle.js"></script>
+
+
+    <script src="/js/local-search.js"></script>
+
+
+
+    <script src="/js/code-copy.js"></script>
+
+
+
+
+<div class="post-scripts">
+    
+        <script src="/js/left-side-toggle.js"></script><script src="/js/libs/anime.min.js"></script><script src="/js/toc.js"></script>
+    
+</div>
+
+
+
+</body>
+</html>
