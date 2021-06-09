@@ -135,7 +135,7 @@
       <link href="2021/04/27/User-Interface-and-User-Experience-Week-4/"/>
       <url>2021/04/27/User-Interface-and-User-Experience-Week-4/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>this week we mainly learnt about the Design Principles and Guidelines.</p><h1><span id="intro">Intro</span></h1><ul><li>Design principles: High-level, context-free design goals based on human-computer interaction theory.</li><li>Design guidelines: The specific and generally context-dependent rules that designers follow to implement these principles.</li><li>Design Standards: standards are to ensure quality</li></ul><h1><span id="differences">Differences</span></h1><table><thead><tr><th>Design principles</th><th>Design guidelines</th></tr></thead><tbody><tr><td>Improve users’ task performance and reduce their effort.</td><td>Maintain consistent interaction.</td></tr><tr><td>Strive for fit between the information representation needed and presented</td><td>Provide the user with control over the interaction, supported by feedback.</td></tr><tr><td>Direct and constrain user affordances to capture real world knowledge</td><td>Use metaphors.</td></tr><tr><td>Design for error.</td><td>Use direct manipulation</td></tr></tbody></table><p>Principles tend to be very general and would apply pretty much across different technologies and systems.</p><p>Guidelines tend to be more specific to a device or system.</p><h1><span id="individual-task">Individual Task</span></h1><ul><li>Study design principles and guidelines in this link <a class="link" href="https://developer.apple.com/design/human-interface-guidelines/">https://developer.apple.com/design/human-interface-guidelines/<i class="fas fa-external-link-alt"></i></a></li><li>Study also 10 Usability Heuristic by Nielsen link <a class="link" href="https://www.nngroup.com/articles/ten-usability-heuristics/">https://www.nngroup.com/articles/ten-usability-heuristics/<i class="fas fa-external-link-alt"></i></a></li></ul><p>prepare for a presentation next week about individual task</p>]]></content>
       
       
       <categories>
@@ -188,31 +188,6 @@
       <url>2021/04/11/User-Interface-and-User-Experience-Week-3/</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>This week we missed one of our class but we finished a activity which also be presented on second class in this week.</p><p>For the activity, there are 2 sections.</p><h2><span id="section-a">Section A</span></h2><ul><li>Use examples from the previous class (system/app that gives positive UX and negative UX).</li><li>Assess the app using cognitive aspects (attention, perception, memory) lectured in class.</li><li>Copy the design implications item from attention, perception, memory into the given table (done for Positive UX app, please create the same table for Negative UX Apps).</li><li>Assess the app UI’s main feature based on the following instructions.</li></ul><p>Describe in either column Clear or Vague/unclear representation in Table 1(Positive UX Apps) and 2 (Negative UX Apps). Screenshot the UI that shows the clear and vague indication on the UI in the appropriate column. If the UI shows vague representation, suggest ways to improve that particular context’s cognitive aspects with sketching at the Suggestion to improve column. Also, add more design implication into each cognitive aspect lacking from the given list in the table (if any).</p><h2><span id="section-b">Section B</span></h2><p>Describe the mental model of groceries list to buy. List out each step you take to accomplish  the goal. </p><p><strong>Experience:</strong><br>Regarding when people go for shopping in mental experience, people get in the shop to buy  the things they in their plan or to just look around and to buy something randomly. They are shopping  with a container, their hands, baskets or carts, to keep the item they choose to buy. they are walking around the shop to find the item which they want to buy, and the items will be put in container once they find it after they check the information. At the end of shopping, before they leave, they have to pay the money according to the items. </p><p><strong>Then we put it into mental model:</strong><br>Step 1. Browse and search items<br>Step 2. Find out more information of the items<br>Step 3. Add/Remove items to/from the shopping cart<br>Step 4. Checkout<br>Step 5. Choose how to pay and a shipping/delivery option<br>Step 6. submit order<br>Step 7. Get some type of feedback confirming the order was done<br>Step 8. The shopping process is done</p><h2><span id="metaphor">Metaphor</span></h2><p>In user interface design, an <strong>interface metaphor</strong> is a set of user interface visuals, actions, behaviours and procedures that exploit specific knowledge that users already have of other areas, in order to help users to interact with the user interface.   </p><h3><span id="verbal-metaphor">Verbal metaphor</span></h3><p>Knowledge about a familiar domain in terms of elements and their relation to each other is mapped on to those in the unfamiliar one</p><h3><span id="virtual-metaphor">Virtual metaphor</span></h3><p>To create electronic counterparts to the physical objects in an office.</p><h3><span id="verbal-metaphor">Verbal metaphor</span></h3><p>Combine two metaphors or more together for carrying out a range of computer based actions</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> UIUX </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> UIUX </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>User Interface and User Experience Week 1</title>
-      <link href="2021/04/05/User-Interface-and-User-Experience-Week-1/"/>
-      <url>2021/04/05/User-Interface-and-User-Experience-Week-1/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2><span id="abstract">Abstract</span></h2><p>As the beginning of the new term, this week we did the ice break in the meeting and learned the basic introduction of <strong>User Interface and User Experience</strong>.</p><h2><span id="contents">Contents</span></h2><h3><span id="difference-between-ui-and-ux">Difference between UI and UX</span></h3><table><thead><tr><th>UI</th><th>UX</th></tr></thead><tbody><tr><td>What Users Do</td><td>How Users Feel</td></tr><tr><td>Sketch App</td><td>Stick Notes</td></tr><tr><td>Visuals</td><td>Research</td></tr><tr><td>Prototyping</td><td>Wireframing</td></tr></tbody></table><h3><span id="basic-concepts">Basic concepts</span></h3><h4><span id="user-interface">User Interface:</span></h4><p>Front-end application view to which user interacts in order to use the software. User can manipulate and control the software as well as hardware by means of UI.</p><h4><span id="usability">Usability:</span></h4><p>Usability is a <em>quality attribute</em> (see chapter 2 in S.Arch) that assesses how easy user interfaces are to use.</p><ol><li><p><strong>Learnability</strong>: How easy is it for users to accomplish basic tasks the first time they encounter the design?</p></li><li><p><strong>Efficiency</strong>: Once users have learned the design, how quickly can they perform tasks?</p></li><li><p><strong>Memorability</strong>: When users return to the design after a period of not using it, how easily can they re-establish proficiency?</p></li><li><p><strong>Errors</strong>: How many errors do users make, how severe are these errors, and how easily can they recover from the errors?</p></li><li><p><strong>Satisfaction</strong>: How pleasant is it to use the design?</p></li></ol><h4><span id="user-experience">User Experience:</span></h4><p>User experience” encompasses all aspects of the end-user’s interaction with the company, its services, and its products (Nielsen).</p><p><strong>Main Aspect of UX</strong></p><ol><li><strong>Subjectivity</strong>: UX exists in the mind of the user, not in the object (or artefact). </li><li><strong>Contributing agents</strong>: UX is the consequence of interaction between the following three contributors: <em>object</em>, <em>user</em>, and <em>context</em>.</li><li><strong>Singular and accumulated experiences</strong>: Singular experiences is a result of an interaction with a touch-point, whereas the accumulated experience is the result of all singular experiences.</li></ol><h4><span id="interaction-design-ixd">Interaction Design (IxD)</span></h4><p>the design of interactive products and services in which a designer’s focus goes beyond the item in development to include the <em>way</em> users will interact with it.</p><h4><span id="5-dimensions">5 Dimensions</span></h4><ol><li>Words</li><li>Visual representations</li><li>Physical objects or space</li><li>Time</li><li>Behaviour</li></ol>]]></content>
       
       
       <categories>
@@ -300,6 +275,31 @@
         <tags>
             
             <tag> CMD </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>User Interface and User Experience Week 1</title>
+      <link href="2021/04/04/User-Interface-and-User-Experience-Week-1/"/>
+      <url>2021/04/04/User-Interface-and-User-Experience-Week-1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2><span id="abstract">Abstract</span></h2><p>As the beginning of the new term, this week we did the ice break in the meeting and learned the basic introduction of <strong>User Interface and User Experience</strong>.</p><h2><span id="contents">Contents</span></h2><h3><span id="difference-between-ui-and-ux">Difference between UI and UX</span></h3><table><thead><tr><th>UI</th><th>UX</th></tr></thead><tbody><tr><td>What Users Do</td><td>How Users Feel</td></tr><tr><td>Sketch App</td><td>Stick Notes</td></tr><tr><td>Visuals</td><td>Research</td></tr><tr><td>Prototyping</td><td>Wireframing</td></tr></tbody></table><h3><span id="basic-concepts">Basic concepts</span></h3><h4><span id="user-interface">User Interface:</span></h4><p>Front-end application view to which user interacts in order to use the software. User can manipulate and control the software as well as hardware by means of UI.</p><h4><span id="usability">Usability:</span></h4><p>Usability is a <em>quality attribute</em> (see chapter 2 in S.Arch) that assesses how easy user interfaces are to use.</p><ol><li><p><strong>Learnability</strong>: How easy is it for users to accomplish basic tasks the first time they encounter the design?</p></li><li><p><strong>Efficiency</strong>: Once users have learned the design, how quickly can they perform tasks?</p></li><li><p><strong>Memorability</strong>: When users return to the design after a period of not using it, how easily can they re-establish proficiency?</p></li><li><p><strong>Errors</strong>: How many errors do users make, how severe are these errors, and how easily can they recover from the errors?</p></li><li><p><strong>Satisfaction</strong>: How pleasant is it to use the design?</p></li></ol><h4><span id="user-experience">User Experience:</span></h4><p>User experience” encompasses all aspects of the end-user’s interaction with the company, its services, and its products (Nielsen).</p><p><strong>Main Aspect of UX</strong></p><ol><li><strong>Subjectivity</strong>: UX exists in the mind of the user, not in the object (or artefact). </li><li><strong>Contributing agents</strong>: UX is the consequence of interaction between the following three contributors: <em>object</em>, <em>user</em>, and <em>context</em>.</li><li><strong>Singular and accumulated experiences</strong>: Singular experiences is a result of an interaction with a touch-point, whereas the accumulated experience is the result of all singular experiences.</li></ol><h4><span id="interaction-design-ixd">Interaction Design (IxD)</span></h4><p>the design of interactive products and services in which a designer’s focus goes beyond the item in development to include the <em>way</em> users will interact with it.</p><h4><span id="5-dimensions">5 Dimensions</span></h4><ol><li>Words</li><li>Visual representations</li><li>Physical objects or space</li><li>Time</li><li>Behaviour</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> UIUX </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> UIUX </tag>
             
         </tags>
       
