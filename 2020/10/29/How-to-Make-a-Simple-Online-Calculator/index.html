@@ -42,32 +42,46 @@
 <body>
 
   <!-- Menu -->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark shadow-sm">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark" aria-label="Eighth navbar example">
   <div class="container">
-
     <a target="_blank" rel="noopener" href="https://github.com/Domuki-main" class="navbar-brand d-flex align-items-center">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
         <path
           d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
       </svg>
-        <strong>&nbsp;Domuki</strong>
-      </a>
+      <strong>&nbsp;Domuki</strong>
+    </a>
 
-    <ul class="navbar-nav">
-      
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsCollapse" aria-controls="navbarsCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsCollapse">
+
+      <ul class="navbar-nav" style="margin-inline-end: auto;">
+        
         <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/archives">Archives</a>
-      </li>
-      
+          <a class="nav-link" href="/archives">Archives</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/categories">Categories</a>
-      </li>
-      
-    </ul>
+          <a class="nav-link" href="/tags">Tags</a>
+        </li>
+        
+      </ul>
+
+      <form class="form-group d-flex mb-0">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg></button>
+      </form>
+
+    </div>
   </div>
 </nav>
 
@@ -94,10 +108,6 @@
 
     <div class="container py-5">
 
-      <div class="row">
-
-        <!-- Main Content -->
-        <div class="col-sm-8 blog-main">
           <div class="blog-post">
 
     <!-- Title -->
@@ -111,17 +121,21 @@
     <p class="blog-post-meta">
         2020-10-29
         
+            by Domuki
+        
     </p>
 
     <!-- Content -->
-    <h2 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h2><h3 id="Requested-Application"><a href="#Requested-Application" class="headerlink" title="Requested Application"></a>Requested Application</h3><ol>
-<li><a class="link" target="_blank" rel="noopener" href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads2133151.html">JDK 1.8<i class="fas fa-external-link-alt"></i></a> </li>
-<li><a class="link" target="_blank" rel="noopener" href="https://www.oracle.com/database/technologies/xe-downloads.html">Oracle Xe Version 18c<i class="fas fa-external-link-alt"></i></a></li>
-<li><a class="link" target="_blank" rel="noopener" href="https://tomcat.apache.org/download-90.cgi">Tomcat Apache 9<i class="fas fa-external-link-alt"></i></a>  </li>
-<li><a class="link" target="_blank" rel="noopener" href="https://www.oracle.com/tools/downloads/sqldev-v192-downloads.html">Oracle SQL Developer 19.2<i class="fas fa-external-link-alt"></i></a>  </li>
-<li><a class="link" target="_blank" rel="noopener" href="https://www.eclipse.org/downloads/packages/release/2019-06/r/eclipse-ide-enterprisejava-developers">Eclipse EE for Java Developers<i class="fas fa-external-link-alt"></i></a> </li>
+    <h2><span id="preparation">Preparation</span></h2><h3><span id="requested-application">Requested Application</span></h3><ol>
+<li><a target="_blank" rel="noopener" href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads2133151.html">JDK 1.8</a> </li>
+<li><a target="_blank" rel="noopener" href="https://www.oracle.com/database/technologies/xe-downloads.html">Oracle Xe Version 18c</a></li>
+<li><a target="_blank" rel="noopener" href="https://tomcat.apache.org/download-90.cgi">Tomcat Apache 9</a>  </li>
+<li><a target="_blank" rel="noopener" href="https://www.oracle.com/tools/downloads/sqldev-v192-downloads.html">Oracle SQL Developer 19.2</a>  </li>
+<li><a target="_blank" rel="noopener" href="https://www.eclipse.org/downloads/packages/release/2019-06/r/eclipse-ide-enterprisejava-developers">Eclipse EE for Java Developers</a> </li>
 </ol>
-<h2 id="Create-a-Maven-Project"><a href="#Create-a-Maven-Project" class="headerlink" title="Create a Maven Project"></a>Create a Maven Project</h2><p>Step 1: Open Eclipse</p>
+<span id="more"></span>
+
+<h2><span id="create-a-maven-project">Create a Maven Project</span></h2><p>Step 1: Open Eclipse</p>
 <p>Step 2: Launch it and wait for a while</p>
 <p>Step 3: Go to <strong>FILE</strong>, then new <strong>MAVEN PROJECT</strong>. or <code>ALT+CTRL+N</code></p>
 <p>Step 4: Don’t need to change first page, next.</p>
@@ -135,36 +149,36 @@
 <p>Step 12: Select items named <em>Maven Dependencies</em>, <em>Apache Tomcat v9.0</em> and <em>JRE System Library</em> in <strong>Java Build Path</strong>. apply and close it</p>
 <p>Step 13: The errors disappeared</p>
 <p>(Before you create the project, shut down the tomcat)</p>
-<h2 id="Creating-Application"><a href="#Creating-Application" class="headerlink" title="Creating Application"></a>Creating Application</h2><h3 id="1-The-Structure-of-Maven-Project"><a href="#1-The-Structure-of-Maven-Project" class="headerlink" title="1. The Structure of Maven Project"></a>1. The Structure of Maven Project</h3><img src="/2020/10/29/How-to-Make-a-Simple-Online-Calculator/structure.png">
+<h2><span id="creating-application">Creating Application</span></h2><h3><span id="1-the-structure-of-maven-project">1. The Structure of Maven Project</span></h3><img src="/2020/10/29/How-to-Make-a-Simple-Online-Calculator/structure.png">
 
 <p>However, you may not find some files showed in image above in your new creating Project</p>
 <p><img src="/2020/10/29/How-to-Make-a-Simple-Online-Calculator/new.png"></p>
 <p>Obviously, there’s no <code>Calc_Controller.java</code>, <code>CalcService_Imp.java</code> and <code>CalcService.java</code> in the new project.</p>
 <p>So now, what you need to do is add these files into your Project.</p>
-<h3 id="2-Add-Components"><a href="#2-Add-Components" class="headerlink" title="2. Add Components"></a>2. Add Components</h3><h4 id="1-CalcService-java"><a href="#1-CalcService-java" class="headerlink" title="1. CalcService.java"></a>1. CalcService.java</h4><p>Create a java file (interface) in package <code>com.ssk3408.service</code>, then type in the code showed below:</p>
+<h3><span id="2-add-components">2. Add Components</span></h3><h4><span id="1-calcservicejava">1. CalcService.java</span></h4><p>Create a java file (interface) in package <code>com.ssk3408.service</code>, then type in the code showed below:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ssk3408.service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CalcService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">sub</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">div</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">mul</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-<h4 id="2-CalcService-Imp-java"><a href="#2-CalcService-Imp-java" class="headerlink" title="2. CalcService_Imp.java"></a>2. CalcService_Imp.java</h4><p>Create a java file implements the interface <em><strong>CalcService</strong></em> in package <code>com.ssk3408.service</code>, then type in the code showed below:</p>
+<h4><span id="2-calcservice_impjava">2. CalcService_Imp.java</span></h4><p>Create a java file implements the interface <em><strong>CalcService</strong></em> in package <code>com.ssk3408.service</code>, then type in the code showed below:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ssk3408.service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CalcService_Imp</span> <span class="keyword">implements</span> <span class="title">CalcService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		<span class="keyword">return</span> a + b;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">sub</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		<span class="keyword">return</span> a - b;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">div</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		<span class="keyword">return</span> a / b;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">mul</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		<span class="keyword">return</span> a * b;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-<h4 id="3-Calc-Controller-java"><a href="#3-Calc-Controller-java" class="headerlink" title="3. Calc_Controller.java"></a>3. Calc_Controller.java</h4><p>Right Click the package <code>src/main/java</code>, then <strong>New</strong> a <strong>Serviet</strong> to create a java file in package <code>com.ssk3408</code>. </p>
+<h4><span id="3-calc_controllerjava">3. Calc_Controller.java</span></h4><p>Right Click the package <code>src/main/java</code>, then <strong>New</strong> a <strong>Serviet</strong> to create a java file in package <code>com.ssk3408</code>. </p>
 <p>​    Java Package: <code>com.ssk3408</code> </p>
 <p>​    Class name: <code>Calc_Controller</code> </p>
 <p>Then type in the code showed below:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ssk3408;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.RequestDispatcher;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="keyword">import</span> com.ssk3408.service.CalcService_Imp;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Servlet implementation class Calc_Controller</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Calc_Controller</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line">       </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@see</span> HttpServlet#HttpServlet()</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Calc_Controller</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        <span class="comment">// TODO Auto-generated constructor stub</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@see</span> HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		response.getWriter().append(<span class="string">&quot;Served at: &quot;</span>).append(request.getContextPath());</span><br><span class="line">		String action = request.getParameter(<span class="string">&quot;Button&quot;</span>);</span><br><span class="line">		<span class="keyword">int</span> num1 = Integer.parseInt(request.getParameter(<span class="string">&quot;num1&quot;</span>));</span><br><span class="line">		<span class="keyword">int</span> num2 = Integer.parseInt(request.getParameter(<span class="string">&quot;num2&quot;</span>));</span><br><span class="line">		CalcService_Imp csi = <span class="keyword">new</span> CalcService_Imp();</span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">switch</span> (action) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&quot;Add&quot;</span>:</span><br><span class="line">			result = csi.add(num1, num2);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&quot;Substract&quot;</span>:</span><br><span class="line">			result = csi.sub(num1, num2);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&quot;Divide&quot;</span>:</span><br><span class="line">			result = csi.div(num1, num2);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&quot;Multiply&quot;</span>:</span><br><span class="line">			result = csi.mul(num1, num2);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		request.setAttribute(<span class="string">&quot;result&quot;</span>, result);</span><br><span class="line">		request.setAttribute(<span class="string">&quot;num1&quot;</span>, num1);</span><br><span class="line">		request.setAttribute(<span class="string">&quot;num2&quot;</span>, num2);</span><br><span class="line">		RequestDispatcher rd = request.getRequestDispatcher(<span class="string">&quot;index.jsp&quot;</span>);</span><br><span class="line">		rd.forward(request, response);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="3-Change-Files"><a href="#3-Change-Files" class="headerlink" title="3. Change Files"></a>3. Change Files</h3><p>Except the 3 files you added, there’re 2 files should be rewrote.</p>
-<h4 id="1-Web-xml"><a href="#1-Web-xml" class="headerlink" title="1. Web.xml"></a>1. Web.xml</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">web-app</span> <span class="meta-keyword">PUBLIC</span></span></span><br><span class="line"><span class="meta"> <span class="meta-string">&quot;-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN&quot;</span></span></span><br><span class="line"><span class="meta"> <span class="meta-string">&quot;http://java.sun.com/dtd/web-app_2_3.dtd&quot;</span> &gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">web-app</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">display-name</span>&gt;</span>Archetype Created Web Application<span class="tag">&lt;/<span class="name">display-name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>Calc_Controller<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">display-name</span>&gt;</span>Calc_Controller<span class="tag">&lt;/<span class="name">display-name</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">description</span>&gt;</span><span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>com.ssk3408.Calc_Controller<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>Calc_Controller<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/Calc_Controller<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">web-app</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3><span id="3-change-files">3. Change Files</span></h3><p>Except the 3 files you added, there’re 2 files should be rewrote.</p>
+<h4><span id="1-webxml">1. Web.xml</span></h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">web-app</span> <span class="meta-keyword">PUBLIC</span></span></span><br><span class="line"><span class="meta"> <span class="meta-string">&quot;-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN&quot;</span></span></span><br><span class="line"><span class="meta"> <span class="meta-string">&quot;http://java.sun.com/dtd/web-app_2_3.dtd&quot;</span> &gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">web-app</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">display-name</span>&gt;</span>Archetype Created Web Application<span class="tag">&lt;/<span class="name">display-name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>Calc_Controller<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">display-name</span>&gt;</span>Calc_Controller<span class="tag">&lt;/<span class="name">display-name</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">description</span>&gt;</span><span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>com.ssk3408.Calc_Controller<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>Calc_Controller<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/Calc_Controller<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">web-app</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h4 id="2-Index-jsp"><a href="#2-Index-jsp" class="headerlink" title="2. Index.jsp"></a>2. Index.jsp</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;  pageEncoding=&quot;UTF-8&quot; isELIgnored=&quot;false&quot;%&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>  <span class="attr">href</span>=<span class="string">&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>Simple Calculator<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">form</span> <span class="attr">style</span>=<span class="string">&quot;&quot;</span> <span class="attr">action</span>=<span class="string">&quot;Calc_Controller&quot;</span> <span class="attr">method</span>=<span class="string">&quot;POST&quot;</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span>Number 1:<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;num1&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;num1&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span>Number 2:<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;num2&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;num2&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-success&quot;</span> <span class="attr">name</span>=<span class="string">&quot;Button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Add&quot;</span>&gt;</span>+<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-danger&quot;</span> <span class="attr">name</span>=<span class="string">&quot;Button&quot;</span>  <span class="attr">value</span>=<span class="string">&quot;Substract&quot;</span>&gt;</span>-<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-primary&quot;</span> <span class="attr">name</span>=<span class="string">&quot;Button&quot;</span>  <span class="attr">value</span>=<span class="string">&quot;Divide&quot;</span>&gt;</span>/<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-warning&quot;</span> <span class="attr">name</span>=<span class="string">&quot;Button&quot;</span>  <span class="attr">value</span>=<span class="string">&quot;Multiply&quot;</span>&gt;</span>X<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">h3</span>&gt;</span>The result is ==&gt;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">h3</span>&gt;</span>$&#123;result&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4><span id="2-indexjsp">2. Index.jsp</span></h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;  pageEncoding=&quot;UTF-8&quot; isELIgnored=&quot;false&quot;%&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>  <span class="attr">href</span>=<span class="string">&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>Simple Calculator<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">form</span> <span class="attr">style</span>=<span class="string">&quot;&quot;</span> <span class="attr">action</span>=<span class="string">&quot;Calc_Controller&quot;</span> <span class="attr">method</span>=<span class="string">&quot;POST&quot;</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span>Number 1:<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;num1&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;num1&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span>Number 2:<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;num2&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;num2&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-success&quot;</span> <span class="attr">name</span>=<span class="string">&quot;Button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Add&quot;</span>&gt;</span>+<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-danger&quot;</span> <span class="attr">name</span>=<span class="string">&quot;Button&quot;</span>  <span class="attr">value</span>=<span class="string">&quot;Substract&quot;</span>&gt;</span>-<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-primary&quot;</span> <span class="attr">name</span>=<span class="string">&quot;Button&quot;</span>  <span class="attr">value</span>=<span class="string">&quot;Divide&quot;</span>&gt;</span>/<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-warning&quot;</span> <span class="attr">name</span>=<span class="string">&quot;Button&quot;</span>  <span class="attr">value</span>=<span class="string">&quot;Multiply&quot;</span>&gt;</span>X<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">h3</span>&gt;</span>The result is ==&gt;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">h3</span>&gt;</span>$&#123;result&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="Problem-and-solution"><a href="#Problem-and-solution" class="headerlink" title="Problem and solution"></a>Problem and solution</h2><h3 id="‘Publishing-to-Tomcat-v9-0-Server-at-localhost…’-has-encountered-a-problem"><a href="#‘Publishing-to-Tomcat-v9-0-Server-at-localhost…’-has-encountered-a-problem" class="headerlink" title="‘Publishing to Tomcat v9.0 Server at localhost…’ has encountered a problem."></a>‘Publishing to Tomcat v9.0 Server at localhost…’ has encountered a problem.</h3><p>If you get this error when you try to run the program, it might because you didn’t shut down the tomcat before you run it.</p>
+<h2><span id="problem-and-solution">Problem and solution</span></h2><h3><span id="publishing-to-tomcat-v90-server-at-localhost-has-encountered-a-problem">‘Publishing to Tomcat v9.0 Server at localhost…’ has encountered a problem.</span></h3><p>If you get this error when you try to run the program, it might because you didn’t shut down the tomcat before you run it.</p>
 <p>If you already shut down the Tomcat but still doesn’t work, go to your Tomcat’s file named <strong>Server</strong> where you installed your Tomcat.</p>
 <p>The path in my computer for reference: D:\APACHE\Server\conf</p>
 <p>Then find the file named <strong>server.xml</strong> and open it with Notepad</p>
@@ -197,148 +211,16 @@
 
 
           <!--The body variable corresponds to the content rendered from the different page type templates (cf above).-->
-        </div>
 
-        <!-- Sidebar -->
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+      <div class="row">
+          <nav class="blog-pagination">
+  
+  <a class="btn btn-outline-primary" href="/">Previous</a>
+  
           
-    
-    <div class="p-4 mb-3 bg-dark text-white rounded shadow">
-        <h3>About</h3>
-        <p class="mb-0" style="color: #dddfe6;">Domuki is a musician, programmer and a lifelong learner. He currently is studying Software Engineering in UPM. He likes to share what he has learnt with the others.</p>
-    </div>
-
-
-
-    
-<div class="p-4 mb-3 bg-primary text-white rounded shadow">
-  <h3>Tags</h3>
-  <p>
-    
-    <a class="text-white" href="/tags/AI/" style="font-size: 23px">
-      AI</a>
-    
-    <a class="text-white" href="/tags/Academic-Writing/" style="font-size: 15px">
-      Academic Writing</a>
-    
-    <a class="text-white" href="/tags/Algorithm/" style="font-size: 21px">
-      Algorithm</a>
-    
-    <a class="text-white" href="/tags/Apache-Tomcat/" style="font-size: 15px">
-      Apache Tomcat</a>
-    
-    <a class="text-white" href="/tags/CMD/" style="font-size: 17px">
-      CMD</a>
-    
-    <a class="text-white" href="/tags/ChatterBot/" style="font-size: 15px">
-      ChatterBot</a>
-    
-    <a class="text-white" href="/tags/Data-Structure/" style="font-size: 19px">
-      Data Structure</a>
-    
-    <a class="text-white" href="/tags/Database/" style="font-size: 21px">
-      Database</a>
-    
-    <a class="text-white" href="/tags/ERD/" style="font-size: 15px">
-      ERD</a>
-    
-    <a class="text-white" href="/tags/Eclipse/" style="font-size: 17px">
-      Eclipse</a>
-    
-    <a class="text-white" href="/tags/English/" style="font-size: 27px">
-      English</a>
-    
-    <a class="text-white" href="/tags/Game/" style="font-size: 15px">
-      Game</a>
-    
-    <a class="text-white" href="/tags/HTML/" style="font-size: 15px">
-      HTML</a>
-    
-    <a class="text-white" href="/tags/Hexo/" style="font-size: 17px">
-      Hexo</a>
-    
-    <a class="text-white" href="/tags/Html/" style="font-size: 15px">
-      Html</a>
-    
-    <a class="text-white" href="/tags/JUnit-5/" style="font-size: 15px">
-      JUnit 5</a>
-    
-    <a class="text-white" href="/tags/Java/" style="font-size: 30px">
-      Java</a>
-    
-    <a class="text-white" href="/tags/JavaFX/" style="font-size: 19px">
-      JavaFX</a>
-    
-    <a class="text-white" href="/tags/JavaScript/" style="font-size: 15px">
-      JavaScript</a>
-    
-    <a class="text-white" href="/tags/Lab/" style="font-size: 25px">
-      Lab</a>
-    
-    <a class="text-white" href="/tags/Maven/" style="font-size: 19px">
-      Maven</a>
-    
-    <a class="text-white" href="/tags/Music/" style="font-size: 15px">
-      Music</a>
-    
-    <a class="text-white" href="/tags/MySQL/" style="font-size: 15px">
-      MySQL</a>
-    
-    <a class="text-white" href="/tags/Notes/" style="font-size: 15px">
-      Notes</a>
-    
-    <a class="text-white" href="/tags/OS/" style="font-size: 15px">
-      OS</a>
-    
-    <a class="text-white" href="/tags/PracticalAI/" style="font-size: 21px">
-      PracticalAI</a>
-    
-    <a class="text-white" href="/tags/Project/" style="font-size: 23px">
-      Project</a>
-    
-    <a class="text-white" href="/tags/Python/" style="font-size: 25px">
-      Python</a>
-    
-    <a class="text-white" href="/tags/Spoken/" style="font-size: 23px">
-      Spoken</a>
-    
-    <a class="text-white" href="/tags/Statistics/" style="font-size: 21px">
-      Statistics</a>
-    
-    <a class="text-white" href="/tags/Studying/" style="font-size: 15px">
-      Studying</a>
-    
-    <a class="text-white" href="/tags/Symphony/" style="font-size: 15px">
-      Symphony</a>
-    
-    <a class="text-white" href="/tags/Tips/" style="font-size: 30px">
-      Tips</a>
-    
-    <a class="text-white" href="/tags/Txt/" style="font-size: 15px">
-      Txt</a>
-    
-    <a class="text-white" href="/tags/UIUX/" style="font-size: 30px">
-      UIUX</a>
-    
-    <a class="text-white" href="/tags/Voice-Assistant/" style="font-size: 15px">
-      Voice Assistant</a>
-    
-    <a class="text-white" href="/tags/Web-Crawler/" style="font-size: 15px">
-      Web Crawler</a>
-    
-    <a class="text-white" href="/tags/Web-app/" style="font-size: 17px">
-      Web-app</a>
-    
-    <a class="text-white" href="/tags/Writing/" style="font-size: 17px">
-      Writing</a>
-    
-  </p>
-</div>
-
-
-
-
-        </div>
+  <a class="btn btn-outline-primary" href="/">Next</a>
+  
+</nav>
 
       </div>
 

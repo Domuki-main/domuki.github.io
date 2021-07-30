@@ -42,32 +42,46 @@
 <body>
 
   <!-- Menu -->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark shadow-sm">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark" aria-label="Eighth navbar example">
   <div class="container">
-
     <a target="_blank" rel="noopener" href="https://github.com/Domuki-main" class="navbar-brand d-flex align-items-center">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
         <path
           d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
       </svg>
-        <strong>&nbsp;Domuki</strong>
-      </a>
+      <strong>&nbsp;Domuki</strong>
+    </a>
 
-    <ul class="navbar-nav">
-      
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsCollapse" aria-controls="navbarsCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsCollapse">
+
+      <ul class="navbar-nav" style="margin-inline-end: auto;">
+        
         <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/archives">Archives</a>
-      </li>
-      
+          <a class="nav-link" href="/archives">Archives</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/categories">Categories</a>
-      </li>
-      
-    </ul>
+          <a class="nav-link" href="/tags">Tags</a>
+        </li>
+        
+      </ul>
+
+      <form class="form-group d-flex mb-0">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg></button>
+      </form>
+
+    </div>
   </div>
 </nav>
 
@@ -94,10 +108,6 @@
 
     <div class="container py-5">
 
-      <div class="row">
-
-        <!-- Main Content -->
-        <div class="col-sm-8 blog-main">
           <div class="blog-post">
 
     <!-- Title -->
@@ -272,7 +282,7 @@
 <td>1/8</td>
 </tr>
 </tbody></table>
-<h4><span id="1-probability-distributions">1. Probability Distributions</span></h4><p>•Probability distributions can be used to describe the population, just as we described samples in <a class="link" target="_blank" rel="noopener" href="https://domuki-main.github.io/2020/02/18/Statistics-Chapter-2-Descriptive-Statistics/">Chapter 2.<i class="fas fa-external-link-alt"></i></a></p>
+<h4><span id="1-probability-distributions">1. Probability Distributions</span></h4><p>•Probability distributions can be used to describe the population, just as we described samples in <a target="_blank" rel="noopener" href="https://domuki-main.github.io/2020/02/18/Statistics-Chapter-2-Descriptive-Statistics/">Chapter 2.</a></p>
 <p>–<strong>Shape:</strong> Symmetric, skewed, mound-shaped…</p>
 <p>–<strong>Outliers:</strong> unusual or unlikely measurements </p>
 <p>–<strong>Center and spread:</strong> mean and standard deviation. A population mean is called <strong>μ</strong> and a population standard deviation is called <strong>σ.</strong> </p>
@@ -415,148 +425,16 @@
 
 
           <!--The body variable corresponds to the content rendered from the different page type templates (cf above).-->
-        </div>
 
-        <!-- Sidebar -->
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+      <div class="row">
+          <nav class="blog-pagination">
+  
+  <a class="btn btn-outline-primary" href="/">Previous</a>
+  
           
-    
-    <div class="p-4 mb-3 bg-dark text-white rounded shadow">
-        <h3>About</h3>
-        <p class="mb-0" style="color: #dddfe6;">Domuki is a musician, programmer and a lifelong learner. He currently is studying Software Engineering in UPM. He likes to share what he has learnt with the others.</p>
-    </div>
-
-
-
-    
-<div class="p-4 mb-3 bg-primary text-white rounded shadow">
-  <h3>Tags</h3>
-  <p>
-    
-    <a class="text-white" href="/tags/AI/" style="font-size: 23px">
-      AI</a>
-    
-    <a class="text-white" href="/tags/Academic-Writing/" style="font-size: 15px">
-      Academic Writing</a>
-    
-    <a class="text-white" href="/tags/Algorithm/" style="font-size: 21px">
-      Algorithm</a>
-    
-    <a class="text-white" href="/tags/Apache-Tomcat/" style="font-size: 15px">
-      Apache Tomcat</a>
-    
-    <a class="text-white" href="/tags/CMD/" style="font-size: 17px">
-      CMD</a>
-    
-    <a class="text-white" href="/tags/ChatterBot/" style="font-size: 15px">
-      ChatterBot</a>
-    
-    <a class="text-white" href="/tags/Data-Structure/" style="font-size: 19px">
-      Data Structure</a>
-    
-    <a class="text-white" href="/tags/Database/" style="font-size: 21px">
-      Database</a>
-    
-    <a class="text-white" href="/tags/ERD/" style="font-size: 15px">
-      ERD</a>
-    
-    <a class="text-white" href="/tags/Eclipse/" style="font-size: 17px">
-      Eclipse</a>
-    
-    <a class="text-white" href="/tags/English/" style="font-size: 27px">
-      English</a>
-    
-    <a class="text-white" href="/tags/Game/" style="font-size: 15px">
-      Game</a>
-    
-    <a class="text-white" href="/tags/HTML/" style="font-size: 15px">
-      HTML</a>
-    
-    <a class="text-white" href="/tags/Hexo/" style="font-size: 17px">
-      Hexo</a>
-    
-    <a class="text-white" href="/tags/Html/" style="font-size: 15px">
-      Html</a>
-    
-    <a class="text-white" href="/tags/JUnit-5/" style="font-size: 15px">
-      JUnit 5</a>
-    
-    <a class="text-white" href="/tags/Java/" style="font-size: 30px">
-      Java</a>
-    
-    <a class="text-white" href="/tags/JavaFX/" style="font-size: 19px">
-      JavaFX</a>
-    
-    <a class="text-white" href="/tags/JavaScript/" style="font-size: 15px">
-      JavaScript</a>
-    
-    <a class="text-white" href="/tags/Lab/" style="font-size: 25px">
-      Lab</a>
-    
-    <a class="text-white" href="/tags/Maven/" style="font-size: 19px">
-      Maven</a>
-    
-    <a class="text-white" href="/tags/Music/" style="font-size: 15px">
-      Music</a>
-    
-    <a class="text-white" href="/tags/MySQL/" style="font-size: 15px">
-      MySQL</a>
-    
-    <a class="text-white" href="/tags/Notes/" style="font-size: 15px">
-      Notes</a>
-    
-    <a class="text-white" href="/tags/OS/" style="font-size: 15px">
-      OS</a>
-    
-    <a class="text-white" href="/tags/PracticalAI/" style="font-size: 21px">
-      PracticalAI</a>
-    
-    <a class="text-white" href="/tags/Project/" style="font-size: 23px">
-      Project</a>
-    
-    <a class="text-white" href="/tags/Python/" style="font-size: 25px">
-      Python</a>
-    
-    <a class="text-white" href="/tags/Spoken/" style="font-size: 23px">
-      Spoken</a>
-    
-    <a class="text-white" href="/tags/Statistics/" style="font-size: 21px">
-      Statistics</a>
-    
-    <a class="text-white" href="/tags/Studying/" style="font-size: 15px">
-      Studying</a>
-    
-    <a class="text-white" href="/tags/Symphony/" style="font-size: 15px">
-      Symphony</a>
-    
-    <a class="text-white" href="/tags/Tips/" style="font-size: 30px">
-      Tips</a>
-    
-    <a class="text-white" href="/tags/Txt/" style="font-size: 15px">
-      Txt</a>
-    
-    <a class="text-white" href="/tags/UIUX/" style="font-size: 30px">
-      UIUX</a>
-    
-    <a class="text-white" href="/tags/Voice-Assistant/" style="font-size: 15px">
-      Voice Assistant</a>
-    
-    <a class="text-white" href="/tags/Web-Crawler/" style="font-size: 15px">
-      Web Crawler</a>
-    
-    <a class="text-white" href="/tags/Web-app/" style="font-size: 17px">
-      Web-app</a>
-    
-    <a class="text-white" href="/tags/Writing/" style="font-size: 17px">
-      Writing</a>
-    
-  </p>
-</div>
-
-
-
-
-        </div>
+  <a class="btn btn-outline-primary" href="/">Next</a>
+  
+</nav>
 
       </div>
 

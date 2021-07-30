@@ -42,32 +42,46 @@
 <body>
 
   <!-- Menu -->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark shadow-sm">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark" aria-label="Eighth navbar example">
   <div class="container">
-
     <a target="_blank" rel="noopener" href="https://github.com/Domuki-main" class="navbar-brand d-flex align-items-center">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
         <path
           d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
       </svg>
-        <strong>&nbsp;Domuki</strong>
-      </a>
+      <strong>&nbsp;Domuki</strong>
+    </a>
 
-    <ul class="navbar-nav">
-      
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsCollapse" aria-controls="navbarsCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsCollapse">
+
+      <ul class="navbar-nav" style="margin-inline-end: auto;">
+        
         <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/archives">Archives</a>
-      </li>
-      
+          <a class="nav-link" href="/archives">Archives</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/categories">Categories</a>
-      </li>
-      
-    </ul>
+          <a class="nav-link" href="/tags">Tags</a>
+        </li>
+        
+      </ul>
+
+      <form class="form-group d-flex mb-0">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg></button>
+      </form>
+
+    </div>
   </div>
 </nav>
 
@@ -94,35 +108,33 @@
 
     <div class="container py-5">
 
-      <div class="row">
-
-        <!-- Main Content -->
-        <div class="col-sm-8 blog-main">
           
-    <div class="container mb-4">
+<div class="main-content">
 
-  <div class="card shadow">
+  
+  <div class="row">
+  <!-- Main Content -->
+  <div class="col-sm-8 blog-main">
+    
+    <div class="container mb-4 rounded shadow">
 
-    <div class="card-header">
+  <div class="card-body">
+    <!-- Title -->
+    <h1 class="card-title">
+      Export JavaFX project to runnable JAR
+    </h1>
+
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-24
       
-    </div>
+      by <a href="/">Domuki</a>
+      
+    </p>
 
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Export JavaFX project to runnable JAR
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-10-24
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h2 id="Exporting"><a href="#Exporting" class="headerlink" title="Exporting"></a>Exporting</h2><ol>
+    <p class="card-text">
+      <!-- Content -->
+      <h2 id="Exporting"><a href="#Exporting" class="headerlink" title="Exporting"></a>Exporting</h2><ol>
 <li>Open Eclipse.</li>
 <li>Click “<strong>File</strong>“ on the top left selection bar.</li>
 <li>Click “<strong>Export</strong>“</li>
@@ -130,944 +142,130 @@
 <li>Choose Launch configuration and Export destination</li>
 <li>Then Finish.</li>
 </ol>
-<h2 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h2><p>You may get the problem like this:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VM arguments will not be part of the runnable JAR. Arguments can be passed on the command line when launching the JAR</span><br></pre></td></tr></table></figure>
-
-<p>When you double click the JAR, it doesn’t response you.</p>
-<p>Then you may use CMD to run this stupid file using <code>java -jar &lt;filename&gt;</code> </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java --module-path PATH_TO_YOUR_JAVAFX_LIB_FOLDER --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.web -jar YOURFILE.jar</span><br></pre></td></tr></table></figure>
-
-<p>(will be continued)</p>
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/24/Export-JavaFX-project-to-runnable-JAR/">
+        View this article
+      </a>
+    </p>
+    
 
   </div>
 
 </div>
 
+    
+    <div class="container mb-4 rounded shadow">
 
-    <div class="container mb-4">
+  <div class="card-body">
+    <!-- Title -->
+    <h1 class="card-title">
+      Add JavaFX to Eclipse
+    </h1>
 
-  <div class="card shadow">
-
-    <div class="card-header">
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-24
       
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Add JavaFX to Eclipse
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-10-24
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <ol>
-<li>Open Eclipse.</li>
-<li>Click “<strong>Help</strong>“ on the top left selection bar.</li>
-<li>Click “<strong>Eclipse Marketplace</strong>“</li>
-<li>Waiting for loading and input “<strong>fx</strong>“ in searching bar.</li>
-<li>Then install it.</li>
-<li>And the Eclipse would be restarted.</li>
-<li>Then you may see the “JavaFX” in project creating category.</li>
-<li>However, you will see there’re a lot of errors in the sample javaFX program. Now it’s the time to download the JavaFX files.</li>
-<li>Go to <a class="link" target="_blank" rel="noopener" href="https://gluonhq.com/products/javafx/">website<i class="fas fa-external-link-alt"></i></a>: <a class="link" target="_blank" rel="noopener" href="https://gluonhq.com/products/javafx/">https://gluonhq.com/products/javafx/<i class="fas fa-external-link-alt"></i></a>, and download one suitable to yours.</li>
-<li>Unzip the file you download, and <strong>remember the PATH where you unzipped it</strong>.</li>
-<li>Then we back to Eclipse. Click “Windows” on the top left selection bar.</li>
-<li>Click “<strong>Preferences</strong>“</li>
-<li>Go to <strong>User Libraries</strong></li>
-<li>New a Library and name it whatever you want. (like JavaFX)</li>
-<li>Then select the new library, and click <strong>Add External JARs…</strong></li>
-<li>Fine and select the files you unzipped. Apply and close it.</li>
-<li>Right click <strong>the project</strong> in <strong>Project Explorer</strong></li>
-<li><strong>Build Path</strong></li>
-<li>Go to Libraries, and select Classpath. <strong>Add Libraries</strong>.</li>
-<li>User Library -&gt; JavaFX</li>
-<li>Apply and close</li>
-<li>The errors and red lines are gone. But there’s still a problem when you run the file.</li>
-<li>Then go to the <strong>Arguments</strong> in <strong>Run Configurations</strong>.</li>
-<li>Edit VM arguments: </li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--module-path &quot;D:\JAVA\javafx\javafx-sdk-15.0.1\lib&quot; --add-modules javafx.controls,javafx.fxml</span><br></pre></td></tr></table></figure>
-
-<p><code>D:\JAVA\javafx\javafx-sdk-15.0.1\lib</code> as an example is the PATH where the files I unzipped.</p>
-<ol start="25">
-<li>Once you done, and everything will be fine.</li>
-</ol>
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
+      by <a href="/">Domuki</a>
       
+    </p>
 
-    </div>
+    <p class="card-text">
+      <!-- Content -->
+      <p>Add JavaFX to Eclipse</p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/24/Add-JavaFX-to-Eclipse/">
+        View this article
+      </a>
+    </p>
+    
 
   </div>
 
 </div>
 
+    
+    <div class="container mb-4 rounded shadow">
 
-    <div class="container mb-4">
+  <div class="card-body">
+    <!-- Title -->
+    <h1 class="card-title">
+      JDK, JVM and JRE
+    </h1>
 
-  <div class="card shadow">
-
-    <div class="card-header">
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-19
       
-    </div>
+      by <a href="/">Domuki</a>
+      
+    </p>
 
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        JDK, JVM and JRE
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-10-19
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h2><span id="overview">Overview</span></h2><img src="/2020/10/19/JDK-JVM-and-JRE/001.jpg" style="zoom:50%;">
+    <p class="card-text">
+      <!-- Content -->
+      <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><img src="/2020/10/19/JDK-JVM-and-JRE/001.jpg" style="zoom:50%;">
 
 <p>We must understand the differences between JDK, JRE, and JVM before proceeding further to Java. </p>
-<h2><span id="brief-introduction">Brief Introduction</span></h2><h3><span id="jvm">JVM</span></h3><p>JVM (Java Virtual Machine) is an abstract machine.</p>
-<p>It doesn’t physically exist.</p>
-<p>It provides a runtime environment in which Java bytecode can be executed.</p>
-<p>It can also run those programs which are written in other languages and compiled to Java bytecode.</p>
-<h3><span id="jre">JRE</span></h3><p>JRE is Runtime Environment.</p>
-<p>A set of software tools which are used for developing Java applications.</p>
-<p>It is used to provide the runtime environment. </p>
-<p>It is the implementation of JVM.</p>
-<p>It includes a set of libraries and other files that JVM uses at runtime.</p>
-<h3><span id="jdk">JDK</span></h3><p>JDK(Java Development Kit) </p>
-<p>is a software development environment which is used to develop Java applications and applets.</p>
-<p>It physically exists. </p>
-<p>It contains JRE and development tools.</p>
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/19/JDK-JVM-and-JRE/">
+        View this article
+      </a>
+    </p>
+    
 
   </div>
 
 </div>
 
+    
+    <div class="container mb-4 rounded shadow">
 
-    <div class="container mb-4">
+  <div class="card-body">
+    <!-- Title -->
+    <h1 class="card-title">
+      How I write my notes
+    </h1>
 
-  <div class="card shadow">
-
-    <div class="card-header">
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-10
       
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        How I write my notes
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-10-10
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <p>In this essay, I’m going to talk about how I make my notes.</p>
-<h2><span id="what-u-need">What U need?</span></h2><p>You just need a <strong>brain</strong> to think, a <strong>hand</strong> to record and <strong>something</strong> to record your knowledge and intelligence. </p>
-<h2><span id="choose-the-way-to-write">Choose the way to write</span></h2><p>Compared with writing on paper, I prefer to record my notes on <strong>electric devices</strong>, such as phone, laptop or computer.</p>
-<h3><span id="but-why">But, why?</span></h3><h4><span id="1-without-limitation-of-time-and-space">1. Without limitation of time and space</span></h4><p>As a college student, I need take a lot of subjects every term and we also need prepare many of notebooks for all different subjects. So, getting all of them with me to go home is not a good idea. Especially for the people have to take a long distance travel. I need to fly 4000+ KM from my college to my city. So they only allow me to take maximum 20 kilograms baggage to fly.</p>
-<h4><span id="2-easier-to-change">2. Easier to Change</span></h4><p>For example: if you use your paper or notebook to write your note. The words you wrote are hard to change but if you use pencils. However, changing the words wrote by pen and paper  will be like:</p>
-<blockquote>
-<p>this is my <del>world</del> word</p>
-</blockquote>
-<p>and also hard to add something inside the sentence:</p>
-<blockquote>
-<p><del>this is my note of science</del></p>
-<p>this is my <strong>friend’s notebook</strong> of <strong>computer</strong> science.</p>
-</blockquote>
-<p>and also the order of your words. like something should be write at first line but you write it at the end…</p>
-<p>However, if you use electric devices to write your notes, everything changing will be easier.</p>
-<h4><span id="3-various-fonts-and-colours">3. Various fonts and colours</span></h4><p>You can write various fonts without any practices. And you can choose any colour you like without cost of colour markers.</p>
-<h4><span id="4-long-storage-time">4. Long storage time</span></h4><p>Sometimes, I lost my notes somewhere in my college and that is hard to find back. Paper material is easier to get damages when you use it frequently. </p>
-<p>But if you submit your notes on the Cloud Drives, it can be <strong>kept forever</strong> unless the company provide cloud to you is closed.</p>
-<h4><span id="5-easy-to-get-more-information">5. Easy to get more information</span></h4><p>If there’re something on your notes but you don’t know, you just need to copy and search on the internet without to type it. </p>
-<h4><span id="6-various-ways">6. Various ways</span></h4><p>You can record the video as the review tutorials when you have just learnt the new knowledge. </p>
-<p>You also can write it as a blog sharing on the internet to discuss with other people.</p>
-<p>Feeling bored when typing on keyboard? You even can use voice input program to help you write. What the thing you only need do is just speaking.</p>
-<h2><span id="the-best-note-app">The best note APP?</span></h2><blockquote>
-<p>Which Application should I use to write notes?</p>
-<p>Which is the best App for notes?</p>
-<p>Is that for free?</p>
-<p>Is that good or bad?</p>
-</blockquote>
-<p>Personally, the APP what I wanna recommend you is <strong>Microsoft Office PowerPoint</strong>.</p>
-<p>Because it’s easy to learn and use. You can change the position of the texts and images as you wish.</p>
-<p>And it’s free.</p>
-<p>This is the form of my note which I made with  <strong>Microsoft Office PowerPoint</strong>:</p>
-<p><img src="/2020/10/10/How-I-write-my-notes/Picture1.png" alt="frontpage"></p>
-<p><img src="/2020/10/10/How-I-write-my-notes/Picture2.png" alt="backpage"></p>
-<h2><span id="the-principles">The principles</span></h2><h4><span id="1-faster">1. Faster</span></h4><p>Don’t spend too much your time on writing note but on enjoying your life. Except your pens and keyboard, you can also use your microphone to record your note.</p>
-<h4><span id="2-simpler">2. Simpler</span></h4><p>That will save your much time when you <strong>writing</strong> or <strong>reading</strong> notes.</p>
-<h4><span id="3-more-personal">3. More personal</span></h4><p>Using your own language or word is an effective way to write notes and it’s more understandable when you review it.</p>
-<h4><span id="4-accurate">4. Accurate</span></h4><p>Any simplification and summary should be based on the accuracy.</p>
-<h4><span id="5-make-it-like-a-speech-draft-not-necessary">5. Make it like a speech draft (not necessary)</span></h4><blockquote>
-<p>Teaching others is the most effective way to learn</p>
-</blockquote>
-<p>Actually, we don’t have to many opportunities to teach others. But we still can use the way of teaching like doing a presentation to yourself.</p>
-<h2><span id="the-steps">The Steps</span></h2><ol>
-<li>Get a new paper/page and <strong>title</strong> it.</li>
-<li>Write the <strong>date</strong> and <strong>tags</strong>. (which helps you know when you write and what you write)</li>
-<li>Draw a <strong>conclusion</strong>.</li>
-<li>List the <strong>reasons</strong>.</li>
-<li>Give <strong>examples</strong>.</li>
-<li>Selection <strong>keywords</strong> and important points.</li>
-</ol>
-<h2><span id="review-time">Review time</span></h2><p>According to the forgotten curve, we’d better to review at:</p>
-<ul>
-<li>1st after 20 min</li>
-<li>2nd after a day</li>
-<li>3rd after 7 days</li>
-<li>4th after 31 days</li>
-<li>5th after 3 months</li>
-</ul>
-<h2><span id="note-codes">Note Codes</span></h2><p>In order to save the time when I typing my notes, I’d like to use NOTE CODES to represent some words frequently used. Like:</p>
-<ul>
-<li>DEF        Definition</li>
-<li>+AD        Advantage</li>
-<li>-AD        Disadvantage</li>
-<li>REF        Reference</li>
-<li>CON        Conclusion</li>
-<li>e.g.            Exempli gratia (For example)</li>
-<li>i.e.            Id set (In other word)</li>
-<li>etc            et cetera (and so on)</li>
-</ul>
-<h2><span id="my-note-pattern">My note Pattern</span></h2><p><img src="/2020/10/10/How-I-write-my-notes/Picture3.png"></p>
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
+      by <a href="/">Domuki</a>
       
+    </p>
 
-    </div>
+    <p class="card-text">
+      <!-- Content -->
+      <p>In this essay, I’m going to talk about how I make my notes.</p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/10/How-I-write-my-notes/">
+        View this article
+      </a>
+    </p>
+    
 
   </div>
 
 </div>
 
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Urllib in Python
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-10-09
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h2><span id="introduction">Introduction</span></h2><h3><span id="what-is-urllib">What is Urllib?</span></h3><blockquote>
-<p><code>urllib</code> is a package that collects several modules for working with URLs</p>
-</blockquote>
-<p>This package has 4 modules: <code>urllib.request</code>, <code>urllib.error</code>, <code>urllib.parse</code> and <code>urllib.robotparser</code>.</p>
-<ul>
-<li><code>urllib.request</code> for opening and reading URLs</li>
-<li><code>urllib.error</code> containing the exceptions raised by <code>urllib.request</code></li>
-<li><code>urllib.parse</code> for parsing URLs</li>
-<li><code>urllib.robotparser</code> for parsing <code>robots.txt</code> files</li>
-</ul>
-<p><code>urllib.request</code> and <code>urllib.error</code> are usually used in Web crawler program.</p>
-<h2><span id="send-request">Send Request</span></h2><p>We need <code>urllib.request</code> when sending a HTTP request as the Chrome. It can be used not only to send requests but also to gain the return. Just <code>urllopen()</code> alone can help us to do the work. This is the API.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">urllib.request.urlopen(url, data&#x3D;None, [timeout, ]*, cafile&#x3D;None, capath&#x3D;None, cadefault&#x3D;False, context&#x3D;None)</span><br></pre></td></tr></table></figure>
-
-<p>the parameters:</p>
-<ol>
-<li>string type: URL address</li>
-<li><code>data</code> is the content in bytes type. It can be converted into a byte stream by the bytes() function. It is also an optional parameter. Using the data parameter, the request method becomes a POST method to submit the form. The standard format used is <code>application/x-www-form-urlencoded</code></li>
-<li><code>timeout</code> is Request timeout in second.</li>
-<li><code>cafile</code> and <code>capath</code> represents the CA certificate and the path of the CA certificate. You need to use HTTPS.</li>
-<li><code>context</code> must be <code>ssl.SSLContext</code> type, which is used to set <code>ssl</code></li>
-<li> <code>cedefault</code> are abandoned</li>
-</ol>
-<p>The method will return a object of <code>http.client.HTTPResponse</code></p>
-<h3><span id="simply-grabbing-website">simply grabbing website</span></h3><p>We can use <code>urllib.request.urllopen()</code> to request my blog site and grab the source code of the page.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://domuki.top&quot;</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">  response = urllib.request.urlopen(url)</span><br><span class="line">  html = response.read()		<span class="comment"># get the source code of page</span></span><br><span class="line">  print(html.decode(<span class="string">&#x27;utf-8&#x27;</span>))	<span class="comment"># transform to utf-8</span></span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">  print(<span class="string">&quot;request failed&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<h3><span id="setting-request-timeout">Setting request Timeout</span></h3><p>Some requests cannot be replied, which may be caused by network problem. Therefore, we can set timeout for our requests. We can abandon the requests we sent or send it one more time, if it times out. </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response = urllib.request.urlopen(url, timeout=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-
-<h3><span id="using-data-parameter-to-submit-data">Using Data parameter to submit data</span></h3><p>We need to use data parameter when requesting some websites requiring it.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urilib.parse</span><br><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://127.0.0.1:8000&quot;</span></span><br><span class="line">params = &#123;</span><br><span class="line">  <span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;Alex&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;matric&#x27;</span>:<span class="string">&#x27;991204&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">data = <span class="built_in">bytes</span>(urllib.parse.urlencode(params), encoding=<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">response = urllib.request.urlopen(url, data=data)</span><br><span class="line">print(response.read().decode(<span class="string">&#x27;utf-8&#x27;</span>))</span><br></pre></td></tr></table></figure>
-
-<p>variable <code>params</code> is a dictionary actually, so we need <code>urllib.parse.urlencode()</code> help us to transform it to Strings. Then, use <code>bytes()</code> to convert it to a byte stream. Finally, use <code>urlopen()</code> to initiate a request that simulates the submission of form data in POST.</p>
-<h3><span id="using-request">Using Request</span></h3><p>Request Constructor: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">urllib.request.Request(url, data&#x3D;None, headers&#x3D;&#123;&#125;, origin_req_host&#x3D;None, unverifiable&#x3D;False, method&#x3D;None)</span><br></pre></td></tr></table></figure>
-
-<p><code>url</code>: address link</p>
-<p><code>data</code>: its usage is same as <code>data</code>  in <code>urlopen()</code></p>
-<p><code>headers</code>: should be a dictionary, and will be treated as if <code>add_header()</code> was called with each key and value as arguments.</p>
-<p><code>origin_req_host</code>: the host name and IP address of Requestor</p>
-<p><code>unverifiable</code>: showing whether this request cannot be verified and it’s false by default. If we, for example, request for images in HTML but we don’t have the permission to do that automatically, so we have to turn the value True.</p>
-<p><code>method</code>: the ways of sending HTTP requests, such as GET, POST, DELETE, PUT and so on.</p>
-<h4><span id="simply-using">Simply using</span></h4><p>Use <code>Request</code> to send a HTTP requests as browser. If the <code>User-Agent</code> in the <code>headers</code> is not set, the <code>User-Agent</code> is <code>Python-urllib/3.5</code> by default. Some websites may reject the request, if your requests is not send as browser. The <code>User-Agent</code> I use is the Chrome.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://tieba.baidu.com/&quot;</span></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">request = urllib.request.Request(url=url, headers=headers)</span><br><span class="line">response = urllib.request.urlopen(request)</span><br><span class="line">print(response.read().decode(<span class="string">&#x27;utf-8&#x27;</span>))</span><br></pre></td></tr></table></figure>
-
-<h5><span id="looking-for-the-latest-chrome-user-agent">Looking for the latest Chrome user agent?</span></h5><p>Check this out:  <a class="link" target="_blank" rel="noopener" href="https://www.whatismybrowser.com/guides/the-latest-user-agent/chrome">latest Chrome User agent<i class="fas fa-external-link-alt"></i></a> </p>
-<h4><span id="advanced-using">Advanced using</span></h4><p>If we need to add a proxy to the request and process the <strong>cookies</strong> of the request, we need to use <code>Handler</code> and <code>OpenerDirector</code>.</p>
-<h3><span id="using-proxy">Using proxy</span></h3><p>Some websites set the limitation of viewing frequency. So if we request the websites highly frequently, the websites will ban our IP. Therefore, we need:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://domuki.top/&quot;</span></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">proxy_handler = urllib.request.ProxyHandler(&#123;</span><br><span class="line">    <span class="string">&#x27;http&#x27;</span>: <span class="string">&#x27;web-proxy.oa.com:8080&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;https&#x27;</span>: <span class="string">&#x27;web-proxy.oa.com:8080&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line">opener = urllib.request.build_opener(proxy_handler)</span><br><span class="line">urllib.request.install_opener(opener)</span><br><span class="line"></span><br><span class="line">request = urllib.request.Request(url=url, headers=headers)</span><br><span class="line">response = urllib.request.urlopen(request)</span><br><span class="line">print(response.read().decode(<span class="string">&#x27;utf-8&#x27;</span>))</span><br></pre></td></tr></table></figure>
-
-<h3><span id="login">Login</span></h3><p>Some websites can be visited as long as we login it with correct username and password. When we meet this situation, we need use <code>HTTPPasswordMgrWithDefaultRealm()</code> to instantiate an object to manage account. Use <code>add_password()</code> add account and password. Then use <code>HTTPBasicAuthHandler()</code> to get hander. And get the opener object by <code>build_opener()</code>. Finally, use <code>open()</code> to send requests.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://▯▯▯▯▯.com/&quot;</span></span><br><span class="line">user = <span class="string">&#x27;user&#x27;</span>			<span class="comment"># username</span></span><br><span class="line">password = <span class="string">&#x27;password&#x27;</span>	<span class="comment"># password</span></span><br><span class="line">pwdmgr = urllib.request.HTTPPasswordMgrWithDefaultRealm()</span><br><span class="line">pwdmgr.add_password(<span class="literal">None</span>，url ，user ，password)</span><br><span class="line"></span><br><span class="line">auth_handler = urllib.request.HTTPBasicAuthHandler(pwdmgr)</span><br><span class="line">opener = urllib.request.build_opener(auth_handler)</span><br><span class="line">response = opener.<span class="built_in">open</span>(url)</span><br><span class="line">print(response.read().decode(<span class="string">&#x27;utf-8&#x27;</span>))</span><br></pre></td></tr></table></figure>
-
-<h3><span id="setting-cookies">Setting Cookies</span></h3><p>If we need login every time we requesting, we can use cookies to do it automatically. </p>
-<p>To obtain cookies, you need to use <code>http.cookiejar.CookieJar()</code> to instantiate a Cookies . Then use <code>urllib.request.HTTPCookieProcessor</code> to construct a handler object. Finally, use the <code>open()</code>.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> http.cookiejar</span><br><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://tieba.baidu.com/&quot;</span></span><br><span class="line">fileName = <span class="string">&#x27;cookie.txt&#x27;</span></span><br><span class="line"></span><br><span class="line">cookie = http.cookiejar.CookieJar()</span><br><span class="line">handler = urllib.request.HTTPCookieProcessor(cookie)</span><br><span class="line">opener = urllib.request.build_opener(handler)</span><br><span class="line">response = opener.<span class="built_in">open</span>(url)</span><br><span class="line"></span><br><span class="line">f = <span class="built_in">open</span>(fileName,<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> cookie:</span><br><span class="line">    f.write(item.name+<span class="string">&quot; = &quot;</span>+item.value+<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
-
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
-
+    
   </div>
 
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        PracticalAI Note 4: Pandas
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-10-09
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <blockquote>
-<p>In this section, we’ll talk about the basics of data analysis with the Python Pandas library.</p>
-</blockquote>
-<h3><span id="uploading-the-data">Uploading the data</span></h3><p>We’re going to get the data, the titanic dataset from the public.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># import urllib</span></span><br><span class="line"><span class="comment"># COMMIT: urllib cannot just be imported. the &#x27;request&#x27; error will be throwed.</span></span><br><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line"><span class="comment"># Upload data from GitHub to notebook&#x27;s local drive</span></span><br><span class="line">url = <span class="string">&quot;https://raw.githubusercontent.com/GokuMohandas/practicalAI/master/data/titanic.csv&quot;</span></span><br><span class="line"><span class="comment"># response = urllib.request.urlopen(url)</span></span><br><span class="line"><span class="comment"># html = response.read()</span></span><br><span class="line"><span class="comment"># with open(&#x27;titanic.csv&#x27;, &#x27;wb&#x27;) as f:</span></span><br><span class="line">  <span class="comment"># f.write(html)</span></span><br><span class="line"><span class="comment"># COMMIT: sometimes, the url doesn&#x27;t work and it will throw HTTP error. So, we need add a try &amp; except to handle it.</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">  response = urllib.request.urlopen(url)</span><br><span class="line">  html = response.read()</span><br><span class="line">  <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;titanic.csv&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(html)</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">  print(<span class="string">&quot;exception&quot;</span>)</span><br><span class="line">  <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-
-<p>However, the output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exception</span><br></pre></td></tr></table></figure>
-
-<p>and to check if the data was uploaded, input command: <code>!ls -1</code></p>
-<p>then output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">total 4</span><br><span class="line">drwxr-xr-x 1 root root 4096 Oct  5 16:31 sample_data</span><br><span class="line">-rw-r--r-- 1 root root    0 Oct  9 14:56 titanic.csv</span><br></pre></td></tr></table></figure>
-
-<p>But, what is <code>urllib</code> exactly?</p>
-<h3><span id="loading-the-data">Loading the data</span></h3><blockquote>
-<p>Panda is a great python library for data analysis</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># Read from CSV to Pandas DataFrame</span></span><br><span class="line">df = pd.read_csv(<span class="string">&quot;titanic.csv&quot;</span>, header=<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># First 5 itmes</span></span><br><span class="line">df.head()</span><br></pre></td></tr></table></figure>
-
-<p>output:</p>
-<p><img src="/2020/10/09/PracticalAI-Note-4-Pandas/blog\blog\source_posts\PracticalAI-Note-4-Pandas\output1.png"></p>
-<h3><span id="exploratory-analysis">Exploratory analysis</span></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># describe features</span></span><br><span class="line">df.describe()</span><br></pre></td></tr></table></figure>
-
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        PracticalAI Note 3: NumPy
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-10-08
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <blockquote>
-<p>the basics of numerical analysis using the NumPy package.</p>
-</blockquote>
-<h3><span id="numpy-basic">NumPy basic</span></h3><h4><span id="seed">Seed</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># import the package</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># set seed for reproducability</span></span><br><span class="line">np.random.seed(seed=<span class="number">1234</span>)</span><br><span class="line">x = np.random.rand(<span class="number">5</span>)</span><br><span class="line"><span class="built_in">print</span> (x)</span><br><span class="line"></span><br><span class="line">x = np.random.rand(<span class="number">5</span>)</span><br><span class="line"><span class="built_in">print</span> (x)</span><br><span class="line"></span><br><span class="line">np.random.seed(seed=<span class="number">1234</span>)</span><br><span class="line">x = np.random.rand(<span class="number">5</span>)</span><br><span class="line"><span class="built_in">print</span> (x)</span><br></pre></td></tr></table></figure>
-
-<p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[0.19151945 0.62210877 0.43772774 0.78535858 0.77997581]</span><br><span class="line">[0.27259261 0.27646426 0.80187218 0.95813935 0.87593263]</span><br><span class="line">[0.19151945 0.62210877 0.43772774 0.78535858 0.77997581]</span><br></pre></td></tr></table></figure>
-
-<p>as the result showing, the lists (1&amp;3) will be same as long as we set the <strong>seed</strong> of <code>np.random</code> </p>
-<h4><span id="scalars">Scalars</span></h4><blockquote>
-<p><em>Scalars</em>, an element of a field, which is used to define a vector space, usually the field of real numbers</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># scalars</span></span><br><span class="line">x = np.array(<span class="number">6</span>) <span class="comment"># scalar</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x: &quot;</span>, x)</span><br><span class="line">print(<span class="string">&quot;x ndim: &quot;</span>, x.ndim) <span class="comment"># dimension</span></span><br><span class="line">print(<span class="string">&quot;x shape:&quot;</span>, x.shape)</span><br><span class="line">print(<span class="string">&quot;x size: &quot;</span>, x.size)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x dtype: &quot;</span>, x.dtype)</span><br></pre></td></tr></table></figure>
-
-<p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x:  6</span><br><span class="line">x ndim:  0</span><br><span class="line">x shape: ()</span><br><span class="line">x size:  1</span><br><span class="line">x dtype:  int64</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>int64: 64 bit integer</p>
-</blockquote>
-<h4><span id="n-d-array">n-D Array</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1-D array</span></span><br><span class="line">x = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2-D array</span></span><br><span class="line">x = np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3-D array</span></span><br><span class="line">x = np.array([[[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>], [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>], [<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]]])</span><br></pre></td></tr></table></figure>
-
-<p>the <code>ndim</code> actually depends on the number of <em>[ ]</em>:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">x = np.array(<span class="number">0</span>)</span><br><span class="line">print(<span class="string">&quot;x ndim: &quot;</span>, x.ndim)</span><br><span class="line"></span><br><span class="line">x = np.array([<span class="number">0</span>])</span><br><span class="line">print(<span class="string">&quot;x ndim: &quot;</span>, x.ndim)</span><br><span class="line"></span><br><span class="line">x = np.array([[[<span class="number">0</span>]]])</span><br><span class="line">print(<span class="string">&quot;x ndim: &quot;</span>, x.ndim)</span><br><span class="line"></span><br><span class="line">x = np.array([[[[<span class="number">0</span>]]]])</span><br><span class="line">print(<span class="string">&quot;x ndim: &quot;</span>, x.ndim)</span><br></pre></td></tr></table></figure>
-
-<p>the output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x ndim:  0</span><br><span class="line">x ndim:  1</span><br><span class="line">x ndim:  3</span><br><span class="line">x ndim:  4</span><br></pre></td></tr></table></figure>
-
-<h4><span id="functions">Functions</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span> (<span class="string">&quot;np.zeros((3,2)):\n&quot;</span>, np.zeros((<span class="number">3</span>,<span class="number">2</span>)))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;np.zeros((2,3)):\n&quot;</span>, np.zeros((<span class="number">2</span>,<span class="number">3</span>)))</span><br></pre></td></tr></table></figure>
-
-<p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">np.zeros((3,2)):</span><br><span class="line"> [[0. 0.]</span><br><span class="line"> [0. 0.]</span><br><span class="line"> [0. 0.]]</span><br><span class="line">np.zeros((2,3)):</span><br><span class="line"> [[0. 0. 0.]</span><br><span class="line"> [0. 0. 0.]]</span><br></pre></td></tr></table></figure>
-
-<p>so the parameters in brackets are <strong>row</strong> and <strong>column</strong> </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span> (<span class="string">&quot;np.zeros((2,2)):\n&quot;</span>, np.zeros((<span class="number">2</span>,<span class="number">2</span>)))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;np.ones((2,2)):\n&quot;</span>, np.ones((<span class="number">2</span>,<span class="number">2</span>)))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;np.eye((2)):\n&quot;</span>, np.eye((<span class="number">2</span>)))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;np.random.random((2,2)):\n&quot;</span>, np.random.random((<span class="number">2</span>,<span class="number">2</span>)))</span><br></pre></td></tr></table></figure>
-
-<p>output: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">np.zeros((2,2)):</span><br><span class="line"> [[0. 0.]</span><br><span class="line"> [0. 0.]]</span><br><span class="line">np.ones((2,2)):</span><br><span class="line"> [[1. 1.]</span><br><span class="line"> [1. 1.]]</span><br><span class="line">np.eye((2)):</span><br><span class="line"> [[1. 0.]</span><br><span class="line"> [0. 1.]]</span><br><span class="line">np.random.random((2,2)):</span><br><span class="line"> [[0.19151945 0.62210877]</span><br><span class="line"> [0.43772774 0.78535858]]</span><br></pre></td></tr></table></figure>
-
-<h4><span id="indexing">Indexing</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Indexing</span></span><br><span class="line">x = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x[0]: &quot;</span>, x[<span class="number">0</span>])</span><br><span class="line">x[<span class="number">0</span>] = <span class="number">0</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x: &quot;</span>, x)</span><br><span class="line"><span class="built_in">print</span> ()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Slicing</span></span><br><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>], [<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>], [<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>]])</span><br><span class="line"><span class="built_in">print</span> (x)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x column 1: &quot;</span>, x[:, <span class="number">1</span>]) </span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x row 0: &quot;</span>, x[<span class="number">0</span>, :]) </span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x rows 0,1,2 &amp; cols 1,2: \n&quot;</span>, x[:<span class="number">3</span>, <span class="number">1</span>:<span class="number">3</span>]) </span><br></pre></td></tr></table></figure>
-
-<p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">x[0]:  1</span><br><span class="line">x:  [0 2 3]</span><br><span class="line"></span><br><span class="line">[[ 1  2  3  4]</span><br><span class="line"> [ 5  6  7  8]</span><br><span class="line"> [ 9 10 11 12]]</span><br><span class="line">x column 1:  [ 2  6 10]</span><br><span class="line">x row 0:  [1 2 3 4]</span><br><span class="line">x rows 0,1,2 &amp; cols 1,2: </span><br><span class="line"> [[ 2  3]</span><br><span class="line"> [ 6  7]</span><br><span class="line"> [10 11]]</span><br></pre></td></tr></table></figure>
-
-<p>and there’s a way how to get row and columns:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">rows = <span class="built_in">len</span>(x)</span><br><span class="line">columns = <span class="built_in">len</span>(x[<span class="number">0</span>])</span><br><span class="line">total_elements = rows * columns</span><br><span class="line"><span class="built_in">print</span> (total_elements)</span><br><span class="line"><span class="built_in">print</span> ()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Integer array indexing</span></span><br><span class="line">rows_to_get = np.arange(rows)</span><br><span class="line">cols_to_get = np.array([<span class="number">0</span>, <span class="number">2</span>, <span class="number">1</span>])</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;rows_to_get: &quot;</span>, rows_to_get)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;cols_to_get: &quot;</span>, cols_to_get)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;indexed values: &quot;</span>, x[rows_to_get, cols_to_get])</span><br></pre></td></tr></table></figure>
-
-<p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">12</span><br><span class="line"></span><br><span class="line">rows_to_get:  [0 1 2]</span><br><span class="line">cols_to_get:  [0 2 1]</span><br><span class="line">indexed values:  [ 1  7 10]</span><br></pre></td></tr></table></figure>
-
-<p>Boolean array indexing:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>], [<span class="number">5</span>, <span class="number">6</span>]])</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x:\n&quot;</span>, x)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x &gt; 2:\n&quot;</span>, x &gt; <span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x[x &gt; 2]:\n&quot;</span>, x[x &gt; <span class="number">2</span>])</span><br></pre></td></tr></table></figure>
-
-<p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">x:</span><br><span class="line"> [[1 2]</span><br><span class="line"> [3 4]</span><br><span class="line"> [5 6]]</span><br><span class="line">x &gt; 2:</span><br><span class="line"> [[False False]</span><br><span class="line"> [ True  True]</span><br><span class="line"> [ True  True]]</span><br><span class="line">x[x &gt; 2]:</span><br><span class="line"> [3 4 5 6]</span><br></pre></td></tr></table></figure>
-
-<h4><span id="math">Math</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Basic math</span></span><br><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>], [<span class="number">3</span>,<span class="number">4</span>]], dtype=np.float64)</span><br><span class="line">y = np.array([[<span class="number">1</span>,<span class="number">2</span>], [<span class="number">3</span>,<span class="number">4</span>]], dtype=np.float64)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x + y:\n&quot;</span>, np.add(x, y)) <span class="comment"># or x + y</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x - y:\n&quot;</span>, np.subtract(x, y)) <span class="comment"># or x - y</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x * y:\n&quot;</span>, np.multiply(x, y)) <span class="comment"># or x * y</span></span><br></pre></td></tr></table></figure>
-
-<p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">x + y:</span><br><span class="line"> [[2. 4.]</span><br><span class="line"> [6. 8.]]</span><br><span class="line">x - y:</span><br><span class="line"> [[0. 0.]</span><br><span class="line"> [0. 0.]]</span><br><span class="line">x * y:</span><br><span class="line"> [[ 1.  4.]</span><br><span class="line"> [ 9. 16.]]</span><br></pre></td></tr></table></figure>
-
-<p>Dot product</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Dot product</span></span><br><span class="line">a = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>], [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]], dtype=np.float64) <span class="comment"># we can specify dtype</span></span><br><span class="line">b = np.array([[<span class="number">7</span>,<span class="number">8</span>], [<span class="number">9</span>,<span class="number">10</span>], [<span class="number">11</span>, <span class="number">12</span>]], dtype=np.float64)</span><br><span class="line"><span class="built_in">print</span> (a.dot(b))</span><br></pre></td></tr></table></figure>
-
-<p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[[ 58.  64.]</span><br><span class="line"> [139. 154.]]</span><br></pre></td></tr></table></figure>
-
-<p>Sum across a dimension</p>
-<p>add numbers in rows or columns</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Sum across a dimension</span></span><br><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>]])</span><br><span class="line"><span class="built_in">print</span> (x)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;sum all: &quot;</span>, np.<span class="built_in">sum</span>(x)) <span class="comment"># adds all elements</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;sum by col: &quot;</span>, np.<span class="built_in">sum</span>(x, axis=<span class="number">0</span>)) <span class="comment"># add numbers in each column</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;sum by row: &quot;</span>, np.<span class="built_in">sum</span>(x, axis=<span class="number">1</span>)) <span class="comment"># add numbers in each row</span></span><br></pre></td></tr></table></figure>
-
-<p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[[1 2]</span><br><span class="line"> [3 4]]</span><br><span class="line">sum all:  10</span><br><span class="line">sum by col:  [4 6]</span><br><span class="line">sum by row:  [3 7]</span><br></pre></td></tr></table></figure>
-
-<p>Transposing</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x:\n&quot;</span>, x)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x.T:\n&quot;</span>, x.T)</span><br></pre></td></tr></table></figure>
-
-<p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x:</span><br><span class="line"> [[1 2]</span><br><span class="line"> [3 4]]</span><br><span class="line">x.T:</span><br><span class="line"> [[1 3]</span><br><span class="line"> [2 4]]</span><br></pre></td></tr></table></figure>
-
-<h3><span id="advanced">Advanced</span></h3><h4><span id="tile">Tile</span></h4><blockquote>
-<p>numpy.tile(<em>A</em>, <em>reps</em>)</p>
-<p>Parameters:</p>
-<ul>
-<li><p><strong>A</strong>: array_like</p>
-<p>The input array.</p>
-</li>
-<li><p><strong>reps</strong>: array_like</p>
-<p>The number of repetitions of <em>A</em> along each axis.</p>
-</li>
-</ul>
-<p>Return: The tiled output array</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Tile</span></span><br><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>], [<span class="number">3</span>,<span class="number">4</span>]])</span><br><span class="line">y = np.array([<span class="number">5</span>, <span class="number">6</span>])</span><br><span class="line">addent = np.tile(y, (<span class="built_in">len</span>(x), <span class="number">1</span>))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;addent: \n&quot;</span>, addent)</span><br><span class="line">z = x + addent</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;z:\n&quot;</span>, z)</span><br></pre></td></tr></table></figure>
-
-<p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">addent: </span><br><span class="line"> [[5 6]</span><br><span class="line"> [5 6]]</span><br><span class="line">z:</span><br><span class="line"> [[ 6  8]</span><br><span class="line"> [ 8 10]]</span><br></pre></td></tr></table></figure>
-
-<h4><span id="broadcasting">Broadcasting</span></h4><p>kinda of addition</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>], [<span class="number">3</span>,<span class="number">4</span>]])</span><br><span class="line">y = np.array([<span class="number">5</span>, <span class="number">6</span>])</span><br><span class="line">z = x + y</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;z:\n&quot;</span>, z)</span><br></pre></td></tr></table></figure>
-
-<p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">z:</span><br><span class="line"> [[ 6  8]</span><br><span class="line"> [ 8 10]]</span><br></pre></td></tr></table></figure>
-
-<h4><span id="reshaping">Reshaping</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>], [<span class="number">3</span>,<span class="number">4</span>], [<span class="number">5</span>,<span class="number">6</span>]])</span><br><span class="line"><span class="built_in">print</span> (x)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x.shape: &quot;</span>, x.shape)</span><br><span class="line">y = np.reshape(x, (<span class="number">2</span>, <span class="number">3</span>))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;y.shape: &quot;</span>, y.shape)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;y: \n&quot;</span>, y)</span><br></pre></td></tr></table></figure>
-
-<p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[[1 2]</span><br><span class="line"> [3 4]</span><br><span class="line"> [5 6]]</span><br><span class="line">x.shape:  (3, 2)</span><br><span class="line">y.shape:  (2, 3)</span><br><span class="line">y: </span><br><span class="line"> [[1 2 3]</span><br><span class="line"> [4 5 6]]</span><br></pre></td></tr></table></figure>
-
-<h4><span id="removing-dimensions">Removing Dimensions</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([[[<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>]],[[<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>]]])</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x.shape: &quot;</span>, x.shape)</span><br><span class="line">y = np.squeeze(x, <span class="number">1</span>) <span class="comment"># squeeze dim 1</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;y.shape: &quot;</span>, y.shape) </span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;y: \n&quot;</span>, y)</span><br></pre></td></tr></table></figure>
-
-<p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x.shape:  (2, 1, 3)</span><br><span class="line">y.shape:  (2, 3)</span><br><span class="line">y: </span><br><span class="line"> [[1 2 1]</span><br><span class="line"> [2 2 3]]</span><br></pre></td></tr></table></figure>
-
-<h4><span id="adding-dimensions">Adding Dimensions</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>],[<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>]])</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x.shape: &quot;</span>, x.shape)</span><br><span class="line">y = np.expand_dims(x, <span class="number">1</span>) <span class="comment"># expand dim 1</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;y.shape: &quot;</span>, y.shape) </span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;y: \n&quot;</span>, y)</span><br></pre></td></tr></table></figure>
-
-<p>output:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x.shape:  (2, 3)</span><br><span class="line">y.shape:  (2, 1, 3)</span><br><span class="line">y: </span><br><span class="line"> [[[1 2 1]]</span><br><span class="line"></span><br><span class="line"> [[2 2 3]]]</span><br></pre></td></tr></table></figure>
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        PracticalAI Notes 1: The Notebooks
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-10-07
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h4><span id="introduction-of-practicalai">Introduction of <em>PracticalAI</em></span></h4><p><em>PracticalAI</em> is a totally free project or tutorial based on Google Cloud of deep learning  on GitHub platform.</p>
-<h2><span id="preparation">Preparation</span></h2><h3><span id="1-download">1. Download</span></h3><p>Click the <a class="link" target="_blank" rel="noopener" href="https://github.com/kleincup/practicalAI">LINK<i class="fas fa-external-link-alt"></i></a>, then download the <code>.zip</code> on GitHub.</p>
-<h3><span id="2-run-the-files">2. Run the Files</span></h3><ol>
-<li><p>Get the notebooks from the <code>notebooks</code> folder in this repositories.</p>
-</li>
-<li><p>For running the files, we need run these notebook on Google Colab (recommend) or your location machine.</p>
-</li>
-<li><p>Before following operations, sign into your Google account.</p>
-</li>
-<li><p>Click on a notebook and replace <code>https://github.com/</code> with <code>https://colab.research.google.com/github/</code> in the notebook URL or use this Chrome extension to do it with one click.</p>
-<p>Or, you can just download all the files to your local machine and upload to your Google Colab.</p>
-</li>
-<li><p>Run the files. and all changes will be automatically saved to you personal Google Cloud.</p>
-</li>
-</ol>
-<h2><span id="how-to-work-with-notebook">How to work with Notebook</span></h2><p>If you already know how to use notebooks, just skip this section.</p>
-<h3><span id="cell-types">Cell Types</span></h3><p><strong>Text cells</strong>: used for text</p>
-<p><strong>Code cells</strong>: used for code</p>
-<p>(literal meaning)</p>
-<h3><span id="operations">Operations</span></h3><h4><span id="creating">Creating</span></h4><p>Just click on <strong>+TEXT</strong> or <strong>+CODE</strong> button below the <em>View</em> button up top.</p>
-<h4><span id="running">Running</span></h4><p>Press <strong>SHIFT + ENTER</strong> to run the cell.</p>
-<h4><span id="editing">Editing</span></h4><p>Double click</p>
-<h4><span id="moving">Moving</span></h4><p>Put your spot on the pane of the cell and you can see that there is a toolbar on the right-top corner. Press ⬆️ or ⬇️ buttons to change your cell’s position. </p>
-<h4><span id="deleting">Deleting</span></h4><p>Press the button with a garbage can icon on the toolbar.</p>
-<h4><span id="saving">Saving</span></h4><p>Press <strong>Ctrl + S</strong></p>
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        PracticalAI Notes 2: Basic Python
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-10-07
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <p>Huh…, just some basic things. If you already know how to code with Python, just skip this section.</p>
-<h3><span id="variables">Variables</span></h3><p>Variables can be lots of different types. Like <strong>integers</strong> (int), <strong>floats</strong> (float), etc. All text based variables are <strong>string</strong> (str) type. </p>
-<p>We can see what type a variable is by printing its type.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># int variable, like 1, 2, 3</span></span><br><span class="line">x = <span class="number">5</span></span><br><span class="line"><span class="built_in">print</span> (x)</span><br><span class="line"><span class="built_in">print</span> (<span class="built_in">type</span>(x))</span><br><span class="line"></span><br><span class="line"><span class="comment"># float variable, like 1.0, 1.2, 1.3</span></span><br><span class="line">x = <span class="number">5.0</span></span><br><span class="line"><span class="built_in">print</span> (x)</span><br><span class="line"><span class="built_in">print</span> (<span class="built_in">type</span>(x))</span><br><span class="line"></span><br><span class="line"><span class="comment"># text variable, like &quot;lol&quot;, &quot;lmao&quot;, &quot;hello world&quot;</span></span><br><span class="line">x = <span class="string">&quot;5&quot;</span> </span><br><span class="line"><span class="built_in">print</span> (x)</span><br><span class="line"><span class="built_in">print</span> (<span class="built_in">type</span>(x))</span><br><span class="line"></span><br><span class="line"><span class="comment"># boolean variable, like true and false</span></span><br><span class="line">x = <span class="literal">True</span></span><br><span class="line"><span class="built_in">print</span> (x)</span><br><span class="line"><span class="built_in">print</span> (<span class="built_in">type</span>(x))</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># int variables</span></span><br><span class="line">a = <span class="number">5</span></span><br><span class="line">b = <span class="number">3</span></span><br><span class="line"><span class="built_in">print</span> (a + b)</span><br><span class="line"><span class="comment">#result: 8</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># string variables</span></span><br><span class="line">a = <span class="string">&quot;5&quot;</span></span><br><span class="line">b = <span class="string">&quot;3&quot;</span></span><br><span class="line"><span class="built_in">print</span> (a + b)</span><br><span class="line"><span class="comment">#result: 53</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># boolean variables</span></span><br><span class="line"><span class="comment">#a = true</span></span><br><span class="line"><span class="comment">#b = false</span></span><br><span class="line"><span class="comment">#print (a + b)</span></span><br><span class="line"><span class="comment">#result: Error</span></span><br></pre></td></tr></table></figure>
-
-<p>(the Booleans can’t be plus, lol)</p>
-<h3><span id="list">List</span></h3><p>Lists are objects in python that can hold a ordered sequence of numbers <strong>and</strong> text.</p>
-<p>(I think it kinda like the <a href="https://domuki.top/2020/10/06/Linked-List/">Linked List</a>)</p>
-<h4><span id="making-a-list">Making a list</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list_x = [<span class="number">3</span>, <span class="string">&quot;hello&quot;</span>, <span class="number">1</span>]</span><br><span class="line"><span class="built_in">print</span> (list_x)</span><br></pre></td></tr></table></figure>
-
-<p>result: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[3, &#39;hello&#39;, 1]</span><br></pre></td></tr></table></figure>
-
-
-
-<h4><span id="adding-something">Adding something</span></h4><blockquote>
-<p><em><strong>Append</strong></em>: add (something) to the end of a written document</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list_x.append(<span class="number">7</span>)</span><br><span class="line"><span class="built_in">print</span> (list_x)</span><br></pre></td></tr></table></figure>
-
-<p>result: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[3, &#39;hello&#39;, 1, 7]</span><br></pre></td></tr></table></figure>
-
-
-
-<h4><span id="accessing-items-at-specific-location-in-a-list">Accessing items at specific location in a list</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span> (<span class="string">&quot;list_x[0]: &quot;</span>, list_x[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;list_x[1]: &quot;</span>, list_x[<span class="number">1</span>])</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;list_x[2]: &quot;</span>, list_x[<span class="number">2</span>])</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;list_x[-1]: &quot;</span>, list_x[-<span class="number">1</span>]) <span class="comment"># the last item</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;list_x[-2]: &quot;</span>, list_x[-<span class="number">2</span>]) <span class="comment"># the second to last item</span></span><br></pre></td></tr></table></figure>
-
-<p>result: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">list_x[0]:  3 </span><br><span class="line">list_x[1]:  hello </span><br><span class="line">list_x[2]:  1 </span><br><span class="line">list_x[-1]:  7 </span><br><span class="line">list_x[-2]:  1</span><br></pre></td></tr></table></figure>
-
-
-
-<h4><span id="slicing">Slicing</span></h4><blockquote>
-<p><em><strong>Slice</strong></em>: cut something from (something larger)</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span> (<span class="string">&quot;list_x[:]: &quot;</span>, list_x[:])</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;list_x[2:]: &quot;</span>, list_x[<span class="number">2</span>:])</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;list_x[1:3]: &quot;</span>, list_x[<span class="number">1</span>:<span class="number">3</span>]) <span class="comment">#The search will start at index 1 (included) and end at index 3 (not included).</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;list_x[:-1]: &quot;</span>, list_x[:-<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
-
-<p>result: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list_x[:]:  [3, &#39;hello&#39;, 1, 7] </span><br><span class="line">list_x[2:]:  [1, 7] </span><br><span class="line">list_x[1:3]:  [&#39;hello&#39;, 1] </span><br><span class="line">list_x[:-1]:  [3, &#39;hello&#39;, 1]</span><br></pre></td></tr></table></figure>
-
-
-
-<h4><span id="length">Length</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">len</span>(list_x)</span><br></pre></td></tr></table></figure>
-
-<p>result: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
-
-
-
-<h4><span id="replacing">Replacing</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list_x[<span class="number">1</span>] = <span class="string">&quot;lol&quot;</span></span><br><span class="line"><span class="built_in">print</span> (list_x)</span><br></pre></td></tr></table></figure>
-
-<p>result: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[3, &#39;lol&#39;, 1, 7]</span><br></pre></td></tr></table></figure>
-
-
-
-<h4><span id="combining">Combining</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list_y = [<span class="number">2.4</span>, <span class="string">&quot;world&quot;</span>]</span><br><span class="line">list_z = list_x + list_y</span><br><span class="line"><span class="built_in">print</span> (list_z)</span><br></pre></td></tr></table></figure>
-
-<p>result: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[3, &#39;lol&#39;, 1, 7, 2.4, &#39;world&#39;]</span><br></pre></td></tr></table></figure>
-
-
-
-<h3><span id="tuples">Tuples</span></h3><blockquote>
-<p>Tuples are also objects in python that can hold immutable data which can not be replaced. </p>
-</blockquote>
-<h4><span id="creating-a-tuple">Creating a tuple</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tuple_x = (<span class="number">3.0</span>, <span class="string">&quot;hello&quot;</span>)</span><br><span class="line"><span class="built_in">print</span> (tuple_x)</span><br></pre></td></tr></table></figure>
-
-<p>result: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(3.0, &#39;hello&#39;)</span><br></pre></td></tr></table></figure>
-
-
-
-<h4><span id="adding-values-to-a-tuple">Adding values to a tuple</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tuple_x = tuple_x + (<span class="number">5.6</span>, )</span><br><span class="line"><span class="built_in">print</span> (tuple_x)</span><br></pre></td></tr></table></figure>
-
-<p>result: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(3.0, &#39;hello&#39;, 5.6)</span><br></pre></td></tr></table></figure>
-
-
-
-<p>Try to change the value, but I can’t.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tuple_x[<span class="number">1</span>] = <span class="string">&quot;world&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>result: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TypeError</span><br></pre></td></tr></table></figure>
-
-
-
-<h3><span id="dictionaries">Dictionaries</span></h3><blockquote>
-<p>Dictionaries are python objects that hold key-value pairs. In the example dictionary below, the keys are the “name” and “eye_colour” variables. They each have a value associated with them. A dictionary cannot have two of the same keys.</p>
-</blockquote>
-<h4><span id="creating-a-dictionary">Creating a dictionary</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">goku = &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;Goku&quot;</span>,</span><br><span class="line">        <span class="string">&quot;eye_color&quot;</span>: <span class="string">&quot;brown&quot;</span>&#125;</span><br><span class="line"><span class="built_in">print</span> (goku)</span><br><span class="line"><span class="built_in">print</span> (goku[<span class="string">&quot;name&quot;</span>])</span><br><span class="line"><span class="built_in">print</span> (goku[<span class="string">&quot;eye_color&quot;</span>])</span><br></pre></td></tr></table></figure>
-
-<p>result: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#39;name&#39;: &#39;Goku&#39;, &#39;eye_color&#39;: &#39;brown&#39;&#125; </span><br><span class="line">Goku </span><br><span class="line">brown</span><br></pre></td></tr></table></figure>
-
-
-
-<h4><span id="changing-the-value-for-a-key">Changing the value for a key</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">goku[<span class="string">&quot;eye_color&quot;</span>] = <span class="string">&quot;green&quot;</span></span><br><span class="line"><span class="built_in">print</span> (goku)</span><br></pre></td></tr></table></figure>
-
-<p>result: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#39;name&#39;: &#39;Goku&#39;, &#39;eye_color&#39;: &#39;green&#39;&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4><span id="adding-new-key-value-pairs">Adding new key-value pairs</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">goku[<span class="string">&quot;age&quot;</span>] = <span class="number">24</span></span><br><span class="line"><span class="built_in">print</span> (goku)</span><br></pre></td></tr></table></figure>
-
-<p>result: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#39;name&#39;: &#39;Goku&#39;, &#39;eye_color&#39;: &#39;green&#39;, &#39;age&#39;: 24&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4><span id="length-of-a-dictionary">Length of a dictionary</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span> (<span class="built_in">len</span>(goku))</span><br></pre></td></tr></table></figure>
-
-<p>result: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
-
-
-
-<h3><span id="if-statements">If-statements</span></h3><p>you can use <em>if</em> as the code shows below:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># If...else if...else statement</span></span><br><span class="line">x = <span class="number">4</span></span><br><span class="line"><span class="keyword">if</span> x &lt; <span class="number">1</span>:</span><br><span class="line">    score = <span class="string">&quot;low&quot;</span></span><br><span class="line"><span class="keyword">elif</span> x &lt;= <span class="number">4</span>:</span><br><span class="line">    score = <span class="string">&quot;medium&quot;</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    score = <span class="string">&quot;high&quot;</span></span><br><span class="line"><span class="built_in">print</span> (score)</span><br></pre></td></tr></table></figure>
-
-<p>result:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">medium</span><br></pre></td></tr></table></figure>
-
-
-
-<h3><span id="loops">Loops</span></h3><h4><span id="for-loop">For Loop</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># For loop</span></span><br><span class="line">x = <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>): <span class="comment"># goes from i=0 to i=2</span></span><br><span class="line">    x += <span class="number">1</span> <span class="comment"># same as x = x + 1</span></span><br><span class="line">    <span class="built_in">print</span> (<span class="string">&quot;i=&#123;0&#125;, x=&#123;1&#125;&quot;</span>.<span class="built_in">format</span>(i, x)) <span class="comment"># printing with multiple variables</span></span><br></pre></td></tr></table></figure>
-
-<p>result:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;0, x&#x3D;2 </span><br><span class="line">i&#x3D;1, x&#x3D;3 </span><br><span class="line">i&#x3D;2, x&#x3D;4</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>loop through items in a list</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>]:</span><br><span class="line">	x += <span class="number">1</span></span><br><span class="line">	<span class="built_in">print</span> (<span class="string">&quot;i=&#123;&#125;, x=&#123;&#125;&quot;</span>.<span class="built_in">format</span>(i, x))</span><br></pre></td></tr></table></figure>
-
-<p>result: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">i&#x3D;0, x&#x3D;2 </span><br><span class="line">i&#x3D;1, x&#x3D;3 </span><br><span class="line">i&#x3D;2, x&#x3D;4</span><br></pre></td></tr></table></figure>
-
-
-
-<h4><span id="while-loop">While Loop</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># While loop</span></span><br><span class="line">x = <span class="number">3</span></span><br><span class="line"><span class="keyword">while</span> x &gt; <span class="number">0</span>:</span><br><span class="line">    x -= <span class="number">1</span> <span class="comment"># same as x = x - 1</span></span><br><span class="line">    <span class="built_in">print</span> (x)</span><br></pre></td></tr></table></figure>
-
-<p>result: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">1</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
-
-<h3><span id="functions">Functions</span></h3><blockquote>
-<p>Functions are a way to modularize reusable pieces of code.</p>
-</blockquote>
-<h4><span id="creating-a-function">Creating a function</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Create a function</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add_two</span>(<span class="params">x</span>):</span></span><br><span class="line">    x += <span class="number">2</span></span><br><span class="line">    <span class="keyword">return</span> x</span><br><span class="line"></span><br><span class="line"><span class="comment"># Use the function</span></span><br><span class="line">score = <span class="number">0</span></span><br><span class="line">score = add_two(x=score)</span><br><span class="line"><span class="built_in">print</span> (score)</span><br></pre></td></tr></table></figure>
-
-<p>result:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
-
-<h4><span id="main-function">Main Function</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    print(<span class="string">&quot;Hello World!&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-
-<p>But how to understand <code>if __name__ == &quot;__main__&quot;:</code> ?</p>
-<p>For example: there’re 2 program</p>
-<p><em><strong>const.py</strong></em> used to define a constant <code>PI=3.14</code></p>
-<p><em><strong>area.py</strong></em> will need the constant to calculate the area of a circle</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># file name: const.py</span></span><br><span class="line">PI = <span class="number">3.14</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">	<span class="built_in">print</span> (<span class="string">&quot;PI:&quot;</span>, PI)</span><br><span class="line"></span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
-
-<p>when you run <em><strong>const.py</strong></em> the output will be</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PI:3.14</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># file name: area.py</span></span><br><span class="line"><span class="keyword">from</span> const <span class="keyword">import</span> PI</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calculate_area</span>(<span class="params">r</span>):</span></span><br><span class="line">	<span class="keyword">return</span> PI * (r ** <span class="number">2</span>)</span><br><span class="line">	</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">	<span class="built_in">print</span> (<span class="string">&quot;area: &quot;</span>, calculate_area(<span class="number">2</span>))</span><br><span class="line">	</span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
-
-<p>When you run <em><strong>area.py</strong></em>,</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PI: 3.14</span><br><span class="line">round area: 12.56</span><br></pre></td></tr></table></figure>
-
-<p>As it showing, the main() in both .py files were executed, which we would not want to see.</p>
-<p>So, we just need add one statement into the <em><strong>const.py</strong></em> </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># file name: const.py</span></span><br><span class="line">PI = <span class="number">3.14</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">	<span class="built_in">print</span> (<span class="string">&quot;PI:&quot;</span>, PI)</span><br><span class="line">	</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">	main()</span><br></pre></td></tr></table></figure>
-
-<p><code>__name__</code> represent the name of current block you running. </p>
-<p>When you running <em><strong>area.py</strong></em>, the <code>__name__</code>  of <em><strong>area.py</strong></em> should be  <code>__main__</code> and the <code>__name__</code>  of <em><strong>const.py</strong></em> is still “const”.</p>
-<p>When you running <em><strong>const.py</strong></em>, the <code>__name__</code>  of <em><strong>const.py</strong></em> should be  <code>__main__</code> and the  <code>__name__</code>  of <em><strong>area.py</strong></em> is still “area”.</p>
-<p>After change, the result should be:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">area: 12.56</span><br></pre></td></tr></table></figure>
-
-<h3><span id="classes">Classes</span></h3><blockquote>
-<p>Classes are a fundamental piece of object oriented Python programming.</p>
-</blockquote>
-<h4><span id="creating-a-class">Creating a class</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Initialize the class</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, name, matric, age</span>):</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.matric = matric</span><br><span class="line">        self.age = age</span><br><span class="line"></span><br><span class="line">    <span class="comment"># For printing</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;name: &#123;0&#125; matric: &#123;1&#125; age: &#123;2&#125;&quot;</span>.<span class="built_in">format</span>(self.name, self.matric, self.age)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Example function</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">change_name</span>(<span class="params">self, new_name</span>):</span></span><br><span class="line">        self.name = new_name</span><br></pre></td></tr></table></figure>
-
-<h4><span id="making-an-instance-of-a-class">Making an instance of a class</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Student <span class="keyword">import</span> Student</span><br><span class="line">peter = Student(name=<span class="string">&quot;Peter&quot;</span>, matric=<span class="string">&quot;201456&quot;</span>, age=<span class="number">20</span>)</span><br><span class="line"><span class="built_in">print</span> (peter)</span><br><span class="line"><span class="built_in">print</span> (peter.name)</span><br></pre></td></tr></table></figure>
-
-<p>result:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name: Peter matric: 201456 age: 20</span><br><span class="line">Peter</span><br></pre></td></tr></table></figure>
-
-
-
-<h4><span id="using-a-classs-function">Using a class’s function</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">peter.change_name(new_name = <span class="string">&quot;Bob&quot;</span>)</span><br><span class="line"><span class="built_in">print</span> (peter)</span><br><span class="line"><span class="built_in">print</span> (peter.name)</span><br></pre></td></tr></table></figure>
-
-<p>result:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name: Bob matric: 201456 age: 20</span><br><span class="line">Bob</span><br></pre></td></tr></table></figure>
-
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Linked List
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-10-06
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h3><span id="understanding-linked-list">Understanding Linked List</span></h3><blockquote>
-<p>A <strong>linked list</strong> is a linear data structure where each element is a separate object. Each element (we will call it a node) of a <strong>list</strong> is comprising of two items - the data and a reference to the next node.</p>
-</blockquote>
-<p><img src="/2020/10/06/Linked-List/image.png"></p>
-<p>Simply,</p>
-<blockquote>
-<p>a <em>linked list</em> consists of nodes where each node contains a data field and a reference(link) to the next node in the list</p>
-</blockquote>
-<h3><span id="working-with-linked-lists">Working with Linked Lists</span></h3><p>Lookup:</p>
-<ul>
-<li>by value O(n)</li>
-<li>by index O(n)</li>
-</ul>
-<p>insert:</p>
-<ul>
-<li>at the end O(1)</li>
-<li>At beginning O(1)</li>
-<li>in the middle  O(n)</li>
-</ul>
-<p>Delete:</p>
-<ul>
-<li>From beginning O(1)</li>
-<li>from end O(n)</li>
-<li>from middle O(n)</li>
-</ul>
-<h3><span id="exercise-building-a-linked-list">Exercise: Building a Linked List</span></h3><h5><span id="node-classinner">Node Class(inner):</span></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> value;</span><br><span class="line">	<span class="keyword">private</span> Node next;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Node</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.value = value;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5><span id="isempty">isEmpty():</span></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> first == <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5><span id="getprevious">getPrevious():</span></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> Node <span class="title">getPrevious</span><span class="params">(Node node)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> current =  first;</span><br><span class="line">	<span class="keyword">while</span> (current != <span class="keyword">null</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span> (current.next == node) <span class="keyword">return</span> current;</span><br><span class="line">		current = current.next;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5><span id="solution-addlast">Solution: addLast()</span></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//add last</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addLast</span><span class="params">(<span class="keyword">int</span> item)</span></span>&#123;</span><br><span class="line">        <span class="keyword">var</span> node = <span class="keyword">new</span> Node(item);</span><br><span class="line">        <span class="keyword">if</span> (first == <span class="keyword">null</span>)</span><br><span class="line">            first = last = node;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            last.next = node;</span><br><span class="line">            last = node;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<h5><span id="solution-addfirst">Solution: addFirst()</span></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addFirst</span><span class="params">(<span class="keyword">int</span> item)</span></span>&#123;</span><br><span class="line">	<span class="keyword">var</span> node = <span class="keyword">new</span> Node(item);</span><br><span class="line">	<span class="keyword">if</span> (isEmpty())</span><br><span class="line">		first = last = node;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">        node.next = first;</span><br><span class="line">		first = node;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5><span id="solution-indexof">Solution: indexOf()</span></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">indexOf</span><span class="params">(<span class="keyword">int</span> item)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">var</span> current = first;</span><br><span class="line">	<span class="keyword">while</span> (current != <span class="keyword">null</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span> (current.value == item) <span class="keyword">return</span> index;</span><br><span class="line">		current = current.next;</span><br><span class="line">		index++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5><span id="solution-contains">Solution: contains()</span></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">contain</span><span class="params">(<span class="keyword">int</span> item)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> indexOf(item) != -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5><span id="solution-removefirst">Solution: removeFirst()</span></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteFirst</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (isEmpty())</span><br><span class="line">		<span class="keyword">throw</span> <span class="keyword">new</span> NoSuchElementException();</span><br><span class="line">	<span class="keyword">if</span> (first == last)&#123;</span><br><span class="line">		first = last = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> second = first.next;</span><br><span class="line">	first.next = <span class="keyword">null</span>;</span><br><span class="line">	first = second;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5><span id="solution-removelast">Solution: removeLast()</span></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteLast</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (isEmpty())</span><br><span class="line">		<span class="keyword">throw</span> <span class="keyword">new</span> NoSuchElementException();</span><br><span class="line">	<span class="keyword">if</span> (first == last)&#123;</span><br><span class="line">		first = last = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> previous = getPrevious(last);</span><br><span class="line">	last = previous;</span><br><span class="line">	last.next = <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5><span id="total-code">Total code:</span></h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.NoSuchElementException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LinkList</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">int</span> value;</span><br><span class="line">        <span class="keyword">private</span> Node next;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Node</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.value = value;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Node first;</span><br><span class="line">    <span class="keyword">private</span> Node last;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//add first</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addFirst</span><span class="params">(<span class="keyword">int</span> item)</span></span>&#123;</span><br><span class="line">        <span class="keyword">var</span> node = <span class="keyword">new</span> Node(item);</span><br><span class="line">        <span class="keyword">if</span> (isEmpty())</span><br><span class="line">            first = last = node;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            node.next = first;</span><br><span class="line">            first = node;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> first == <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//add last</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addLast</span><span class="params">(<span class="keyword">int</span> item)</span></span>&#123;</span><br><span class="line">        <span class="keyword">var</span> node = <span class="keyword">new</span> Node(item);</span><br><span class="line">        <span class="keyword">if</span> (first == <span class="keyword">null</span>)</span><br><span class="line">            first = last = node;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            last.next = node;</span><br><span class="line">            last = node;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//delete first</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteFirst</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (isEmpty())</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NoSuchElementException();</span><br><span class="line">        <span class="keyword">if</span> (first == last)&#123;</span><br><span class="line">            first = last = <span class="keyword">null</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> second = first.next;</span><br><span class="line">        first.next = <span class="keyword">null</span>;</span><br><span class="line">        first = second;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//delete last</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteLast</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (isEmpty())</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NoSuchElementException();</span><br><span class="line">        <span class="keyword">if</span> (first == last)&#123;</span><br><span class="line">            first = last = <span class="keyword">null</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> previous = getPrevious(last);</span><br><span class="line">        last = previous;</span><br><span class="line">        last.next = <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Node <span class="title">getPrevious</span><span class="params">(Node node)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> current =  first;</span><br><span class="line">        <span class="keyword">while</span> (current != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (current.next == node) <span class="keyword">return</span> current;</span><br><span class="line">            current = current.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//contain</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">contain</span><span class="params">(<span class="keyword">int</span> item)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> indexOf(item) != -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//indexOf</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">indexOf</span><span class="params">(<span class="keyword">int</span> item)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">var</span> current = first;</span><br><span class="line">        <span class="keyword">while</span> (current != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (current.value == item) <span class="keyword">return</span> index;</span><br><span class="line">            current = current.next;</span><br><span class="line">            index++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-
-<nav class="blog-pagination">
-  
-  <a class="btn btn-outline-primary" href="/page/3/">Previous</a>
-  
-          
-  <a class="btn btn-outline-primary" href="/page/5/">Next</a>
-  
-  </nav>
-
-
-          <!--The body variable corresponds to the content rendered from the different page type templates (cf above).-->
-        </div>
-
-        <!-- Sidebar -->
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          
+  <!-- Sidebar -->
+  <div class="col-sm-4 blog-sidebar">
+    
     
     <div class="p-4 mb-3 bg-dark text-white rounded shadow">
         <h3>About</h3>
@@ -1204,7 +402,25 @@
 
 
 
-        </div>
+  </div>
+</div>
+
+
+  
+</div>
+
+
+          <!--The body variable corresponds to the content rendered from the different page type templates (cf above).-->
+
+      <div class="row">
+          <nav class="blog-pagination">
+  
+  <a class="btn btn-outline-primary" href="/page/3/">Previous</a>
+  
+          
+  <a class="btn btn-outline-primary" href="/page/5/">Next</a>
+  
+</nav>
 
       </div>
 

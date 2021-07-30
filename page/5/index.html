@@ -42,32 +42,46 @@
 <body>
 
   <!-- Menu -->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark shadow-sm">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark" aria-label="Eighth navbar example">
   <div class="container">
-
     <a target="_blank" rel="noopener" href="https://github.com/Domuki-main" class="navbar-brand d-flex align-items-center">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
         <path
           d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
       </svg>
-        <strong>&nbsp;Domuki</strong>
-      </a>
+      <strong>&nbsp;Domuki</strong>
+    </a>
 
-    <ul class="navbar-nav">
-      
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsCollapse" aria-controls="navbarsCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsCollapse">
+
+      <ul class="navbar-nav" style="margin-inline-end: auto;">
+        
         <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/archives">Archives</a>
-      </li>
-      
+          <a class="nav-link" href="/archives">Archives</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/categories">Categories</a>
-      </li>
-      
-    </ul>
+          <a class="nav-link" href="/tags">Tags</a>
+        </li>
+        
+      </ul>
+
+      <form class="form-group d-flex mb-0">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg></button>
+      </form>
+
+    </div>
   </div>
 </nav>
 
@@ -94,159 +108,109 @@
 
     <div class="container py-5">
 
-      <div class="row">
-
-        <!-- Main Content -->
-        <div class="col-sm-8 blog-main">
           
-    <div class="container mb-4">
+<div class="main-content">
 
-  <div class="card shadow">
+  
+  <div class="row">
+  <!-- Main Content -->
+  <div class="col-sm-8 blog-main">
+    
+    <div class="container mb-4 rounded shadow">
 
-    <div class="card-header">
+  <div class="card-body">
+    <!-- Title -->
+    <h1 class="card-title">
+      Array
+    </h1>
+
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-06
       
-    </div>
+      by <a href="/">Domuki</a>
+      
+    </p>
 
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Array
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-10-06
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h3><span id="understanding-arrays">Understanding Arrays</span></h3><blockquote>
-<p>In <a class="link" target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Computer_science">computer science<i class="fas fa-external-link-alt"></i></a>, an <strong>array data structure</strong>, or simply an <strong>array</strong>, is a <a class="link" target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Data_structure">data structure<i class="fas fa-external-link-alt"></i></a> consisting of a collection of <em>elements</em> (<a class="link" target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Value_(computer_science)">values<i class="fas fa-external-link-alt"></i></a> or <a class="link" target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Variable_(programming)">variables<i class="fas fa-external-link-alt"></i></a>), each identified by at least one <em>array index</em> or <em>key</em>.</p>
+    <p class="card-text">
+      <!-- Content -->
+      <h3 id="Understanding-Arrays"><a href="#Understanding-Arrays" class="headerlink" title="Understanding Arrays"></a>Understanding Arrays</h3><blockquote>
+<p>In <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Computer_science">computer science</a>, an <strong>array data structure</strong>, or simply an <strong>array</strong>, is a <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Data_structure">data structure</a> consisting of a collection of <em>elements</em> (<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Value_(computer_science)">values</a> or <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Variable_(programming)">variables</a>), each identified by at least one <em>array index</em> or <em>key</em>.</p>
 </blockquote>
 <p>Simply, </p>
 <blockquote>
 <p>a container stored a list of values</p>
 </blockquote>
-<h3><span id="exercise-building-an-array">Exercise: Building an Array</span></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] intArray_1 = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] intArray_2 = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> &#125;;</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://domuki.top/2020/02/14/Java-Learning-Chapter-7-Arrays/">More information about array</a></p>
-<h3><span id="solution-creating-the-array-class">Solution: Creating the Array Class</span></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Array</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span>[] items;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> count;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Array</span><span class="params">()</span></span>&#123;</span><br><span class="line">        items = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Array</span><span class="params">(<span class="keyword">int</span> length)</span></span>&#123;</span><br><span class="line">        items = <span class="keyword">new</span> <span class="keyword">int</span>[length];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> item)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(items.length == count)&#123;</span><br><span class="line">            <span class="keyword">int</span>[] newItems = <span class="keyword">new</span> <span class="keyword">int</span>[count + <span class="number">1</span>];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; count; i++)</span><br><span class="line">                newItems[i] = items[i];</span><br><span class="line">            items = newItems;</span><br><span class="line">        &#125;</span><br><span class="line">        items[count++] = item;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">removeAt</span><span class="params">(<span class="keyword">int</span> index)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt;= count)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = index; i &lt; count - <span class="number">1</span>; i++)</span><br><span class="line">            items[i] = items[i + <span class="number">1</span>];</span><br><span class="line">        count--;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">/*int[] newItems = new int[count];</span></span><br><span class="line"><span class="comment">        for (int i = 0; i &lt; count; i++)</span></span><br><span class="line"><span class="comment">            newItems[i] = items[i];</span></span><br><span class="line"><span class="comment">        items = newItems;*/</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">indexOf</span><span class="params">(<span class="keyword">int</span> item)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; count; i++)</span><br><span class="line">            <span class="keyword">if</span> (items[i] == item)</span><br><span class="line">                <span class="keyword">return</span> i;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">length</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> items.length;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; count; i++)</span><br><span class="line">            System.out.println(items[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3><span id="dynamic-array">Dynamic Array</span></h3><blockquote>
-<p>A <strong>dynamic array</strong> is an <strong>array</strong> with a big improvement: automatic resizing. One limitation of <strong>arrays</strong> is that they’re fixed size, meaning you need to specify the number of elements your <strong>array</strong> will hold ahead of time. A <strong>dynamic array</strong> expands as you add more elements.</p>
-</blockquote>
-<p>simply,</p>
-<blockquote>
-<p>The array can adjust its length automatically as long as it is changed.</p>
-</blockquote>
-<h4><span id="examples">Examples</span></h4><p>Java has built-in dynamic arrays. These are <a href="https://domuki.top/2020/04/23/Frequently-Used-Methods-of-Vector/">Vector</a>, <a href="https://domuki.top/2020/04/23/Frequently-Used-Methods-of-ArrayList/">ArrayList</a>, LinkedList and CopyOnWriteArrayList.</p>
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/06/Array/">
+        View this article
+      </a>
+    </p>
+    
 
   </div>
 
 </div>
 
+    
+    <div class="container mb-4 rounded shadow">
 
-    <div class="container mb-4">
+  <div class="card-body">
+    <!-- Title -->
+    <h1 class="card-title">
+      The Big O
+    </h1>
 
-  <div class="card shadow">
-
-    <div class="card-header">
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-05
       
-    </div>
+      by <a href="/">Domuki</a>
+      
+    </p>
 
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        The Big O
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-10-05
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <blockquote>
+    <p class="card-text">
+      <!-- Content -->
+      <blockquote>
 <p>The Big O Notation</p>
 </blockquote>
-<h3><span id="what-is-big-o-notation">What is Big O Notation?</span></h3><blockquote>
-<p><strong>Big O notation</strong> is a mathematical <strong>notation</strong> that describes the limiting behaviour of a function when the argument tends towards a particular value or infinity.</p>
-</blockquote>
-<p>Or simply,</p>
-<blockquote>
-<p>We use <strong>Big O</strong> to describe the performance of an algorithm</p>
-</blockquote>
-<h3><span id="5-main-types-of-big-o">5 main types of Big O</span></h3><img src="/2020/10/05/The-Big-O/chart1.png">
-
-<h4><span id="1-o1">1. O(1)</span></h4><p>It describes an algorithm that will always execute in the same time (or space)</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">log</span><span class="params">(<span class="keyword">int</span>[] numbers)</span></span>&#123;</span><br><span class="line">		System.out.print(numbers[<span class="number">0</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-
-
-<h4><span id="2-olog-n">2. O(log n)</span></h4><p>Logarithms are slightly trickier to explain so I’ll use a common example:</p>
-<p><strong>The</strong> <strong>binary</strong> <strong>searching</strong>.(it will be discussed in note of binary search)</p>
-<h4><span id="3-on">3. O(n)</span></h4><p>It describes an algorithm whose performance will grow linearly and in direct proportion to the size of the input data set.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">log</span><span class="params">(<span class="keyword">int</span>[] numbers)</span></span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;numbers.length; i++)</span><br><span class="line">			System.out.println(numbers[i]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-
-
-<h4><span id="4-onk">4. O(n^k^)</span></h4><p>It represents an algorithm whose performance is directly proportional to the square of the size of the input data set.</p>
-<p>O(n^2^):</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">log</span><span class="params">(<span class="keyword">int</span>[] numbers)</span></span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> first : numbers)</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> second : numbers)</span><br><span class="line">				System.out.println(first+’,’+second);</span><br><span class="line">	&#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-
-
-<h4><span id="5-okn">5. O(k^n^)</span></h4><p>It denotes an algorithm whose growth doubles with each addition to the input data set.</p>
-<p>O(2^n^):</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= Math.pow(<span class="number">2</span>, n); i++)&#123;</span><br><span class="line">    	System.out.println(<span class="string">&quot;Hey - I&#x27;m busy looking at: &quot;</span> + i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/05/The-Big-O/">
+        View this article
+      </a>
+    </p>
+    
 
   </div>
 
 </div>
 
+    
+    <div class="container mb-4 rounded shadow">
 
-    <div class="container mb-4">
+  <div class="card-body">
+    <!-- Title -->
+    <h1 class="card-title">
+      Nine useful sentence patterns
+    </h1>
 
-  <div class="card shadow">
-
-    <div class="card-header">
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-02
       
-    </div>
+      by <a href="/">Domuki</a>
+      
+    </p>
 
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Nine useful sentence patterns
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-10-02
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h2><span id="1-use-participle-phrases-as-adverbials"><strong>1. Use participle phrases as adverbials</strong></span></h2><ul>
+    <p class="card-text">
+      <!-- Content -->
+      <h2 id="1-Use-participle-phrases-as-adverbials"><a href="#1-Use-participle-phrases-as-adverbials" class="headerlink" title="1. Use participle phrases as adverbials"></a><strong>1. Use participle phrases as adverbials</strong></h2><ul>
 <li><strong>Same subjects</strong></li>
 </ul>
 <blockquote>
@@ -257,1084 +221,60 @@
 <p>When <strong>you</strong> are offered a job, <strong>you</strong> should cherish it.</p>
 <p>When offered a job, <strong>you</strong> should cherish it. </p>
 </blockquote>
-<ul>
-<li><strong>Independent subjects</strong></li>
-</ul>
-<blockquote>
-<p>As <strong>you</strong> are smart, <strong>the exam</strong> is easy to you. </p>
-<p>As <strong>you</strong> being smart, <strong>the exam</strong> is easy to you. </p>
-</blockquote>
-<h2><span id="2-use-participle-phrases-as-an-attribute"><strong>2. Use participle phrases as an attribute</strong></span></h2><blockquote>
-<p>The book which costs five dollars is HARRY PORTER. </p>
-<p>The book <strong>costing</strong> five dollars is HARRY PORTER.</p>
-</blockquote>
-<blockquote>
-<p>The book which is bought by you is HARRY PORTER.</p>
-<p>The book <strong>bought</strong> by you is HARRY PORTER.</p>
-</blockquote>
-<h2><span id="3-the-noun-clauses-led-by-what"><strong>3. The noun clauses led by “WHAT”</strong></span></h2><blockquote>
-<p><strong>What should be noted</strong> is that college education can bring you a better future.</p>
-</blockquote>
-<h2><span id="4-the-adjectival-clauses-led-by-when-where-why-whose">**4. The adjectival clauses led by “WHEN WHERE WHY WHOSE” **</span></h2><blockquote>
-<p>I sat on my seat <strong>when</strong> the teacher came into classroom.</p>
-</blockquote>
-<blockquote>
-<p>We will go to the beach <strong>where</strong> we had been 10 years ago.</p>
-</blockquote>
-<blockquote>
-<p>That is the reason <strong>why</strong> I want to kill him.</p>
-</blockquote>
-<blockquote>
-<p>The girl <strong>whose</strong> mother is a teacher studies very hard.</p>
-</blockquote>
-<h2><span id="5-non-restrictive-attributive-clause"><strong>5. non-restrictive attributive clause</strong></span></h2><p><strong><strong>, <strong>which</strong></strong></strong>_____.</p>
-<blockquote>
-<p>You choose to study abroad, <strong>which</strong> will bring you a better future. </p>
-</blockquote>
-<p>你选择出国留学，这可以给你带来一个更好的未来</p>
-<h2><span id="6-infix-sentenceinonwithnv-ing"><strong>6. Infix sentence（in/on/with+n/v-ing）</strong></span></h2><ul>
-<li><strong>in/ on/ with+n/ v-ing</strong></li>
-</ul>
-<p>介词短语（in/on/with+n/v-ing）做插入语，插到主语与谓语动词或系动词之间</p>
-<blockquote>
-<p><strong>In</strong> my opinion, college education is very important.</p>
-<p>College education, <strong>in</strong> my opinion, is very important. </p>
-</blockquote>
-<blockquote>
-<p>I travel to Beijing <strong>by</strong> driving.</p>
-<p>I, <strong>by</strong> driving, travel to Beijing. </p>
-</blockquote>
-<ul>
-<li><strong>Definitely/surely/undoubtedly/certainly/inevitably</strong></li>
-</ul>
-<blockquote>
-<p>You**, definitely,** make a good choice.</p>
-</blockquote>
-<ul>
-<li><strong>Special usage of HOWEVER</strong></li>
-</ul>
-<blockquote>
-<p><strong>However</strong>, I hold an opposite view. </p>
-</blockquote>
-<blockquote>
-<p>I, <strong>however</strong>, hold an opposite view. </p>
-</blockquote>
-<blockquote>
-<p>I hold an opposite view, <strong>however</strong>.</p>
-</blockquote>
-<h2><span id="7-inversion"><strong>7. Inversion</strong></span></h2><p>On no account/by no means/in no way = not</p>
-<p>E.G.  I can <strong>not</strong> support this view.</p>
-<p>-&gt;I can <strong>on no account</strong> support this view.</p>
-<p>-&gt;<strong>On no account</strong> can I support this view. (Finally)</p>
-<blockquote>
-<p>Education can <strong>not</strong> tell you how to live. </p>
-<p><strong>by no means</strong> can education tell you how to live. </p>
-</blockquote>
-<blockquote>
-<p>I will <strong>not</strong> choose this subject.</p>
-<p><strong>In no way</strong> will I choose this subject.</p>
-</blockquote>
-<blockquote>
-<p>I do <strong>not</strong> know how to take a taxi.</p>
-<p><strong>By no means</strong> do I know how to take a taxi. </p>
-</blockquote>
-<blockquote>
-<p>I am <strong>not</strong> a student. </p>
-<p><strong>On no account</strong> am I a student.</p>
-</blockquote>
-<h2><span id="8-appositive"><strong>8. Appositive</strong></span></h2><p>*<strong>Because</strong> = due to the fact that</p>
-<p>*<strong>So</strong> = which leads to the case that</p>
-<blockquote>
-<p><strong>Because</strong> you are young, you have more time to enjoy life. </p>
-<p><strong>Due to the fact that</strong> you are young, you have more time to enjoy life. </p>
-</blockquote>
-<blockquote>
-<p>You are young, <strong>so</strong> you have more time to enjoy life.</p>
-<p>you are young, <strong>which leads to the case that</strong> you have more time to enjoy life.</p>
-</blockquote>
-<h2><span id="9-emphasize"><strong>9. Emphasize</strong></span></h2><p><strong>It is</strong> + <the part you wanna emphasize> + <strong>that</strong> + others</the></p>
-<p>强调除谓语动词及系动词之外的部分 </p>
-<blockquote>
-<p>We elected him monitor at the meeting yesterday.</p>
-</blockquote>
-<blockquote>
-<p><strong>It is</strong> We <strong>that</strong> elected him monitor at the meeting yesterday.</p>
-<p><strong>It is</strong> him <strong>that</strong> We elected monitor at the meeting yesterday.</p>
-</blockquote>
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/02/Nine-useful-sentence-patterns/">
+        View this article
+      </a>
+    </p>
+    
 
   </div>
 
 </div>
 
+    
+    <div class="container mb-4 rounded shadow">
 
-    <div class="container mb-4">
+  <div class="card-body">
+    <!-- Title -->
+    <h1 class="card-title">
+      The Silent Letters
+    </h1>
 
-  <div class="card shadow">
-
-    <div class="card-header">
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-02
       
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        The Silent Letters
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-10-02
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <p>There are a lot of English letters should be silent when reading them although the letters have been written. These letters are called The Silent Letters.</p>
-<h3><span id="a">A</span></h3><p>It comes before ‘lly’. </p>
-<p>Like: logically, artistically,romantically, musically</p>
-<h3><span id="b">B</span></h3><p>It comes before ‘t’ or after ‘m’.</p>
-<p>Like: subtle, debt; comb, womb, tomb, bomb, plumber</p>
-<p>Except obtain</p>
-<h3><span id="c">C</span></h3><p>It is usually silent after ‘s’ or before ‘I’, ‘e’, or ‘y’.</p>
-<p>Like: scissors, science; muscle</p>
-<h3><span id="d">D</span></h3><p>Normally being silent if before ‘n’ or ‘g’.</p>
-<p>Like: wednesday, pledge, grudge, sandwich, handsome</p>
-<h3><span id="e">E</span></h3><p>If an ‘e’ is at the end of a word, the vowelbefore it becomes a longer vowel sound.</p>
-<p>Mat -&gt; mate; strip -&gt; stripe</p>
-<h3><span id="f">F</span></h3><p>seems it never keeping silent …</p>
-<h3><span id="g">G</span></h3><p>\1. Not pronounced if it comes before an ‘n’.</p>
-<p>Like: align, foreign; magnet, signature</p>
-<p>\2. Not pronounced if it comes after a voweland before an ‘h’. </p>
-<p>Like: high, light, through.</p>
-<p>But ‘gh’ needs to be pronounced in this situation: combine words. </p>
-<p>Like: Doghouse, foghorn</p>
-<p>Sometimes ‘gh’ is pronounced like /f/ </p>
-<p>For example: laugh,draught, tough,</p>
-<h3><span id="h">H</span></h3><p>Usually silent after a ‘w’. </p>
-<p>Like: white, what, which</p>
-<p>Sometimes not silent especially before an ‘o’. </p>
-<p>Like: who, whoever, whole</p>
-<p>Usually silent at the beginning of words.Hour, honest, </p>
-<p>Except: happy</p>
-<h3><span id="i">I</span></h3><p>-There’s nothing here.</p>
-<h3><span id="j">J</span></h3><p>-Don’t lookat me.</p>
-<h3><span id="k">K</span></h3><p>Almost always silent when it is before an ‘n’ at the beginning of a word.</p>
-<p>Like: Knight, knife, knowledge</p>
-<h3><span id="l">L</span></h3><p>Not usually pronounced after ‘a’, ‘o’, or ‘u’. </p>
-<p>Like: calf, should, yolk</p>
-<h3><span id="m">M</span></h3><p>-ignore me</p>
-<h3><span id="n">N</span></h3><p>Usually silent after an ‘m’ at the end of a word. </p>
-<p>Like: Autumn, column, damn</p>
-<h3><span id="o">O</span></h3><p>-oops</p>
-<h3><span id="p">P</span></h3><p>‘p’ usually silent in letter combinations, ‘ps’, ‘pt’, ‘pn’ used at the beginning of the words. </p>
-<p>Like: Psychology, pterodactyl, pneumonia</p>
-<p>Sometimes ‘ph’ is pronounced like ‘f’. </p>
-<p>Like: photo, phone</p>
-<h3><span id="q">Q</span></h3><p>-404 error</p>
-<h3><span id="r">R</span></h3><p>-do you know british accent?</p>
-<h3><span id="s">S</span></h3><p>‘s’ is not pronounced before ‘l’ in the following words: Island, isle</p>
-<h3><span id="t">T</span></h3><p>Now T as a silent letter. It’s quite hard to come up with a definitive rule. </p>
-<p>But commonly, anything end in S-T-E-N, it’s likely to have a silent T. </p>
-<p>Like: listen, </p>
-<p>And also anything ending in S-T-L-E is likely to have a silent ‘t’. </p>
-<p>Such as: whistle, castle, often.</p>
-<h3><span id="u">U</span></h3><p>Usually silent after a ‘g’ at the beginning of a word. </p>
-<p>Like: Guess, guide</p>
-<h3><span id="v">V</span></h3><p>-not me</p>
-<h3><span id="w">W</span></h3><p>Usually not pronounced if it comes before ‘r’ at the beginning of a word. </p>
-<p>Like: Wrong, wrap, write</p>
-<p>It is silent if followed by an ‘h’ and an ‘o’ at the beginning of a word. </p>
-<p>Like: Who, whole; two, sword</p>
-<h3><span id="x">X</span></h3><p>some words from French. </p>
-<p>Faux: made in imitation; artificial.</p>
-<h3><span id="y">Y</span></h3><p>-none of my business</p>
-<h3><span id="z">Z</span></h3><p>Another French word, </p>
-<p>Rendezvous: a meeting at an agreed time and place, typically between two people</p>
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
+      by <a href="/">Domuki</a>
       
+    </p>
 
-    </div>
+    <p class="card-text">
+      <!-- Content -->
+      <p>There are a lot of English letters should be silent when reading them although the letters have been written. These letters are called The Silent Letters.</p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/02/The-Silent-Letters/">
+        View this article
+      </a>
+    </p>
+    
 
   </div>
 
 </div>
 
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Part 4: Oral Presentation
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-10-02
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h2><span id="preparing-your-presentation">Preparing your presentation</span></h2><h4><span id="1-assessing-the-situation">1. Assessing the situation</span></h4><ul>
-<li>Topic in your area</li>
-<li>Topic that interests and that we want to know more about</li>
-</ul>
-<h4><span id="2-brainstorming">2. Brainstorming</span></h4><blockquote>
-<p>Brainstorming is a situation where a group of people meet to generate new ideas and solutions around a specific domain of interest by removing inhibitions. People are able to think more freely and they suggest as many spontaneous new ideas as possible.</p>
-</blockquote>
-<p>2.1. Listing</p>
-<p>to list all the ideas</p>
-<p>2.2. Idea Mapping</p>
-<p>to show the relationships and directions</p>
-<h4><span id="3-organising-your-idea">3. Organising your idea</span></h4><p>to make a story line in a tree diagram or an outline</p>
-<p>Developing the body of presentation, to make a detail outline and organising the information</p>
-<h4><span id="4-introducing-your-speech-to-engage-the-audience">4. Introducing your speech to engage the audience</span></h4><ul>
-<li>getting audience’s attention</li>
-<li>telling audience the topic</li>
-</ul>
-<h4><span id="5-developing-the-body-of-your-presentation">5. Developing the body of your presentation</span></h4><ul>
-<li>make a detailed outline</li>
-<li>organising information according to some basic patterns</li>
-</ul>
-<h4><span id="6-closing-your-presentation-effectively">6. Closing your presentation effectively</span></h4><ul>
-<li>summarising your central idea and main points</li>
-<li>using a memorable quotation</li>
-<li>making a dramatic statement</li>
-</ul>
-<h4><span id="7-revising-your-draft-presentation">7. Revising your draft presentation</span></h4><p><strong>7.1. Sentence construction</strong></p>
-<ul>
-<li>keep the sentences short. Short sentences are easier to follow and understand.</li>
-<li>use the active construction rather than the passive construction.</li>
-<li>use direct sentences. avoid beating about bush.</li>
-</ul>
-<p><strong>7.2. Word choice</strong></p>
-<p>make it more simple and easier</p>
-<p><strong>7.3. Transitions &amp; Intentions</strong></p>
-<p>illustration signals:</p>
-<blockquote>
-<p>An example of … is …</p>
-<p>To begin with, let me …</p>
-</blockquote>
-<p>time signals:</p>
-<blockquote>
-<p>In conclusion, I would like …</p>
-<p>Earlier, I have … now I would like …</p>
-<p>At this point, …</p>
-</blockquote>
-<p>change-of-direction signals:</p>
-<blockquote>
-<p>However,</p>
-<p>In contrast,</p>
-<p>On the other hand,</p>
-</blockquote>
-<p>comparison signals:</p>
-<blockquote>
-<p>Similarly,</p>
-<p>Likewise,</p>
-<p>In comparison,</p>
-</blockquote>
-<p>conclusion signals:</p>
-<blockquote>
-<p>As a result,</p>
-<p>In summary,</p>
-</blockquote>
-<p>addition signals:</p>
-<blockquote>
-<p>In addition,</p>
-<p>Moreover,</p>
-</blockquote>
-<p>emphasizers:</p>
-<blockquote>
-<p>In fact,</p>
-<p>Actually,</p>
-<p>To repeat,</p>
-</blockquote>
-<h2><span id="the-outline">The outline</span></h2><h4><span id="1-head-beginning-of-speech">1. Head (Beginning of speech)</span></h4><p>Greetings: we need greet people before we formally start our speech. </p>
-<blockquote>
-<p>Hello, everyone! (in a short way)<br>Good morning/afternoon/evening! It’s my pleasure to give you a short speech here. (in a long way)</p>
-</blockquote>
-<p>Self-introduction: self intro should be simple and direct</p>
-<blockquote>
-<p>I’m Alex, a student studying in faculty of Computer Science. (in a long way)</p>
-<p>I’m Bob. (in a short way)</p>
-</blockquote>
-<h4><span id="2-body">2. Body</span></h4><p>Firstly, raise our opinion:</p>
-<blockquote>
-<p>Today, we’re going to talk about …</p>
-<p>My topic is …</p>
-<p>What I wanna say is …</p>
-</blockquote>
-<p>If there are many subtopics in your topic, you’d better to introduce them to the audience in order.</p>
-<blockquote>
-<p>This is the outline of what we’re going to discuss.</p>
-<p>Firstly, …</p>
-<p>Secondly, …</p>
-<p>and …</p>
-<p>Finally, …</p>
-</blockquote>
-<p>We need to confirm our ideas which is correct and valuable by showing the evidence we collected to the audience.</p>
-<blockquote>
-<p>You know …</p>
-<p>As we all know, …</p>
-<p>The evidence as the page shows that …</p>
-<p>You can see this statistic chart which shows that …</p>
-</blockquote>
-<p>When everything expressed clearly, we need draw a simple conclusion.</p>
-<blockquote>
-<p>So, what we discussed today is that …</p>
-<p>Therefore, my conclusion is …</p>
-</blockquote>
-<h4><span id="3-tail-ending-of-speech">3. Tail (Ending of speech)</span></h4><p>Thank to audience:</p>
-<blockquote>
-<p>Thank you very much for your attention.</p>
-<p>Thanks for listening.</p>
-</blockquote>
-<h2><span id="delivering-your-speech">Delivering your speech</span></h2><ol>
-<li>Pronunciation</li>
-<li>Body language</li>
-<li>Degree of formality</li>
-<li>Pacing</li>
-</ol>
-<h2><span id="preparing-visuals">Preparing Visuals</span></h2><p>I wouldn’t recommend you to make everything about PPT, even patterns. There are many resources available on the internet, and they are completely free to everyone. Therefore, you the only thing you need do is to copy your information on the basis of completing the speech draft to the template you downloaded, and revise a appropriate layout.</p>
-<p>But working with a template doesn’t mean everything will be all right. Here are some things that need your attention:</p>
-<p><strong>1. Choose the correct size</strong></p>
-<p>try to set the size fit in the electronic equipment you will use for display, and ensure that your pictures and text will not fly over the screen.</p>
-<p><strong>2. Avoid the use of “text points” and try to replace it with different pictures</strong></p>
-<p>Wait, why? Because IIBC proves that pictures are more acceptable than texts. </p>
-<p><strong>3. use pictures and diagrams as many as possible</strong></p>
-<p>Compared with text, images are easier to understand and analyse</p>
-<p><strong>4. Choose the style you like</strong></p>
-<p><strong>5. Put the text in the upper position</strong></p>
-<p>Sometimes, you can see some students standing up to read the PPT content in class that because some texts are too low so the audience at the back of room may not be able to see it clearly.</p>
-<p><strong>6. You need a “progress bar” or page number to display the PPT</strong></p>
-<p>It can show you and the audience where your speech has progressed.</p>
-<p><strong>7. Highlight the most important part of the text</strong></p>
-<p><strong>8. The screen goes black when telling a story</strong></p>
-<p>in order to create an atmosphere for the audience to listen to the story attentively</p>
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
-
+    
   </div>
 
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Part 3: Negotiating Effectively
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-10-02
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <p><strong>What is negotiation?</strong> </p>
-<p>Negotiation is the communication process that include two or more parties meet with hope of getting something from the other party or parties. </p>
-<p>When we negotiate we try to get what we want from the other party by offering something in exchanging. We would meet with to find out what the other party wants and to discuss how these interests can be met.</p>
-<p>Simply, you can use the following patterns to help you plan for success in negotiation:</p>
-<ul>
-<li>Understand the issues involved</li>
-<li>Know yourself totally, whatever the strengths or weakness</li>
-<li>Know your opponents as better as possible including strengths and weakness</li>
-<li>Understand the process of negotiation</li>
-<li>Use the power of verbal and non-verbal communication</li>
-</ul>
-<h2><span id="first-of-all-preparing-for-negotiation">First of All: Preparing for Negotiation</span></h2><h3><span id="1-identifying-issues-for-negotiation">1. Identifying issues for negotiation</span></h3><blockquote>
-<p>Issues are the content of negotiation.</p>
-</blockquote>
-<p>As an effective negotiator, you need to be able to identify the obvious issues and other related ones for discussion. you also need to predict issues of concern to the other party. </p>
-<p><img src="https://imglf6.lf127.net/img/TDhpTXREcklsWUx0VGVZcjFsQ1F4ckNTbDFreUcwaGM1UFBuSEdCeWlYMFdSRlpMT2VGenVnPT0.jpg?imageView" alt="img"></p>
-<h3><span id="2-considering-time-and-effort-to-be-invested">2. Considering time and effort to be invested</span></h3><p>Apart from identifying the issues, you need to think about the time and effort that you wish to spend for negotiation. If the negotiation held to long, goodwill and possible opportunities for you to gain more interests are lost.</p>
-<p>However, it’s not means all negotiations should be just short. But, normally, the longer negotiation you hold, the greater risks of losing morale, trust and goodwill between you and other you take.</p>
-<h3><span id="3-gathering-information-and-identifying-negotiation-strategies">3. Gathering information and identifying negotiation strategies</span></h3><p>Your Positions:</p>
-<ul>
-<li>What strategies can I use?</li>
-<li>What are the obstacles involved?</li>
-<li>How can I persuade them to see my point of view?</li>
-</ul>
-<p>The Other Party’s Positions:</p>
-<ul>
-<li>What strategies would they use?</li>
-<li>What defence would they use?</li>
-<li>What information might they use against me?</li>
-</ul>
-<h2><span id="managing-different-phases-of-negotiation">Managing Different Phases of Negotiation</span></h2><p>Negotiators often goes through a number of phases in attempting to reach agreement considering on particular issues. The following are some of the phrases:</p>
-<h3><span id="setting-the-stage-for-cooperation">Setting the Stage for Cooperation</span></h3><h4><span id="1-paying-attention">1. Paying attention</span></h4><p>These are discussed in Maintaining a conversation (Part 1)</p>
-<p><a class="link" target="_blank" rel="noopener" href="https://www.lofter.com/lpost/30b2f25a_1ca90d646">https://www.lofter.com/lpost/30b2f25a_1ca90d646<i class="fas fa-external-link-alt"></i></a></p>
-<h4><span id="2-initiating-and-participating-in-a-casual-conversation">2. Initiating and participating in a casual conversation</span></h4><p>Here are some useful expressions for greetings and carry out a conversation:</p>
-<blockquote>
-<p>Hello, … Nice to meet you again. How are your wife and children? I haven’t seen … for almost a year now. </p>
-</blockquote>
-<blockquote>
-<p>Good morning. You must be Mr./Ms… I’m … Pleased to meet you. I’ve read so much about you. I’ve always wanted to meet you in person.</p>
-</blockquote>
-<blockquote>
-<p>How do you do? Thank you for allowing us to meet you on such short notice.</p>
-</blockquote>
-<h4><span id="3-making-an-opening-statement">3. Making an opening statement</span></h4><p>Here are some examples:</p>
-<blockquote>
-<p>Right, shall we get started? I’ve mentioned on the phone that I would like to..</p>
-<p>So, I’ll like to discuss with you our three main concerns about…</p>
-</blockquote>
-<blockquote>
-<p>So, let’s agree on our agenda today, shall we? I’d like to present our position and I hope you could also let us know …</p>
-</blockquote>
-<h3><span id="exploring-needs-and-alternatives">Exploring Needs and Alternatives</span></h3><h4><span id="1-asking-opening-questions">1. Asking opening questions</span></h4><p>Please refer to: <a class="link" target="_blank" rel="noopener" href="https://www.lofter.com/lpost/30b2f25a_1ca92ab35">https://www.lofter.com/lpost/30b2f25a_1ca92ab35<i class="fas fa-external-link-alt"></i></a></p>
-<h4><span id="2-listening-actively">2. Listening actively</span></h4><p>Please refer to Maintaining a conversation and discussing options (Part 1 and 2):</p>
-<p><a class="link" target="_blank" rel="noopener" href="https://www.lofter.com/lpost/30b2f25a_1ca90d646">https://www.lofter.com/lpost/30b2f25a_1ca90d646<i class="fas fa-external-link-alt"></i></a></p>
-<p><a class="link" target="_blank" rel="noopener" href="https://www.lofter.com/lpost/30b2f25a_1ca92ab35">https://www.lofter.com/lpost/30b2f25a_1ca92ab35<i class="fas fa-external-link-alt"></i></a></p>
-<h3><span id="inviting-and-forwarding-proposals">Inviting and Forwarding Proposals</span></h3><h4><span id="1-inviting-proposals">1. Inviting proposals</span></h4><blockquote>
-<p>So, how do you suggest we solve this problem?</p>
-<p>So, what do you have in mind? </p>
-<p>What are you trying to say here?</p>
-<p>What are we talking about here?</p>
-</blockquote>
-<h4><span id="2-presenting-initial-demandsproposal">2. Presenting initial demands/proposal</span></h4><blockquote>
-<p>I would like …</p>
-<p>If you don’t mind, …</p>
-<p>I will agree to … as long as  …</p>
-<p>I won’t accept … unless …</p>
-<p>Is it possible to have … ?</p>
-</blockquote>
-<h4><span id="3-checking-for-understanding">3. Checking for Understanding</span></h4><p>Please refer to: <a class="link" target="_blank" rel="noopener" href="https://www.lofter.com/lpost/30b2f25a_1ca92ab35">https://www.lofter.com/lpost/30b2f25a_1ca92ab35<i class="fas fa-external-link-alt"></i></a></p>
-<h3><span id="bargaining-and-conceding">Bargaining and Conceding</span></h3><h4><span id="1-expressing-conditions">1. Expressing conditions</span></h4><blockquote>
-<p>If you could … we would consider …</p>
-<p>If you can agree with … then we can …</p>
-<p>That’s not possible unless …</p>
-<p>We cannot accept that if …</p>
-</blockquote>
-<h4><span id="2-justifying-your-position">2. Justifying your position</span></h4><p>Disagreements and conflicts may occur at the phrase. Therefore, handling such situations efficiently is highly crucial to the success of the negotiation. What is necessary to disagree or reject the demand, reasons or clarification of the situation is often given to justify your position. A counter-proposal could also be made.</p>
-<h4><span id="3-expressing-agreement-or-disagreement">3. Expressing agreement or disagreement</span></h4><p>To show agreement:</p>
-<blockquote>
-<p>That’s possible.</p>
-<p>OK. That’s probably all right.</p>
-<p>That seems acceptable.</p>
-<p>That’s fine with me.</p>
-</blockquote>
-<p>To show disagreement:</p>
-<blockquote>
-<p>That’s impossible.</p>
-<p>I’m afraid we can’t agree with that.</p>
-<p>Unfortunately …</p>
-</blockquote>
-<h3><span id="ending-the-negotiation">Ending the Negotiation</span></h3><h4><span id="1-summarizing-progressespoints-of-agreement">1. Summarizing progresses/points of agreement</span></h4><p>Please refer to: <a class="link" target="_blank" rel="noopener" href="https://www.lofter.com/lpost/30b2f25a_1ca92ab35">https://www.lofter.com/lpost/30b2f25a_1ca92ab35<i class="fas fa-external-link-alt"></i></a></p>
-<p>the section of drawing a conclusion.</p>
-<h4><span id="2-closing-the-deal">2. Closing the deal</span></h4><p>This is done when you have come to the end of the successful negotiation. The clothing is often brief and the parties involved may engage in the short session of small talk to bring the negotiation to a cordial end.</p>
-<p>Like a easy talk. You can just chat something about you and other, like travelling, etc.</p>
-<h4><span id="3-adjourning-the-negotiation">3. Adjourning the negotiation</span></h4><p>Here are some expressions to help you adjourning the negotiation:</p>
-<blockquote>
-<p>We don’t seem to be getting anywhere.</p>
-<p>Perhaps we could adjourn for a while.</p>
-<p>I think we’re both tired. It has been a long day.</p>
-</blockquote>
-<p>When the intention to adjourn has been expressed, you can end negotiation by summarising the points of agreement and establishing the agenda for the next negotiation session Here are some useful expressions for this purpose:</p>
-<blockquote>
-<p>Shall we summarize the progress that we’ve made?</p>
-<p>Let’s go through the points that we’ve agreed on?</p>
-<p>I hope we can work out something of mutual benefit to both parties in our next meeting.</p>
-</blockquote>
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Part 2: Group Discussion
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-10-02
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <p>Many of us might have participated a group discussion in a formal or an informal meeting. There are some skills that how we manage a group discussion.</p>
-<p>A group discussion takes place when two or more people are communicating in order to achieve a specific purpose. There are two directions when people exchanging ideas during discussion:</p>
-<p>\1. We express our ideas and opinions to make others understand.</p>
-<p>\2. We listen to others to understand their opinions and ideas.</p>
-<p>In view of time, the structure of group discussion can be thought as 3 main sections: The beginning, the discussion itself and the ending.</p>
-<h2><span id="1-the-beginning-and-the-ending">1. The beginning and the ending</span></h2><p>At the beginning of discussion, there should be a person, one of the partners, who announce the discussion begin when everything to be ready. We can get a starting by saying:</p>
-<blockquote>
-<p>Is everyone ready to begin?</p>
-<p>Are we ready to get started?</p>
-<p>Shall we begin?</p>
-</blockquote>
-<p>But there is not a discussion without ending. After everyone finish expressing their ideas, the discussion shall be closed. We can end the discussion by drawing a conclusion of content we said. The conclusion should include all the ideas that represent all the group members. We can summarise the discussion by saying:</p>
-<blockquote>
-<p>We’ve come to the conclusion that …</p>
-<p>So, to sum up, we’ve decided …</p>
-<p>After our discussion, it seems that most of us think that …</p>
-</blockquote>
-<h2><span id="2-the-discussion-itself">2. The discussion itself</span></h2><h3><span id="21-how-to-express-your-opinion">2.1. How to express your opinion</span></h3><p>Firstly, raise it.</p>
-<p>We need tell the others that we agree or disagree with the given topic. But we should not just give our opinion without any explanation or evidence which can support our opinion.</p>
-<p>So, we need <strong>support our ideas</strong>.</p>
-<blockquote>
-<p><strong>When I do exercise everyday, I’m more alert and energetic.</strong> That’s the reason why I think it’s a good idea for people to exercise regularly.</p>
-<p><strong>There’s a research shows that it’s good for people’s health if we eat more vegetables.</strong> So I agree with that vegetables are indispensable to human beings.</p>
-</blockquote>
-<p>When we expressing our own ideas, we’d better to use <strong>“owned languages”.</strong> That is because when we take off “owned languages”, others may take offence from what you are saying, and may not want to respond your words. There are some examples of <strong>“owned languages</strong>“:</p>
-<blockquote>
-<p>I feel that …</p>
-<p>I think/believe that …</p>
-<p>In my opinion, …</p>
-<p>From my point of view, …</p>
-<p>As far as I’m concerned …</p>
-</blockquote>
-<p>A very important skill in a discussion is efficient <strong>turn-taking</strong>. We need to know when and how we take turn at speaking, and give others an opportunity to speak. When others taking turn to us, we should not to interrupt them. All we need to do is just keeping patient and waiting for them finish their talk. </p>
-<p>If there is the situation that you have to interrupt someone, we should use the right way to interrupt. An interruption in wrong way can be very rude. There are some examples about requiring an interruption:</p>
-<blockquote>
-<p>I’d like to say something here.</p>
-<p>Could I add something here?</p>
-<p>Sorry, may I interrupt for just a moment?</p>
-<p>Do you mind if I say something here?</p>
-</blockquote>
-<p>If someone interrupts you, you should stop talking and let the people talk. When you continue your words after interruption, you can say:</p>
-<blockquote>
-<p>As what I said …</p>
-<p>So …</p>
-<p>I’ve just mentioned that …</p>
-</blockquote>
-<p>However, when you have the right to finish your word and someone trying to interrpt you, you can continue by saying:</p>
-<blockquote>
-<p>Sorry, I’d just like to finish this point.</p>
-<p>Could I please finish my point?</p>
-</blockquote>
-<h3><span id="22-responding-to-the-others">2.2. Responding to the others</span></h3><p>\1. We need show that we agree or disagree with others’ opinion.</p>
-<p>Agree all:</p>
-<blockquote>
-<p>You are right</p>
-<p>I think so</p>
-<p>I agree</p>
-</blockquote>
-<p>Agree some:</p>
-<blockquote>
-<p>I agree up to a point, but …</p>
-<p>That’s true in a way, but …</p>
-<p>Most of what you said is true. However, …</p>
-</blockquote>
-<p>Neutral:</p>
-<blockquote>
-<p>I can see both sides of augment.</p>
-<p>I agree both</p>
-<p>I haven’t made up my mind about … because …</p>
-</blockquote>
-<p>Disagree indirectly:</p>
-<blockquote>
-<p>I’m not sure I agree with that.</p>
-<p>Yes, but …</p>
-<p>I see things a bit differently.</p>
-</blockquote>
-<p>Disagree directly:</p>
-<blockquote>
-<p>I disagree.</p>
-<p>I can’t accept that.</p>
-</blockquote>
-<p>\2. Maybe you didn’t hear the opinion clearly or you didn’t know the mean of some word the others said. you can just ask for clarification. If others don’t understand your word, you also need to give clarification.</p>
-<p>Asking:</p>
-<blockquote>
-<p>What’s the mean by …?</p>
-</blockquote>
-<p>Clarifying:</p>
-<blockquote>
-<p>What I mean is …</p>
-<p>This means …</p>
-</blockquote>
-<p>Checking:</p>
-<blockquote>
-<p>Is that clearer?</p>
-<p>Can you get me?</p>
-</blockquote>
-<p>If you want to check that you have understood the opinion correctly, you can use paraphrasing:</p>
-<blockquote>
-<p>I hear you saying …</p>
-<p>Let me see if I’ve got it right.</p>
-<p>In other words, you’ve saying that …</p>
-</blockquote>
-<blockquote>
-<p>Did I hear you correctly?</p>
-<p>Is that right?</p>
-<p>I’m I right so far</p>
-</blockquote>
-<p>\3. We need give others some responses to show our respect when they expressing their ideas. (attending behaviour)</p>
-<blockquote>
-<p>Uh huh …</p>
-<p>Mmm…</p>
-<p>Okay…</p>
-<p>I see …</p>
-<p>Right</p>
-</blockquote>
-<h3><span id="23-maintain-the-flow-of-discussion">2.3. Maintain the flow of discussion</span></h3><p>\1. Encouraging participation</p>
-<p>Encourage open participation</p>
-<blockquote>
-<p>Dose anyone have anything to add?</p>
-<p>Anyone want to say something here?</p>
-</blockquote>
-<p>Encourage specific members</p>
-<blockquote>
-<p>Banana. How do you think of Apple’s point?</p>
-<p>Mango, anything wanna add?</p>
-<p>Peach, what do you think?</p>
-</blockquote>
-<p>Complimenting</p>
-<blockquote>
-<p>Thanks, Apple for mentioning that.</p>
-<p>That’s a good point, Cheese.</p>
-</blockquote>
-<p>Control the group when some members speak too much.</p>
-<p>Let’s hear what others wanna say.</p>
-<p>\2. Keeping discussion on track</p>
-<blockquote>
-<p>That’s an interesting idea, but perhaps we should finish this point before going on.</p>
-</blockquote>
-<p>If someone spend too much time on one point, or repeat the same idea.</p>
-<blockquote>
-<p>Let’s move on to the next point, shall we?</p>
-</blockquote>
-<p>\3. Facilitating in-depth discussion</p>
-<blockquote>
-<p>Let’s discuss a little bit more about …</p>
-<p>I feel that … has not been explored in much depth. </p>
-<p>Shall we talk more about it?</p>
-</blockquote>
-<p>Talking in different aspects:</p>
-<blockquote>
-<p>We’ve considered the … implications of … </p>
-<p>How about we discussing the … implications?</p>
-</blockquote>
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Part 1: Conversation Skills
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-10-02
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h2><span id="1-introduction">1. Introduction</span></h2><p>We, as humans, communicate with various people every day. For someone, having a conversation with others, including strangers, does not seem to be a difficult task, However, for some people, it seems to be a stressful experience. For those who do not so well, there must be some useful skills.</p>
-<p>In this section, we’re going to talk about how to start, maintain, and end a conversation.</p>
-<h2><span id="2-start-a-conversation">2. Start a Conversation</span></h2><p>Let’s see a few ways you can use in starting a discussion:</p>
-<ol>
-<li>Using greetings and introductions</li>
-<li>Talking about your surroundings</li>
-<li>Making a small talk</li>
-</ol>
-<h3><span id="21-using-greetings-and-introductions">2.1. Using greetings and introductions</span></h3><p>Simple and common greetings, like:</p>
-<ul>
-<li><em>Hello</em></li>
-<li><em>Good morning/ afternoon/ evening</em></li>
-<li><em>How are you?</em></li>
-<li><em>How do you do (formal way)</em></li>
-<li><em>What’s up (informal way)</em></li>
-</ul>
-<p>And you also can add some information about yourself, like:</p>
-<ul>
-<li><em>How do you do? I’m Apple.</em></li>
-<li><em>Pleased to meet you Apple. My name is Banana.</em></li>
-<li><em>Hello, I’m Mango. May I have your name?</em></li>
-<li><em>Hi, you look familiar. Have we met before?</em></li>
-</ul>
-<p>Introduction also can involve introducing people to each other.</p>
-<ul>
-<li><em>Apple, let me introduce you to Mango, my old classmate.</em></li>
-<li><em>This is Strawberry. He used to stay next door to me.</em></li>
-<li><em>I’d like to introduce you to Cheese. we are colleagues.</em></li>
-</ul>
-<h3><span id="22-talking-about-your-surroundings">2.2. Talking about your surroundings</span></h3><p>Talking about your surroundings is another way to start a conversation. The topics on the surroundings should be related to the context of your discussion.</p>
-<ul>
-<li><em>Such a long queue, isn’t it?</em></li>
-<li><em>Don’t you think the painting is pretty?</em></li>
-<li><em>What a noisy place, isn’t it?</em></li>
-</ul>
-<h3><span id="23-making-a-small-talk">2.3. Making a small talk</span></h3><p>One useful conversation skill we should learn is to start a discussion by making small talk. Normally accepted topics include work, study, the weather, news, and life.</p>
-<ul>
-<li>*Was the traffic heavy on the highway?<br>*</li>
-<li><em>Is there water rationing at your place?</em></li>
-<li><em>Did you hear about the news that…?</em></li>
-</ul>
-<h2><span id="3-maintain-a-conversation">3. Maintain a Conversation</span></h2><p>Once a conversation has been started, you should develop and maintain it.</p>
-<p>There are a few ways in remaining a conversation:</p>
-<ol>
-<li>Using fillers</li>
-<li>Using encouraging expressions</li>
-<li>Asking questions</li>
-<li>Highlighting what you have heard</li>
-<li>Disclosing information about yourself</li>
-</ol>
-<h3><span id="31-using-fillers">3.1. Using fillers</span></h3><p>Fillers can help you break the silence and stall for time while you search for ideas or the right words.</p>
-<ul>
-<li><em>Anyway…</em></li>
-<li><em>Well…</em></li>
-<li><em>You know…</em></li>
-<li>*I’m not sure, but… I think …<br>*</li>
-<li><em>Err, let me see…</em></li>
-<li><em>What I’m trying to tell you is…</em></li>
-</ul>
-<h3><span id="32-using-encouraging-expressions">3.2. Using encouraging expressions</span></h3><p>If the person you talking with is shy or introverted or lacks the motivation of talking, you should keep the talk going by encouraging them.</p>
-<ul>
-<li><em>Uh-huh…</em></li>
-<li><em>Mmm…</em></li>
-<li><em>Really?</em></li>
-<li><em>Is it?</em></li>
-<li><em>I see</em></li>
-<li><em>Is that right?</em></li>
-<li><em>Carry on</em></li>
-<li><em>You’re right</em></li>
-<li><em>That’s nice.</em></li>
-<li><em>How interesting (interesting)</em></li>
-<li><em>You’ve got the point there.</em></li>
-</ul>
-<h3><span id="33-asking-questions">3.3. Asking questions</span></h3><p>There are 2 types of questions: open-ended and close-ended questions.</p>
-<p>Open-ended questions beginning with What, How and Why encourage the others you talking with to give more information.</p>
-<ul>
-<li><em>What do you think about this course?</em></li>
-<li><em>How was your summer holiday?</em></li>
-<li><em>Why did you come for that activity?</em></li>
-</ul>
-<p>Close-ended questions only require ‘Yes’ or ‘No’ or one-word or two-word responses as an answer.</p>
-<ul>
-<li><em>Do you like this course?</em></li>
-<li><em>When did you come to Malaysia?</em></li>
-<li><em>How long have you been doing this job?</em></li>
-</ul>
-<h3><span id="34-highlighting">3.4. Highlighting</span></h3><p>You can catch the point that the people are interested in and refer them to discuss the topic deeper.</p>
-<ul>
-<li><em>Earlier you seemed interested when I told you about…</em></li>
-<li><em>A moment ago I heard you say… (I’ve just heard that…)</em></li>
-</ul>
-<p>or just repeat the keyword or phrase of what the people just said.</p>
-<ul>
-<li><em>I’m doing a course in Landscaping and Design. - <strong>Landscaping and Design</strong>?</em></li>
-</ul>
-<p>or auxiliaries:</p>
-<ul>
-<li><em>do/don’t, does/doesn’t, have/haven’t, can/can’t …</em></li>
-<li><em>I didn’t take any notes during the sessions. - Didn’t you?</em></li>
-</ul>
-<h3><span id="35-disclosing-information-about-yourself">3.5. Disclosing information about yourself</span></h3><p>You can just share your information about your personal thought or experience which are directly related to the topic in the current conversation.</p>
-<ul>
-<li><em>A: Where are you from?</em></li>
-<li><em>B: Arizona, USA. It’s hot there all year long, but very dry.</em></li>
-<li><em>A: Oh, I heard about that place. I have a friend studying there but I’ve never been there before. I’d like to visit her someday.</em></li>
-</ul>
-<h2><span id="4-close-a-conversation">4. Close a Conversation</span></h2><p>In some situations, there are some signals that tell us to end the conversation naturally, for example, when the bus/subway/train arrives, or a meeting/class/course/lecture/appointment begins.</p>
-<ul>
-<li><em>Oh, here’s the bus!</em></li>
-<li><em>Seems the meeting is starting now</em></li>
-</ul>
-<p>In other situations where we do not have such signals for natural closing, we may think about how to close a conversation more comfortable. A politely ending usually involves 3 steps:</p>
-<ol>
-<li>Pre-closing</li>
-<li>Closing</li>
-<li>Taking leave</li>
-</ol>
-<h3><span id="41-pre-closing">4.1. Pre-closing</span></h3><ul>
-<li><em>Well…</em></li>
-<li><em>So, …</em></li>
-<li><em>Well, okay …</em></li>
-<li><em>Look at the tie…</em></li>
-<li><em>I know you’re busy …</em></li>
-</ul>
-<h3><span id="42-closing">4.2. Closing</span></h3><ul>
-<li><em>I gotta go.</em></li>
-<li><em>I really need to leave now.</em></li>
-<li><em>I’m afraid I’ve got to leave now. It’s getting late.</em></li>
-<li><em>I’ve to get back to work/ meet someone/ take my course now</em></li>
-</ul>
-<h3><span id="43-taking-leave">4.3. Taking leave</span></h3><ul>
-<li><em>Good-bye</em></li>
-<li><em>See you later/ next time/ tomorrow</em></li>
-<li><em>Good day (formal)</em></li>
-<li><em>Have a nice day!</em></li>
-</ul>
-<p>If you are in a formal situation, you can end the conversation by the steps below:</p>
-<ol>
-<li>Summarising the content</li>
-<li>Give the reasons for leaving</li>
-<li>Showing your appreciation</li>
-<li>Expressing interest to meet again</li>
-</ol>
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        How to make your own Voice Assistant
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-09-18
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <span id="more"></span>
-
-<h2><span id="preparation">Preparation</span></h2><p>Firstly, I have to introduce the version of the items although it seems not important for your coding. However, you’d better to refer the list below to download these packages in order to reduce the trouble that you will meet during coding time.</p>
-<ol>
-<li>the <strong>python</strong> version I recommend is <strong>3.6.0</strong></li>
-<li>ChatterBot   0.7.4</li>
-<li>chatterbot-corpus   1.0.1</li>
-<li>pyttsx3   2.9</li>
-<li>SpeechRecognition   3.8.1</li>
-<li>playsound   1.2.2</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip3 install pyttsx3</span><br><span class="line">pip3 install SpeechRecognition&#x3D;&#x3D;3.8.1</span><br><span class="line">pip3 install playsound&#x3D;&#x3D;1.2.2</span><br></pre></td></tr></table></figure>
-
-<h2><span id="the-imports-and-their-usages">The imports and their usages</span></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pyttsx3                  <span class="comment"># speaking program</span></span><br><span class="line"><span class="keyword">import</span> datetime                 <span class="comment"># time machine</span></span><br><span class="line"><span class="keyword">import</span> speech_recognition <span class="keyword">as</span> sr <span class="comment"># speech_recognition </span></span><br><span class="line"><span class="keyword">import</span> wikipedia				<span class="comment"># for search something</span></span><br><span class="line"><span class="keyword">import</span> random					<span class="comment"># random</span></span><br><span class="line"><span class="keyword">import</span> webbrowser				<span class="comment"># operation of browser</span></span><br><span class="line"><span class="keyword">import</span> os						<span class="comment"># os</span></span><br><span class="line"><span class="keyword">from</span> playsound <span class="keyword">import</span> playsound	<span class="comment"># play sounds</span></span><br><span class="line"><span class="keyword">from</span> chatterbot <span class="keyword">import</span> ChatBot	<span class="comment"># the chatting bot</span></span><br><span class="line"><span class="keyword">from</span> chatterbot.trainers <span class="keyword">import</span> ChatterBotCorpusTrainer</span><br></pre></td></tr></table></figure>
-
-<h2><span id="initialization">Initialization</span></h2><p>bot:</p>
-<p>in this ChatBot constructor, there are 3 parameters:</p>
-<p> <code>Alpha</code> name of the bot, </p>
-<p><code>storage_adapter</code>  ChatterBot comes with built in adapter classes that allow it to connect to different types of databases. In this code, I used the SQLStorageAdapter which allows the chat bot to connect to SQL databases. By default, this adapter will create a SQLite database in the folder storing main.py.</p>
-<p><code>logic_adapters</code> parameter is a list of logic adapters. In ChatterBot, a logic adapter is a class that takes an input statement and returns a response to that statement.</p>
-<p><code>database_uri</code>  parameter is used to specify the path to the database that the chat bot will use.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">bot = ChatBot(</span><br><span class="line">        <span class="string">&#x27;Alpha&#x27;</span>,</span><br><span class="line">        storage_adapter=<span class="string">&#x27;chatterbot.storage.SQLStorageAdapter&#x27;</span>,</span><br><span class="line">        logic_adapters=[</span><br><span class="line">            <span class="string">&#x27;chatterbot.logic.MathematicalEvaluation&#x27;</span>,</span><br><span class="line">            <span class="comment">#&#x27;chatterbot.logic.TimeLogicAdapter&#x27;,</span></span><br><span class="line">            <span class="string">&#x27;chatterbot.logic.BestMatch&#x27;</span></span><br><span class="line">        ],</span><br><span class="line">        database_uri=<span class="string">&#x27;sqlite:///database.db&#x27;</span></span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
-
-<p>pyttsx3:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">engine = pyttsx3.init()</span><br><span class="line">engine.setProperty(<span class="string">&#x27;rate&#x27;</span>, <span class="number">200</span>)    <span class="comment"># Speed percent (can go over 100)</span></span><br><span class="line">engine.setProperty(<span class="string">&#x27;volume&#x27;</span>, <span class="number">1</span>)  <span class="comment"># Volume only 0-1</span></span><br></pre></td></tr></table></figure>
-
-<h2><span id="basic-functions">Basic Functions</span></h2><p>speak():</p>
-<p>The function of speaking is using for read the information(str type) from bot response.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">speak</span>(<span class="params">audio</span>):</span>               <span class="comment"># the function of machine speaking controlling</span></span><br><span class="line">    <span class="string">&quot;speak function&quot;</span></span><br><span class="line">    print(audio)</span><br><span class="line">    engine.say(audio)</span><br><span class="line">    engine.runAndWait()</span><br></pre></td></tr></table></figure>
-
-<p>takeCmd():</p>
-<p>The function of taking commands from user. it will record your audio by the microphone and transform audio into string, so please make sure that your microphone is working.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">takeCmd</span>():</span>              <span class="comment"># get the commands from users</span></span><br><span class="line">    r = sr.Recognizer()</span><br><span class="line">    <span class="keyword">with</span> sr.Microphone() <span class="keyword">as</span> source:</span><br><span class="line">        r.adjust_for_ambient_noise(source)</span><br><span class="line">        audio = r.listen(source)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        command = r.recognize_google(audio, language = <span class="string">&quot;en&quot;</span>)</span><br><span class="line">        print(command)</span><br><span class="line">       </span><br><span class="line"></span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        print(e)</span><br><span class="line">        command = takeCmd()	<span class="comment"># if failed then do again</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> command</span><br></pre></td></tr></table></figure>
-
-<p>analyzeCmd():</p>
-<p>This function will receive the string transformed by takeCmd() and analyse the order.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">def analyzeCmd(command):</span><br><span class="line">    global KEEPING_ORDER</span><br><span class="line">    command &#x3D; command.lower()</span><br><span class="line">    print(command)</span><br><span class="line">    if &quot;open google&quot; in command:</span><br><span class="line">        openBrowser()</span><br><span class="line"></span><br><span class="line">    elif &quot;shut down&quot; in command:</span><br><span class="line">        speak(&quot;good bye sir&quot;)</span><br><span class="line">        os._exit(0)</span><br><span class="line"></span><br><span class="line">    else:</span><br><span class="line">        chatData(command)</span><br></pre></td></tr></table></figure>
-
-<p>chatData():</p>
-<p>The function uses chatterbot for chat responding.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">chatData</span>(<span class="params">command</span>):</span></span><br><span class="line">    </span><br><span class="line">    print(<span class="string">&#x27;Chatbot is ready&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    user_input = command</span><br><span class="line"></span><br><span class="line">    bot_response = bot.get_response(user_input)</span><br><span class="line"></span><br><span class="line">    speak(bot_response)</span><br></pre></td></tr></table></figure>
-
-<h2><span id="source-code">Source Code</span></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pyttsx3                  <span class="comment"># speaking program</span></span><br><span class="line"><span class="keyword">import</span> datetime                 <span class="comment"># time machine</span></span><br><span class="line"><span class="keyword">import</span> speech_recognition <span class="keyword">as</span> sr <span class="comment"># speech_recognition </span></span><br><span class="line"><span class="keyword">import</span> wikipedia</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> webbrowser</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> playsound <span class="keyword">import</span> playsound</span><br><span class="line"><span class="keyword">from</span> chatterbot <span class="keyword">import</span> ChatBot</span><br><span class="line"><span class="keyword">from</span> chatterbot.trainers <span class="keyword">import</span> ChatterBotCorpusTrainer</span><br><span class="line"></span><br><span class="line">KEEPING_ORDER = <span class="literal">False</span></span><br><span class="line">bot = ChatBot(</span><br><span class="line">        <span class="string">&#x27;Alpha&#x27;</span>,</span><br><span class="line">        storage_adapter=<span class="string">&#x27;chatterbot.storage.SQLStorageAdapter&#x27;</span>,</span><br><span class="line">        logic_adapters=[</span><br><span class="line">            <span class="string">&#x27;chatterbot.logic.MathematicalEvaluation&#x27;</span>,</span><br><span class="line">            <span class="comment">#&#x27;chatterbot.logic.TimeLogicAdapter&#x27;,</span></span><br><span class="line">            <span class="string">&#x27;chatterbot.logic.BestMatch&#x27;</span></span><br><span class="line">        ],</span><br><span class="line">        database_uri=<span class="string">&#x27;sqlite:///database.db&#x27;</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">engine = pyttsx3.init()</span><br><span class="line">engine.setProperty(<span class="string">&#x27;rate&#x27;</span>, <span class="number">200</span>)    <span class="comment"># Speed percent (can go over 100)</span></span><br><span class="line">engine.setProperty(<span class="string">&#x27;volume&#x27;</span>, <span class="number">1</span>)  <span class="comment"># Volume 0-1</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">speak</span>(<span class="params">audio</span>):</span>               <span class="comment"># the function of machine speaking controlling</span></span><br><span class="line">    <span class="string">&quot;speak function&quot;</span></span><br><span class="line">    print(audio)</span><br><span class="line">    engine.say(audio)</span><br><span class="line">    engine.runAndWait()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">time</span>():</span>                     <span class="comment"># get current time</span></span><br><span class="line">    <span class="string">&quot;time function&quot;</span></span><br><span class="line">    Time = datetime.datetime.now().strftime(<span class="string">&quot;%I:%M:%S&quot;</span>)</span><br><span class="line">    speak(<span class="string">&quot;The current time is&quot;</span>)</span><br><span class="line">    speak(Time)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">date</span>():</span>                     <span class="comment"># get date</span></span><br><span class="line">    <span class="string">&quot;date function&quot;</span></span><br><span class="line">    year = <span class="built_in">int</span>(datetime.datetime.now().year)    <span class="comment"># get year in int format</span></span><br><span class="line">    month = <span class="built_in">int</span>(datetime.datetime.now().month)  <span class="comment"># get month in int format</span></span><br><span class="line">    day = <span class="built_in">int</span>(datetime.datetime.now().day)      <span class="comment"># get day in int format</span></span><br><span class="line">    speak(<span class="string">&quot;The current date is&quot;</span>)</span><br><span class="line">    speak(day)</span><br><span class="line">    speak(month)</span><br><span class="line">    speak(year)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">wishme</span>():</span>                   <span class="comment"># the greetings at begining</span></span><br><span class="line">    hour()</span><br><span class="line">    speak(<span class="string">&quot;Welcome back!&quot;</span>)</span><br><span class="line">    speak(<span class="string">&quot;Alpha-2 at your service. Please tell me how can I help you?&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hour</span>():</span>                     <span class="comment"># judgement of greetings</span></span><br><span class="line">    Hour = datetime.datetime.now().hour</span><br><span class="line">    <span class="keyword">if</span> Hour &gt;= <span class="number">6</span> <span class="keyword">and</span> Hour &lt; <span class="number">12</span>:</span><br><span class="line">        speak(<span class="string">&quot;good morning sir!&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> Hour &gt;= <span class="number">12</span> <span class="keyword">and</span> Hour &lt; <span class="number">18</span>:</span><br><span class="line">        speak(<span class="string">&quot;good afternoon sir!&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> Hour &gt;= <span class="number">18</span> <span class="keyword">and</span> Hour &lt; <span class="number">20</span>:</span><br><span class="line">        speak(<span class="string">&quot;good evening sir!&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        speak(<span class="string">&quot;Good night sir&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">takeCmd</span>():</span>              <span class="comment"># get the commands from users</span></span><br><span class="line">    <span class="keyword">global</span> KEEPING_ORDER</span><br><span class="line">    r = sr.Recognizer()</span><br><span class="line">    <span class="keyword">with</span> sr.Microphone() <span class="keyword">as</span> source:</span><br><span class="line">        <span class="comment">#r.pause_threshold = 1</span></span><br><span class="line">        <span class="keyword">if</span> KEEPING_ORDER:</span><br><span class="line">            playsound(<span class="string">&quot;G:\\JARVIS demo\\jarvis\\jarvis\\Music\\tip1.mp3&quot;</span>)</span><br><span class="line"></span><br><span class="line">        r.adjust_for_ambient_noise(source)</span><br><span class="line">        audio = r.listen(source)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">if</span> KEEPING_ORDER:</span><br><span class="line">            playsound(<span class="string">&quot;G:\\JARVIS demo\\jarvis\\jarvis\\Music\\nono.mp3&quot;</span>)</span><br><span class="line">        command = r.recognize_google(audio, language = <span class="string">&quot;en&quot;</span>)</span><br><span class="line">        print(command)</span><br><span class="line">       </span><br><span class="line"></span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        print(e)</span><br><span class="line">        <span class="keyword">if</span> KEEPING_ORDER:</span><br><span class="line">            speak(askRepeat())</span><br><span class="line">        command = takeCmd()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> command</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">wiki</span>(<span class="params">command</span>):</span>              <span class="comment"># searching information from wiki</span></span><br><span class="line">    text = wikipedia.summary(command)</span><br><span class="line">    print(text)</span><br><span class="line">    speak(text)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">askRepeat</span>():</span>                <span class="comment"># asking for repeating the commands</span></span><br><span class="line">    num = random.randint(<span class="number">0</span>,<span class="number">3</span>)</span><br><span class="line">    <span class="keyword">if</span> num == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Sorry?&quot;</span></span><br><span class="line">    <span class="keyword">elif</span> num == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Pardon?&quot;</span></span><br><span class="line">    <span class="keyword">elif</span> num == <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;I beg your pardon, sir.&quot;</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Say it again?&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">openBrowser</span>():</span></span><br><span class="line">    speak(<span class="string">&#x27;Please waiting. the Google has just been opened&#x27;</span>)</span><br><span class="line">    url = <span class="string">&#x27;http://www.google.com/&#x27;</span></span><br><span class="line">    path = <span class="string">&quot;C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s&quot;</span></span><br><span class="line">    webbrowser.get(path).<span class="built_in">open</span>(url)</span><br><span class="line">    speak(<span class="string">&#x27;Done&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">searchingGoogle</span>():</span></span><br><span class="line">    speak(<span class="string">&quot;what\&#x27;s you wanna search sir?&quot;</span>)</span><br><span class="line">    target = takeCmd().lower()</span><br><span class="line">    <span class="keyword">if</span> <span class="string">&quot;searching&quot;</span> <span class="keyword">in</span> target <span class="keyword">or</span> <span class="string">&quot;stop&quot;</span> <span class="keyword">in</span> target:</span><br><span class="line">        openBrowser()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            speak(<span class="string">&quot;you wanna search: &quot;</span>+target+<span class="string">&quot;right?&quot;</span>)</span><br><span class="line">            <span class="keyword">if</span> <span class="string">&quot;yes&quot;</span> <span class="keyword">in</span> takeCmd().lower():</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                target = takeCmd().lower()</span><br><span class="line"></span><br><span class="line">        path = <span class="string">&quot;C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s&quot;</span></span><br><span class="line">        url = <span class="string">&quot;http://google.com/?#q=&quot;</span></span><br><span class="line">        webbrowser.get(path).open_new(url + target)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">closeBrowser</span>():</span></span><br><span class="line">    os.system(<span class="string">&#x27;taskkill /F /IM chrome.exe&#x27;</span>)</span><br><span class="line">    speak(<span class="string">&#x27;The Google has just been closed, sir&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#----------------------------------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">analyzeCmd</span>(<span class="params">command</span>):</span></span><br><span class="line">    <span class="keyword">global</span> KEEPING_ORDER</span><br><span class="line">    command = command.lower()</span><br><span class="line">    print(command)</span><br><span class="line">    <span class="keyword">if</span> <span class="string">&quot;open google&quot;</span> <span class="keyword">in</span> command:</span><br><span class="line">        speak(<span class="string">&quot;shall I help you to search something?&quot;</span>)</span><br><span class="line">        command = takeCmd().lower()</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&quot;yes&quot;</span> <span class="keyword">in</span> command <span class="keyword">or</span> <span class="string">&quot;sure&quot;</span> <span class="keyword">in</span> command <span class="keyword">or</span> <span class="string">&quot;okay&quot;</span> <span class="keyword">in</span> command:</span><br><span class="line">            searchingGoogle()</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            openBrowser()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">elif</span> <span class="string">&quot;close google&quot;</span> <span class="keyword">in</span> command:</span><br><span class="line">        closeBrowser()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">elif</span> <span class="string">&quot;time&quot;</span> <span class="keyword">in</span> command:</span><br><span class="line">        time()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">elif</span> <span class="string">&quot;date&quot;</span> <span class="keyword">in</span> command:</span><br><span class="line">        date()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">elif</span> <span class="string">&quot;your name&quot;</span> <span class="keyword">in</span> command:</span><br><span class="line">        speak(<span class="string">&quot;my name is Alpha&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">elif</span> <span class="string">&quot;what is&quot;</span> <span class="keyword">in</span> command:</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            wiki(command)</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            speak(<span class="string">&quot;there\&#x27;s an exception with wiki, please try again&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">elif</span> <span class="string">&quot;shut up&quot;</span> <span class="keyword">in</span> command <span class="keyword">or</span> <span class="string">&quot;be quiet&quot;</span> <span class="keyword">in</span> command:</span><br><span class="line">        playsound(<span class="string">&quot;G:\\JARVIS demo\\jarvis\\jarvis\\Music\\unhappy.mp3&quot;</span>)</span><br><span class="line">        speak(<span class="string">&quot;as you wish sir&quot;</span>)</span><br><span class="line">        KEEPING_ORDER = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">elif</span> <span class="string">&quot;shut down&quot;</span> <span class="keyword">in</span> command:</span><br><span class="line">        speak(<span class="string">&quot;good bye sir&quot;</span>)</span><br><span class="line">        os._exit(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        chatData(command)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">chatData</span>(<span class="params">command</span>):</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">#trainer = ChatterBotCorpusTrainer(bot)</span></span><br><span class="line">    <span class="comment">#bot.set_trainer(ChatterBotCorpusTrainer)</span></span><br><span class="line">    <span class="comment">#trainer.train(&quot;chatterbot.corpus.english&quot;)</span></span><br><span class="line">    print(<span class="string">&#x27;Chatbot is ready&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    user_input = command</span><br><span class="line"></span><br><span class="line">    bot_response = bot.get_response(user_input)</span><br><span class="line"></span><br><span class="line">    speak(bot_response)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#----------------------------------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">major</span>():</span></span><br><span class="line">    <span class="keyword">global</span> KEEPING_ORDER</span><br><span class="line">    wishme()</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        Cmd = takeCmd()</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&quot;Alpha&quot;</span> <span class="keyword">in</span> Cmd <span class="keyword">or</span> <span class="string">&quot;hello&quot;</span> <span class="keyword">in</span> Cmd:</span><br><span class="line">            speak(<span class="string">&quot;yes?&quot;</span>)</span><br><span class="line">            KEEPING_ORDER = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">elif</span> <span class="string">&quot;shut down&quot;</span> <span class="keyword">in</span> Cmd:</span><br><span class="line">            speak(<span class="string">&quot;good bye sir&quot;</span>)</span><br><span class="line">            os._exit(<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">while</span> KEEPING_ORDER:</span><br><span class="line">            analyzeCmd(takeCmd())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">major()</span><br></pre></td></tr></table></figure>
-
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        English Writing Learning no.1
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-07-09
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <span id="more"></span>
-
-<h2><span id="1-translate-the-sentences-below">1. Translate the sentences below</span></h2><ol>
-<li><p>大多数人会认为有很多玩具的孩子是幸运的。【孩子拥有很多玩具的优缺点】</p>
-<p><em>Most of the people would like to believe the <del>kids</del> possessing a lot of toys are lucky.</em></p>
-<p><strong>Problem</strong>: the “kid” is unappropriated in formal situation. <strong>(Inaccurate wording)</strong></p>
-<p><strong>Answer</strong>: Most of the people would like to believe the children possessing a lot of toys are lucky.</p>
-</li>
-<li><p>气候变化和塑料的过度使用是另外两个值得我们关注的主要问题。【环境问题】</p>
-<p><em>Climate changing and plastic abusing are the other two <del>problems</del> being worth we paying attention to.</em></p>
-<p><strong>Problem</strong>: Better to use essential issues. <strong>(Inaccurate wording)</strong></p>
-<p><strong>Answer</strong>: Climate change and excessive use of plastic are just two other essential issues that deserve our attention.</p>
-</li>
-<li><p>这项技术已经可以用于生产更安静、更清洁的电动汽车。【汽油价格上升对交通、污染的影响】</p>
-<p><em>This technique has been used to <del>product</del> electronic vehicles being quieter and cleaner.</em></p>
-<p><strong>Problem</strong>: “Product is a noun”. But in there, it should be verb like “produce”. <strong>(Inaccurate wording)</strong></p>
-<p><strong>Answer</strong>: This technique has been used to produce the quieter and cleaner electric vehicles.</p>
-</li>
-<li><p>任何鼓励语言学习的东西都能从文化和经济上给社会带来好处，而早期接触语言学习也有助于这一点。【外语学习的时间】</p>
-<p><em>Every encouragement for learning language can provide benefits to society on culture and economy aspects.</em></p>
-<p><strong>Answer</strong>: Anything that encourages language learning benefits society culturally and economically, and early exposure(早期接触) to language learning contributes to(有助于) this.</p>
-</li>
-<li><p>儿童成长的一个重要阶段当然是良心(conscience)的发展，这与分辨是非的能力有关。【惩罚对孩子的作用】</p>
-<p><em><del>There is no room for</del> doubt that one of the most <del>important periods</del> of <del>children growing</del> is the conscience development related to the ability of <del>distinguish</del> right and wrong.</em></p>
-<p><strong>Problem</strong>: </p>
-<ol>
-<li>It is no doubt that….</li>
-<li>Children growth. (growing 增长的)</li>
-<li>One important stage</li>
-<li>Of + verb-ing </li>
-<li>Tell right from wrong = distinguish between right and wrong</li>
-</ol>
-<p><strong>Answer</strong>: One <em><strong>important stage</strong></em> in a <em><strong>child’s growth</strong></em> is certainly the development of a conscience, which is linked to the ability <em><strong>to tell right from wrong</strong></em>. </p>
-</li>
-</ol>
-<ol start="6">
-<li><p>让惩罚与犯罪相匹配是一个有用的概念，这可以让孩子们捡起他们扔的垃圾，清理他们画的涂鸦，或者向他们伤害过的人道歉。【惩罚对孩子的作用】</p>
-<p><em>Matching punishments to mistakes can make children pick up the rubbish they littered, clean the pattern they painted and apologize to the people they hurt, which is a useful conception.</em> </p>
-<p><strong>Answer</strong>: Making the punishment fit the crime is a useful notion, which would see children being made to pick up rubbish they have dropped, clean up graffiti they have drawn, or apologize to someone they have hurt. </p>
-</li>
-</ol>
-<h2><span id="2-analysis-of-long-amp-complex-sentences-below">2. Analysis of Long &amp; Complex sentences below</span></h2><ol>
-<li><em><strong>One explanation for the trend to more superhot fires is that the region, which usually has dry summers, has had significantly below normal precipitation in many recent years.</strong></em> </li>
-</ol>
-<p><strong>Main Structure:</strong> </p>
-<p>​        explanation is &lt;a thing&gt;</p>
-<p>​        &lt;a thing&gt;: the region has had (significantly below normal) precipitation (in many recent years).</p>
-<p><em>for the trend to more superhot fires -&gt; One explanation</em>  对于越来越多的超高温火灾(的) -&gt; 一种解释</p>
-<p><em>usually has dry summers</em> -&gt; region  通常夏日干燥(的) -&gt; 地区</p>
-<p>Therefore, the translation of this sentence is: 对于越来越多的超高温火灾的一种解释是该地区通常夏日干燥近年降水明显低于正常水平。</p>
-<ol start="2">
-<li><em><strong>The group found that those elderly people who were able to retain a sense of independence were more likely to stay healthy in old age.</strong></em></li>
-</ol>
-<p><strong>Main Structure:</strong> </p>
-<p>​        The group found &lt;a thing&gt;</p>
-<p>​        &lt;a thing&gt;: elderly people (who were able to retain a sense of independence) were more likely to stay healthy (in old age).</p>
-<p><em>who were able to retain a sense of independence</em> -&gt; <em>elderly people</em></p>
-<p>Therefore, the translation of this sentence is: 该小组发现那些保持独立感的老年人更可能在晚年保持健康。</p>
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-
-<nav class="blog-pagination">
-  
-  <a class="btn btn-outline-primary" href="/page/4/">Previous</a>
-  
-          
-  <a class="btn btn-outline-primary" href="/page/6/">Next</a>
-  
-  </nav>
-
-
-          <!--The body variable corresponds to the content rendered from the different page type templates (cf above).-->
-        </div>
-
-        <!-- Sidebar -->
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          
+  <!-- Sidebar -->
+  <div class="col-sm-4 blog-sidebar">
+    
     
     <div class="p-4 mb-3 bg-dark text-white rounded shadow">
         <h3>About</h3>
@@ -1471,7 +411,25 @@
 
 
 
-        </div>
+  </div>
+</div>
+
+
+  
+</div>
+
+
+          <!--The body variable corresponds to the content rendered from the different page type templates (cf above).-->
+
+      <div class="row">
+          <nav class="blog-pagination">
+  
+  <a class="btn btn-outline-primary" href="/page/4/">Previous</a>
+  
+          
+  <a class="btn btn-outline-primary" href="/page/6/">Next</a>
+  
+</nav>
 
       </div>
 

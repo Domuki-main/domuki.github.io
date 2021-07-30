@@ -42,32 +42,46 @@
 <body>
 
   <!-- Menu -->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark shadow-sm">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark" aria-label="Eighth navbar example">
   <div class="container">
-
     <a target="_blank" rel="noopener" href="https://github.com/Domuki-main" class="navbar-brand d-flex align-items-center">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
         <path
           d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
       </svg>
-        <strong>&nbsp;Domuki</strong>
-      </a>
+      <strong>&nbsp;Domuki</strong>
+    </a>
 
-    <ul class="navbar-nav">
-      
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsCollapse" aria-controls="navbarsCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsCollapse">
+
+      <ul class="navbar-nav" style="margin-inline-end: auto;">
+        
         <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/archives">Archives</a>
-      </li>
-      
+          <a class="nav-link" href="/archives">Archives</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/categories">Categories</a>
-      </li>
-      
-    </ul>
+          <a class="nav-link" href="/tags">Tags</a>
+        </li>
+        
+      </ul>
+
+      <form class="form-group d-flex mb-0">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg></button>
+      </form>
+
+    </div>
   </div>
 </nav>
 
@@ -94,1185 +108,161 @@
 
     <div class="container py-5">
 
-      <div class="row">
-
-        <!-- Main Content -->
-        <div class="col-sm-8 blog-main">
           
-    <div class="container mb-4">
+<div class="main-content">
 
-  <div class="card shadow">
+  
+  <div class="row">
+  <!-- Main Content -->
+  <div class="col-sm-8 blog-main">
+    
+    <div class="container mb-4 rounded shadow">
 
-    <div class="card-header">
+  <div class="card-body">
+    <!-- Title -->
+    <h1 class="card-title">
+      User Interface and User Experience Week 1
+    </h1>
+
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2021-04-04
       
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        User Interface and User Experience Week 1
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2021-04-04
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h2><span id="abstract">Abstract</span></h2><p>As the beginning of the new term, this week we did the ice break in the meeting and learned the basic introduction of <strong>User Interface and User Experience</strong>.</p>
-<h2><span id="contents">Contents</span></h2><h3><span id="difference-between-ui-and-ux">Difference between UI and UX</span></h3><table>
-<thead>
-<tr>
-<th>UI</th>
-<th>UX</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>What Users Do</td>
-<td>How Users Feel</td>
-</tr>
-<tr>
-<td>Sketch App</td>
-<td>Stick Notes</td>
-</tr>
-<tr>
-<td>Visuals</td>
-<td>Research</td>
-</tr>
-<tr>
-<td>Prototyping</td>
-<td>Wireframing</td>
-</tr>
-</tbody></table>
-<h3><span id="basic-concepts">Basic concepts</span></h3><h4><span id="user-interface">User Interface:</span></h4><p>Front-end application view to which user interacts in order to use the software. User can manipulate and control the software as well as hardware by means of UI.</p>
-<h4><span id="usability">Usability:</span></h4><p>Usability is a <em>quality attribute</em> (see chapter 2 in S.Arch) that assesses how easy user interfaces are to use.</p>
-<ol>
-<li><p><strong>Learnability</strong>: How easy is it for users to accomplish basic tasks the first time they encounter the design?</p>
-</li>
-<li><p><strong>Efficiency</strong>: Once users have learned the design, how quickly can they perform tasks?</p>
-</li>
-<li><p><strong>Memorability</strong>: When users return to the design after a period of not using it, how easily can they re-establish proficiency?</p>
-</li>
-<li><p><strong>Errors</strong>: How many errors do users make, how severe are these errors, and how easily can they recover from the errors?</p>
-</li>
-<li><p><strong>Satisfaction</strong>: How pleasant is it to use the design?</p>
-</li>
-</ol>
-<h4><span id="user-experience">User Experience:</span></h4><p>User experience” encompasses all aspects of the end-user’s interaction with the company, its services, and its products (Nielsen).</p>
-<p><strong>Main Aspect of UX</strong></p>
-<ol>
-<li><strong>Subjectivity</strong>: UX exists in the mind of the user, not in the object (or artefact). </li>
-<li><strong>Contributing agents</strong>: UX is the consequence of interaction between the following three contributors: <em>object</em>, <em>user</em>, and <em>context</em>.</li>
-<li><strong>Singular and accumulated experiences</strong>: Singular experiences is a result of an interaction with a touch-point, whereas the accumulated experience is the result of all singular experiences.</li>
-</ol>
-<h4><span id="interaction-design-ixd">Interaction Design (IxD)</span></h4><p>the design of interactive products and services in which a designer’s focus goes beyond the item in development to include the <em>way</em> users will interact with it.</p>
-<h4><span id="5-dimensions">5 Dimensions</span></h4><ol>
-<li>Words</li>
-<li>Visual representations</li>
-<li>Physical objects or space</li>
-<li>Time</li>
-<li>Behaviour</li>
-</ol>
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
+      by <a href="/">Domuki</a>
       
+    </p>
 
-    </div>
+    <p class="card-text">
+      <!-- Content -->
+      <h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>As the beginning of the new term, this week we did the ice break in the meeting and learned the basic introduction of <strong>User Interface and User Experience</strong>.</p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2021/04/04/User-Interface-and-User-Experience-Week-1/">
+        View this article
+      </a>
+    </p>
+    
 
   </div>
 
 </div>
 
+    
+    <div class="container mb-4 rounded shadow">
 
-    <div class="container mb-4">
+  <div class="card-body">
+    <!-- Title -->
+    <h1 class="card-title">
+      Annotations in Java
+    </h1>
 
-  <div class="card shadow">
-
-    <div class="card-header">
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2021-03-22
       
-    </div>
+      by <a href="/">Domuki</a>
+      
+    </p>
 
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Annotations in Java
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2021-03-22
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <blockquote>
+    <p class="card-text">
+      <!-- Content -->
+      <blockquote>
 <p>Annotations are used to provide supplement information about a program.</p>
 </blockquote>
-<h1 id="What-is-Annotations"><a href="#What-is-Annotations" class="headerlink" title="What is Annotations"></a>What is Annotations</h1><p>Annotations are also called metadata,a data used to describe data, such as, <code>@Override</code> and <code>@Deprecated</code>.</p>
-<p>It was imported in JDK1.5 and used to explain the code.</p>
-<ul>
-<li>Annotations start with ‘@’.</li>
-<li>Annotations do not change action of a compiled program.</li>
-<li>Annotations help to associate metadata (information) to the program elements.</li>
-<li>Annotations are not pure comments as they can change the way a program is treated by compiler. </li>
-</ul>
-<h1 id="Usages"><a href="#Usages" class="headerlink" title="Usages"></a>Usages</h1><ol>
-<li>Creating <em>javadoc</em> Documents via metadata from annotations in code.</li>
-<li>Checking compile</li>
-<li>Dynamic processing at compile time</li>
-<li>Dynamic processing at runtime</li>
-</ol>
-<h1 id="Categories"><a href="#Categories" class="headerlink" title="Categories"></a>Categories</h1><ol>
-<li><p><strong>Java default annotations</strong> </p>
-<p>Including <em>@Override</em>, <em>@Deprecated</em> (Indicate that a class or method is out of date) and <em>@SuppressWarnings</em> (Mark the warnings to be ignored)</p>
-</li>
-<li><p><strong>Meta annotations</strong></p>
-<p>meta annotations are annotations used to define annotations.</p>
-<p>Including <em>@Retention</em> (indicating the stage at which the annotation is retained), <em>@Targe</em>t (indicating the scope of the annotation use), <em>@Inherited</em> (indicating that the annotation can be inherited), <em>@Documented</em> (indicating whether to generate a javadoc document)</p>
-</li>
-<li><p><strong>Customize</strong></p>
-<p>Defining by user</p>
-</li>
-</ol>
-<h1 id="Default-annotations"><a href="#Default-annotations" class="headerlink" title="Default annotations"></a>Default annotations</h1><h2 id="Deprecated"><a href="#Deprecated" class="headerlink" title="@Deprecated"></a>@Deprecated</h2><p>Indicating the <strong>elements which are out of date</strong>. The warning will be throwed by compiler to tell developer that he is calling a out-of-date element.</p>
-<h3 id="Override"><a href="#Override" class="headerlink" title="@Override"></a>@Override</h3><p>Mark that this method <strong>covers the method of the parent class</strong>.</p>
-<h3 id="SuppressWarnings"><a href="#SuppressWarnings" class="headerlink" title="@SuppressWarnings"></a>@SuppressWarnings</h3><p>Used to selectively <strong>turn off the compiler’s warnings</strong> for classes, methods, member variables, and variable initialization.</p>
-<h3 id="SafeVarargs"><a href="#SafeVarargs" class="headerlink" title="@SafeVarargs"></a>@SafeVarargs</h3><p>Parameter safety type annotation. Its purpose is to remind developers not to <strong>use parameters to do some unsafe operations</strong>. Its existence will prevent the compiler from generating <em>unchecked warnings</em>. It was added in the Java 1.7.</p>
-<h3 id="FunctionalInterface"><a href="#FunctionalInterface" class="headerlink" title="@FunctionalInterface"></a>@FunctionalInterface</h3><p><a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html">https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html</a></p>
-<h1 id="Meta-annotations"><a href="#Meta-annotations" class="headerlink" title="Meta annotations"></a>Meta annotations</h1><h3 id="Retention"><a href="#Retention" class="headerlink" title="@Retention"></a>@Retention</h3><p>The RetentionPolicy.SOURCE annotation is only reserved in the source code phase, and it will be discarded and ignored when the compiler compiles.</p>
-<p>The RetentionPolicy.CLASS annotation is only retained until compilation is in progress, and it will not be loaded into the JVM. Such as Java built-in annotations, @Override, @Deprecated, @SuppressWarnning, etc.</p>
-<p>The RetentionPolicy.RUNTIME annotation can be retained until the program is running, it will be loaded into the JVM, so they can be obtained when the program is running. Such as @Controller, @Autowired, @RequestMapping, etc. in SpringMvc.</p>
-<h3 id="Documented"><a href="#Documented" class="headerlink" title="@Documented"></a>@Documented</h3><p>Its function is to be able to include the elements in the annotations into the Javadoc.</p>
-<h3 id="Target"><a href="#Target" class="headerlink" title="@Target"></a>@Target</h3><ul>
-<li>ElementType.ANNOTATION_TYPE can annotate an annotation</li>
-<li>ElementType.CONSTRUCTOR can annotate the construction method</li>
-<li>ElementType.FIELD can annotate attributes</li>
-<li>ElementType.LOCAL_VARIABLE can annotate local variables</li>
-<li>ElementType.METHOD can annotate methods</li>
-<li>ElementType.PACKAGE can annotate a package</li>
-<li>ElementType.PARAMETER can annotate the parameters in a method</li>
-<li>ElementType.TYPE can annotate a type, such as class, interface, enumeration</li>
-</ul>
-<h3 id="Inherite"><a href="#Inherite" class="headerlink" title="@Inherite"></a>@Inherite</h3><p>This is a annotation for annotations. It means that subclasses of annotated classes are considered having the same annotation as their superclass.</p>
-<h3 id="Repeatable"><a href="#Repeatable" class="headerlink" title="@Repeatable"></a>@Repeatable</h3><p>Repeatable usage scenarios: When you need to use the same annotation multiple times, you often need to use @Repeatable.</p>
-<h1 id="State-annotations"><a href="#State-annotations" class="headerlink" title="State annotations"></a>State annotations</h1><p>Java language uses <em><strong>@interface</strong></em> syntax to define annotations (Annotation), and its format is as follows:</p>
-<p>For example:</p>
-<h2 id="Use-interface-to-define"><a href="#Use-interface-to-define" class="headerlink" title="Use @interface to define"></a>Use @interface to define</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Report &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Add-parameters-and-default-values"><a href="#Add-parameters-and-default-values" class="headerlink" title="Add parameters and default values"></a>Add parameters and default values</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Report &#123;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">type</span><span class="params">()</span> <span class="keyword">default</span> 0</span>;</span><br><span class="line">    <span class="function">String <span class="title">level</span><span class="params">()</span> <span class="keyword">default</span> &quot;info&quot;</span>;</span><br><span class="line">    <span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> &quot;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Use-Meta-annotations"><a href="#Use-Meta-annotations" class="headerlink" title="Use Meta annotations"></a>Use Meta annotations</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Target(ElementType.TYPE)</span></span><br><span class="line"><span class="meta">@Retention(RetentionPolicy.RUNTIME)</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Report &#123;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">type</span><span class="params">()</span> <span class="keyword">default</span> 0</span>;</span><br><span class="line">    <span class="function">String <span class="title">level</span><span class="params">()</span> <span class="keyword">default</span> &quot;info&quot;</span>;</span><br><span class="line">    <span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> &quot;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2021/03/22/Annotations-in-Java/">
+        View this article
+      </a>
+    </p>
+    
 
   </div>
 
 </div>
 
+    
+    <div class="container mb-4 rounded shadow">
 
-    <div class="container mb-4">
+  <div class="card-body">
+    <!-- Title -->
+    <h1 class="card-title">
+      The reflection of Java
+    </h1>
 
-  <div class="card shadow">
-
-    <div class="card-header">
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2021-03-19
       
-    </div>
+      by <a href="/">Domuki</a>
+      
+    </p>
 
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        The reflection of Java
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2021-03-19
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <blockquote>
+    <p class="card-text">
+      <!-- Content -->
+      <blockquote>
 <p>The Java reflection is in the running state, for any class, you can <strong>know</strong> all the properties and methods of this class; for any object, you can <strong>call</strong> any of its methods and properties.</p>
 </blockquote>
-<p>The most important use of reflection is <strong>to develop various general frameworks</strong></p>
-<ul>
-<li>Figure out the class of any object at runtime</li>
-<li>Construct an object of any class at runtime</li>
-<li>Figure out the member variables and methods of any class at runtime</li>
-<li>Call any object’s method at runtime</li>
-</ul>
-<h1 id="Relative-Class-of-Reflect"><a href="#Relative-Class-of-Reflect" class="headerlink" title="Relative Class of Reflect"></a>Relative Class of Reflect</h1><table>
-<thead>
-<tr>
-<th>Class name</th>
-<th>Function (presenting)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html">Class</a></td>
-<td>The entity of the class, representing the class and interface in the running Java application</td>
-</tr>
-<tr>
-<td>Field</td>
-<td>Class member variables</td>
-</tr>
-<tr>
-<td>Method</td>
-<td>Methods in class</td>
-</tr>
-<tr>
-<td>Constructor</td>
-<td>Constructor in class</td>
-</tr>
-</tbody></table>
-<h2 id="Field"><a href="#Field" class="headerlink" title="Field"></a>Field</h2><table>
-<thead>
-<tr>
-<th>Method</th>
-<th>Usage</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>equals(Object obj)</td>
-<td>Returns true if the attribute is equal to obj</td>
-</tr>
-<tr>
-<td>get(Object obj)</td>
-<td>get the corresponding attribute value in obj</td>
-</tr>
-<tr>
-<td>set(Object obj, Object value)</td>
-<td>Set the corresponding attribute value in obj</td>
-</tr>
-</tbody></table>
-<h2 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h2><table>
-<thead>
-<tr>
-<th>Method</th>
-<th>Usage</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>invoke(Object obj, Object… args)</td>
-<td>Pass the object object and parameters to call the corresponding method of the object</td>
-</tr>
-</tbody></table>
-<h2 id="Constructor"><a href="#Constructor" class="headerlink" title="Constructor"></a>Constructor</h2><table>
-<thead>
-<tr>
-<th>Method</th>
-<th>Usage</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>newInstance(Object… initargs)</td>
-<td>Create objects of the class based on the passed parameters</td>
-</tr>
-</tbody></table>
-<p><a target="_blank" rel="noopener" href="https://thinkwon.blog.csdn.net/article/details/100128361">EXAMPLE</a></p>
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2021/03/19/The-reflection-of-Java/">
+        View this article
+      </a>
+    </p>
+    
 
   </div>
 
 </div>
 
+    
+    <div class="container mb-4 rounded shadow">
 
-    <div class="container mb-4">
+  <div class="card-body">
+    <!-- Title -->
+    <h1 class="card-title">
+      Basic Syntax of Java
+    </h1>
 
-  <div class="card shadow">
-
-    <div class="card-header">
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2021-03-18
       
-    </div>
+      by <a href="/">Domuki</a>
+      
+    </p>
 
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Basic Syntax of Java
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2021-03-18
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h1><span id="identifier">Identifier</span></h1><blockquote>
+    <p class="card-text">
+      <!-- Content -->
+      <h1 id="Identifier"><a href="#Identifier" class="headerlink" title="Identifier"></a>Identifier</h1><blockquote>
 <p>A <strong>Java identifier</strong> is a name given to a package, class, interface, method, or variable. It allows a programmer to refer to the item from other places in the program.</p>
 </blockquote>
-<h2><span id="rules-for-defining-java-identifiers">Rules for defining Java Identifiers</span></h2><ul>
-<li>The only allowed characters for identifiers are all alphanumeric characters([A-Z],[a-z],[0-9]), ‘$‘(dollar sign) and ‘_‘ (underscore).</li>
-<li>Identifiers <strong>should not</strong> start with digits([0-9]). </li>
-<li>Java identifiers are <strong>case-sensitive</strong>.</li>
-<li>There is no limit on the length of the identifier but it is advisable to use an optimum length of <strong>4 – 15 letters only</strong>.</li>
-<li>Reserved Words can’t be used as an identifier. </li>
-</ul>
-<h2><span id="camel-case">Camel-Case</span></h2><h3><span id="package-name">Package name</span></h3><p>All letters should be lowercases.</p>
-<p>For example: com.ssk3401</p>
-<h3><span id="class-interface-name">Class, interface name</span></h3><p>Beginning with Capital letter in every single word.</p>
-<p>For example: Student</p>
-<h3><span id="method-and-variable-name">Method and variable name</span></h3><p>Beginning with lowercase. Beginning with Capital letter in every single word, If the name combined by many words.</p>
-<p>For example: state, maxNum, helloWorld()</p>
-<h3><span id="constant">Constant</span></h3><p>All letters should be Capital letters</p>
-<p>For example: PANE_COLOUR</p>
-<h3><span id="project-name">Project name</span></h3><p>All letters should be lowercases. Put “-“ between different words if the name combined by many words.</p>
-<p>For example: demo, the-final-project</p>
-<h1><span id="keywords">Keywords</span></h1><p><img src="/2021/03/18/Basic-Syntax-of-Java/001.png"></p>
-<h1><span id="comment">Comment</span></h1><p>Single line:    // …</p>
-<p>Multi-line:    /* … */</p>
-<p>Document:    /* … **/</p>
-<h1><span id="access-modifier">Access modifier</span></h1><table>
-<thead>
-<tr>
-<th>Modifier</th>
-<th>Current class</th>
-<th>same package</th>
-<th>lower class</th>
-<th>other packages</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>private</td>
-<td>Y</td>
-<td>N</td>
-<td>N</td>
-<td>N</td>
-</tr>
-<tr>
-<td>(default)</td>
-<td>Y</td>
-<td>Y</td>
-<td>N</td>
-<td>N</td>
-</tr>
-<tr>
-<td>protected</td>
-<td>Y</td>
-<td>Y</td>
-<td>Y</td>
-<td>N</td>
-</tr>
-<tr>
-<td>public</td>
-<td>Y</td>
-<td>Y</td>
-<td>Y</td>
-<td>Y</td>
-</tr>
-</tbody></table>
-<h1><span id="separator">Separator</span></h1><ul>
-<li>; semicolon, end a statement</li>
-<li>{} curly brackets, define a range of statement block</li>
-<li>[] square brackets, define the type of array</li>
-<li>, comma</li>
-<li>. period</li>
-<li>() brackets</li>
-</ul>
-<h1><span id="escape-character">Escape character</span></h1><table>
-<thead>
-<tr>
-<th>Escape Sequence</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>\t</td>
-<td>Insert a <strong>tab</strong> in the text at this point.</td>
-</tr>
-<tr>
-<td>\b</td>
-<td>Insert a <strong>backspace</strong> in the text at this point.</td>
-</tr>
-<tr>
-<td>\n</td>
-<td>Insert a <strong>newline</strong> in the text at this point.</td>
-</tr>
-<tr>
-<td>\r</td>
-<td>Insert a carriage return in the text at this point.</td>
-</tr>
-<tr>
-<td>\f</td>
-<td>Insert a formed in the text at this point.</td>
-</tr>
-<tr>
-<td>\‘</td>
-<td>Insert a single quote character in the text at this point</td>
-</tr>
-<tr>
-<td>\‘’</td>
-<td>Insert a double quote character in the text at this point.</td>
-</tr>
-<tr>
-<td>\\</td>
-<td>Insert a backslash character in the text at this point.</td>
-</tr>
-</tbody></table>
-<h1><span id="format">Format</span></h1><h2><span id="binary">Binary</span></h2><p>The machine uses binary to save and operate data.<br>0b___ (start with 0b or 0B, _ means 0 or 1) For example: 010101</p>
-<h2><span id="original-code-inverse-code-complement">Original code, inverse code, complement</span></h2><h3><span id="original-code">Original code</span></h3><p>Convert an integer to a binary format</p>
-<p>Take the <em>int</em> type as an example. The <em>int</em> type occupies 4 bytes and a total of 32 bits.</p>
-<p>E.g:</p>
-<p>The original code of 2 is: 00000000 00000000 00000000 00000010</p>
-<p>The original code of -2 is: 10000000 00000000 00000000 00000010</p>
-<h3><span id="ones-complement">One’s complement</span></h3><p>One’s complement</p>
-<p>The inverse code of a positive number: the <strong>same</strong> as the original code</p>
-<p>The inverse code of a negative number: the sign bit of the original code remains unchanged, and the other bits are inverted</p>
-<p>For example, the complement of -2 is: 11111111 11111111 11111111 11111101</p>
-<h3><span id="twos-complement">Two’s Complement</span></h3><p>The complement of a positive number: the <strong>same</strong> as the original code</p>
-<p>The complement of a negative number: one’s complement +1</p>
-<p>For example, the complement of -2 is: 01111111 11111111 11111111 11111110</p>
-<h3><span id="precautions">Precautions</span></h3><p>The highest bit of the binary system is the sign bit (“0” represents a positive number, and “1” represents a minus number);</p>
-<p>There is no unsigned number in Java;</p>
-<p>The computer performs operations in the complement of an integer;</p>
-<h2><span id="octal">Octal</span></h2><p>0____; (start with the number 0, _ means any number from 0 to 7, for example: 012345)</p>
-<h2><span id="decimal">Decimal</span></h2><p>0~9 composition such as: 100</p>
-<h2><span id="hexadecimal">Hexadecimal</span></h2><p>0x____; (start with 0x or 0X, _ means 0<del>9 or a</del>f composition, for example: 0x12c)</p>
-<h1><span id="flow-control-statement">Flow control statement</span></h1><h2><span id="sequence">Sequence</span></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">&quot;begin&quot;</span>);</span><br><span class="line">System.out.println(<span class="string">&quot;A&quot;</span>);</span><br><span class="line">System.out.println(<span class="string">&quot;B&quot;</span>);</span><br><span class="line">System.out.println(<span class="string">&quot;C&quot;</span>);</span><br><span class="line">System.out.println(<span class="string">&quot;end&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<h2><span id="selection">Selection</span></h2><h3><span id="1-if">1. if</span></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(isEqual())&#123;</span><br><span class="line">	System.out.println(<span class="string">&quot;begin&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(<span class="string">&quot;end&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<h3><span id="2-if-else">2. if-else</span></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(isEqual())&#123;</span><br><span class="line">	System.out.println(<span class="string">&quot;begin&quot;</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	System.out.println(<span class="string">&quot;end&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3><span id="3-if-else-if">3. if-else if</span></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(a = <span class="number">0</span>)&#123;</span><br><span class="line">	System.out.println(<span class="string">&quot;begin&quot;</span>);</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(a &lt; <span class="number">0</span>)&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;end&quot;</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;end&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3><span id="4-switch">4. switch</span></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(num) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">			System.out.println(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">			System.out.println(<span class="string">&quot;2&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">			System.out.println(<span class="string">&quot;3&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			System.out.println(<span class="string">&quot;out of bound&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
-
-<h2><span id="iteration">Iteration</span></h2><h3><span id="1-for">1. for</span></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (statement <span class="number">1</span>; statement <span class="number">2</span>; statement <span class="number">3</span>) &#123;</span><br><span class="line">  <span class="comment">// code block to be executed</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">10</span>; i = i + <span class="number">2</span>) &#123;</span><br><span class="line">  System.out.println(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3><span id="2-for-each">2. for-each</span></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (type variableName : arrayName) &#123;</span><br><span class="line">  <span class="comment">// code block to be executed</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">String[] cars = &#123;<span class="string">&quot;Volvo&quot;</span>, <span class="string">&quot;BMW&quot;</span>, <span class="string">&quot;Ford&quot;</span>, <span class="string">&quot;Mazda&quot;</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (String i : cars) &#123;</span><br><span class="line">  System.out.println(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3><span id="3-while">3. while</span></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (condition) &#123;</span><br><span class="line">  <span class="comment">// code block to be executed</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (i &lt; <span class="number">5</span>) &#123;</span><br><span class="line">  System.out.println(i);</span><br><span class="line">  i++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3><span id="4-do-while">4. do-while</span></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">  <span class="comment">// code block to be executed</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">while</span> (condition);</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">  System.out.println(i);</span><br><span class="line">  i++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">while</span> (i &lt; <span class="number">5</span>);</span><br></pre></td></tr></table></figure>
-
-<h3><span id="5-keywords">5. keywords</span></h3><ul>
-<li><p>break</p>
-<p>In <em>switch</em>, break is used to end the switch</p>
-<p>In a loop, it exit current loop</p>
-</li>
-<li><p>continue</p>
-<p>end loop just for once and continue next loop in current loops</p>
-</li>
-<li><p>return</p>
-<p>return statement <strong>not only breaks out of the loop</strong> <strong>but also the entire function</strong> definition and shifts the control to the statements after the calling function.</p>
-</li>
-</ul>
-<h1><span id="expression">Expression</span></h1><blockquote>
-<p>Use operators to connect constants or variables to symbolic Java grammar formulas can be called expressions.</p>
-</blockquote>
-<h2><span id="precedence">Precedence</span></h2><table>
-<thead>
-<tr>
-<th align="center">Category</th>
-<th align="center">Operator</th>
-<th align="center">Associativity</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Postfix</td>
-<td align="center">expression++ expression–</td>
-<td align="center">Left to right</td>
-</tr>
-<tr>
-<td align="center">Unary</td>
-<td align="center">++expression –-expression +expression –expression ~ !</td>
-<td align="center">Right to left</td>
-</tr>
-<tr>
-<td align="center">Multiplicative</td>
-<td align="center">* / %</td>
-<td align="center">Left to right</td>
-</tr>
-<tr>
-<td align="center">Additive</td>
-<td align="center">+ -</td>
-<td align="center">Left to right</td>
-</tr>
-<tr>
-<td align="center">Shift</td>
-<td align="center">&lt;&lt; &gt;&gt; &gt;&gt;&gt;</td>
-<td align="center">Left to right</td>
-</tr>
-<tr>
-<td align="center">Relational</td>
-<td align="center">&lt; &gt; &lt;= &gt;= instanceof</td>
-<td align="center">Left to right</td>
-</tr>
-<tr>
-<td align="center">Equality</td>
-<td align="center">== !=</td>
-<td align="center">Left to right</td>
-</tr>
-<tr>
-<td align="center">Bitwise AND</td>
-<td align="center">&amp;</td>
-<td align="center">Left to right</td>
-</tr>
-<tr>
-<td align="center">Bitwise XOR</td>
-<td align="center">^</td>
-<td align="center">Left to right</td>
-</tr>
-<tr>
-<td align="center">Bitwise OR</td>
-<td align="center">|</td>
-<td align="center">Left to right</td>
-</tr>
-<tr>
-<td align="center">Logical AND</td>
-<td align="center">&amp;&amp;</td>
-<td align="center">Left to right</td>
-</tr>
-<tr>
-<td align="center">Logical OR</td>
-<td align="center">||</td>
-<td align="center">Left to right</td>
-</tr>
-<tr>
-<td align="center">Conditional</td>
-<td align="center">?:</td>
-<td align="center">Right to left</td>
-</tr>
-<tr>
-<td align="center">Assignment</td>
-<td align="center">= += -= *= /= %= ^= |= &lt;&lt;= &gt;&gt;= &gt;&gt;&gt;=</td>
-<td align="center">Right to left</td>
-</tr>
-</tbody></table>
-<h2><span id="conditional-ternary-operator">Conditional (ternary) operator</span></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(condition)?expression1:expression2</span><br><span class="line"><span class="comment">/* same as the selection below */</span></span><br><span class="line"><span class="keyword">if</span>(condition)&#123;</span><br><span class="line">	expression1;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	expression2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1><span id="variable">Variable</span></h1><blockquote>
-<p>The data which can be changed is saved in memory</p>
-</blockquote>
-<h2><span id="category">Category</span></h2><h3><span id="member-variable">Member variable</span></h3><p>Variables defined outside the method and inside the class. </p>
-<ol>
-<li><p>static variable</p>
-<ul>
-<li>most of the static variables are visible. (public)</li>
-<li>Static variables are created when they are accessed for the first time and destroyed at the end of the program.</li>
-</ul>
-</li>
-<li><p>non-static variable</p>
-<ul>
-<li>most of the non-static variables are invisible. (private)</li>
-<li>Instance variables are created when the object is created, and destroyed when the object is destroyed</li>
-</ul>
-</li>
-<li><p>Difference</p>
-<table>
-<thead>
-<tr>
-<th align="left">Static variable</th>
-<th align="left">Non static variable</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Static variables can be accessed using class name</td>
-<td align="left">Non static variables can be accessed using instance of a class</td>
-</tr>
-<tr>
-<td align="left">Static variables can be accessed by static and non static methods</td>
-<td align="left">Non static variables cannot be accessed inside a static method.</td>
-</tr>
-<tr>
-<td align="left">Static variables reduce the amount of memory used by a program.</td>
-<td align="left">Non static variables do not reduce the amount of memory used by a program</td>
-</tr>
-<tr>
-<td align="left">Static variables are shared among all instances of a class.</td>
-<td align="left">Non static variables are specific to that instance of a class.</td>
-</tr>
-<tr>
-<td align="left">Static variable is like a global variable and is available to all methods.</td>
-<td align="left">Non static variable is like a local variable and they can be accessed through only instance of a class.</td>
-</tr>
-<tr>
-<td align="left">Static variables are stored in the static area in the method area.</td>
-<td align="left">Non static variables are stored in heap memory.</td>
-</tr>
-</tbody></table>
-</li>
-</ol>
-<h3><span id="local-variable">Local variable</span></h3><blockquote>
-<p>Variables in the methods of the class.</p>
-</blockquote>
-<p>Local variables are declared <strong>in methods, construction methods, or statement blocks</strong>;</p>
-<p>Local variables are created when methods, constructors, or statement blocks are executed. When they are executed, the variables will be destroyed;</p>
-<p>Access modifiers cannot be used for local variables;</p>
-<p>Local variables are only visible in the method, construction method, or statement block that declares it;</p>
-<p>Local variables are allocated on the <strong>stack</strong>.</p>
-<p><strong>Local variables have no default value</strong>, so after the local variables are declared, they must be initialized before they can be used.</p>
-<h3><span id="difference">Difference</span></h3><table>
-<thead>
-<tr>
-<th>Member variables</th>
-<th>Local variables</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>can be used in the whole class</td>
-<td>only work in some certain area</td>
-</tr>
-<tr>
-<td>Heap memory</td>
-<td>Stack memory</td>
-</tr>
-<tr>
-<td>exist with object</td>
-<td>exist with statement executing</td>
-</tr>
-<tr>
-<td>have default value</td>
-<td>have no default value</td>
-</tr>
-</tbody></table>
-<h2><span id="basic-data-types">Basic data types</span></h2><h3><span id="basic-data-type">Basic data type</span></h3><p>byte, short, int, long, float, double, char, boolean</p>
-<h3><span id="variable-definition-format">Variable definition format</span></h3><p><strong>Data type</strong> <em>variable name</em> = initialization value;</p>
-<h3><span id="note">note</span></h3><p>Integers are <em>int</em> by default. When defining data of <em>long</em>, add L after the value.<br>Float numbers are <em>double</em> by default. When defining <em>float</em> data, add F after the value</p>
-<h1><span id="constant">Constant</span></h1><blockquote>
-<p>Value cannot be changed during the execution of the program.</p>
-</blockquote>
-<h2><span id="keyword">Keyword</span></h2><p><em><strong>final</strong></em> is used to define a constant:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="keyword">int</span> COUNT = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">final</span> <span class="keyword">float</span> HEIGHT = <span class="number">100F</span>;</span><br></pre></td></tr></table></figure>
-
-<h1><span id="datatypes">Datatypes</span></h1><blockquote>
-<p>For each type of data, a clear and specific data type is defined and different sizes of memory space are allocated in the memory.</p>
-</blockquote>
-<h2><span id="category">Category</span></h2><p>Primitive</p>
-<ul>
-<li>Numeric<ul>
-<li>Integral <ul>
-<li>Integer (byte, short, int, long)</li>
-<li>Floating point (float, double)</li>
-</ul>
-</li>
-<li>Character (char)</li>
-</ul>
-</li>
-<li>Boolean</li>
-</ul>
-<p>Non-Primitive</p>
-<ul>
-<li>Class</li>
-<li>String</li>
-<li>Interface</li>
-<li>Array</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="left"><strong>Data Type</strong></th>
-<th align="left"><strong>Default Value</strong></th>
-<th align="left"><strong>Default size</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">boolean</td>
-<td align="left">false</td>
-<td align="left">1 bit</td>
-</tr>
-<tr>
-<td align="left">char</td>
-<td align="left">‘\u0000’</td>
-<td align="left">2 byte</td>
-</tr>
-<tr>
-<td align="left">byte</td>
-<td align="left">0</td>
-<td align="left">1 byte</td>
-</tr>
-<tr>
-<td align="left">short</td>
-<td align="left">0</td>
-<td align="left">2 byte</td>
-</tr>
-<tr>
-<td align="left">int</td>
-<td align="left">0</td>
-<td align="left">4 byte</td>
-</tr>
-<tr>
-<td align="left">long</td>
-<td align="left">0L</td>
-<td align="left">8 byte</td>
-</tr>
-<tr>
-<td align="left">float</td>
-<td align="left">0.0f</td>
-<td align="left">4 byte</td>
-</tr>
-<tr>
-<td align="left">double</td>
-<td align="left">0.0d</td>
-<td align="left">8 byte</td>
-</tr>
-</tbody></table>
-<h2><span id="transform">Transform</span></h2><h3><span id="visible-transform">Visible transform</span></h3><p>Target type variable name = (target type) (data to be converted)</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> b = (<span class="keyword">byte</span>)(a + b)</span><br></pre></td></tr></table></figure>
-
-<h3><span id="invisible-transform">Invisible transform</span></h3><p>Conversion of numeric data: byte→short→int→long→float→double.<br>Character type is converted to integer type: char→int</p>
-<h3><span id="conditions">Conditions</span></h3><ol>
-<li>The two data types are compatible with each other.</li>
-<li>The value range of the target type is larger than the original data type (low-level type data is converted into high-level type data).</li>
-</ol>
-<h1><span id="reflection">Reflection</span></h1><blockquote>
-<p>The Java reflection is in the running state, for any class, you can <strong>know</strong> all the properties and methods of this class; for any object, you can <strong>call</strong> any of its methods and properties.</p>
-</blockquote>
-<p>The most important use of reflection is <strong>to develop various general frameworks</strong></p>
-<ul>
-<li>Figure out the class of any object at runtime</li>
-<li>Construct an object of any class at runtime</li>
-<li>Figure out the member variables and methods of any class at runtime</li>
-<li>Call any object’s method at runtime</li>
-</ul>
-<p><a href="https://domuki.top/2021/03/19/The-reflection-of-Java/">Learn more</a></p>
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2021/03/18/Basic-Syntax-of-Java/">
+        View this article
+      </a>
+    </p>
+    
 
   </div>
 
 </div>
 
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Environment variable configuration
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2021-03-18
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h1 id="Environment-variable-configuration"><a href="#Environment-variable-configuration" class="headerlink" title="Environment variable configuration"></a>Environment variable configuration</h1><h3 id="Open-Advanced-system-setting-click-“Environment-variable”"><a href="#Open-Advanced-system-setting-click-“Environment-variable”" class="headerlink" title="Open Advanced system setting, click “Environment variable”"></a>Open <em>Advanced system setting</em>, click “Environment variable”</h3><p><img src="/2021/03/18/Environment-variable-configuration/001.png"></p>
-<h3 id="New-a-variable-called-“JAVA-HOME”"><a href="#New-a-variable-called-“JAVA-HOME”" class="headerlink" title="New a variable called “JAVA_HOME”"></a>New a variable called “JAVA_HOME”</h3><p>Variable name: JAVA_HOME</p>
-<p>Variable value: <em>the path where you installed java</em></p>
-<p><img src="/2021/03/18/Environment-variable-configuration/002.png"></p>
-<h3 id="Edit-“Path”-then-Add-2-values"><a href="#Edit-“Path”-then-Add-2-values" class="headerlink" title="Edit “Path”, then Add 2 values"></a>Edit “Path”, then Add 2 values</h3><p>%JAVA_HOME%\bin</p>
-<p>%JAVA_HOME%\jre\bin</p>
-<p><img src="/2021/03/18/Environment-variable-configuration/003.png"></p>
-<h3 id="New-a-variable-called-“CLASSPATH”"><a href="#New-a-variable-called-“CLASSPATH”" class="headerlink" title="New a variable called “CLASSPATH”"></a>New a variable called “CLASSPATH”</h3><p>Variable name: CLASSPATH</p>
-<p>Variable value: <code>.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar</code></p>
-<h1 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h1><p>Enter cmd, input code: <code>java -version</code></p>
-<p><img src="/2021/03/18/Environment-variable-configuration/005.png"></p>
-<h1 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h1><h3 id="JAVA-HOME"><a href="#JAVA-HOME" class="headerlink" title="JAVA_HOME"></a>JAVA_HOME</h3><p>Variable name: JAVA_HOME<br>Variable value: C:\Program File\Java\jdk1.8.0_281<br>Purpose: define a variable for use in other places</p>
-<h3 id="Path"><a href="#Path" class="headerlink" title="Path"></a>Path</h3><p>Variable name: Path<br>Variable value: %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;<br>Purpose: Make the system recognize java, javac, javap and other commands under any path</p>
-<h3 id="CLASSPATH"><a href="#CLASSPATH" class="headerlink" title="CLASSPATH"></a>CLASSPATH</h3><p>Variable name: CLASSPATH<br>Variable value: .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar<br>Purpose: Tell the JVM to use or execute the class on which path, so that the JVM can load the class file, .; indicates the current path, tools.jar and dt.jar are the class library paths</p>
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
-
+    
   </div>
 
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Java Introduction
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2021-03-18
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h1 id="What-is-Java"><a href="#What-is-Java" class="headerlink" title="What is Java"></a>What is Java</h1><h3 id="Java-programming-language"><a href="#Java-programming-language" class="headerlink" title="Java (programming language)"></a>Java (programming language)</h3><p>Java is a class-based, object-oriented <strong>programming language</strong>.</p>
-<h3 id="Java-software-platform"><a href="#Java-software-platform" class="headerlink" title="Java (software platform)"></a>Java (software platform)</h3><p>Java is a <strong>system</strong> for developing application software and deploying it in a cross-platform computing <strong>environment</strong>.</p>
-<h1 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h1><p>Java was started as a project called “Oak” by James Gosling in June 1991. Gosling’s goals were to implement a virtual machine and a language that had a familiar C-like notation but with greater uniformity and simplicity than C/C++. The first public implementation was Java 1.0 in 1995.</p>
-<h1 id="Versions"><a href="#Versions" class="headerlink" title="Versions"></a>Versions</h1><h3 id="Java-SE-J2SE-Java-2-Platform-Standard-Edition"><a href="#Java-SE-J2SE-Java-2-Platform-Standard-Edition" class="headerlink" title="Java SE (J2SE, Java 2 Platform Standard Edition)"></a>Java SE (J2SE, Java 2 Platform Standard Edition)</h3><p>Java SE is a computing platform for development and deployment of portable code for desktop and server environments.</p>
-<h3 id="Java-EE-J2EE-Java-2-Platform-Enterprise-Edition"><a href="#Java-EE-J2EE-Java-2-Platform-Enterprise-Edition" class="headerlink" title="Java EE (J2EE, Java 2 Platform Enterprise Edition)"></a>Java EE (J2EE, Java 2 Platform Enterprise Edition)</h3><p>Jakarta EE, formerly Java Platform, Enterprise Edition (Java EE)  is a set of specifications, <strong>extending Java SE</strong> with specifications for enterprise features such as distributed computing and web services.</p>
-<h3 id="Java-ME-J2ME-Java-2-Platform-Micro-Edition"><a href="#Java-ME-J2ME-Java-2-Platform-Micro-Edition" class="headerlink" title="Java ME (J2ME, Java 2 Platform Micro Edition)"></a>Java ME (J2ME, Java 2 Platform Micro Edition)</h3><p>Java ME is a computing platform for development and deployment of portable code for embedded and mobile devices (mobile phones, TV set-top boxes, etc.).</p>
-<h1 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h1><h3 id="Simple"><a href="#Simple" class="headerlink" title="Simple"></a>Simple</h3><p>Java is easy to learn and its syntax is quite simple, clean and easy to understand</p>
-<blockquote>
-<p>There’re no pointers and operator overloading in Java.</p>
-</blockquote>
-<h3 id="Object-Oriented"><a href="#Object-Oriented" class="headerlink" title="Object Oriented"></a>Object Oriented</h3><p>In java, everything is an object.</p>
-<h4 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h4><p>A Java object is a <strong>combination of data and procedures</strong> working on the available data.</p>
-<blockquote>
-<p>Door has states (open/close) and behaviours (pull()/push())</p>
-</blockquote>
-<h4 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h4><p>A Class is like <strong>an object constructor</strong>, or a “blueprint” for creating objects.</p>
-<blockquote>
-<p>Jenny and Danny are Students.</p>
-</blockquote>
-<h4 id="Inheritance"><a href="#Inheritance" class="headerlink" title="*Inheritance"></a>*Inheritance</h4><p>Inheritance can be defined as the process where one class acquires the properties (methods and fields) of another</p>
-<blockquote>
-<p>Father and Son</p>
-</blockquote>
-<h4 id="Polymorphism"><a href="#Polymorphism" class="headerlink" title="*Polymorphism"></a>*Polymorphism</h4><p>Polymorphism means “many forms”, and it occurs when we have many classes that are related to each other by inheritance.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bike</span></span>&#123;  </span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;System.out.println(<span class="string">&quot;running&quot;</span>);&#125;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Splendor</span> <span class="keyword">extends</span> <span class="title">Bike</span></span>&#123;  </span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;System.out.println(<span class="string">&quot;running safely with 60km&quot;</span>);&#125;  </span><br></pre></td></tr></table></figure>
-
-<h4 id="Encapsulation"><a href="#Encapsulation" class="headerlink" title="*Encapsulation"></a>*Encapsulation</h4><p>In encapsulation, the variables of a class will be hidden from other classes, and can be accessed only through the methods of their current class.</p>
-<blockquote>
-<p>private</p>
-</blockquote>
-<p>*Java object-oriented programming has 3 major characteristics: <em>encapsulation</em>, <em>inheritance</em>, and <em>polymorphism</em>.</p>
-<h3 id="Robust"><a href="#Robust" class="headerlink" title="Robust"></a>Robust</h3><p>Robust simply means <strong>strong</strong>. Java is robust because: It uses strong memory management.</p>
-<h3 id="Platform-Independent"><a href="#Platform-Independent" class="headerlink" title="Platform Independent"></a>Platform Independent</h3><p>The meaning of <strong>platform</strong>-<strong>independent</strong> is that the <strong>java</strong> compiled code(byte code) can run on all operating systems.</p>
-<h3 id="Secure"><a href="#Secure" class="headerlink" title="Secure"></a>Secure</h3><p>Java program always runs in JRE with almost null interaction with system OS, hence it is more secure.</p>
-<h3 id="Multi-Threading"><a href="#Multi-Threading" class="headerlink" title="Multi-Threading"></a>Multi-Threading</h3><p>Java multithreading feature makes it possible to write program that can do many tasks at the same time.</p>
-<h3 id="Architectural-Neutral"><a href="#Architectural-Neutral" class="headerlink" title="Architectural Neutral"></a>Architectural Neutral</h3><p>Java program is easy to interpret on <strong>any machine</strong>.</p>
-<h3 id="Portable"><a href="#Portable" class="headerlink" title="Portable"></a>Portable</h3><p>Java Byte code can be carried to <strong>any platform</strong>.</p>
-<h3 id="High-Performance"><a href="#High-Performance" class="headerlink" title="High Performance"></a>High Performance</h3><p>Java is an interpreted language, so it <strong>cannot be as fast as a compiled language</strong> like C or C++. However, Java enables high performance with the use of just-in-time compiler.</p>
-<h3 id="Distributed"><a href="#Distributed" class="headerlink" title="Distributed"></a>Distributed</h3><p>Programs can be designed to run on computer networks. Java has a special class library for communicating using TCP/IP protocols.</p>
-<h1 id="Java-Technological-System"><a href="#Java-Technological-System" class="headerlink" title="Java Technological System"></a>Java Technological System</h1><p><img src="/2021/03/18/Java-Introduction/001.png"></p>
-<h1 id="JVM-JRE-amp-JDK"><a href="#JVM-JRE-amp-JDK" class="headerlink" title="JVM, JRE &amp; JDK"></a>JVM, JRE &amp; JDK</h1><h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p><img src="/2021/03/18/Java-Introduction/002.jpg"></p>
-<p>We must understand the differences between JDK, JRE, and JVM before proceeding further to Java. </p>
-<h2 id="Brief-Introduction"><a href="#Brief-Introduction" class="headerlink" title="Brief Introduction"></a>Brief Introduction</h2><h3 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h3><p>JVM (Java Virtual Machine) is an abstract machine.</p>
-<p>It doesn’t physically exist.</p>
-<p>It provides a runtime environment in which Java bytecode can be executed.</p>
-<p>It can also run those programs which are written in other languages and compiled to Java bytecode.</p>
-<h3 id="JRE"><a href="#JRE" class="headerlink" title="JRE"></a>JRE</h3><p>JRE is Runtime Environment.</p>
-<p>A set of software tools which are used for developing Java applications.</p>
-<p>It is used to provide the runtime environment. </p>
-<p>It is the implementation of JVM.</p>
-<p>It includes a set of libraries and other files that JVM uses at runtime.</p>
-<h3 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h3><p>JDK(Java Development Kit) </p>
-<p>is a software development environment which is used to develop Java applications and applets.</p>
-<p>It physically exists. </p>
-<p>It contains JRE and development tools.</p>
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        A Simple Web-based Database Application
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2021-03-16
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h2 id="General-Steps"><a href="#General-Steps" class="headerlink" title="General Steps"></a>General Steps</h2><h3 id="1-Create-a-Maven-Project"><a href="#1-Create-a-Maven-Project" class="headerlink" title="1. Create a Maven Project"></a>1. Create a Maven Project</h3><p>Step 1: Open Eclipse</p>
-<p>Step 2: Launch it and wait for a while</p>
-<p>Step 3: Go to <strong>FILE</strong>, then new <strong>MAVEN PROJECT</strong>. or <code>ALT+CTRL+N</code></p>
-<p>Step 4: Don’t need to change first page, next.</p>
-<p>Step 5: Find a filter with group id <strong>org.apache.maven.archetypes</strong> and artifact id <strong>maven-archetype-webapp</strong>, select it and next.</p>
-<p>Step 6: Type in the <strong>Group Id</strong> (mine is: com.ssk3408) and <strong>Artifact Id</strong> (mine is: MVC-Registration). Then Finish.</p>
-<p>Step 7: You will get <strong>1 error and 2 exception</strong> in Markers</p>
-<h3 id="2-Configure-Build-Path"><a href="#2-Configure-Build-Path" class="headerlink" title="2. Configure Build Path"></a>2. Configure Build Path</h3><p>Step 8: Right click on the <strong>MVC-Registration</strong> in Project Explorer, and go to BUILD PATH and go to <strong>configure build path</strong></p>
-<p>Step 9: Change JDK to 1.8 in <strong>Java Compiler</strong>, Apply</p>
-<p>Step 10: Change JDK to 1.8 in <strong>Project Facets</strong>, Apply</p>
-<p>Step 11: add your Tomcat in <strong>Targeted Runtimes</strong></p>
-<p>Step 12: Select items named <em>Maven Dependencies</em>, <em>Apache Tomcat v9.0</em> and <em>JRE System Library</em> in <strong>Java Build Path</strong>. apply and close it</p>
-<p>Step 13: The errors disappeared</p>
-<p>(Before you create the project, shut down the tomcat)</p>
-<h2 id="Creating-Steps"><a href="#Creating-Steps" class="headerlink" title="Creating Steps"></a>Creating Steps</h2><h3 id="3-Add-Required-Dependencies-to-POM-xml"><a href="#3-Add-Required-Dependencies-to-POM-xml" class="headerlink" title="3. Add Required Dependencies to POM.xml"></a>3. Add Required Dependencies to POM.xml</h3><p>Modify the pom.xml file to add required dependencies</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.servlet<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javax.servlet-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">version</span>&gt;</span>3.0.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/javax.servlet/jstl --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.servlet<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jstl<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc6 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.oracle.database.jdbc<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>ojdbc6<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">version</span>&gt;</span>11.2.0.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="4-Create-the-view-component"><a href="#4-Create-the-view-component" class="headerlink" title="4. Create the view component"></a>4. Create the view component</h3><h4 id="4-1-Index-jsp"><a href="#4-1-Index-jsp" class="headerlink" title="4.1. Index,jsp"></a>4.1. Index,jsp</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=<span class="string">&quot;java&quot;</span> contentType=<span class="string">&quot;text/html; charset=ISO-8859-1&quot;</span></span><br><span class="line">	pageEncoding=<span class="string">&quot;ISO-8859-1&quot;</span> isELIgnored=<span class="string">&quot;false&quot;</span>%&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;link rel=<span class="string">&quot;stylesheet&quot;</span></span><br><span class="line">	href=<span class="string">&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&quot;</span>&gt;</span><br><span class="line">&lt;style type=<span class="string">&quot;text/css&quot;</span>&gt;</span><br><span class="line">body &#123;</span><br><span class="line">	font-family: Arial, Helvetica, sans-serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">form &#123;</span><br><span class="line">	margin: <span class="number">0</span> auto;</span><br><span class="line">	border: 3px solid #f1f1f1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.container &#123;</span><br><span class="line">	padding: 16px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">h2 &#123;</span><br><span class="line">	text-align: center</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;title&gt;Main Page&lt;/title&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;container&quot;</span>&gt;</span><br><span class="line">		&lt;p&gt;&lt;/p&gt;</span><br><span class="line">		&lt;p&gt;&lt;/p&gt;</span><br><span class="line">		&lt;p style=<span class="string">&quot;color: #b50e0e&quot;</span>&gt;$&#123;NOTIFICATION&#125;&lt;/p&gt;</span><br><span class="line">		&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;row&quot;</span>&gt;</span><br><span class="line">			&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;col-md-4&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">				&lt;h2&gt;SSK3408-SYSTEM&lt;/h2&gt;</span><br><span class="line">				&lt;hr&gt;</span><br><span class="line">				&lt;p&gt;&lt;/p&gt;</span><br><span class="line">				&lt;p&gt;&lt;/p&gt;</span><br><span class="line">				&lt;form name=<span class="string">&quot;myForm&quot;</span> action=<span class="string">&quot;RegistrationController&quot;</span> method=<span class="string">&quot;get&quot;</span>&gt;</span><br><span class="line">					&lt;p&gt;</span><br><span class="line">						&lt;button <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;btn btn-success btn-lg btn-block&quot;</span> name=<span class="string">&quot;action&quot;</span></span><br><span class="line">							value=<span class="string">&quot;ADD&quot;</span>&gt;Register Form&lt;/button&gt;</span><br><span class="line">					&lt;/p&gt;</span><br><span class="line">					&lt;p&gt;</span><br><span class="line">						&lt;button <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;btn btn-secondary btn-lg btn-block &quot;</span> name=<span class="string">&quot;action&quot;</span></span><br><span class="line">							value=<span class="string">&quot;LIST&quot;</span>&gt;Display Form&lt;/button&gt;</span><br><span class="line">					&lt;/p&gt;</span><br><span class="line">					&lt;p&gt;</span><br><span class="line">						&lt;button <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;btn btn-danger btn-lg btn-block&quot;</span> name=<span class="string">&quot;action&quot;</span></span><br><span class="line">							value=<span class="string">&quot;EXIT&quot;</span>&gt;Exit&lt;/button&gt;</span><br><span class="line">					&lt;/p&gt;</span><br><span class="line">				&lt;/form&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-2-FormRegistration-jsp"><a href="#4-2-FormRegistration-jsp" class="headerlink" title="4.2. FormRegistration.jsp"></a>4.2. FormRegistration.jsp</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=<span class="string">&quot;java&quot;</span> contentType=<span class="string">&quot;text/html; charset=ISO-8859-1&quot;</span></span><br><span class="line">	pageEncoding=<span class="string">&quot;ISO-8859-1&quot;</span> isELIgnored=<span class="string">&quot;false&quot;</span>%&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;link rel=<span class="string">&quot;stylesheet&quot;</span></span><br><span class="line">	href=<span class="string">&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&quot;</span>&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;title&gt;User Registration&lt;/title&gt;</span><br><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">validateForm</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">document</span>.myForm.first_name.value == <span class="literal">null</span></span><br><span class="line">				|| <span class="built_in">document</span>.myForm.first_name.value == <span class="string">&quot;&quot;</span>) &#123;</span><br><span class="line">			alert(<span class="string">&quot;Please key-in first-name&quot;</span>);</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">document</span>.myForm.last_name.value == <span class="literal">null</span></span><br><span class="line">				|| <span class="built_in">document</span>.myForm.last_name.value == <span class="string">&quot;&quot;</span>) &#123;</span><br><span class="line">			alert(<span class="string">&quot;Please key-in last-name&quot;</span>);</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">document</span>.myForm.email.value == <span class="literal">null</span></span><br><span class="line">				|| <span class="built_in">document</span>.myForm.email.value == <span class="string">&quot;&quot;</span>) &#123;</span><br><span class="line">			alert(<span class="string">&quot;Please key-in email&quot;</span>);</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">document</span>.myForm.username.value == <span class="literal">null</span></span><br><span class="line">				|| <span class="built_in">document</span>.myForm.username.value == <span class="string">&quot;&quot;</span>) &#123;</span><br><span class="line">			alert(<span class="string">&quot;Please key-in username&quot;</span>);</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">document</span>.myForm.password1.value == <span class="literal">null</span></span><br><span class="line">				|| <span class="built_in">document</span>.myForm.password1.value == <span class="string">&quot;&quot;</span>) &#123;</span><br><span class="line">			alert(<span class="string">&quot;Please key-in password&quot;</span>);</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">if</span> (<span class="built_in">document</span>.myForm.password2.value == <span class="literal">null</span></span><br><span class="line">					|| <span class="built_in">document</span>.myForm.password2.value == <span class="string">&quot;&quot;</span>) &#123;</span><br><span class="line">				alert(<span class="string">&quot;Please confirm password&quot;</span>);</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="keyword">if</span> (<span class="built_in">document</span>.myForm.password1.value != <span class="built_in">document</span>.myForm.password2.value) &#123;</span><br><span class="line">					alert(<span class="string">&quot;Password does not match&quot;</span>);</span><br><span class="line">					<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;container&quot;</span>&gt;</span><br><span class="line">		&lt;h2&gt;User Details&lt;/h2&gt;</span><br><span class="line">		&lt;p style=<span class="string">&quot;color: #b50e0e&quot;</span>&gt;$&#123;NOTIFICATION&#125;&lt;/p&gt;</span><br><span class="line">		&lt;hr&gt;</span><br><span class="line">		&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;row&quot;</span>&gt;</span><br><span class="line">			&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;col-md-4&quot;</span>&gt;</span><br><span class="line">				&lt;form name=<span class="string">&quot;myForm&quot;</span> action=<span class="string">&quot;RegistrationController?action=ADD&quot;</span></span><br><span class="line">					onSubmit=<span class="string">&quot;return validateForm()&quot;</span> method=<span class="string">&quot;post&quot;</span>&gt;</span><br><span class="line">					&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;form-group&quot;</span>&gt;</span><br><span class="line">						First Name: <span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">class</span>=<span class="string">&quot;form-control&quot;</span></span></span></span><br><span class="line"><span class="xml">							name=&quot;first_name&quot; placeholder=&quot;Enter Firstname&quot;</span></span><br><span class="line"><span class="xml">							value=&quot;$&#123;user.firstName&#125;&quot; /&gt;</span></span><br><span class="line">					&lt;/div&gt;</span><br><span class="line">					&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;form-group&quot;</span>&gt;</span><br><span class="line">						Last Name: <span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">class</span>=<span class="string">&quot;form-control&quot;</span></span></span></span><br><span class="line"><span class="xml">							name=&quot;last_name&quot; placeholder=&quot;Enter Lastname&quot;</span></span><br><span class="line"><span class="xml">							value=&quot;$&#123;user.lastName&#125;&quot; /&gt;</span></span><br><span class="line">					&lt;/div&gt;</span><br><span class="line">					&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;form-group&quot;</span>&gt;</span><br><span class="line">						Email: <span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">class</span>=<span class="string">&quot;form-control&quot;</span> <span class="attr">name</span>=<span class="string">&quot;email&quot;</span></span></span></span><br><span class="line"><span class="xml">							placeholder=&quot;Enter Email&quot; value=&quot;$&#123;user.email&#125;&quot; /&gt;</span></span><br><span class="line">					&lt;/div&gt;</span><br><span class="line">					&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;form-group&quot;</span>&gt;</span><br><span class="line">						UserName: <span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">class</span>=<span class="string">&quot;form-control&quot;</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span></span></span></span><br><span class="line"><span class="xml">							placeholder=&quot;Enter Username&quot; value=&quot;$&#123;user.userName&#125;&quot; /&gt;</span></span><br><span class="line">					&lt;/div&gt;</span><br><span class="line">					&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;form-group&quot;</span>&gt;</span><br><span class="line">						Password: <span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">class</span>=<span class="string">&quot;form-control&quot;</span> <span class="attr">name</span>=<span class="string">&quot;password1&quot;</span></span></span></span><br><span class="line"><span class="xml">							placeholder=&quot;Enter Password&quot; value=&quot;$&#123;user.password&#125;&quot; /&gt;</span></span><br><span class="line">					&lt;/div&gt;</span><br><span class="line">					&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;form-group&quot;</span>&gt;</span><br><span class="line">						Confirm Password: <span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">class</span>=<span class="string">&quot;form-control&quot;</span></span></span></span><br><span class="line"><span class="xml">							name=&quot;password2&quot; placeholder=&quot;Enter Password&quot;</span></span><br><span class="line"><span class="xml">							value=&quot;$&#123;user.password&#125;&quot; /&gt;</span></span><br><span class="line">					&lt;/div&gt;</span><br><span class="line">					&lt;input type=<span class="string">&quot;reset&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;btn btn-success&quot;</span> name=<span class="string">&quot;reset&quot;</span></span><br><span class="line">						value=<span class="string">&quot;Reset&quot;</span> /&gt; <span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-success&quot;</span></span></span></span><br><span class="line"><span class="xml">						name=&quot;submit&quot; value=&quot;Submit&quot; /&gt;</span> <span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span></span></span></span><br><span class="line"><span class="xml">						class=&quot;btn btn-success&quot;</span></span><br><span class="line"><span class="xml">						onclick=&quot;window.location.href = &#x27;/MVC-Registration/index.jsp&#x27;&quot;</span></span><br><span class="line"><span class="xml">						value=&quot;Back&quot; /&gt;</span></span><br><span class="line">				&lt;/form&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-3-FormList-jsp"><a href="#4-3-FormList-jsp" class="headerlink" title="4.3. FormList.jsp"></a>4.3. FormList.jsp</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=<span class="string">&quot;java&quot;</span> contentType=<span class="string">&quot;text/html; charset=UTF-8&quot;</span></span><br><span class="line">	pageEncoding=<span class="string">&quot;UTF-8&quot;</span> isELIgnored=<span class="string">&quot;false&quot;</span>%&gt;</span><br><span class="line">&lt;%@taglib uri=<span class="string">&quot;http://java.sun.com/jsp/jstl/core&quot;</span> prefix=<span class="string">&quot;c&quot;</span>%&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset=<span class="string">&quot;UTF-8&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;title&gt;Employee Directory&lt;/title&gt;</span><br><span class="line">&lt;link rel=<span class="string">&quot;stylesheet&quot;</span></span><br><span class="line">	href=<span class="string">&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&quot;</span>&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;container&quot;</span>&gt;</span><br><span class="line">		&lt;h1&gt;User Directory&lt;/h1&gt;</span><br><span class="line"></span><br><span class="line">		&lt;p style=<span class="string">&quot;color: #b50e0e&quot;</span>&gt;$&#123;NOTIFICATION&#125;&lt;/p&gt;</span><br><span class="line">		&lt;hr&gt;</span><br><span class="line">		&lt;table <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;table table-striped table-bordered&quot;</span>&gt;</span><br><span class="line">			&lt;tr <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;thead-dark&quot;</span>&gt;</span><br><span class="line">				&lt;th&gt;First Name&lt;/th&gt;</span><br><span class="line">				&lt;th&gt;Last Name&lt;/th&gt;</span><br><span class="line">				&lt;th&gt;Email&lt;/th&gt;</span><br><span class="line">				&lt;th&gt;User Name&lt;/th&gt;</span><br><span class="line">			&lt;/tr&gt;</span><br><span class="line"></span><br><span class="line">			&lt;c:forEach items=<span class="string">&quot;$&#123;user&#125;&quot;</span> <span class="keyword">var</span>=<span class="string">&quot;user&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">				&lt;tr&gt;</span><br><span class="line">					&lt;td&gt;$&#123;user.firstName&#125;&lt;/td&gt;</span><br><span class="line">					&lt;td&gt;$&#123;user.lastName&#125;&lt;/td&gt;</span><br><span class="line">					&lt;td&gt;$&#123;user.email&#125;&lt;/td&gt;</span><br><span class="line">					&lt;td&gt;$&#123;user.userName&#125;&lt;/td&gt;</span><br><span class="line">				&lt;/tr&gt;</span><br><span class="line">			&lt;/c:forEach&gt;</span><br><span class="line">		&lt;/table&gt;</span><br><span class="line">		&lt;input type=<span class="string">&quot;button&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;btn btn-success&quot;</span></span><br><span class="line">			onclick=<span class="string">&quot;window.location.href = &#x27;/MVC-Registration/index.jsp&#x27;&quot;</span></span><br><span class="line">			value=<span class="string">&quot;Back&quot;</span> /&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-Create-the-controller-component"><a href="#5-Create-the-controller-component" class="headerlink" title="5. Create the controller component"></a>5. Create the controller component</h3><p>Create a controller as a java servlet under<strong>src/main/java</strong> folder.</p>
-<p>Specify Java package, Class Name and click Finish.</p>
-<p>Check web.xml:</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">web-app</span> <span class="meta-keyword">PUBLIC</span></span></span><br><span class="line"><span class="meta"> <span class="meta-string">&quot;-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN&quot;</span></span></span><br><span class="line"><span class="meta"> <span class="meta-string">&quot;http://java.sun.com/dtd/web-app_2_3.dtd&quot;</span> &gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">web-app</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">display-name</span>&gt;</span>Archetype Created Web Application<span class="tag">&lt;/<span class="name">display-name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>RegistrationController<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">display-name</span>&gt;</span>RegistrationController<span class="tag">&lt;/<span class="name">display-name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">description</span>&gt;</span><span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>com.ssk3408.RegistrationController<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>RegistrationController<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/RegistrationController<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">web-app</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>This is generated automatically once you created <strong>RegistrationController</strong> as a servlet.</p>
-<p>The Generated RegistrationController: </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ssk3408;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.RequestDispatcher;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="keyword">import</span> com.ssk3408.DAO.RegisterDAO;</span><br><span class="line"><span class="keyword">import</span> com.ssk3408.model.User;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RegistrationController</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line">	RegisterDAO regDAO = <span class="keyword">null</span>;</span><br><span class="line">	RequestDispatcher rd = <span class="keyword">null</span>;</span><br><span class="line">	String clickDelete = <span class="string">&quot;&quot;</span>;</span><br><span class="line">	String clickUpdate = <span class="string">&quot;&quot;</span>;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">RegistrationController</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		regDAO = <span class="keyword">new</span> RegisterDAO();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">listUser</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span></span></span><br><span class="line"><span class="function">        <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        response.getWriter().append(<span class="string">&quot;Served at: &quot;</span>).append(request.getContextPath());</span><br><span class="line"></span><br><span class="line">        RegisterDAO dao = <span class="keyword">new</span> RegisterDAO();</span><br><span class="line">        List&lt;User&gt; theList = dao.getUser();</span><br><span class="line">        request.setAttribute(<span class="string">&quot;user&quot;</span>, theList);</span><br><span class="line">        RequestDispatcher rd = request.getRequestDispatcher(<span class="string">&quot;/FormList.jsp&quot;</span>);</span><br><span class="line">        rd.forward(request, response);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">saveUser</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span></span></span><br><span class="line"><span class="function">        <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line"></span><br><span class="line">        User u = <span class="keyword">new</span> User();</span><br><span class="line">        u.setFirstName(request.getParameter(<span class="string">&quot;first_name&quot;</span>));</span><br><span class="line">        u.setLastName(request.getParameter(<span class="string">&quot;last_name&quot;</span>));</span><br><span class="line">        u.setEmail(request.getParameter(<span class="string">&quot;email&quot;</span>));</span><br><span class="line">        u.setUserName(request.getParameter(<span class="string">&quot;username&quot;</span>));</span><br><span class="line">        u.setPassword(request.getParameter(<span class="string">&quot;password2&quot;</span>));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (regDAO.save(u)) &#123;</span><br><span class="line">            request.setAttribute(<span class="string">&quot;NOTIFICATION&quot;</span>, <span class="string">&quot;User Registered Successfully!&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        RequestDispatcher rd = request.getRequestDispatcher(<span class="string">&quot;/FormRegistration.jsp&quot;</span>);</span><br><span class="line">        rd.forward(request, response);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-Create-the-model-component"><a href="#6-Create-the-model-component" class="headerlink" title="6. Create the model component"></a>6. Create the model component</h3><p>Create a model as a java class under <strong>src/main/java</strong> folder</p>
-<p>Specify Package, Name and click Finish.</p>
-<p>User.java:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ssk3408.model;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">String firstName;</span><br><span class="line">String lastName;</span><br><span class="line">String email;</span><br><span class="line">String userName;</span><br><span class="line">String password;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getFirstName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> firstName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setFirstName</span><span class="params">(String firstName)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.firstName = firstName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getLastName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> lastName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setLastName</span><span class="params">(String lastName)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.lastName = lastName;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getEmail</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> email;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setEmail</span><span class="params">(String email)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.email = email;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getUserName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> userName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUserName</span><span class="params">(String userName)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.userName = userName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getPassword</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> password;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPassword</span><span class="params">(String password)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.password = password;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-Create-the-Data-Access-Object"><a href="#7-Create-the-Data-Access-Object" class="headerlink" title="7. Create the Data Access Object"></a>7. Create the Data Access Object</h3><p>Database need to be connected before data can be manipulated.</p>
-<p>Thus, we create a class for database connection.</p>
-<p><strong>DBConnectionUtil</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ssk3408.DAO;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"><span class="keyword">import</span> java.sql.DriverManager;</span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DBConnectionUtil</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String URL = <span class="string">&quot;jdbc:oracle:thin:@localhost:1521:xe&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String USERNAME = <span class="string">&quot;hr&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String PASSWORD = <span class="string">&quot;hr&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String DRIVER = <span class="string">&quot;oracle.jdbc.driver.OracleDriver&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Connection connection = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Connection <span class="title">openConnection</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (connection != <span class="keyword">null</span>)</span><br><span class="line">            <span class="keyword">return</span> connection;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                Class.forName(DRIVER);</span><br><span class="line">                connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> connection;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="8-Create-a-class-for-Data-Manipulation"><a href="#8-Create-a-class-for-Data-Manipulation" class="headerlink" title="8. Create a class for Data Manipulation"></a>8. Create a class for Data Manipulation</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ssk3408.DAO;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"><span class="keyword">import</span> java.sql.PreparedStatement;</span><br><span class="line"><span class="keyword">import</span> java.sql.ResultSet;</span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"><span class="keyword">import</span> java.sql.Statement;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.ssk3408.model.User;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RegisterDAO</span> </span>&#123;</span><br><span class="line">    Connection connection=<span class="keyword">null</span>;</span><br><span class="line">    Statement statement=<span class="keyword">null</span>;</span><br><span class="line">    ResultSet resultSet=<span class="keyword">null</span>;</span><br><span class="line">    PreparedStatement preparedStatement =<span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">save</span><span class="params">(User u)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">boolean</span> flag = <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            String sql = <span class="string">&quot;INSERT INTO users(firstname, lastname, email, username, password)VALUES&quot;</span> + <span class="string">&quot;(&#x27;&quot;</span> + u.getFirstName() + <span class="string">&quot;&#x27;,&#x27;&quot;</span> + u.getLastName() + <span class="string">&quot;&#x27;, &#x27;&quot;</span> + u.getEmail() + <span class="string">&quot;&#x27;, &#x27;&quot;</span> + u.getUserName() + <span class="string">&quot;&#x27;, &#x27;&quot;</span> + u.getPassword() +<span class="string">&quot;&#x27;)&quot;</span>;</span><br><span class="line"></span><br><span class="line">            System.out.println(sql);</span><br><span class="line">            connection = DBConnectionUtil.openConnection();</span><br><span class="line">            preparedStatement = connection.prepareStatement(sql);</span><br><span class="line">            preparedStatement.executeUpdate();</span><br><span class="line">            flag = <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (SQLException ex) &#123;</span><br><span class="line">            ex.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> flag;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;User&gt; <span class="title">getUser</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        List&lt;User&gt; list = <span class="keyword">null</span>;</span><br><span class="line">        User user = <span class="keyword">new</span> User();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            list = <span class="keyword">new</span> ArrayList&lt;User&gt;();</span><br><span class="line">            String sql = <span class="string">&quot;SELECT * FROM users order by firstname asc&quot;</span>;</span><br><span class="line">            connection = DBConnectionUtil.openConnection();</span><br><span class="line">            statement = connection.createStatement();</span><br><span class="line">            resultSet = statement.executeQuery(sql);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> (resultSet.next()) &#123;</span><br><span class="line">                user = <span class="keyword">new</span> User();</span><br><span class="line">                user.setFirstName(resultSet.getString(<span class="string">&quot;firstname&quot;</span>));</span><br><span class="line">                user.setLastName(resultSet.getString(<span class="string">&quot;lastname&quot;</span>));</span><br><span class="line">                user.setEmail(resultSet.getString(<span class="string">&quot;email&quot;</span>));</span><br><span class="line">                user.setUserName(resultSet.getString(<span class="string">&quot;userName&quot;</span>));</span><br><span class="line">                user.setPassword(resultSet.getString(<span class="string">&quot;password&quot;</span>));</span><br><span class="line">                list.add(user);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;    </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> list;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        B2B-Trading-Inc.
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2021-03-16
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h3 id="The-Screenshots"><a href="#The-Screenshots" class="headerlink" title="The Screenshots:"></a>The Screenshots:</h3><img src="/2021/03/16/B2B-Trading-Inc/001.png">
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-      <p>
-        <a class="btn btn-outline-secondary" type="button" href="/2021/03/16/B2B-Trading-Inc/">
-          Open this article
-        </a>
-      </p>
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Transform ERD into Relation
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-11-09
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <p>For this part, I’ll get started from this question.</p>
-<p><em>Figure the Supertype/subtype relationships according to the diagram below.</em></p>
-<p><img src="/2020/11/09/Transform-ERD-into-Relation/Example.png"></p>
-<p>Answer: </p>
-<p><img src="/2020/11/09/Transform-ERD-into-Relation/answer.png"></p>
-<ol>
-<li>Every Entity need to be written as a relationship. (like every line in <em>Answer</em>)</li>
-<li>If there’s a many-to-many relationship between two entities, the relationship will become a entity. (like <em>PEREQ</em>)</li>
-<li>If there’s a one-to-many relationship between two entities, the entity in “many” side need to add a relationship of the “one” side with a dashed underline. (like lectID in <em>STUDENT</em> and deptID in <em>LECTURER</em>)</li>
-<li>Dashed circle will not be included in relationships. (like totalCr)</li>
-<li>Every primary key in Relationships need a underline.</li>
-</ol>
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        How to Make a Simple Online Calculator
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-10-29
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h2 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h2><h3 id="Requested-Application"><a href="#Requested-Application" class="headerlink" title="Requested Application"></a>Requested Application</h3><ol>
-<li><a class="link" target="_blank" rel="noopener" href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads2133151.html">JDK 1.8<i class="fas fa-external-link-alt"></i></a> </li>
-<li><a class="link" target="_blank" rel="noopener" href="https://www.oracle.com/database/technologies/xe-downloads.html">Oracle Xe Version 18c<i class="fas fa-external-link-alt"></i></a></li>
-<li><a class="link" target="_blank" rel="noopener" href="https://tomcat.apache.org/download-90.cgi">Tomcat Apache 9<i class="fas fa-external-link-alt"></i></a>  </li>
-<li><a class="link" target="_blank" rel="noopener" href="https://www.oracle.com/tools/downloads/sqldev-v192-downloads.html">Oracle SQL Developer 19.2<i class="fas fa-external-link-alt"></i></a>  </li>
-<li><a class="link" target="_blank" rel="noopener" href="https://www.eclipse.org/downloads/packages/release/2019-06/r/eclipse-ide-enterprisejava-developers">Eclipse EE for Java Developers<i class="fas fa-external-link-alt"></i></a> </li>
-</ol>
-<h2 id="Create-a-Maven-Project"><a href="#Create-a-Maven-Project" class="headerlink" title="Create a Maven Project"></a>Create a Maven Project</h2><p>Step 1: Open Eclipse</p>
-<p>Step 2: Launch it and wait for a while</p>
-<p>Step 3: Go to <strong>FILE</strong>, then new <strong>MAVEN PROJECT</strong>. or <code>ALT+CTRL+N</code></p>
-<p>Step 4: Don’t need to change first page, next.</p>
-<p>Step 5: Find a filter with group id <strong>org.apache.maven.archetypes</strong> and artifact id <strong>maven-archetype-webapp</strong>, select it and next.</p>
-<p>Step 6: Type in the <strong>Group Id</strong> (mine is: com.ssk3408) and <strong>Artifact Id</strong> (mine is: MVC-Calculator). Then Finish.</p>
-<p>Step 7: You will get <strong>1 error and 2 exception</strong> in Markers </p>
-<p>Step 8: Right click on the <strong>MVC-Calculator</strong> in Project Explorer, and go to BUILD PATH and go to <strong>configure build path</strong></p>
-<p>Step 9: Change JDK to 1.8 in <strong>Java Compiler</strong>, Apply</p>
-<p>Step 10: Change JDK to 1.8 in <strong>Project Facets</strong>, Apply</p>
-<p>Step 11: add your Tomcat in <strong>Targeted Runtimes</strong></p>
-<p>Step 12: Select items named <em>Maven Dependencies</em>, <em>Apache Tomcat v9.0</em> and <em>JRE System Library</em> in <strong>Java Build Path</strong>. apply and close it</p>
-<p>Step 13: The errors disappeared</p>
-<p>(Before you create the project, shut down the tomcat)</p>
-<h2 id="Creating-Application"><a href="#Creating-Application" class="headerlink" title="Creating Application"></a>Creating Application</h2><h3 id="1-The-Structure-of-Maven-Project"><a href="#1-The-Structure-of-Maven-Project" class="headerlink" title="1. The Structure of Maven Project"></a>1. The Structure of Maven Project</h3><img src="/2020/10/29/How-to-Make-a-Simple-Online-Calculator/structure.png">
-
-<p>However, you may not find some files showed in image above in your new creating Project</p>
-<p><img src="/2020/10/29/How-to-Make-a-Simple-Online-Calculator/new.png"></p>
-<p>Obviously, there’s no <code>Calc_Controller.java</code>, <code>CalcService_Imp.java</code> and <code>CalcService.java</code> in the new project.</p>
-<p>So now, what you need to do is add these files into your Project.</p>
-<h3 id="2-Add-Components"><a href="#2-Add-Components" class="headerlink" title="2. Add Components"></a>2. Add Components</h3><h4 id="1-CalcService-java"><a href="#1-CalcService-java" class="headerlink" title="1. CalcService.java"></a>1. CalcService.java</h4><p>Create a java file (interface) in package <code>com.ssk3408.service</code>, then type in the code showed below:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ssk3408.service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CalcService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">sub</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">div</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">mul</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="2-CalcService-Imp-java"><a href="#2-CalcService-Imp-java" class="headerlink" title="2. CalcService_Imp.java"></a>2. CalcService_Imp.java</h4><p>Create a java file implements the interface <em><strong>CalcService</strong></em> in package <code>com.ssk3408.service</code>, then type in the code showed below:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ssk3408.service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CalcService_Imp</span> <span class="keyword">implements</span> <span class="title">CalcService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		<span class="keyword">return</span> a + b;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">sub</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		<span class="keyword">return</span> a - b;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">div</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		<span class="keyword">return</span> a / b;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">mul</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		<span class="keyword">return</span> a * b;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="3-Calc-Controller-java"><a href="#3-Calc-Controller-java" class="headerlink" title="3. Calc_Controller.java"></a>3. Calc_Controller.java</h4><p>Right Click the package <code>src/main/java</code>, then <strong>New</strong> a <strong>Serviet</strong> to create a java file in package <code>com.ssk3408</code>. </p>
-<p>​    Java Package: <code>com.ssk3408</code> </p>
-<p>​    Class name: <code>Calc_Controller</code> </p>
-<p>Then type in the code showed below:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ssk3408;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.RequestDispatcher;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletException;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="keyword">import</span> com.ssk3408.service.CalcService_Imp;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Servlet implementation class Calc_Controller</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Calc_Controller</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line">       </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@see</span> HttpServlet#HttpServlet()</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Calc_Controller</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        <span class="comment">// TODO Auto-generated constructor stub</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@see</span> HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		response.getWriter().append(<span class="string">&quot;Served at: &quot;</span>).append(request.getContextPath());</span><br><span class="line">		String action = request.getParameter(<span class="string">&quot;Button&quot;</span>);</span><br><span class="line">		<span class="keyword">int</span> num1 = Integer.parseInt(request.getParameter(<span class="string">&quot;num1&quot;</span>));</span><br><span class="line">		<span class="keyword">int</span> num2 = Integer.parseInt(request.getParameter(<span class="string">&quot;num2&quot;</span>));</span><br><span class="line">		CalcService_Imp csi = <span class="keyword">new</span> CalcService_Imp();</span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">switch</span> (action) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&quot;Add&quot;</span>:</span><br><span class="line">			result = csi.add(num1, num2);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&quot;Substract&quot;</span>:</span><br><span class="line">			result = csi.sub(num1, num2);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&quot;Divide&quot;</span>:</span><br><span class="line">			result = csi.div(num1, num2);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&quot;Multiply&quot;</span>:</span><br><span class="line">			result = csi.mul(num1, num2);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		request.setAttribute(<span class="string">&quot;result&quot;</span>, result);</span><br><span class="line">		request.setAttribute(<span class="string">&quot;num1&quot;</span>, num1);</span><br><span class="line">		request.setAttribute(<span class="string">&quot;num2&quot;</span>, num2);</span><br><span class="line">		RequestDispatcher rd = request.getRequestDispatcher(<span class="string">&quot;index.jsp&quot;</span>);</span><br><span class="line">		rd.forward(request, response);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-Change-Files"><a href="#3-Change-Files" class="headerlink" title="3. Change Files"></a>3. Change Files</h3><p>Except the 3 files you added, there’re 2 files should be rewrote.</p>
-<h4 id="1-Web-xml"><a href="#1-Web-xml" class="headerlink" title="1. Web.xml"></a>1. Web.xml</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">web-app</span> <span class="meta-keyword">PUBLIC</span></span></span><br><span class="line"><span class="meta"> <span class="meta-string">&quot;-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN&quot;</span></span></span><br><span class="line"><span class="meta"> <span class="meta-string">&quot;http://java.sun.com/dtd/web-app_2_3.dtd&quot;</span> &gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">web-app</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">display-name</span>&gt;</span>Archetype Created Web Application<span class="tag">&lt;/<span class="name">display-name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>Calc_Controller<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">display-name</span>&gt;</span>Calc_Controller<span class="tag">&lt;/<span class="name">display-name</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">description</span>&gt;</span><span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>com.ssk3408.Calc_Controller<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>Calc_Controller<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/Calc_Controller<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">web-app</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="2-Index-jsp"><a href="#2-Index-jsp" class="headerlink" title="2. Index.jsp"></a>2. Index.jsp</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;  pageEncoding=&quot;UTF-8&quot; isELIgnored=&quot;false&quot;%&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>  <span class="attr">href</span>=<span class="string">&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>Simple Calculator<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">form</span> <span class="attr">style</span>=<span class="string">&quot;&quot;</span> <span class="attr">action</span>=<span class="string">&quot;Calc_Controller&quot;</span> <span class="attr">method</span>=<span class="string">&quot;POST&quot;</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span>Number 1:<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;num1&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;num1&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span>Number 2:<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;num2&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;num2&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-success&quot;</span> <span class="attr">name</span>=<span class="string">&quot;Button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Add&quot;</span>&gt;</span>+<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-danger&quot;</span> <span class="attr">name</span>=<span class="string">&quot;Button&quot;</span>  <span class="attr">value</span>=<span class="string">&quot;Substract&quot;</span>&gt;</span>-<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-primary&quot;</span> <span class="attr">name</span>=<span class="string">&quot;Button&quot;</span>  <span class="attr">value</span>=<span class="string">&quot;Divide&quot;</span>&gt;</span>/<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-warning&quot;</span> <span class="attr">name</span>=<span class="string">&quot;Button&quot;</span>  <span class="attr">value</span>=<span class="string">&quot;Multiply&quot;</span>&gt;</span>X<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">h3</span>&gt;</span>The result is ==&gt;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">h3</span>&gt;</span>$&#123;result&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Problem-and-solution"><a href="#Problem-and-solution" class="headerlink" title="Problem and solution"></a>Problem and solution</h2><h3 id="‘Publishing-to-Tomcat-v9-0-Server-at-localhost…’-has-encountered-a-problem"><a href="#‘Publishing-to-Tomcat-v9-0-Server-at-localhost…’-has-encountered-a-problem" class="headerlink" title="‘Publishing to Tomcat v9.0 Server at localhost…’ has encountered a problem."></a>‘Publishing to Tomcat v9.0 Server at localhost…’ has encountered a problem.</h3><p>If you get this error when you try to run the program, it might because you didn’t shut down the tomcat before you run it.</p>
-<p>If you already shut down the Tomcat but still doesn’t work, go to your Tomcat’s file named <strong>Server</strong> where you installed your Tomcat.</p>
-<p>The path in my computer for reference: D:\APACHE\Server\conf</p>
-<p>Then find the file named <strong>server.xml</strong> and open it with Notepad</p>
-<p>Ctrl + F to find the keyword: <strong>Shutdown</strong> and change port from <strong>-1</strong> to <strong>1</strong> </p>
-<p><img src="/2020/10/29/How-to-Make-a-Simple-Online-Calculator/server.png"></p>
-
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-
-<nav class="blog-pagination">
-  
-  <a class="btn btn-outline-primary" href="/page/2/">Previous</a>
-  
-          
-  <a class="btn btn-outline-primary" href="/page/4/">Next</a>
-  
-  </nav>
-
-
-          <!--The body variable corresponds to the content rendered from the different page type templates (cf above).-->
-        </div>
-
-        <!-- Sidebar -->
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          
+  <!-- Sidebar -->
+  <div class="col-sm-4 blog-sidebar">
+    
     
     <div class="p-4 mb-3 bg-dark text-white rounded shadow">
         <h3>About</h3>
@@ -1409,7 +399,25 @@
 
 
 
-        </div>
+  </div>
+</div>
+
+
+  
+</div>
+
+
+          <!--The body variable corresponds to the content rendered from the different page type templates (cf above).-->
+
+      <div class="row">
+          <nav class="blog-pagination">
+  
+  <a class="btn btn-outline-primary" href="/page/2/">Previous</a>
+  
+          
+  <a class="btn btn-outline-primary" href="/page/4/">Next</a>
+  
+</nav>
 
       </div>
 

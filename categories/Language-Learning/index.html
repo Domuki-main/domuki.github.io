@@ -42,32 +42,46 @@
 <body>
 
   <!-- Menu -->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark shadow-sm">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark" aria-label="Eighth navbar example">
   <div class="container">
-
     <a target="_blank" rel="noopener" href="https://github.com/Domuki-main" class="navbar-brand d-flex align-items-center">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
         <path
           d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
       </svg>
-        <strong>&nbsp;Domuki</strong>
-      </a>
+      <strong>&nbsp;Domuki</strong>
+    </a>
 
-    <ul class="navbar-nav">
-      
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsCollapse" aria-controls="navbarsCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsCollapse">
+
+      <ul class="navbar-nav" style="margin-inline-end: auto;">
+        
         <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/archives">Archives</a>
-      </li>
-      
+          <a class="nav-link" href="/archives">Archives</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/categories">Categories</a>
-      </li>
-      
-    </ul>
+          <a class="nav-link" href="/tags">Tags</a>
+        </li>
+        
+      </ul>
+
+      <form class="form-group d-flex mb-0">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg></button>
+      </form>
+
+    </div>
   </div>
 </nav>
 
@@ -94,297 +108,325 @@
 
     <div class="container py-5">
 
-      <div class="row">
-
-        <!-- Main Content -->
-        <div class="col-sm-8 blog-main">
           
+    <div class="container mb-4 rounded shadow">
 
-
-   <h2 class="blog-archive-title">Language Learning</h2>
-
-
-
-<div class="blog-post">
-
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/10/02/Nine-useful-sentence-patterns/">
-            Nine useful sentence patterns
-        </a>
-    </h2>
+    <h1 class="card-title">
+      Nine useful sentence patterns
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-10-02
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-02
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <h2 id="1-Use-participle-phrases-as-adverbials"><a href="#1-Use-participle-phrases-as-adverbials" class="headerlink" title="1. Use participle phrases as adverbials"></a><strong>1. Use participle phrases as adverbials</strong></h2><ul>
+<li><strong>Same subjects</strong></li>
+</ul>
+<blockquote>
+<p>When <strong>I</strong> was young, <strong>I</strong> wanted to be a scientist. </p>
+<p>When being young, <strong>I</strong> wanted to be a scientist. </p>
+</blockquote>
+<blockquote>
+<p>When <strong>you</strong> are offered a job, <strong>you</strong> should cherish it.</p>
+<p>When offered a job, <strong>you</strong> should cherish it. </p>
+</blockquote>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/02/Nine-useful-sentence-patterns/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/10/02/The-Silent-Letters/">
-            The Silent Letters
-        </a>
-    </h2>
+    <h1 class="card-title">
+      The Silent Letters
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-10-02
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-02
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <p>There are a lot of English letters should be silent when reading them although the letters have been written. These letters are called The Silent Letters.</p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/02/The-Silent-Letters/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/10/02/Part-4-Oral-Presentation/">
-            Part 4: Oral Presentation
-        </a>
-    </h2>
+    <h1 class="card-title">
+      Part 4: Oral Presentation
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-10-02
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-02
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <h2 id="Preparing-your-presentation"><a href="#Preparing-your-presentation" class="headerlink" title="Preparing your presentation"></a>Preparing your presentation</h2><h4 id="1-Assessing-the-situation"><a href="#1-Assessing-the-situation" class="headerlink" title="1. Assessing the situation"></a>1. Assessing the situation</h4><ul>
+<li>Topic in your area</li>
+<li>Topic that interests and that we want to know more about</li>
+</ul>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/02/Part-4-Oral-Presentation/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/10/02/Part-3-Negotiating-Effectively/">
-            Part 3: Negotiating Effectively
-        </a>
-    </h2>
+    <h1 class="card-title">
+      Part 3: Negotiating Effectively
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-10-02
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-02
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <p><strong>What is negotiation?</strong> </p>
+<p>Negotiation is the communication process that include two or more parties meet with hope of getting something from the other party or parties. </p>
+<p>When we negotiate we try to get what we want from the other party by offering something in exchanging. We would meet with to find out what the other party wants and to discuss how these interests can be met.</p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/02/Part-3-Negotiating-Effectively/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/10/02/Part-2-Group-Discussion/">
-            Part 2: Group Discussion
-        </a>
-    </h2>
+    <h1 class="card-title">
+      Part 2: Group Discussion
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-10-02
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-02
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <p>Many of us might have participated a group discussion in a formal or an informal meeting. There are some skills that how we manage a group discussion.</p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/02/Part-2-Group-Discussion/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/10/02/Part-1-Conversation-Skills/">
-            Part 1: Conversation Skills
-        </a>
-    </h2>
+    <h1 class="card-title">
+      Part 1: Conversation Skills
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-10-02
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-02
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><p>We, as humans, communicate with various people every day. For someone, having a conversation with others, including strangers, does not seem to be a difficult task, However, for some people, it seems to be a stressful experience. For those who do not so well, there must be some useful skills.</p>
+<p>In this section, we’re going to talk about how to start, maintain, and end a conversation.</p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/02/Part-1-Conversation-Skills/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/07/09/English-Writing-Learning-no-1/">
-            English Writing Learning no.1
-        </a>
-    </h2>
+    <h1 class="card-title">
+      English Writing Learning no.1
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-07-09
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-07-09
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <span id="more"></span>
+
+<h2><span id="1-translate-the-sentences-below">1. Translate the sentences below</span></h2><ol>
+<li><p>大多数人会认为有很多玩具的孩子是幸运的。【孩子拥有很多玩具的优缺点】</p>
+<p><em>Most of the people would like to believe the <del>kids</del> possessing a lot of toys are lucky.</em></p>
+<p><strong>Problem</strong>: the “kid” is unappropriated in formal situation. <strong>(Inaccurate wording)</strong></p>
+<p><strong>Answer</strong>: Most of the people would like to believe the children possessing a lot of toys are lucky.</p>
+</li>
+<li><p>气候变化和塑料的过度使用是另外两个值得我们关注的主要问题。【环境问题】</p>
+<p><em>Climate changing and plastic abusing are the other two <del>problems</del> being worth we paying attention to.</em></p>
+<p><strong>Problem</strong>: Better to use essential issues. <strong>(Inaccurate wording)</strong></p>
+<p><strong>Answer</strong>: Climate change and excessive use of plastic are just two other essential issues that deserve our attention.</p>
+</li>
+<li><p>这项技术已经可以用于生产更安静、更清洁的电动汽车。【汽油价格上升对交通、污染的影响】</p>
+<p><em>This technique has been used to <del>product</del> electronic vehicles being quieter and cleaner.</em></p>
+<p><strong>Problem</strong>: “Product is a noun”. But in there, it should be verb like “produce”. <strong>(Inaccurate wording)</strong></p>
+<p><strong>Answer</strong>: This technique has been used to produce the quieter and cleaner electric vehicles.</p>
+</li>
+<li><p>任何鼓励语言学习的东西都能从文化和经济上给社会带来好处，而早期接触语言学习也有助于这一点。【外语学习的时间】</p>
+<p><em>Every encouragement for learning language can provide benefits to society on culture and economy aspects.</em></p>
+<p><strong>Answer</strong>: Anything that encourages language learning benefits society culturally and economically, and early exposure(早期接触) to language learning contributes to(有助于) this.</p>
+</li>
+<li><p>儿童成长的一个重要阶段当然是良心(conscience)的发展，这与分辨是非的能力有关。【惩罚对孩子的作用】</p>
+<p><em><del>There is no room for</del> doubt that one of the most <del>important periods</del> of <del>children growing</del> is the conscience development related to the ability of <del>distinguish</del> right and wrong.</em></p>
+<p><strong>Problem</strong>: </p>
+<ol>
+<li>It is no doubt that….</li>
+<li>Children growth. (growing 增长的)</li>
+<li>One important stage</li>
+<li>Of + verb-ing </li>
+<li>Tell right from wrong = distinguish between right and wrong</li>
+</ol>
+<p><strong>Answer</strong>: One <em><strong>important stage</strong></em> in a <em><strong>child’s growth</strong></em> is certainly the development of a conscience, which is linked to the ability <em><strong>to tell right from wrong</strong></em>. </p>
+</li>
+</ol>
+<ol start="6">
+<li><p>让惩罚与犯罪相匹配是一个有用的概念，这可以让孩子们捡起他们扔的垃圾，清理他们画的涂鸦，或者向他们伤害过的人道歉。【惩罚对孩子的作用】</p>
+<p><em>Matching punishments to mistakes can make children pick up the rubbish they littered, clean the pattern they painted and apologize to the people they hurt, which is a useful conception.</em> </p>
+<p><strong>Answer</strong>: Making the punishment fit the crime is a useful notion, which would see children being made to pick up rubbish they have dropped, clean up graffiti they have drawn, or apologize to someone they have hurt. </p>
+</li>
+</ol>
+<h2><span id="2-analysis-of-long-amp-complex-sentences-below">2. Analysis of Long &amp; Complex sentences below</span></h2><ol>
+<li><em><strong>One explanation for the trend to more superhot fires is that the region, which usually has dry summers, has had significantly below normal precipitation in many recent years.</strong></em> </li>
+</ol>
+<p><strong>Main Structure:</strong> </p>
+<p>​        explanation is &lt;a thing&gt;</p>
+<p>​        &lt;a thing&gt;: the region has had (significantly below normal) precipitation (in many recent years).</p>
+<p><em>for the trend to more superhot fires -&gt; One explanation</em>  对于越来越多的超高温火灾(的) -&gt; 一种解释</p>
+<p><em>usually has dry summers</em> -&gt; region  通常夏日干燥(的) -&gt; 地区</p>
+<p>Therefore, the translation of this sentence is: 对于越来越多的超高温火灾的一种解释是该地区通常夏日干燥近年降水明显低于正常水平。</p>
+<ol start="2">
+<li><em><strong>The group found that those elderly people who were able to retain a sense of independence were more likely to stay healthy in old age.</strong></em></li>
+</ol>
+<p><strong>Main Structure:</strong> </p>
+<p>​        The group found &lt;a thing&gt;</p>
+<p>​        &lt;a thing&gt;: elderly people (who were able to retain a sense of independence) were more likely to stay healthy (in old age).</p>
+<p><em>who were able to retain a sense of independence</em> -&gt; <em>elderly people</em></p>
+<p>Therefore, the translation of this sentence is: 该小组发现那些保持独立感的老年人更可能在晚年保持健康。</p>
+
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+
+  </div>
 
 </div>
 
-
-
-<nav class="blog-pagination">
-  
-  <a class="btn btn-outline-secondary disabled" href="/">Previous</a>
-  
-          
-  <a class="btn btn-outline-secondary disabled" href="/">Previous</a>
-  
-  </nav>
 
 
           <!--The body variable corresponds to the content rendered from the different page type templates (cf above).-->
-        </div>
 
-        <!-- Sidebar -->
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+      <div class="row">
+          <nav class="blog-pagination">
+  
+  <a class="btn btn-outline-secondary disabled" href="/">Previous</a>
+  
           
-    
-    <div class="p-4 mb-3 bg-dark text-white rounded shadow">
-        <h3>About</h3>
-        <p class="mb-0" style="color: #dddfe6;">Domuki is a musician, programmer and a lifelong learner. He currently is studying Software Engineering in UPM. He likes to share what he has learnt with the others.</p>
-    </div>
-
-
-
-    
-<div class="p-4 mb-3 bg-primary text-white rounded shadow">
-  <h3>Tags</h3>
-  <p>
-    
-    <a class="text-white" href="/tags/AI/" style="font-size: 23px">
-      AI</a>
-    
-    <a class="text-white" href="/tags/Academic-Writing/" style="font-size: 15px">
-      Academic Writing</a>
-    
-    <a class="text-white" href="/tags/Algorithm/" style="font-size: 21px">
-      Algorithm</a>
-    
-    <a class="text-white" href="/tags/Apache-Tomcat/" style="font-size: 15px">
-      Apache Tomcat</a>
-    
-    <a class="text-white" href="/tags/CMD/" style="font-size: 17px">
-      CMD</a>
-    
-    <a class="text-white" href="/tags/ChatterBot/" style="font-size: 15px">
-      ChatterBot</a>
-    
-    <a class="text-white" href="/tags/Data-Structure/" style="font-size: 19px">
-      Data Structure</a>
-    
-    <a class="text-white" href="/tags/Database/" style="font-size: 21px">
-      Database</a>
-    
-    <a class="text-white" href="/tags/ERD/" style="font-size: 15px">
-      ERD</a>
-    
-    <a class="text-white" href="/tags/Eclipse/" style="font-size: 17px">
-      Eclipse</a>
-    
-    <a class="text-white" href="/tags/English/" style="font-size: 27px">
-      English</a>
-    
-    <a class="text-white" href="/tags/Game/" style="font-size: 15px">
-      Game</a>
-    
-    <a class="text-white" href="/tags/HTML/" style="font-size: 15px">
-      HTML</a>
-    
-    <a class="text-white" href="/tags/Hexo/" style="font-size: 17px">
-      Hexo</a>
-    
-    <a class="text-white" href="/tags/Html/" style="font-size: 15px">
-      Html</a>
-    
-    <a class="text-white" href="/tags/JUnit-5/" style="font-size: 15px">
-      JUnit 5</a>
-    
-    <a class="text-white" href="/tags/Java/" style="font-size: 30px">
-      Java</a>
-    
-    <a class="text-white" href="/tags/JavaFX/" style="font-size: 19px">
-      JavaFX</a>
-    
-    <a class="text-white" href="/tags/JavaScript/" style="font-size: 15px">
-      JavaScript</a>
-    
-    <a class="text-white" href="/tags/Lab/" style="font-size: 25px">
-      Lab</a>
-    
-    <a class="text-white" href="/tags/Maven/" style="font-size: 19px">
-      Maven</a>
-    
-    <a class="text-white" href="/tags/Music/" style="font-size: 15px">
-      Music</a>
-    
-    <a class="text-white" href="/tags/MySQL/" style="font-size: 15px">
-      MySQL</a>
-    
-    <a class="text-white" href="/tags/Notes/" style="font-size: 15px">
-      Notes</a>
-    
-    <a class="text-white" href="/tags/OS/" style="font-size: 15px">
-      OS</a>
-    
-    <a class="text-white" href="/tags/PracticalAI/" style="font-size: 21px">
-      PracticalAI</a>
-    
-    <a class="text-white" href="/tags/Project/" style="font-size: 23px">
-      Project</a>
-    
-    <a class="text-white" href="/tags/Python/" style="font-size: 25px">
-      Python</a>
-    
-    <a class="text-white" href="/tags/Spoken/" style="font-size: 23px">
-      Spoken</a>
-    
-    <a class="text-white" href="/tags/Statistics/" style="font-size: 21px">
-      Statistics</a>
-    
-    <a class="text-white" href="/tags/Studying/" style="font-size: 15px">
-      Studying</a>
-    
-    <a class="text-white" href="/tags/Symphony/" style="font-size: 15px">
-      Symphony</a>
-    
-    <a class="text-white" href="/tags/Tips/" style="font-size: 30px">
-      Tips</a>
-    
-    <a class="text-white" href="/tags/Txt/" style="font-size: 15px">
-      Txt</a>
-    
-    <a class="text-white" href="/tags/UIUX/" style="font-size: 30px">
-      UIUX</a>
-    
-    <a class="text-white" href="/tags/Voice-Assistant/" style="font-size: 15px">
-      Voice Assistant</a>
-    
-    <a class="text-white" href="/tags/Web-Crawler/" style="font-size: 15px">
-      Web Crawler</a>
-    
-    <a class="text-white" href="/tags/Web-app/" style="font-size: 17px">
-      Web-app</a>
-    
-    <a class="text-white" href="/tags/Writing/" style="font-size: 17px">
-      Writing</a>
-    
-  </p>
-</div>
-
-
-
-
-        </div>
+  <a class="btn btn-outline-secondary disabled" href="/">Previous</a>
+  
+</nav>
 
       </div>
 

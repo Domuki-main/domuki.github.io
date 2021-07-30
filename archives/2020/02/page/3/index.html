@@ -42,32 +42,46 @@
 <body>
 
   <!-- Menu -->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark shadow-sm">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark" aria-label="Eighth navbar example">
   <div class="container">
-
     <a target="_blank" rel="noopener" href="https://github.com/Domuki-main" class="navbar-brand d-flex align-items-center">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
         <path
           d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
       </svg>
-        <strong>&nbsp;Domuki</strong>
-      </a>
+      <strong>&nbsp;Domuki</strong>
+    </a>
 
-    <ul class="navbar-nav">
-      
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsCollapse" aria-controls="navbarsCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsCollapse">
+
+      <ul class="navbar-nav" style="margin-inline-end: auto;">
+        
         <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/archives">Archives</a>
-      </li>
-      
+          <a class="nav-link" href="/archives">Archives</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/categories">Categories</a>
-      </li>
-      
-    </ul>
+          <a class="nav-link" href="/tags">Tags</a>
+        </li>
+        
+      </ul>
+
+      <form class="form-group d-flex mb-0">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg></button>
+      </form>
+
+    </div>
   </div>
 </nav>
 
@@ -94,243 +108,175 @@
 
     <div class="container py-5">
 
-      <div class="row">
-
-        <!-- Main Content -->
-        <div class="col-sm-8 blog-main">
           
+    <div class="container mb-4 rounded shadow">
 
-
-   <h2 class="blog-archive-title">2020/2</h2>
-
-
-
-<div class="blog-post">
-
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/02/12/Me-Hexo-and-Problems/">
-            Install Hexo and Solve Problems
-        </a>
-    </h2>
+    <h1 class="card-title">
+      Install Hexo and Solve Problems
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-02-12
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-02-12
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <h2 id="1-Prepare-Environment"><a href="#1-Prepare-Environment" class="headerlink" title="1. Prepare Environment"></a>1. Prepare Environment</h2><p>download and install: </p>
+<pre><code>1. [Node.js](https://nodejs.org/en/)
+2. [Git](https://git-scm.com/)
+</code></pre>
+<blockquote>
+<p>If your computer already has these, congratulations! You can skip to the Hexo installation step.</p>
+<p>If not, please follow the following instructions to install all the requirements.</p>
+</blockquote>
+<p>Verify that if the installation is complete:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git version</span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/02/12/Me-Hexo-and-Problems/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/02/12/Java-Learning-Chapter-2-Problem-Analyse/">
-            Java Learning Chapter 2 Problem Analyse
-        </a>
-    </h2>
+    <h1 class="card-title">
+      Java Learning Chapter 2 Problem Analyse
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-02-12
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-02-12
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <h4 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h4><p>At the end of this chapter, student should be able to:</p>
+<p>​    <em>Explain the step by step in problem solving (C1, A3)</em></p>
+<p>​    <em>Analyse problem and identify the problem requirements (CTPS)</em></p>
+<p>​    <em>Using the correct symbol/notations in developing a flow chart (P3)</em></p>
+<p>​    <em>Write a simple program to display the output (A2)</em></p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/02/12/Java-Learning-Chapter-2-Problem-Analyse/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/02/12/Java-Learning-Chapter-1-Introduction/">
-            Java Learning Chapter 1 Introduction
-        </a>
-    </h2>
+    <h1 class="card-title">
+      Java Learning Chapter 1 Introduction
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-02-12
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-02-12
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <h4 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h4><p>​    At the end of this chapter, student should be able to:</p>
+<ul>
+<li><em>Describe the basic of computer components (A1)</em></li>
+<li><em>Differentiate types of programming languages (C1)</em></li>
+<li><em>Compile and execute the sample given. Identify types of error (P3)</em></li>
+</ul>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/02/12/Java-Learning-Chapter-1-Introduction/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/02/12/How-to-use-hexo-to-write-a-document/">
-            How to use Hexo to write a document
-        </a>
-    </h2>
+    <h1 class="card-title">
+      How to use Hexo to write a document
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-02-12
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-02-12
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <h1 id="1-Creating-original-file"><a href="#1-Creating-original-file" class="headerlink" title="1. Creating original file"></a>1. Creating original file</h1><p>Open git bash.exe in site file folder, then input the commit below to create a new file named “doc”</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;doc&quot;</span></span><br></pre></td></tr></table></figure>
+<p>the file will be create under the folder <em>source/_post</em> named “doc”.<br>this is the original file using to record the content of document which will be shared to the website.</p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/02/12/How-to-use-hexo-to-write-a-document/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
 
-<nav class="blog-pagination">
+          <!--The body variable corresponds to the content rendered from the different page type templates (cf above).-->
+
+      <div class="row">
+          <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/archives/2020/02/page/2/">Previous</a>
   
           
   <a class="btn btn-outline-secondary disabled" href="/">Previous</a>
   
-  </nav>
-
-
-          <!--The body variable corresponds to the content rendered from the different page type templates (cf above).-->
-        </div>
-
-        <!-- Sidebar -->
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          
-    
-    <div class="p-4 mb-3 bg-dark text-white rounded shadow">
-        <h3>About</h3>
-        <p class="mb-0" style="color: #dddfe6;">Domuki is a musician, programmer and a lifelong learner. He currently is studying Software Engineering in UPM. He likes to share what he has learnt with the others.</p>
-    </div>
-
-
-
-    
-<div class="p-4 mb-3 bg-primary text-white rounded shadow">
-  <h3>Tags</h3>
-  <p>
-    
-    <a class="text-white" href="/tags/AI/" style="font-size: 23px">
-      AI</a>
-    
-    <a class="text-white" href="/tags/Academic-Writing/" style="font-size: 15px">
-      Academic Writing</a>
-    
-    <a class="text-white" href="/tags/Algorithm/" style="font-size: 21px">
-      Algorithm</a>
-    
-    <a class="text-white" href="/tags/Apache-Tomcat/" style="font-size: 15px">
-      Apache Tomcat</a>
-    
-    <a class="text-white" href="/tags/CMD/" style="font-size: 17px">
-      CMD</a>
-    
-    <a class="text-white" href="/tags/ChatterBot/" style="font-size: 15px">
-      ChatterBot</a>
-    
-    <a class="text-white" href="/tags/Data-Structure/" style="font-size: 19px">
-      Data Structure</a>
-    
-    <a class="text-white" href="/tags/Database/" style="font-size: 21px">
-      Database</a>
-    
-    <a class="text-white" href="/tags/ERD/" style="font-size: 15px">
-      ERD</a>
-    
-    <a class="text-white" href="/tags/Eclipse/" style="font-size: 17px">
-      Eclipse</a>
-    
-    <a class="text-white" href="/tags/English/" style="font-size: 27px">
-      English</a>
-    
-    <a class="text-white" href="/tags/Game/" style="font-size: 15px">
-      Game</a>
-    
-    <a class="text-white" href="/tags/HTML/" style="font-size: 15px">
-      HTML</a>
-    
-    <a class="text-white" href="/tags/Hexo/" style="font-size: 17px">
-      Hexo</a>
-    
-    <a class="text-white" href="/tags/Html/" style="font-size: 15px">
-      Html</a>
-    
-    <a class="text-white" href="/tags/JUnit-5/" style="font-size: 15px">
-      JUnit 5</a>
-    
-    <a class="text-white" href="/tags/Java/" style="font-size: 30px">
-      Java</a>
-    
-    <a class="text-white" href="/tags/JavaFX/" style="font-size: 19px">
-      JavaFX</a>
-    
-    <a class="text-white" href="/tags/JavaScript/" style="font-size: 15px">
-      JavaScript</a>
-    
-    <a class="text-white" href="/tags/Lab/" style="font-size: 25px">
-      Lab</a>
-    
-    <a class="text-white" href="/tags/Maven/" style="font-size: 19px">
-      Maven</a>
-    
-    <a class="text-white" href="/tags/Music/" style="font-size: 15px">
-      Music</a>
-    
-    <a class="text-white" href="/tags/MySQL/" style="font-size: 15px">
-      MySQL</a>
-    
-    <a class="text-white" href="/tags/Notes/" style="font-size: 15px">
-      Notes</a>
-    
-    <a class="text-white" href="/tags/OS/" style="font-size: 15px">
-      OS</a>
-    
-    <a class="text-white" href="/tags/PracticalAI/" style="font-size: 21px">
-      PracticalAI</a>
-    
-    <a class="text-white" href="/tags/Project/" style="font-size: 23px">
-      Project</a>
-    
-    <a class="text-white" href="/tags/Python/" style="font-size: 25px">
-      Python</a>
-    
-    <a class="text-white" href="/tags/Spoken/" style="font-size: 23px">
-      Spoken</a>
-    
-    <a class="text-white" href="/tags/Statistics/" style="font-size: 21px">
-      Statistics</a>
-    
-    <a class="text-white" href="/tags/Studying/" style="font-size: 15px">
-      Studying</a>
-    
-    <a class="text-white" href="/tags/Symphony/" style="font-size: 15px">
-      Symphony</a>
-    
-    <a class="text-white" href="/tags/Tips/" style="font-size: 30px">
-      Tips</a>
-    
-    <a class="text-white" href="/tags/Txt/" style="font-size: 15px">
-      Txt</a>
-    
-    <a class="text-white" href="/tags/UIUX/" style="font-size: 30px">
-      UIUX</a>
-    
-    <a class="text-white" href="/tags/Voice-Assistant/" style="font-size: 15px">
-      Voice Assistant</a>
-    
-    <a class="text-white" href="/tags/Web-Crawler/" style="font-size: 15px">
-      Web Crawler</a>
-    
-    <a class="text-white" href="/tags/Web-app/" style="font-size: 17px">
-      Web-app</a>
-    
-    <a class="text-white" href="/tags/Writing/" style="font-size: 17px">
-      Writing</a>
-    
-  </p>
-</div>
-
-
-
-
-        </div>
+</nav>
 
       </div>
 

@@ -42,32 +42,46 @@
 <body>
 
   <!-- Menu -->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark shadow-sm">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark" aria-label="Eighth navbar example">
   <div class="container">
-
     <a target="_blank" rel="noopener" href="https://github.com/Domuki-main" class="navbar-brand d-flex align-items-center">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
         <path
           d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
       </svg>
-        <strong>&nbsp;Domuki</strong>
-      </a>
+      <strong>&nbsp;Domuki</strong>
+    </a>
 
-    <ul class="navbar-nav">
-      
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsCollapse" aria-controls="navbarsCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsCollapse">
+
+      <ul class="navbar-nav" style="margin-inline-end: auto;">
+        
         <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/archives">Archives</a>
-      </li>
-      
+          <a class="nav-link" href="/archives">Archives</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/categories">Categories</a>
-      </li>
-      
-    </ul>
+          <a class="nav-link" href="/tags">Tags</a>
+        </li>
+        
+      </ul>
+
+      <form class="form-group d-flex mb-0">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg></button>
+      </form>
+
+    </div>
   </div>
 </nav>
 
@@ -94,464 +108,163 @@
 
     <div class="container py-5">
 
-      <div class="row">
-
-        <!-- Main Content -->
-        <div class="col-sm-8 blog-main">
           
-    <div class="container mb-4">
+<div class="main-content">
 
-  <div class="card shadow">
+  
+  <div class="row">
+  <!-- Main Content -->
+  <div class="col-sm-8 blog-main">
+    
+    <div class="container mb-4 rounded shadow">
 
-    <div class="card-header">
+  <div class="card-body">
+    <!-- Title -->
+    <h1 class="card-title">
+      Java Learning Chapter 10 Object-Oriented Modelling
+    </h1>
+
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-02-29
       
-    </div>
+      by <a href="/">Domuki</a>
+      
+    </p>
 
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Java Learning Chapter 10 Object-Oriented Modelling
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-02-29
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <p><strong>Learning Objectives</strong></p>
+    <p class="card-text">
+      <!-- Content -->
+      <p><strong>Learning Objectives</strong></p>
 <p>Explain the process of object-oriented software development (A3)</p>
 <p>Analyze the type of relationship: association, aggregation, strong inheritance, and weak inheritance (C4)</p>
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-      <p>
-        <a class="btn btn-outline-secondary" type="button" href="/2020/02/29/Java-Learning-Chapter-10-OOM/">
-          Open this article
-        </a>
-      </p>
-      
-
-    </div>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/02/29/Java-Learning-Chapter-10-OOM/">
+        View this article
+      </a>
+    </p>
+    
 
   </div>
 
 </div>
 
+    
+    <div class="container mb-4 rounded shadow">
 
-    <div class="container mb-4">
+  <div class="card-body">
+    <!-- Title -->
+    <h1 class="card-title">
+      Java Programming 2 Lab3
+    </h1>
 
-  <div class="card shadow">
-
-    <div class="card-header">
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-02-28
       
-    </div>
+      by <a href="/">Domuki</a>
+      
+    </p>
 
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Java Programming 2 Lab3
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-02-28
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <p>Tips for <a target="_blank" rel="noopener" href="https://domuki-main.github.io/2020/02/20/tips002/"><strong>Try-and-Catch</strong></a></p>
+    <p class="card-text">
+      <!-- Content -->
+      <p>Tips for <a target="_blank" rel="noopener" href="https://domuki-main.github.io/2020/02/20/tips002/"><strong>Try-and-Catch</strong></a></p>
 <h2 id="Question-1"><a href="#Question-1" class="headerlink" title="Question 1"></a>Question 1</h2><p>Write a program that prompt the user to enter the length in feet and inches and outputs the equivalent length in inches and in centimetres. If the user enters a negative or a non-digit number, throw and handle an appropriate exception and prompt the user to enter another set of numbers.<br>Note: 1 foot is equal to 12 inches; 1 inch is equal to 2.54 centimetre. You may use <strong>InputMismatchException</strong> and <strong>NumberFormatException</strong> classes.</p>
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-      <p>
-        <a class="btn btn-outline-secondary" type="button" href="/2020/02/28/JP2-L3/">
-          Open this article
-        </a>
-      </p>
-      
-
-    </div>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/02/28/JP2-L3/">
+        View this article
+      </a>
+    </p>
+    
 
   </div>
 
 </div>
 
+    
+    <div class="container mb-4 rounded shadow">
 
-    <div class="container mb-4">
+  <div class="card-body">
+    <!-- Title -->
+    <h1 class="card-title">
+      How to draw a Box Plot
+    </h1>
 
-  <div class="card shadow">
-
-    <div class="card-header">
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-02-28
       
-    </div>
+      by <a href="/">Domuki</a>
+      
+    </p>
 
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        How to draw a Box Plot
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-02-28
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h2 id="1-Read-the-data-and-sort-numbers"><a href="#1-Read-the-data-and-sort-numbers" class="headerlink" title="1. Read the data and sort numbers"></a>1. Read the data and sort numbers</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">16	25	4	18	11	13	20	8	11	9 </span><br><span class="line">&#x2F;&#x2F; after sorting</span><br><span class="line">4	8	9	11	11	13	16	18	20	25</span><br></pre></td></tr></table></figure>
+    <p class="card-text">
+      <!-- Content -->
+      <h2 id="1-Read-the-data-and-sort-numbers"><a href="#1-Read-the-data-and-sort-numbers" class="headerlink" title="1. Read the data and sort numbers"></a>1. Read the data and sort numbers</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">16	25	4	18	11	13	20	8	11	9 </span><br><span class="line">&#x2F;&#x2F; after sorting</span><br><span class="line">4	8	9	11	11	13	16	18	20	25</span><br></pre></td></tr></table></figure>
 
 <p>So from the information that we can get the maximum and minimum of this data(question).</p>
 <p><code>Max = 25</code> and <code>Min = 4</code></p>
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-      <p>
-        <a class="btn btn-outline-secondary" type="button" href="/2020/02/28/Math001/">
-          Open this article
-        </a>
-      </p>
-      
-
-    </div>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/02/28/Math001/">
+        View this article
+      </a>
+    </p>
+    
 
   </div>
 
 </div>
 
+    
+    <div class="container mb-4 rounded shadow">
 
-    <div class="container mb-4">
+  <div class="card-body">
+    <!-- Title -->
+    <h1 class="card-title">
+      Static Variables and Methods
+    </h1>
 
-  <div class="card shadow">
-
-    <div class="card-header">
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-02-24
       
-    </div>
+      by <a href="/">Domuki</a>
+      
+    </p>
 
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Static Variables and Methods
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-02-24
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h2 id="1-Static-Variables"><a href="#1-Static-Variables" class="headerlink" title="1. Static Variables"></a>1. Static Variables</h2><blockquote>
+    <p class="card-text">
+      <!-- Content -->
+      <h2 id="1-Static-Variables"><a href="#1-Static-Variables" class="headerlink" title="1. Static Variables"></a>1. Static Variables</h2><blockquote>
 <p><strong>Static variables</strong> are shared by all the instances of the class.</p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Constants</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span> PI = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Constants</span><span class="params">()</span></span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getPI</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> PI;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPI</span><span class="params">(<span class="keyword">double</span> PI)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.PI = PI;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-      <p>
-        <a class="btn btn-outline-secondary" type="button" href="/2020/02/24/Static-Variables-and-Methods/">
-          Open this article
-        </a>
-      </p>
-      
-
-    </div>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/02/24/Static-Variables-and-Methods/">
+        View this article
+      </a>
+    </p>
+    
 
   </div>
 
 </div>
 
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Symphony Learning Note.1
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-02-23
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <blockquote>
-<p>A symphony is an extended musical composition in Western classical music, most often written by composers for orchestra. </p>
-</blockquote>
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-      <p>
-        <a class="btn btn-outline-secondary" type="button" href="/2020/02/23/Symphony-Learning-Note-1/">
-          Open this article
-        </a>
-      </p>
-      
-
-    </div>
-
+    
   </div>
 
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        How to use "Try-Catch" in a Loop
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-02-20
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <blockquote>
-<p>In this program, the problem I want to solve is that use try-catch and loop to make user’s input correct. </p>
-<p>For example, as we all know, if we put string in to integer field the system will get error. So I want to use try-catch to repeat the processing of value input until the value is correct.</p>
-</blockquote>
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-      <p>
-        <a class="btn btn-outline-secondary" type="button" href="/2020/02/20/tips002/">
-          Open this article
-        </a>
-      </p>
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        4 ways to keep two decimal places in Java
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-02-20
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h2 id="1-String-format-Method"><a href="#1-String-format-Method" class="headerlink" title="1. String.format() Method"></a>1. String.format() Method</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> f = <span class="number">3.1415926</span>;</span><br><span class="line">System.out.println(String.format(<span class="string">&quot;%.2f&quot;</span>, f));</span><br></pre></td></tr></table></figure>
-
-<p>If variable f is an integer, program will get error.</p>
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-      <p>
-        <a class="btn btn-outline-secondary" type="button" href="/2020/02/20/tips001/">
-          Open this article
-        </a>
-      </p>
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Java Programming 2 Lab2
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-02-20
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h2 id="Question-1"><a href="#Question-1" class="headerlink" title="Question 1"></a>Question 1</h2><p>The <strong>InventoryItem</strong> class holds simple data about an item in an inventory. A description of the item is stored in the description field and the number of units on hand is stored in the units field. The figure below shows the UML diagram for the class</p>
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-      <p>
-        <a class="btn btn-outline-secondary" type="button" href="/2020/02/20/JP2-L2/">
-          Open this article
-        </a>
-      </p>
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Statistics Chapter 2 Descriptive Statistics
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-02-18
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h2 id="1-Variables-and-Data"><a href="#1-Variables-and-Data" class="headerlink" title="1. Variables and Data"></a>1. Variables and Data</h2><blockquote>
-<p>A <strong>variable</strong> is a characteristic that changes or varies over time and/or for different individuals or objects under consideration.</p>
-</blockquote>
-<p><code>Changing things or Changing items/parameters/elements of researching object</code></p>
-<p><strong>Examples:</strong> Hair colour, white blood cell count, time to failure of a computer component. </p>
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-      <p>
-        <a class="btn btn-outline-secondary" type="button" href="/2020/02/18/Statistics-Chapter-2-Descriptive-Statistics/">
-          Open this article
-        </a>
-      </p>
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Statistics Chapter 1 Introduction
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-02-18
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h2 id="1-What-is-Statistics"><a href="#1-What-is-Statistics" class="headerlink" title="1. What is Statistics?"></a>1. What is Statistics?</h2><p>Statistics is the science of data. </p>
-<p>–observations (such as measurements,  genders, survey responses) that have been collected</p>
-<blockquote>
-<p>The science of collecting, organizing, analysing, and interpreting data in order to make decisions.</p>
-</blockquote>
-<p><strong>What is Data?</strong></p>
-<p>Consist of information coming from observations, counts, measurements, or responses.</p>
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-      <p>
-        <a class="btn btn-outline-secondary" type="button" href="/2020/02/18/Statistics-Chapter-1-Introduction/">
-          Open this article
-        </a>
-      </p>
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-
-<nav class="blog-pagination">
-  
-  <a class="btn btn-outline-primary" href="/page/6/">Previous</a>
-  
-          
-  <a class="btn btn-outline-primary" href="/page/8/">Next</a>
-  
-  </nav>
-
-
-          <!--The body variable corresponds to the content rendered from the different page type templates (cf above).-->
-        </div>
-
-        <!-- Sidebar -->
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          
+  <!-- Sidebar -->
+  <div class="col-sm-4 blog-sidebar">
+    
     
     <div class="p-4 mb-3 bg-dark text-white rounded shadow">
         <h3>About</h3>
@@ -688,7 +401,25 @@
 
 
 
-        </div>
+  </div>
+</div>
+
+
+  
+</div>
+
+
+          <!--The body variable corresponds to the content rendered from the different page type templates (cf above).-->
+
+      <div class="row">
+          <nav class="blog-pagination">
+  
+  <a class="btn btn-outline-primary" href="/page/6/">Previous</a>
+  
+          
+  <a class="btn btn-outline-primary" href="/page/8/">Next</a>
+  
+</nav>
 
       </div>
 

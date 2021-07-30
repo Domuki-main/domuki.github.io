@@ -42,32 +42,46 @@
 <body>
 
   <!-- Menu -->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark shadow-sm">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark" aria-label="Eighth navbar example">
   <div class="container">
-
     <a target="_blank" rel="noopener" href="https://github.com/Domuki-main" class="navbar-brand d-flex align-items-center">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
         <path
           d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
       </svg>
-        <strong>&nbsp;Domuki</strong>
-      </a>
+      <strong>&nbsp;Domuki</strong>
+    </a>
 
-    <ul class="navbar-nav">
-      
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsCollapse" aria-controls="navbarsCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsCollapse">
+
+      <ul class="navbar-nav" style="margin-inline-end: auto;">
+        
         <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/archives">Archives</a>
-      </li>
-      
+          <a class="nav-link" href="/archives">Archives</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/categories">Categories</a>
-      </li>
-      
-    </ul>
+          <a class="nav-link" href="/tags">Tags</a>
+        </li>
+        
+      </ul>
+
+      <form class="form-group d-flex mb-0">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg></button>
+      </form>
+
+    </div>
   </div>
 </nav>
 
@@ -94,351 +108,429 @@
 
     <div class="container py-5">
 
-      <div class="row">
-
-        <!-- Main Content -->
-        <div class="col-sm-8 blog-main">
           
+    <div class="container mb-4 rounded shadow">
 
-
-   <h2 class="blog-archive-title">Archives</h2>
-
-
-
-<div class="blog-post">
-
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/10/24/Export-JavaFX-project-to-runnable-JAR/">
-            Export JavaFX project to runnable JAR
-        </a>
-    </h2>
+    <h1 class="card-title">
+      Export JavaFX project to runnable JAR
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-10-24
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-24
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <h2 id="Exporting"><a href="#Exporting" class="headerlink" title="Exporting"></a>Exporting</h2><ol>
+<li>Open Eclipse.</li>
+<li>Click “<strong>File</strong>“ on the top left selection bar.</li>
+<li>Click “<strong>Export</strong>“</li>
+<li>Select <strong>Runnable JAR file</strong>, and next</li>
+<li>Choose Launch configuration and Export destination</li>
+<li>Then Finish.</li>
+</ol>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/24/Export-JavaFX-project-to-runnable-JAR/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/10/24/Add-JavaFX-to-Eclipse/">
-            Add JavaFX to Eclipse
-        </a>
-    </h2>
+    <h1 class="card-title">
+      Add JavaFX to Eclipse
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-10-24
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-24
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <p>Add JavaFX to Eclipse</p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/24/Add-JavaFX-to-Eclipse/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/10/19/JDK-JVM-and-JRE/">
-            JDK, JVM and JRE
-        </a>
-    </h2>
+    <h1 class="card-title">
+      JDK, JVM and JRE
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-10-19
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-19
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><img src="/2020/10/19/JDK-JVM-and-JRE/001.jpg" style="zoom:50%;">
+
+<p>We must understand the differences between JDK, JRE, and JVM before proceeding further to Java. </p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/19/JDK-JVM-and-JRE/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/10/10/How-I-write-my-notes/">
-            How I write my notes
-        </a>
-    </h2>
+    <h1 class="card-title">
+      How I write my notes
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-10-10
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-10
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <p>In this essay, I’m going to talk about how I make my notes.</p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/10/How-I-write-my-notes/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/10/09/Urllib-in-Python/">
-            Urllib in Python
-        </a>
-    </h2>
+    <h1 class="card-title">
+      Urllib in Python
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-10-09
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-09
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <span id="more"></span>
+
+<h2><span id="introduction">Introduction</span></h2><h3><span id="what-is-urllib">What is Urllib?</span></h3><blockquote>
+<p><code>urllib</code> is a package that collects several modules for working with URLs</p>
+</blockquote>
+<p>This package has 4 modules: <code>urllib.request</code>, <code>urllib.error</code>, <code>urllib.parse</code> and <code>urllib.robotparser</code>.</p>
+<ul>
+<li><code>urllib.request</code> for opening and reading URLs</li>
+<li><code>urllib.error</code> containing the exceptions raised by <code>urllib.request</code></li>
+<li><code>urllib.parse</code> for parsing URLs</li>
+<li><code>urllib.robotparser</code> for parsing <code>robots.txt</code> files</li>
+</ul>
+<p><code>urllib.request</code> and <code>urllib.error</code> are usually used in Web crawler program.</p>
+<h2><span id="send-request">Send Request</span></h2><p>We need <code>urllib.request</code> when sending a HTTP request as the Chrome. It can be used not only to send requests but also to gain the return. Just <code>urllopen()</code> alone can help us to do the work. This is the API.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">urllib.request.urlopen(url, data&#x3D;None, [timeout, ]*, cafile&#x3D;None, capath&#x3D;None, cadefault&#x3D;False, context&#x3D;None)</span><br></pre></td></tr></table></figure>
+
+<p>the parameters:</p>
+<ol>
+<li>string type: URL address</li>
+<li><code>data</code> is the content in bytes type. It can be converted into a byte stream by the bytes() function. It is also an optional parameter. Using the data parameter, the request method becomes a POST method to submit the form. The standard format used is <code>application/x-www-form-urlencoded</code></li>
+<li><code>timeout</code> is Request timeout in second.</li>
+<li><code>cafile</code> and <code>capath</code> represents the CA certificate and the path of the CA certificate. You need to use HTTPS.</li>
+<li><code>context</code> must be <code>ssl.SSLContext</code> type, which is used to set <code>ssl</code></li>
+<li> <code>cedefault</code> are abandoned</li>
+</ol>
+<p>The method will return a object of <code>http.client.HTTPResponse</code></p>
+<h3><span id="simply-grabbing-website">simply grabbing website</span></h3><p>We can use <code>urllib.request.urllopen()</code> to request my blog site and grab the source code of the page.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://domuki.top&quot;</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">  response = urllib.request.urlopen(url)</span><br><span class="line">  html = response.read()		<span class="comment"># get the source code of page</span></span><br><span class="line">  print(html.decode(<span class="string">&#x27;utf-8&#x27;</span>))	<span class="comment"># transform to utf-8</span></span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">  print(<span class="string">&quot;request failed&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3><span id="setting-request-timeout">Setting request Timeout</span></h3><p>Some requests cannot be replied, which may be caused by network problem. Therefore, we can set timeout for our requests. We can abandon the requests we sent or send it one more time, if it times out. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response = urllib.request.urlopen(url, timeout=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<h3><span id="using-data-parameter-to-submit-data">Using Data parameter to submit data</span></h3><p>We need to use data parameter when requesting some websites requiring it.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urilib.parse</span><br><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://127.0.0.1:8000&quot;</span></span><br><span class="line">params = &#123;</span><br><span class="line">  <span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;Alex&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;matric&#x27;</span>:<span class="string">&#x27;991204&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">data = <span class="built_in">bytes</span>(urllib.parse.urlencode(params), encoding=<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">response = urllib.request.urlopen(url, data=data)</span><br><span class="line">print(response.read().decode(<span class="string">&#x27;utf-8&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<p>variable <code>params</code> is a dictionary actually, so we need <code>urllib.parse.urlencode()</code> help us to transform it to Strings. Then, use <code>bytes()</code> to convert it to a byte stream. Finally, use <code>urlopen()</code> to initiate a request that simulates the submission of form data in POST.</p>
+<h3><span id="using-request">Using Request</span></h3><p>Request Constructor: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">urllib.request.Request(url, data&#x3D;None, headers&#x3D;&#123;&#125;, origin_req_host&#x3D;None, unverifiable&#x3D;False, method&#x3D;None)</span><br></pre></td></tr></table></figure>
+
+<p><code>url</code>: address link</p>
+<p><code>data</code>: its usage is same as <code>data</code>  in <code>urlopen()</code></p>
+<p><code>headers</code>: should be a dictionary, and will be treated as if <code>add_header()</code> was called with each key and value as arguments.</p>
+<p><code>origin_req_host</code>: the host name and IP address of Requestor</p>
+<p><code>unverifiable</code>: showing whether this request cannot be verified and it’s false by default. If we, for example, request for images in HTML but we don’t have the permission to do that automatically, so we have to turn the value True.</p>
+<p><code>method</code>: the ways of sending HTTP requests, such as GET, POST, DELETE, PUT and so on.</p>
+<h4><span id="simply-using">Simply using</span></h4><p>Use <code>Request</code> to send a HTTP requests as browser. If the <code>User-Agent</code> in the <code>headers</code> is not set, the <code>User-Agent</code> is <code>Python-urllib/3.5</code> by default. Some websites may reject the request, if your requests is not send as browser. The <code>User-Agent</code> I use is the Chrome.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://tieba.baidu.com/&quot;</span></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">request = urllib.request.Request(url=url, headers=headers)</span><br><span class="line">response = urllib.request.urlopen(request)</span><br><span class="line">print(response.read().decode(<span class="string">&#x27;utf-8&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<h5><span id="looking-for-the-latest-chrome-user-agent">Looking for the latest Chrome user agent?</span></h5><p>Check this out:  <a target="_blank" rel="noopener" href="https://www.whatismybrowser.com/guides/the-latest-user-agent/chrome">latest Chrome User agent</a> </p>
+<h4><span id="advanced-using">Advanced using</span></h4><p>If we need to add a proxy to the request and process the <strong>cookies</strong> of the request, we need to use <code>Handler</code> and <code>OpenerDirector</code>.</p>
+<h3><span id="using-proxy">Using proxy</span></h3><p>Some websites set the limitation of viewing frequency. So if we request the websites highly frequently, the websites will ban our IP. Therefore, we need:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://domuki.top/&quot;</span></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">proxy_handler = urllib.request.ProxyHandler(&#123;</span><br><span class="line">    <span class="string">&#x27;http&#x27;</span>: <span class="string">&#x27;web-proxy.oa.com:8080&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;https&#x27;</span>: <span class="string">&#x27;web-proxy.oa.com:8080&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line">opener = urllib.request.build_opener(proxy_handler)</span><br><span class="line">urllib.request.install_opener(opener)</span><br><span class="line"></span><br><span class="line">request = urllib.request.Request(url=url, headers=headers)</span><br><span class="line">response = urllib.request.urlopen(request)</span><br><span class="line">print(response.read().decode(<span class="string">&#x27;utf-8&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<h3><span id="login">Login</span></h3><p>Some websites can be visited as long as we login it with correct username and password. When we meet this situation, we need use <code>HTTPPasswordMgrWithDefaultRealm()</code> to instantiate an object to manage account. Use <code>add_password()</code> add account and password. Then use <code>HTTPBasicAuthHandler()</code> to get hander. And get the opener object by <code>build_opener()</code>. Finally, use <code>open()</code> to send requests.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://▯▯▯▯▯.com/&quot;</span></span><br><span class="line">user = <span class="string">&#x27;user&#x27;</span>			<span class="comment"># username</span></span><br><span class="line">password = <span class="string">&#x27;password&#x27;</span>	<span class="comment"># password</span></span><br><span class="line">pwdmgr = urllib.request.HTTPPasswordMgrWithDefaultRealm()</span><br><span class="line">pwdmgr.add_password(<span class="literal">None</span>，url ，user ，password)</span><br><span class="line"></span><br><span class="line">auth_handler = urllib.request.HTTPBasicAuthHandler(pwdmgr)</span><br><span class="line">opener = urllib.request.build_opener(auth_handler)</span><br><span class="line">response = opener.<span class="built_in">open</span>(url)</span><br><span class="line">print(response.read().decode(<span class="string">&#x27;utf-8&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<h3><span id="setting-cookies">Setting Cookies</span></h3><p>If we need login every time we requesting, we can use cookies to do it automatically. </p>
+<p>To obtain cookies, you need to use <code>http.cookiejar.CookieJar()</code> to instantiate a Cookies . Then use <code>urllib.request.HTTPCookieProcessor</code> to construct a handler object. Finally, use the <code>open()</code>.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> http.cookiejar</span><br><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;http://tieba.baidu.com/&quot;</span></span><br><span class="line">fileName = <span class="string">&#x27;cookie.txt&#x27;</span></span><br><span class="line"></span><br><span class="line">cookie = http.cookiejar.CookieJar()</span><br><span class="line">handler = urllib.request.HTTPCookieProcessor(cookie)</span><br><span class="line">opener = urllib.request.build_opener(handler)</span><br><span class="line">response = opener.<span class="built_in">open</span>(url)</span><br><span class="line"></span><br><span class="line">f = <span class="built_in">open</span>(fileName,<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> cookie:</span><br><span class="line">    f.write(item.name+<span class="string">&quot; = &quot;</span>+item.value+<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/10/09/PracticalAI-Note-4-Pandas/">
-            PracticalAI Note 4: Pandas
-        </a>
-    </h2>
+    <h1 class="card-title">
+      PracticalAI Note 4: Pandas
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-10-09
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-09
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <blockquote>
+<p>In this section, we’ll talk about the basics of data analysis with the Python Pandas library.</p>
+</blockquote>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/09/PracticalAI-Note-4-Pandas/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/10/08/PracticalAI-Note-3-NumPy/">
-            PracticalAI Note 3: NumPy
-        </a>
-    </h2>
+    <h1 class="card-title">
+      PracticalAI Note 3: NumPy
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-10-08
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-08
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <blockquote>
+<p>the basics of numerical analysis using the NumPy package.</p>
+</blockquote>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/08/PracticalAI-Note-3-NumPy/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/10/07/PracticalAI-Notes-1-The-Notebooks/">
-            PracticalAI Notes 1: The Notebooks
-        </a>
-    </h2>
+    <h1 class="card-title">
+      PracticalAI Notes 1: The Notebooks
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-10-07
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-07
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <h4 id="Introduction-of-PracticalAI"><a href="#Introduction-of-PracticalAI" class="headerlink" title="Introduction of PracticalAI"></a>Introduction of <em>PracticalAI</em></h4><p><em>PracticalAI</em> is a totally free project or tutorial based on Google Cloud of deep learning  on GitHub platform.</p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/07/PracticalAI-Notes-1-The-Notebooks/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/10/07/PracticalAI-Notes-2-Basic-Python/">
-            PracticalAI Notes 2: Basic Python
-        </a>
-    </h2>
+    <h1 class="card-title">
+      PracticalAI Notes 2: Basic Python
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-10-07
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-07
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <p>Huh…, just some basic things. If you already know how to code with Python, just skip this section.</p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/07/PracticalAI-Notes-2-Basic-Python/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/10/06/Linked-List/">
-            Linked List
-        </a>
-    </h2>
+    <h1 class="card-title">
+      Linked List
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-10-06
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-06
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <h3 id="Understanding-Linked-List"><a href="#Understanding-Linked-List" class="headerlink" title="Understanding Linked List"></a>Understanding Linked List</h3><blockquote>
+<p>A <strong>linked list</strong> is a linear data structure where each element is a separate object. Each element (we will call it a node) of a <strong>list</strong> is comprising of two items - the data and a reference to the next node.</p>
+</blockquote>
+<p><img src="/2020/10/06/Linked-List/image.png"></p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/06/Linked-List/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
 
-<nav class="blog-pagination">
+          <!--The body variable corresponds to the content rendered from the different page type templates (cf above).-->
+
+      <div class="row">
+          <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/archives/page/3/">Previous</a>
   
           
   <a class="btn btn-outline-primary" href="/archives/page/5/">Next</a>
   
-  </nav>
-
-
-          <!--The body variable corresponds to the content rendered from the different page type templates (cf above).-->
-        </div>
-
-        <!-- Sidebar -->
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          
-    
-    <div class="p-4 mb-3 bg-dark text-white rounded shadow">
-        <h3>About</h3>
-        <p class="mb-0" style="color: #dddfe6;">Domuki is a musician, programmer and a lifelong learner. He currently is studying Software Engineering in UPM. He likes to share what he has learnt with the others.</p>
-    </div>
-
-
-
-    
-<div class="p-4 mb-3 bg-primary text-white rounded shadow">
-  <h3>Tags</h3>
-  <p>
-    
-    <a class="text-white" href="/tags/AI/" style="font-size: 23px">
-      AI</a>
-    
-    <a class="text-white" href="/tags/Academic-Writing/" style="font-size: 15px">
-      Academic Writing</a>
-    
-    <a class="text-white" href="/tags/Algorithm/" style="font-size: 21px">
-      Algorithm</a>
-    
-    <a class="text-white" href="/tags/Apache-Tomcat/" style="font-size: 15px">
-      Apache Tomcat</a>
-    
-    <a class="text-white" href="/tags/CMD/" style="font-size: 17px">
-      CMD</a>
-    
-    <a class="text-white" href="/tags/ChatterBot/" style="font-size: 15px">
-      ChatterBot</a>
-    
-    <a class="text-white" href="/tags/Data-Structure/" style="font-size: 19px">
-      Data Structure</a>
-    
-    <a class="text-white" href="/tags/Database/" style="font-size: 21px">
-      Database</a>
-    
-    <a class="text-white" href="/tags/ERD/" style="font-size: 15px">
-      ERD</a>
-    
-    <a class="text-white" href="/tags/Eclipse/" style="font-size: 17px">
-      Eclipse</a>
-    
-    <a class="text-white" href="/tags/English/" style="font-size: 27px">
-      English</a>
-    
-    <a class="text-white" href="/tags/Game/" style="font-size: 15px">
-      Game</a>
-    
-    <a class="text-white" href="/tags/HTML/" style="font-size: 15px">
-      HTML</a>
-    
-    <a class="text-white" href="/tags/Hexo/" style="font-size: 17px">
-      Hexo</a>
-    
-    <a class="text-white" href="/tags/Html/" style="font-size: 15px">
-      Html</a>
-    
-    <a class="text-white" href="/tags/JUnit-5/" style="font-size: 15px">
-      JUnit 5</a>
-    
-    <a class="text-white" href="/tags/Java/" style="font-size: 30px">
-      Java</a>
-    
-    <a class="text-white" href="/tags/JavaFX/" style="font-size: 19px">
-      JavaFX</a>
-    
-    <a class="text-white" href="/tags/JavaScript/" style="font-size: 15px">
-      JavaScript</a>
-    
-    <a class="text-white" href="/tags/Lab/" style="font-size: 25px">
-      Lab</a>
-    
-    <a class="text-white" href="/tags/Maven/" style="font-size: 19px">
-      Maven</a>
-    
-    <a class="text-white" href="/tags/Music/" style="font-size: 15px">
-      Music</a>
-    
-    <a class="text-white" href="/tags/MySQL/" style="font-size: 15px">
-      MySQL</a>
-    
-    <a class="text-white" href="/tags/Notes/" style="font-size: 15px">
-      Notes</a>
-    
-    <a class="text-white" href="/tags/OS/" style="font-size: 15px">
-      OS</a>
-    
-    <a class="text-white" href="/tags/PracticalAI/" style="font-size: 21px">
-      PracticalAI</a>
-    
-    <a class="text-white" href="/tags/Project/" style="font-size: 23px">
-      Project</a>
-    
-    <a class="text-white" href="/tags/Python/" style="font-size: 25px">
-      Python</a>
-    
-    <a class="text-white" href="/tags/Spoken/" style="font-size: 23px">
-      Spoken</a>
-    
-    <a class="text-white" href="/tags/Statistics/" style="font-size: 21px">
-      Statistics</a>
-    
-    <a class="text-white" href="/tags/Studying/" style="font-size: 15px">
-      Studying</a>
-    
-    <a class="text-white" href="/tags/Symphony/" style="font-size: 15px">
-      Symphony</a>
-    
-    <a class="text-white" href="/tags/Tips/" style="font-size: 30px">
-      Tips</a>
-    
-    <a class="text-white" href="/tags/Txt/" style="font-size: 15px">
-      Txt</a>
-    
-    <a class="text-white" href="/tags/UIUX/" style="font-size: 30px">
-      UIUX</a>
-    
-    <a class="text-white" href="/tags/Voice-Assistant/" style="font-size: 15px">
-      Voice Assistant</a>
-    
-    <a class="text-white" href="/tags/Web-Crawler/" style="font-size: 15px">
-      Web Crawler</a>
-    
-    <a class="text-white" href="/tags/Web-app/" style="font-size: 17px">
-      Web-app</a>
-    
-    <a class="text-white" href="/tags/Writing/" style="font-size: 17px">
-      Writing</a>
-    
-  </p>
-</div>
-
-
-
-
-        </div>
+</nav>
 
       </div>
 

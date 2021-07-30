@@ -42,32 +42,46 @@
 <body>
 
   <!-- Menu -->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark shadow-sm">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark" aria-label="Eighth navbar example">
   <div class="container">
-
     <a target="_blank" rel="noopener" href="https://github.com/Domuki-main" class="navbar-brand d-flex align-items-center">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
         <path
           d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
       </svg>
-        <strong>&nbsp;Domuki</strong>
-      </a>
+      <strong>&nbsp;Domuki</strong>
+    </a>
 
-    <ul class="navbar-nav">
-      
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsCollapse" aria-controls="navbarsCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsCollapse">
+
+      <ul class="navbar-nav" style="margin-inline-end: auto;">
+        
         <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/archives">Archives</a>
-      </li>
-      
+          <a class="nav-link" href="/archives">Archives</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/categories">Categories</a>
-      </li>
-      
-    </ul>
+          <a class="nav-link" href="/tags">Tags</a>
+        </li>
+        
+      </ul>
+
+      <form class="form-group d-flex mb-0">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg></button>
+      </form>
+
+    </div>
   </div>
 </nav>
 
@@ -94,10 +108,6 @@
 
     <div class="container py-5">
 
-      <div class="row">
-
-        <!-- Main Content -->
-        <div class="col-sm-8 blog-main">
           <div class="blog-post">
 
     <!-- Title -->
@@ -111,61 +121,65 @@
     <p class="blog-post-meta">
         2021-03-18
         
+            by Domuki
+        
     </p>
 
     <!-- Content -->
-    <h1 id="What-is-Java"><a href="#What-is-Java" class="headerlink" title="What is Java"></a>What is Java</h1><h3 id="Java-programming-language"><a href="#Java-programming-language" class="headerlink" title="Java (programming language)"></a>Java (programming language)</h3><p>Java is a class-based, object-oriented <strong>programming language</strong>.</p>
-<h3 id="Java-software-platform"><a href="#Java-software-platform" class="headerlink" title="Java (software platform)"></a>Java (software platform)</h3><p>Java is a <strong>system</strong> for developing application software and deploying it in a cross-platform computing <strong>environment</strong>.</p>
-<h1 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h1><p>Java was started as a project called “Oak” by James Gosling in June 1991. Gosling’s goals were to implement a virtual machine and a language that had a familiar C-like notation but with greater uniformity and simplicity than C/C++. The first public implementation was Java 1.0 in 1995.</p>
-<h1 id="Versions"><a href="#Versions" class="headerlink" title="Versions"></a>Versions</h1><h3 id="Java-SE-J2SE-Java-2-Platform-Standard-Edition"><a href="#Java-SE-J2SE-Java-2-Platform-Standard-Edition" class="headerlink" title="Java SE (J2SE, Java 2 Platform Standard Edition)"></a>Java SE (J2SE, Java 2 Platform Standard Edition)</h3><p>Java SE is a computing platform for development and deployment of portable code for desktop and server environments.</p>
-<h3 id="Java-EE-J2EE-Java-2-Platform-Enterprise-Edition"><a href="#Java-EE-J2EE-Java-2-Platform-Enterprise-Edition" class="headerlink" title="Java EE (J2EE, Java 2 Platform Enterprise Edition)"></a>Java EE (J2EE, Java 2 Platform Enterprise Edition)</h3><p>Jakarta EE, formerly Java Platform, Enterprise Edition (Java EE)  is a set of specifications, <strong>extending Java SE</strong> with specifications for enterprise features such as distributed computing and web services.</p>
-<h3 id="Java-ME-J2ME-Java-2-Platform-Micro-Edition"><a href="#Java-ME-J2ME-Java-2-Platform-Micro-Edition" class="headerlink" title="Java ME (J2ME, Java 2 Platform Micro Edition)"></a>Java ME (J2ME, Java 2 Platform Micro Edition)</h3><p>Java ME is a computing platform for development and deployment of portable code for embedded and mobile devices (mobile phones, TV set-top boxes, etc.).</p>
-<h1 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h1><h3 id="Simple"><a href="#Simple" class="headerlink" title="Simple"></a>Simple</h3><p>Java is easy to learn and its syntax is quite simple, clean and easy to understand</p>
+    <h1><span id="what-is-java">What is Java</span></h1><h3><span id="java-programming-language">Java (programming language)</span></h3><p>Java is a class-based, object-oriented <strong>programming language</strong>.</p>
+<h3><span id="java-software-platform">Java (software platform)</span></h3><p>Java is a <strong>system</strong> for developing application software and deploying it in a cross-platform computing <strong>environment</strong>.</p>
+<span id="more"></span>
+
+<h1><span id="background">Background</span></h1><p>Java was started as a project called “Oak” by James Gosling in June 1991. Gosling’s goals were to implement a virtual machine and a language that had a familiar C-like notation but with greater uniformity and simplicity than C/C++. The first public implementation was Java 1.0 in 1995.</p>
+<h1><span id="versions">Versions</span></h1><h3><span id="java-se-j2se-java-2-platform-standard-edition">Java SE (J2SE, Java 2 Platform Standard Edition)</span></h3><p>Java SE is a computing platform for development and deployment of portable code for desktop and server environments.</p>
+<h3><span id="java-ee-j2ee-java-2-platform-enterprise-edition">Java EE (J2EE, Java 2 Platform Enterprise Edition)</span></h3><p>Jakarta EE, formerly Java Platform, Enterprise Edition (Java EE)  is a set of specifications, <strong>extending Java SE</strong> with specifications for enterprise features such as distributed computing and web services.</p>
+<h3><span id="java-me-j2me-java-2-platform-micro-edition">Java ME (J2ME, Java 2 Platform Micro Edition)</span></h3><p>Java ME is a computing platform for development and deployment of portable code for embedded and mobile devices (mobile phones, TV set-top boxes, etc.).</p>
+<h1><span id="features">Features</span></h1><h3><span id="simple">Simple</span></h3><p>Java is easy to learn and its syntax is quite simple, clean and easy to understand</p>
 <blockquote>
 <p>There’re no pointers and operator overloading in Java.</p>
 </blockquote>
-<h3 id="Object-Oriented"><a href="#Object-Oriented" class="headerlink" title="Object Oriented"></a>Object Oriented</h3><p>In java, everything is an object.</p>
-<h4 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h4><p>A Java object is a <strong>combination of data and procedures</strong> working on the available data.</p>
+<h3><span id="object-oriented">Object Oriented</span></h3><p>In java, everything is an object.</p>
+<h4><span id="object">Object</span></h4><p>A Java object is a <strong>combination of data and procedures</strong> working on the available data.</p>
 <blockquote>
 <p>Door has states (open/close) and behaviours (pull()/push())</p>
 </blockquote>
-<h4 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h4><p>A Class is like <strong>an object constructor</strong>, or a “blueprint” for creating objects.</p>
+<h4><span id="class">Class</span></h4><p>A Class is like <strong>an object constructor</strong>, or a “blueprint” for creating objects.</p>
 <blockquote>
 <p>Jenny and Danny are Students.</p>
 </blockquote>
-<h4 id="Inheritance"><a href="#Inheritance" class="headerlink" title="*Inheritance"></a>*Inheritance</h4><p>Inheritance can be defined as the process where one class acquires the properties (methods and fields) of another</p>
+<h4><span id="inheritance">*Inheritance</span></h4><p>Inheritance can be defined as the process where one class acquires the properties (methods and fields) of another</p>
 <blockquote>
 <p>Father and Son</p>
 </blockquote>
-<h4 id="Polymorphism"><a href="#Polymorphism" class="headerlink" title="*Polymorphism"></a>*Polymorphism</h4><p>Polymorphism means “many forms”, and it occurs when we have many classes that are related to each other by inheritance.</p>
+<h4><span id="polymorphism">*Polymorphism</span></h4><p>Polymorphism means “many forms”, and it occurs when we have many classes that are related to each other by inheritance.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bike</span></span>&#123;  </span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;System.out.println(<span class="string">&quot;running&quot;</span>);&#125;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Splendor</span> <span class="keyword">extends</span> <span class="title">Bike</span></span>&#123;  </span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;System.out.println(<span class="string">&quot;running safely with 60km&quot;</span>);&#125;  </span><br></pre></td></tr></table></figure>
 
-<h4 id="Encapsulation"><a href="#Encapsulation" class="headerlink" title="*Encapsulation"></a>*Encapsulation</h4><p>In encapsulation, the variables of a class will be hidden from other classes, and can be accessed only through the methods of their current class.</p>
+<h4><span id="encapsulation">*Encapsulation</span></h4><p>In encapsulation, the variables of a class will be hidden from other classes, and can be accessed only through the methods of their current class.</p>
 <blockquote>
 <p>private</p>
 </blockquote>
 <p>*Java object-oriented programming has 3 major characteristics: <em>encapsulation</em>, <em>inheritance</em>, and <em>polymorphism</em>.</p>
-<h3 id="Robust"><a href="#Robust" class="headerlink" title="Robust"></a>Robust</h3><p>Robust simply means <strong>strong</strong>. Java is robust because: It uses strong memory management.</p>
-<h3 id="Platform-Independent"><a href="#Platform-Independent" class="headerlink" title="Platform Independent"></a>Platform Independent</h3><p>The meaning of <strong>platform</strong>-<strong>independent</strong> is that the <strong>java</strong> compiled code(byte code) can run on all operating systems.</p>
-<h3 id="Secure"><a href="#Secure" class="headerlink" title="Secure"></a>Secure</h3><p>Java program always runs in JRE with almost null interaction with system OS, hence it is more secure.</p>
-<h3 id="Multi-Threading"><a href="#Multi-Threading" class="headerlink" title="Multi-Threading"></a>Multi-Threading</h3><p>Java multithreading feature makes it possible to write program that can do many tasks at the same time.</p>
-<h3 id="Architectural-Neutral"><a href="#Architectural-Neutral" class="headerlink" title="Architectural Neutral"></a>Architectural Neutral</h3><p>Java program is easy to interpret on <strong>any machine</strong>.</p>
-<h3 id="Portable"><a href="#Portable" class="headerlink" title="Portable"></a>Portable</h3><p>Java Byte code can be carried to <strong>any platform</strong>.</p>
-<h3 id="High-Performance"><a href="#High-Performance" class="headerlink" title="High Performance"></a>High Performance</h3><p>Java is an interpreted language, so it <strong>cannot be as fast as a compiled language</strong> like C or C++. However, Java enables high performance with the use of just-in-time compiler.</p>
-<h3 id="Distributed"><a href="#Distributed" class="headerlink" title="Distributed"></a>Distributed</h3><p>Programs can be designed to run on computer networks. Java has a special class library for communicating using TCP/IP protocols.</p>
-<h1 id="Java-Technological-System"><a href="#Java-Technological-System" class="headerlink" title="Java Technological System"></a>Java Technological System</h1><p><img src="/2021/03/18/Java-Introduction/001.png"></p>
-<h1 id="JVM-JRE-amp-JDK"><a href="#JVM-JRE-amp-JDK" class="headerlink" title="JVM, JRE &amp; JDK"></a>JVM, JRE &amp; JDK</h1><h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p><img src="/2021/03/18/Java-Introduction/002.jpg"></p>
+<h3><span id="robust">Robust</span></h3><p>Robust simply means <strong>strong</strong>. Java is robust because: It uses strong memory management.</p>
+<h3><span id="platform-independent">Platform Independent</span></h3><p>The meaning of <strong>platform</strong>-<strong>independent</strong> is that the <strong>java</strong> compiled code(byte code) can run on all operating systems.</p>
+<h3><span id="secure">Secure</span></h3><p>Java program always runs in JRE with almost null interaction with system OS, hence it is more secure.</p>
+<h3><span id="multi-threading">Multi-Threading</span></h3><p>Java multithreading feature makes it possible to write program that can do many tasks at the same time.</p>
+<h3><span id="architectural-neutral">Architectural Neutral</span></h3><p>Java program is easy to interpret on <strong>any machine</strong>.</p>
+<h3><span id="portable">Portable</span></h3><p>Java Byte code can be carried to <strong>any platform</strong>.</p>
+<h3><span id="high-performance">High Performance</span></h3><p>Java is an interpreted language, so it <strong>cannot be as fast as a compiled language</strong> like C or C++. However, Java enables high performance with the use of just-in-time compiler.</p>
+<h3><span id="distributed">Distributed</span></h3><p>Programs can be designed to run on computer networks. Java has a special class library for communicating using TCP/IP protocols.</p>
+<h1><span id="java-technological-system">Java Technological System</span></h1><p><img src="/2021/03/18/Java-Introduction/001.png"></p>
+<h1><span id="jvm-jre-amp-jdk">JVM, JRE &amp; JDK</span></h1><h2><span id="overview">Overview</span></h2><p><img src="/2021/03/18/Java-Introduction/002.jpg"></p>
 <p>We must understand the differences between JDK, JRE, and JVM before proceeding further to Java. </p>
-<h2 id="Brief-Introduction"><a href="#Brief-Introduction" class="headerlink" title="Brief Introduction"></a>Brief Introduction</h2><h3 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h3><p>JVM (Java Virtual Machine) is an abstract machine.</p>
+<h2><span id="brief-introduction">Brief Introduction</span></h2><h3><span id="jvm">JVM</span></h3><p>JVM (Java Virtual Machine) is an abstract machine.</p>
 <p>It doesn’t physically exist.</p>
 <p>It provides a runtime environment in which Java bytecode can be executed.</p>
 <p>It can also run those programs which are written in other languages and compiled to Java bytecode.</p>
-<h3 id="JRE"><a href="#JRE" class="headerlink" title="JRE"></a>JRE</h3><p>JRE is Runtime Environment.</p>
+<h3><span id="jre">JRE</span></h3><p>JRE is Runtime Environment.</p>
 <p>A set of software tools which are used for developing Java applications.</p>
 <p>It is used to provide the runtime environment. </p>
 <p>It is the implementation of JVM.</p>
 <p>It includes a set of libraries and other files that JVM uses at runtime.</p>
-<h3 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h3><p>JDK(Java Development Kit) </p>
+<h3><span id="jdk">JDK</span></h3><p>JDK(Java Development Kit) </p>
 <p>is a software development environment which is used to develop Java applications and applets.</p>
 <p>It physically exists. </p>
 <p>It contains JRE and development tools.</p>
@@ -196,148 +210,16 @@
 
 
           <!--The body variable corresponds to the content rendered from the different page type templates (cf above).-->
-        </div>
 
-        <!-- Sidebar -->
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+      <div class="row">
+          <nav class="blog-pagination">
+  
+  <a class="btn btn-outline-primary" href="/">Previous</a>
+  
           
-    
-    <div class="p-4 mb-3 bg-dark text-white rounded shadow">
-        <h3>About</h3>
-        <p class="mb-0" style="color: #dddfe6;">Domuki is a musician, programmer and a lifelong learner. He currently is studying Software Engineering in UPM. He likes to share what he has learnt with the others.</p>
-    </div>
-
-
-
-    
-<div class="p-4 mb-3 bg-primary text-white rounded shadow">
-  <h3>Tags</h3>
-  <p>
-    
-    <a class="text-white" href="/tags/AI/" style="font-size: 23px">
-      AI</a>
-    
-    <a class="text-white" href="/tags/Academic-Writing/" style="font-size: 15px">
-      Academic Writing</a>
-    
-    <a class="text-white" href="/tags/Algorithm/" style="font-size: 21px">
-      Algorithm</a>
-    
-    <a class="text-white" href="/tags/Apache-Tomcat/" style="font-size: 15px">
-      Apache Tomcat</a>
-    
-    <a class="text-white" href="/tags/CMD/" style="font-size: 17px">
-      CMD</a>
-    
-    <a class="text-white" href="/tags/ChatterBot/" style="font-size: 15px">
-      ChatterBot</a>
-    
-    <a class="text-white" href="/tags/Data-Structure/" style="font-size: 19px">
-      Data Structure</a>
-    
-    <a class="text-white" href="/tags/Database/" style="font-size: 21px">
-      Database</a>
-    
-    <a class="text-white" href="/tags/ERD/" style="font-size: 15px">
-      ERD</a>
-    
-    <a class="text-white" href="/tags/Eclipse/" style="font-size: 17px">
-      Eclipse</a>
-    
-    <a class="text-white" href="/tags/English/" style="font-size: 27px">
-      English</a>
-    
-    <a class="text-white" href="/tags/Game/" style="font-size: 15px">
-      Game</a>
-    
-    <a class="text-white" href="/tags/HTML/" style="font-size: 15px">
-      HTML</a>
-    
-    <a class="text-white" href="/tags/Hexo/" style="font-size: 17px">
-      Hexo</a>
-    
-    <a class="text-white" href="/tags/Html/" style="font-size: 15px">
-      Html</a>
-    
-    <a class="text-white" href="/tags/JUnit-5/" style="font-size: 15px">
-      JUnit 5</a>
-    
-    <a class="text-white" href="/tags/Java/" style="font-size: 30px">
-      Java</a>
-    
-    <a class="text-white" href="/tags/JavaFX/" style="font-size: 19px">
-      JavaFX</a>
-    
-    <a class="text-white" href="/tags/JavaScript/" style="font-size: 15px">
-      JavaScript</a>
-    
-    <a class="text-white" href="/tags/Lab/" style="font-size: 25px">
-      Lab</a>
-    
-    <a class="text-white" href="/tags/Maven/" style="font-size: 19px">
-      Maven</a>
-    
-    <a class="text-white" href="/tags/Music/" style="font-size: 15px">
-      Music</a>
-    
-    <a class="text-white" href="/tags/MySQL/" style="font-size: 15px">
-      MySQL</a>
-    
-    <a class="text-white" href="/tags/Notes/" style="font-size: 15px">
-      Notes</a>
-    
-    <a class="text-white" href="/tags/OS/" style="font-size: 15px">
-      OS</a>
-    
-    <a class="text-white" href="/tags/PracticalAI/" style="font-size: 21px">
-      PracticalAI</a>
-    
-    <a class="text-white" href="/tags/Project/" style="font-size: 23px">
-      Project</a>
-    
-    <a class="text-white" href="/tags/Python/" style="font-size: 25px">
-      Python</a>
-    
-    <a class="text-white" href="/tags/Spoken/" style="font-size: 23px">
-      Spoken</a>
-    
-    <a class="text-white" href="/tags/Statistics/" style="font-size: 21px">
-      Statistics</a>
-    
-    <a class="text-white" href="/tags/Studying/" style="font-size: 15px">
-      Studying</a>
-    
-    <a class="text-white" href="/tags/Symphony/" style="font-size: 15px">
-      Symphony</a>
-    
-    <a class="text-white" href="/tags/Tips/" style="font-size: 30px">
-      Tips</a>
-    
-    <a class="text-white" href="/tags/Txt/" style="font-size: 15px">
-      Txt</a>
-    
-    <a class="text-white" href="/tags/UIUX/" style="font-size: 30px">
-      UIUX</a>
-    
-    <a class="text-white" href="/tags/Voice-Assistant/" style="font-size: 15px">
-      Voice Assistant</a>
-    
-    <a class="text-white" href="/tags/Web-Crawler/" style="font-size: 15px">
-      Web Crawler</a>
-    
-    <a class="text-white" href="/tags/Web-app/" style="font-size: 17px">
-      Web-app</a>
-    
-    <a class="text-white" href="/tags/Writing/" style="font-size: 17px">
-      Writing</a>
-    
-  </p>
-</div>
-
-
-
-
-        </div>
+  <a class="btn btn-outline-primary" href="/">Next</a>
+  
+</nav>
 
       </div>
 

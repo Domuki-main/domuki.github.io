@@ -42,32 +42,46 @@
 <body>
 
   <!-- Menu -->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark shadow-sm">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark" aria-label="Eighth navbar example">
   <div class="container">
-
     <a target="_blank" rel="noopener" href="https://github.com/Domuki-main" class="navbar-brand d-flex align-items-center">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
         <path
           d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
       </svg>
-        <strong>&nbsp;Domuki</strong>
-      </a>
+      <strong>&nbsp;Domuki</strong>
+    </a>
 
-    <ul class="navbar-nav">
-      
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsCollapse" aria-controls="navbarsCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsCollapse">
+
+      <ul class="navbar-nav" style="margin-inline-end: auto;">
+        
         <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/archives">Archives</a>
-      </li>
-      
+          <a class="nav-link" href="/archives">Archives</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/categories">Categories</a>
-      </li>
-      
-    </ul>
+          <a class="nav-link" href="/tags">Tags</a>
+        </li>
+        
+      </ul>
+
+      <form class="form-group d-flex mb-0">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg></button>
+      </form>
+
+    </div>
   </div>
 </nav>
 
@@ -94,297 +108,294 @@
 
     <div class="container py-5">
 
-      <div class="row">
-
-        <!-- Main Content -->
-        <div class="col-sm-8 blog-main">
           
+    <div class="container mb-4 rounded shadow">
 
-
-   <h2 class="blog-archive-title">2021/5</h2>
-
-
-
-<div class="blog-post">
-
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2021/05/27/User-Interface-and-User-Experience-Week-9/">
-            User Interface and User Experience Week 9
-        </a>
-    </h2>
+    <h1 class="card-title">
+      User Interface and User Experience Week 9
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2021-05-27
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2021-05-27
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <h2 id="25-5-2021"><a href="#25-5-2021" class="headerlink" title="25/5/2021"></a>25/5/2021</h2><p><strong>Define</strong> is the second phase in design thinking process.</p>
+<p>A clear and short summary of issues that must be resolved and used to keep track of the team at the start of the project.</p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2021/05/27/User-Interface-and-User-Experience-Week-9/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2021/05/18/Get-started-with-JUnit-5/">
-            Get started with JUnit 5
-        </a>
-    </h2>
+    <h1 class="card-title">
+      Get started with JUnit 5
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2021-05-18
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2021-05-18
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <h1 id="Thinking"><a href="#Thinking" class="headerlink" title="Thinking"></a>Thinking</h1><p>Repetitive manual test execution is boring and error prone.<br>Test automation uses tool reduce human intervention and mistakes.<br>However, test automation demands considerable budget and resources.</p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2021/05/18/Get-started-with-JUnit-5/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2021/05/18/User-Interface-and-User-Experience-Week-8/">
-            User Interface and User Experience Week 8
-        </a>
-    </h2>
+    <h1 class="card-title">
+      User Interface and User Experience Week 8
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2021-05-18
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2021-05-18
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <p>Today’s class our group leader, Aous, presented our group project process.</p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2021/05/18/User-Interface-and-User-Experience-Week-8/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2021/05/16/Chapter-1-Paragraph-Structure/">
-            Chapter 1: Paragraph Structure
-        </a>
-    </h2>
+    <h1 class="card-title">
+      Chapter 1: Paragraph Structure
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2021-05-16
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2021-05-16
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <h1 id="Parts-of-a-Paragraph"><a href="#Parts-of-a-Paragraph" class="headerlink" title="Parts of a Paragraph"></a>Parts of a Paragraph</h1><p>Paragraphs normally contain 3 parts:</p>
+<ol>
+<li><strong>topic sentence</strong></li>
+<li><strong>supporting sentences</strong></li>
+<li><strong>concluding sentence</strong> (most paragraph have)</li>
+</ol>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2021/05/16/Chapter-1-Paragraph-Structure/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2021/05/12/User-Interface-and-User-Experience-Week-6/">
-            User Interface and User Experience Week 6
-        </a>
-    </h2>
+    <h1 class="card-title">
+      User Interface and User Experience Week 6
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2021-05-12
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2021-05-12
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <p>User-centric design care about more details of users and their habits. Human-centric design emphasizes the importance of the human experience in solving problems. </p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2021/05/12/User-Interface-and-User-Experience-Week-6/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2021/05/06/User-Interface-and-User-Experience-Week-5/">
-            User Interface and User Experience Week 5
-        </a>
-    </h2>
+    <h1 class="card-title">
+      User Interface and User Experience Week 5
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2021-05-06
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2021-05-06
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <span id="more"></span>
+
+<h1><span id="presentation">Presentation</span></h1><h2><span id="group-information">Group information</span></h2><p>Project title: <strong>Color it</strong></p>
+<p>Group name: <strong>WeDesign</strong></p>
+<p>Group member: </p>
+<ul>
+<li>Aous</li>
+<li>Ma</li>
+<li>Wang</li>
+</ul>
+<h2><span id="projectresearch-information">Project/Research information</span></h2><h3><span id="introduction">Introduction</span></h3><p>Designer struggling to find a color that fits their needs.so designers can select their own appropriate color groups or individual colors for use in the designing their software, or generate random colors automatically.</p>
+<h3><span id="objective">Objective</span></h3><p>To help designers find the color that is inside their mind. Facilitate designers to design a more beautiful UI interface.</p>
+<h3><span id="background">Background</span></h3><p>For the designers who are not familiar with the colours code, it is hard to design and develop the website or application interface without a sample of colour code. Many people who do not know much about design and have not studied systematically find it difficult to use the right color combinations to make good-looking UI designs.</p>
+<p>In order to help designers and developers to find the colours they want, this website will provide both code and the sample of the colours.</p>
+<h3><span id="methods">Methods</span></h3><p>The website will have an option where it displays different types of colors and the user can come and choose which color fits him best.</p>
+<h3><span id="expected-result">Expected Result</span></h3><p>The designer finds the colors for their needs</p>
+<h3><span id="implementation">Implementation</span></h3><ul>
+<li>Figma</li>
+<li>HTML and CSS with Bootstrap framework</li>
+</ul>
+<h3><span id="reference">Reference</span></h3><p><a target="_blank" rel="noopener" href="https://www.color-hex.com/">https://www.color-hex.com/</a></p>
+<p><a target="_blank" rel="noopener" href="https://htmlcolorcodes.com/">https://htmlcolorcodes.com/</a></p>
+
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2021/05/06/User-Interface-and-User-Experience-Week-7/">
-            User Interface and User Experience Week 7
-        </a>
-    </h2>
+    <h1 class="card-title">
+      User Interface and User Experience Week 7
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2021-05-06
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2021-05-06
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <span id="more"></span>
+
+<h3><span id="04052021">04/05/2021</span></h3><p>Empathize, the first stages of Design thinking process.</p>
+<blockquote>
+<p>The <strong>first stage</strong> of the <strong>design process</strong> is to understand the perspective of the target audience/customer/consumer to identify and address the problem at hand.</p>
+</blockquote>
+<p>Asking yourself these three questions is a good way to start practicing empathy in your everyday interactions:</p>
+<ul>
+<li>What is this person feeling?</li>
+<li>Can you identify this feeling?</li>
+<li>How would you describe about felt this way?</li>
+</ul>
+<blockquote>
+<p><strong>Design thinking</strong> is a term used to represent a set of cognitive, strategic and practical processes by which design concepts are developed.</p>
+</blockquote>
+<p>Design thinking is a good way for students to do their design project more efficient. </p>
+<p>Empathy map can be used in many situations in order to inspire designer to solve problems. You can use empathy maps to summarize what you’ve learned from your interactions with people in the field of design studies.</p>
+<h3><span id="06052021">06/05/2021</span></h3><blockquote>
+<p>A <strong>journey map</strong> is a synthetic representation that describes a step-by-step description of how a user uses a service.</p>
+</blockquote>
+<p>journey map is the process of providing a complete picture of the customer experience by revealing moments of both frustration and joy through a series of interactions. When executed successfully, it opens up opportunities to solve customer problems, reduce fragmentation and ultimately improve the user experience.</p>
+
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+
+  </div>
 
 </div>
 
-
-
-<nav class="blog-pagination">
-  
-  <a class="btn btn-outline-secondary disabled" href="/">Previous</a>
-  
-          
-  <a class="btn btn-outline-secondary disabled" href="/">Previous</a>
-  
-  </nav>
 
 
           <!--The body variable corresponds to the content rendered from the different page type templates (cf above).-->
-        </div>
 
-        <!-- Sidebar -->
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+      <div class="row">
+          <nav class="blog-pagination">
+  
+  <a class="btn btn-outline-secondary disabled" href="/">Previous</a>
+  
           
-    
-    <div class="p-4 mb-3 bg-dark text-white rounded shadow">
-        <h3>About</h3>
-        <p class="mb-0" style="color: #dddfe6;">Domuki is a musician, programmer and a lifelong learner. He currently is studying Software Engineering in UPM. He likes to share what he has learnt with the others.</p>
-    </div>
-
-
-
-    
-<div class="p-4 mb-3 bg-primary text-white rounded shadow">
-  <h3>Tags</h3>
-  <p>
-    
-    <a class="text-white" href="/tags/AI/" style="font-size: 23px">
-      AI</a>
-    
-    <a class="text-white" href="/tags/Academic-Writing/" style="font-size: 15px">
-      Academic Writing</a>
-    
-    <a class="text-white" href="/tags/Algorithm/" style="font-size: 21px">
-      Algorithm</a>
-    
-    <a class="text-white" href="/tags/Apache-Tomcat/" style="font-size: 15px">
-      Apache Tomcat</a>
-    
-    <a class="text-white" href="/tags/CMD/" style="font-size: 17px">
-      CMD</a>
-    
-    <a class="text-white" href="/tags/ChatterBot/" style="font-size: 15px">
-      ChatterBot</a>
-    
-    <a class="text-white" href="/tags/Data-Structure/" style="font-size: 19px">
-      Data Structure</a>
-    
-    <a class="text-white" href="/tags/Database/" style="font-size: 21px">
-      Database</a>
-    
-    <a class="text-white" href="/tags/ERD/" style="font-size: 15px">
-      ERD</a>
-    
-    <a class="text-white" href="/tags/Eclipse/" style="font-size: 17px">
-      Eclipse</a>
-    
-    <a class="text-white" href="/tags/English/" style="font-size: 27px">
-      English</a>
-    
-    <a class="text-white" href="/tags/Game/" style="font-size: 15px">
-      Game</a>
-    
-    <a class="text-white" href="/tags/HTML/" style="font-size: 15px">
-      HTML</a>
-    
-    <a class="text-white" href="/tags/Hexo/" style="font-size: 17px">
-      Hexo</a>
-    
-    <a class="text-white" href="/tags/Html/" style="font-size: 15px">
-      Html</a>
-    
-    <a class="text-white" href="/tags/JUnit-5/" style="font-size: 15px">
-      JUnit 5</a>
-    
-    <a class="text-white" href="/tags/Java/" style="font-size: 30px">
-      Java</a>
-    
-    <a class="text-white" href="/tags/JavaFX/" style="font-size: 19px">
-      JavaFX</a>
-    
-    <a class="text-white" href="/tags/JavaScript/" style="font-size: 15px">
-      JavaScript</a>
-    
-    <a class="text-white" href="/tags/Lab/" style="font-size: 25px">
-      Lab</a>
-    
-    <a class="text-white" href="/tags/Maven/" style="font-size: 19px">
-      Maven</a>
-    
-    <a class="text-white" href="/tags/Music/" style="font-size: 15px">
-      Music</a>
-    
-    <a class="text-white" href="/tags/MySQL/" style="font-size: 15px">
-      MySQL</a>
-    
-    <a class="text-white" href="/tags/Notes/" style="font-size: 15px">
-      Notes</a>
-    
-    <a class="text-white" href="/tags/OS/" style="font-size: 15px">
-      OS</a>
-    
-    <a class="text-white" href="/tags/PracticalAI/" style="font-size: 21px">
-      PracticalAI</a>
-    
-    <a class="text-white" href="/tags/Project/" style="font-size: 23px">
-      Project</a>
-    
-    <a class="text-white" href="/tags/Python/" style="font-size: 25px">
-      Python</a>
-    
-    <a class="text-white" href="/tags/Spoken/" style="font-size: 23px">
-      Spoken</a>
-    
-    <a class="text-white" href="/tags/Statistics/" style="font-size: 21px">
-      Statistics</a>
-    
-    <a class="text-white" href="/tags/Studying/" style="font-size: 15px">
-      Studying</a>
-    
-    <a class="text-white" href="/tags/Symphony/" style="font-size: 15px">
-      Symphony</a>
-    
-    <a class="text-white" href="/tags/Tips/" style="font-size: 30px">
-      Tips</a>
-    
-    <a class="text-white" href="/tags/Txt/" style="font-size: 15px">
-      Txt</a>
-    
-    <a class="text-white" href="/tags/UIUX/" style="font-size: 30px">
-      UIUX</a>
-    
-    <a class="text-white" href="/tags/Voice-Assistant/" style="font-size: 15px">
-      Voice Assistant</a>
-    
-    <a class="text-white" href="/tags/Web-Crawler/" style="font-size: 15px">
-      Web Crawler</a>
-    
-    <a class="text-white" href="/tags/Web-app/" style="font-size: 17px">
-      Web-app</a>
-    
-    <a class="text-white" href="/tags/Writing/" style="font-size: 17px">
-      Writing</a>
-    
-  </p>
-</div>
-
-
-
-
-        </div>
+  <a class="btn btn-outline-secondary disabled" href="/">Previous</a>
+  
+</nav>
 
       </div>
 

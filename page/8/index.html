@@ -42,32 +42,46 @@
 <body>
 
   <!-- Menu -->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark shadow-sm">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark" aria-label="Eighth navbar example">
   <div class="container">
-
     <a target="_blank" rel="noopener" href="https://github.com/Domuki-main" class="navbar-brand d-flex align-items-center">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
         <path
           d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
       </svg>
-        <strong>&nbsp;Domuki</strong>
-      </a>
+      <strong>&nbsp;Domuki</strong>
+    </a>
 
-    <ul class="navbar-nav">
-      
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsCollapse" aria-controls="navbarsCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsCollapse">
+
+      <ul class="navbar-nav" style="margin-inline-end: auto;">
+        
         <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/archives">Archives</a>
-      </li>
-      
+          <a class="nav-link" href="/archives">Archives</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/categories">Categories</a>
-      </li>
-      
-    </ul>
+          <a class="nav-link" href="/tags">Tags</a>
+        </li>
+        
+      </ul>
+
+      <form class="form-group d-flex mb-0">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg></button>
+      </form>
+
+    </div>
   </div>
 </nav>
 
@@ -94,455 +108,157 @@
 
     <div class="container py-5">
 
-      <div class="row">
-
-        <!-- Main Content -->
-        <div class="col-sm-8 blog-main">
           
-    <div class="container mb-4">
+<div class="main-content">
 
-  <div class="card shadow">
+  
+  <div class="row">
+  <!-- Main Content -->
+  <div class="col-sm-8 blog-main">
+    
+    <div class="container mb-4 rounded shadow">
 
-    <div class="card-header">
+  <div class="card-body">
+    <!-- Title -->
+    <h1 class="card-title">
+      Java Programming 2 Lab 1
+    </h1>
+
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-02-17
       
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Java Programming 2 Lab 1
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-02-17
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h2 id="Question-1"><a href="#Question-1" class="headerlink" title="Question 1"></a>Question 1</h2><p>Create a class named <em><strong>Rectangle</strong></em> to represent a rectangle. The class contains:</p>
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
+      by <a href="/">Domuki</a>
       
-      <p>
-        <a class="btn btn-outline-secondary" type="button" href="/2020/02/17/Jp2-L1/">
-          Open this article
-        </a>
-      </p>
-      
+    </p>
 
-    </div>
+    <p class="card-text">
+      <!-- Content -->
+      <h2 id="Question-1"><a href="#Question-1" class="headerlink" title="Question 1"></a>Question 1</h2><p>Create a class named <em><strong>Rectangle</strong></em> to represent a rectangle. The class contains:</p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/02/17/Jp2-L1/">
+        View this article
+      </a>
+    </p>
+    
 
   </div>
 
 </div>
 
+    
+    <div class="container mb-4 rounded shadow">
 
-    <div class="container mb-4">
+  <div class="card-body">
+    <!-- Title -->
+    <h1 class="card-title">
+      Java Learning Chapter 9 Introduction (Object and Classes)
+    </h1>
 
-  <div class="card shadow">
-
-    <div class="card-header">
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-02-15
       
-    </div>
+      by <a href="/">Domuki</a>
+      
+    </p>
 
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Java Learning Chapter 9 Introduction (Object and Classes)
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-02-15
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h4 id="Learning-Objectives"><a href="#Learning-Objectives" class="headerlink" title="Learning Objectives"></a>Learning Objectives</h4><p><em>Describe classes and objects in OOP (A1, C1)</em></p>
+    <p class="card-text">
+      <!-- Content -->
+      <h4 id="Learning-Objectives"><a href="#Learning-Objectives" class="headerlink" title="Learning Objectives"></a>Learning Objectives</h4><p><em>Describe classes and objects in OOP (A1, C1)</em></p>
 <p><em>Analyse a problem using object-oriented analysis. (C4)</em></p>
 <p><em>Construct a simple object-oriented program (P4)</em></p>
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-      <p>
-        <a class="btn btn-outline-secondary" type="button" href="/2020/02/15/Java-Learning-Chapter-9-Object-and-Classes/">
-          Open this article
-        </a>
-      </p>
-      
-
-    </div>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/02/15/Java-Learning-Chapter-9-Object-and-Classes/">
+        View this article
+      </a>
+    </p>
+    
 
   </div>
 
 </div>
 
+    
+    <div class="container mb-4 rounded shadow">
 
-    <div class="container mb-4">
+  <div class="card-body">
+    <!-- Title -->
+    <h1 class="card-title">
+      Java Learning Chapter 8.2 FILE Operation
+    </h1>
 
-  <div class="card shadow">
-
-    <div class="card-header">
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-02-15
       
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Java Learning Chapter 8.2 FILE Operation
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-02-15
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h4 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h4><p><em>Character and Input/Output class (C3, P4)</em> </p>
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
+      by <a href="/">Domuki</a>
       
-      <p>
-        <a class="btn btn-outline-secondary" type="button" href="/2020/02/15/Java-Learning-Chapter-8-2-FILE-Operation/">
-          Open this article
-        </a>
-      </p>
-      
+    </p>
 
-    </div>
+    <p class="card-text">
+      <!-- Content -->
+      <h4 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h4><p><em>Character and Input/Output class (C3, P4)</em> </p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/02/15/Java-Learning-Chapter-8-2-FILE-Operation/">
+        View this article
+      </a>
+    </p>
+    
 
   </div>
 
 </div>
 
+    
+    <div class="container mb-4 rounded shadow">
 
-    <div class="container mb-4">
+  <div class="card-body">
+    <!-- Title -->
+    <h1 class="card-title">
+      Java Learning Chapter 8 String
+    </h1>
 
-  <div class="card shadow">
-
-    <div class="card-header">
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-02-15
       
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Java Learning Chapter 8 String
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-02-15
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h4 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h4><p><em>Construct program by manipulating String</em></p>
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
+      by <a href="/">Domuki</a>
       
-      <p>
-        <a class="btn btn-outline-secondary" type="button" href="/2020/02/15/Java-Learning-Chapter-8-String/">
-          Open this article
-        </a>
-      </p>
-      
+    </p>
 
-    </div>
+    <p class="card-text">
+      <!-- Content -->
+      <h4 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h4><p><em>Construct program by manipulating String</em></p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/02/15/Java-Learning-Chapter-8-String/">
+        View this article
+      </a>
+    </p>
+    
 
   </div>
 
 </div>
 
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Java Learning Chapter 7 Arrays
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-02-14
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h4 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h4><p><em>Construct program  from flowchart (C3, P4)</em><br><em>Construct program  using array (C3, P4)</em><br><em>Explain the basic concepts and usage of array (C2, A3)</em><br><em>Analyse and solve programming problem using array(P3, CTPS)</em></p>
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-      <p>
-        <a class="btn btn-outline-secondary" type="button" href="/2020/02/14/Java-Learning-Chapter-7-Arrays/">
-          Open this article
-        </a>
-      </p>
-      
-
-    </div>
-
+    
   </div>
 
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Java Learning Chapter 6 Method
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-02-14
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h4 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h4><p><em>Construct program  from flowchart (C3, P4)</em></p>
-<p><em>Construct program  using methods (C3, P4)</em> </p>
-<p><em>Explain the basic concepts and usage of methods (C2, A3)</em></p>
-<p><em>Analyse and solve programming problem using stepwise refinement approach (P3, CTPS)</em></p>
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-      <p>
-        <a class="btn btn-outline-secondary" type="button" href="/2020/02/14/Java-Learning-Chapter-6-Method/">
-          Open this article
-        </a>
-      </p>
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Book Management System (Data based on TXT)
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-02-13
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h1 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h1><h2 id="1-1-Purpose"><a href="#1-1-Purpose" class="headerlink" title="1.1. Purpose"></a>1.1. Purpose</h2><p>In first term, we just studied from Chapter 1 to Chapter 8 which are quite simple part on textbook of Java programming. So it means that I cannot operate SQL data base or something like that. The only things I can use to store the data is TXT file, according to Chapter 8, String and File Operation. </p>
-<p>For making book management system this time, I watched a lot of information and some projects from others which make me confused. </p>
-<p>Therefore, I decided to make it by myself, because I’m too lazy, too lazy to read others’ codes. </p>
-<p>Now this project was completed. Although, it’s not perfect enough but really successful to me.  </p>
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-      <p>
-        <a class="btn btn-outline-secondary" type="button" href="/2020/02/13/Book-Management-System/">
-          Open this article
-        </a>
-      </p>
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Java Learning Chapter 5 Loops
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-02-13
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h4 id="Learning-Outcomes"><a href="#Learning-Outcomes" class="headerlink" title="Learning Outcomes"></a>Learning Outcomes</h4><p>​        <em>C</em>onstruct program from flowchart (C3, P4)*<br>​        <em>Construct program using control statement (C3, P4)</em><br>​        <em>Explain the usage of control statements (C2, A3)</em><br>​        Analyse and solve programming problem (CTPS)*</p>
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-      <p>
-        <a class="btn btn-outline-secondary" type="button" href="/2020/02/13/Java-Learning-Chapter-5-Loops/">
-          Open this article
-        </a>
-      </p>
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Java Learning Chapter 4 Selection
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-02-13
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h4 id="Learning-Outcomes"><a href="#Learning-Outcomes" class="headerlink" title="Learning Outcomes"></a>Learning Outcomes</h4><p>At the end of this chapter, student should be able to:</p>
-<p>​        <em>Construct program from flowchart (C3, P4)</em></p>
-<p>​        <em>Construct program using control statement (C3, P4)</em> </p>
-<p>​        <em>Explain the usage of control statements (C2, A3)</em></p>
-<p>​        <em>Analyse and solve programming problem (CTPS)</em></p>
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-      <p>
-        <a class="btn btn-outline-secondary" type="button" href="/2020/02/13/Java-Learning-Chapter-4-Selection/">
-          Open this article
-        </a>
-      </p>
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-    <div class="container mb-4">
-
-  <div class="card shadow">
-
-    <div class="card-header">
-      
-    </div>
-
-    <div class="card-body">
-      <!-- Title -->
-      <h1 class="card-title">
-        Java Learning Chapter 3 Primitive Data Types and Operations
-      </h1>
-
-      <!-- Date and Author -->
-      <p class="card-text">
-        2020-02-13
-        
-
-      </p>
-
-      <p class="card-text">
-        <!-- Content -->
-        <h2 id="Learning-Outcomes"><a href="#Learning-Outcomes" class="headerlink" title="Learning Outcomes"></a>Learning Outcomes</h2><blockquote>
-<p>At the end of this chapter, student should be able to:</p>
-<p>​            <em>Construct program  from flowchart (C3, P4)</em></p>
-<p>​            <em>Construct simple program (C3, P4)</em> </p>
-<p>​            <em>Explain the basic programming concepts in developing simple program (C2, A3)</em></p>
-</blockquote>
-      </p>
-      <!-- Only display the Read More link if we are displaying an excerpt -->
-      
-      <p>
-        <a class="btn btn-outline-secondary" type="button" href="/2020/02/13/Java-Learning-Chapter-3-Primitive-Data-Types-and-Operations/">
-          Open this article
-        </a>
-      </p>
-      
-
-    </div>
-
-  </div>
-
-</div>
-
-
-
-<nav class="blog-pagination">
-  
-  <a class="btn btn-outline-primary" href="/page/7/">Previous</a>
-  
-          
-  <a class="btn btn-outline-primary" href="/page/9/">Next</a>
-  
-  </nav>
-
-
-          <!--The body variable corresponds to the content rendered from the different page type templates (cf above).-->
-        </div>
-
-        <!-- Sidebar -->
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          
+  <!-- Sidebar -->
+  <div class="col-sm-4 blog-sidebar">
+    
     
     <div class="p-4 mb-3 bg-dark text-white rounded shadow">
         <h3>About</h3>
@@ -679,7 +395,25 @@
 
 
 
-        </div>
+  </div>
+</div>
+
+
+  
+</div>
+
+
+          <!--The body variable corresponds to the content rendered from the different page type templates (cf above).-->
+
+      <div class="row">
+          <nav class="blog-pagination">
+  
+  <a class="btn btn-outline-primary" href="/page/7/">Previous</a>
+  
+          
+  <a class="btn btn-outline-primary" href="/page/9/">Next</a>
+  
+</nav>
 
       </div>
 

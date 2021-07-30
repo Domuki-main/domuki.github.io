@@ -42,32 +42,46 @@
 <body>
 
   <!-- Menu -->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark shadow-sm">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark" aria-label="Eighth navbar example">
   <div class="container">
-
     <a target="_blank" rel="noopener" href="https://github.com/Domuki-main" class="navbar-brand d-flex align-items-center">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
         <path
           d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
       </svg>
-        <strong>&nbsp;Domuki</strong>
-      </a>
+      <strong>&nbsp;Domuki</strong>
+    </a>
 
-    <ul class="navbar-nav">
-      
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsCollapse" aria-controls="navbarsCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsCollapse">
+
+      <ul class="navbar-nav" style="margin-inline-end: auto;">
+        
         <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/archives">Archives</a>
-      </li>
-      
+          <a class="nav-link" href="/archives">Archives</a>
+        </li>
+        
         <li class="nav-item">
-        <a class="nav-link" href="/categories">Categories</a>
-      </li>
-      
-    </ul>
+          <a class="nav-link" href="/tags">Tags</a>
+        </li>
+        
+      </ul>
+
+      <form class="form-group d-flex mb-0">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg></button>
+      </form>
+
+    </div>
   </div>
 </nav>
 
@@ -94,351 +108,405 @@
 
     <div class="container py-5">
 
-      <div class="row">
-
-        <!-- Main Content -->
-        <div class="col-sm-8 blog-main">
           
+    <div class="container mb-4 rounded shadow">
 
-
-   <h2 class="blog-archive-title">Tips</h2>
-
-
-
-<div class="blog-post">
-
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/10/10/How-I-write-my-notes/">
-            How I write my notes
-        </a>
-    </h2>
+    <h1 class="card-title">
+      How I write my notes
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-10-10
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-10-10
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <p>In this essay, I’m going to talk about how I make my notes.</p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/10/How-I-write-my-notes/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/04/30/Overload-and-Override/">
-            Overload and Override
-        </a>
-    </h2>
+    <h1 class="card-title">
+      Overload and Override
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-04-30
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-04-30
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <p>Override and Overload which always be confounded are two different means in Java. In order to distinguish these two means better, this essay had been written.</p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/04/30/Overload-and-Override/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/04/23/Frequently-Used-Methods-of-Vector/">
-            Frequently Used Methods of Vector
-        </a>
-    </h2>
+    <h1 class="card-title">
+      Frequently Used Methods of Vector
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-04-23
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-04-23
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <p>it’s kind like arrayList but without type (&lt; E &gt;).</p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/04/23/Frequently-Used-Methods-of-Vector/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/04/23/Frequently-Used-Methods-of-ArrayList/">
-            Frequently Used Methods of ArrayList
-        </a>
-    </h2>
+    <h1 class="card-title">
+      Frequently Used Methods of ArrayList
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-04-23
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-04-23
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <p>array’s length cannot be changed<br>but length of array list can be changed<br>we know ArrayList<E>, but what’s the meaning of <E>？<br>you can think it as the type of all data in array list.<br>creating:<br><code>ArrayList();</code><br>notice: for array list, you cannot get reference when you try to print it</E></E></p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/04/23/Frequently-Used-Methods-of-ArrayList/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/04/01/Memory-partition-in-Java/">
-            Memory partition in Java
-        </a>
-    </h2>
+    <h1 class="card-title">
+      Memory partition in Java
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-04-01
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-04-01
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <span id="more"></span>
+
+<p><strong>Java memory is mainly divided into five parts:</strong> </p>
+<ol>
+<li><strong>Stack</strong>: <em>the stack is used to store the local variable in methods({}).</em></li>
+<li><strong>Heap</strong>: <em>the heap is used to store the thing which created by “new”, and everything has their  own reference and default value.</em></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int</td>
+<td>0</td>
+</tr>
+<tr>
+<td>double</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>char</td>
+<td>‘\u0000’</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>null</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>false</td>
+</tr>
+</tbody></table>
+<ol start="3">
+<li><strong>Method area</strong>: <em>the information related to .class (include method information)</em></li>
+<li><strong>Native Method stack</strong>: <em>Operation System related</em></li>
+<li><strong>PC Register</strong>: <em>in CPU, very effective</em></li>
+</ol>
+
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/03/31/Bubble-Sorting/">
-            Bubble Sorting
-        </a>
-    </h2>
+    <h1 class="card-title">
+      Bubble Sorting
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-03-31
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-03-31
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <span id="more"></span>
+
+<p>Main Method</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">	BubbleSorting bs = <span class="keyword">new</span> BubbleSorting();</span><br><span class="line">		</span><br><span class="line">	<span class="keyword">int</span>[] array = &#123;<span class="number">3</span>, <span class="number">5</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">45</span>, <span class="number">6</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">8</span>, <span class="number">4</span>, <span class="number">1</span>, <span class="number">63</span>, <span class="number">96</span>, <span class="number">54</span>, <span class="number">41</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">54</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">63</span>, <span class="number">5</span>, <span class="number">54</span>&#125;;</span><br><span class="line">		</span><br><span class="line">	<span class="keyword">int</span>[] a1 = bs.bubbleSortingFromBigToSmall(array);</span><br><span class="line">		</span><br><span class="line">	<span class="keyword">int</span>[] a2 = bs.bubbleSortingFromSmallToBig(array);</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">	bs.print(array);</span><br><span class="line">		</span><br><span class="line">	bs.print(a1);</span><br><span class="line">		</span><br><span class="line">	bs.print(a2);</span><br><span class="line">		</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Class Bubble_Sorting</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BubbleSorting</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * this method is just used for printing the content of array</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> array which you want to print</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">int</span>[] array)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; array.length - <span class="number">1</span>; j ++) &#123;</span><br><span class="line">			</span><br><span class="line">				System.out.print(array[j] + <span class="string">&quot;\t&quot;</span>);</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">		</span><br><span class="line">		System.out.println(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * the function of this method is sorting the numbers of array from large to small</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> Array is which you want to sort</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> the result after sorting</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">int</span>[] bubbleSortingFromBigToSmall(<span class="keyword">int</span>[] Array) &#123;</span><br><span class="line">		</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">		 * because of array passing by reference, I&#x27;ll lose the original array if I use method to operate on it directly.</span></span><br><span class="line"><span class="comment">		 * so I created a new array and make its values same as the original array</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">int</span>[] targetArray = <span class="keyword">new</span> <span class="keyword">int</span>[Array.length];</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; Array.length; i++)</span><br><span class="line">		   targetArray[i] = Array[i];</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; targetArray.length - <span class="number">1</span>; i ++) &#123;</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; targetArray.length - <span class="number">1</span> - i; j ++) &#123;</span><br><span class="line">				</span><br><span class="line">				<span class="keyword">if</span> (targetArray[j] &lt; targetArray[j + <span class="number">1</span>]) &#123;</span><br><span class="line">					</span><br><span class="line">					<span class="keyword">int</span> temp = targetArray[j + <span class="number">1</span>];</span><br><span class="line">					</span><br><span class="line">					targetArray[j + <span class="number">1</span>] = targetArray[j];</span><br><span class="line"></span><br><span class="line">					targetArray[j] = temp;</span><br><span class="line">					</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> targetArray;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">int</span>[] bubbleSortingFromSmallToBig(<span class="keyword">int</span>[] Array) &#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span>[] targetArray = <span class="keyword">new</span> <span class="keyword">int</span>[Array.length];</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; Array.length; i++)</span><br><span class="line">		   targetArray[i] = Array[i];</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; targetArray.length - <span class="number">1</span>; i ++) &#123;</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; targetArray.length - <span class="number">1</span> - i; j ++) &#123;</span><br><span class="line">				</span><br><span class="line">				<span class="keyword">if</span> (targetArray[j] &gt; targetArray[j + <span class="number">1</span>]) &#123;</span><br><span class="line">					</span><br><span class="line">					<span class="keyword">int</span> temp = targetArray[j + <span class="number">1</span>];</span><br><span class="line">					</span><br><span class="line">					targetArray[j + <span class="number">1</span>] = targetArray[j];</span><br><span class="line"></span><br><span class="line">					targetArray[j] = temp;</span><br><span class="line">					</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> targetArray;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/02/28/Math001/">
-            How to draw a Box Plot
-        </a>
-    </h2>
+    <h1 class="card-title">
+      How to draw a Box Plot
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-02-28
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-02-28
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <h2 id="1-Read-the-data-and-sort-numbers"><a href="#1-Read-the-data-and-sort-numbers" class="headerlink" title="1. Read the data and sort numbers"></a>1. Read the data and sort numbers</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">16	25	4	18	11	13	20	8	11	9 </span><br><span class="line">&#x2F;&#x2F; after sorting</span><br><span class="line">4	8	9	11	11	13	16	18	20	25</span><br></pre></td></tr></table></figure>
+
+<p>So from the information that we can get the maximum and minimum of this data(question).</p>
+<p><code>Max = 25</code> and <code>Min = 4</code></p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/02/28/Math001/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/02/24/Static-Variables-and-Methods/">
-            Static Variables and Methods
-        </a>
-    </h2>
+    <h1 class="card-title">
+      Static Variables and Methods
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-02-24
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-02-24
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <h2 id="1-Static-Variables"><a href="#1-Static-Variables" class="headerlink" title="1. Static Variables"></a>1. Static Variables</h2><blockquote>
+<p><strong>Static variables</strong> are shared by all the instances of the class.</p>
+</blockquote>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/02/24/Static-Variables-and-Methods/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/02/20/tips002/">
-            How to use "Try-Catch" in a Loop
-        </a>
-    </h2>
+    <h1 class="card-title">
+      How to use "Try-Catch" in a Loop
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-02-20
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-02-20
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <blockquote>
+<p>In this program, the problem I want to solve is that use try-catch and loop to make user’s input correct. </p>
+<p>For example, as we all know, if we put string in to integer field the system will get error. So I want to use try-catch to repeat the processing of value input until the value is correct.</p>
+</blockquote>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/02/20/tips002/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
 
-<div class="blog-post">
+    <div class="container mb-4 rounded shadow">
 
+  <div class="card-body">
     <!-- Title -->
-    <h2 class="blog-post-title-archive">
-        <a href="/2020/02/20/tips001/">
-            4 ways to keep two decimal places in Java
-        </a>
-    </h2>
+    <h1 class="card-title">
+      4 ways to keep two decimal places in Java
+    </h1>
 
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2020-02-20
-        
+    <!-- Date and Author(item.author) -->
+    <p class="card-text">
+      2020-02-20
+      
+      by <a href="/">Domuki</a>
+      
     </p>
+
+    <p class="card-text">
+      <!-- Content -->
+      <h2 id="1-String-format-Method"><a href="#1-String-format-Method" class="headerlink" title="1. String.format() Method"></a>1. String.format() Method</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> f = <span class="number">3.1415926</span>;</span><br><span class="line">System.out.println(String.format(<span class="string">&quot;%.2f&quot;</span>, f));</span><br></pre></td></tr></table></figure>
+
+<p>If variable f is an integer, program will get error.</p>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/02/20/tips001/">
+        View this article
+      </a>
+    </p>
+    
+
+  </div>
 
 </div>
 
-
-
-<nav class="blog-pagination">
-  
-  <a class="btn btn-outline-secondary disabled" href="/">Previous</a>
-  
-          
-  <a class="btn btn-outline-secondary disabled" href="/">Previous</a>
-  
-  </nav>
 
 
           <!--The body variable corresponds to the content rendered from the different page type templates (cf above).-->
-        </div>
 
-        <!-- Sidebar -->
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+      <div class="row">
+          <nav class="blog-pagination">
+  
+  <a class="btn btn-outline-secondary disabled" href="/">Previous</a>
+  
           
-    
-    <div class="p-4 mb-3 bg-dark text-white rounded shadow">
-        <h3>About</h3>
-        <p class="mb-0" style="color: #dddfe6;">Domuki is a musician, programmer and a lifelong learner. He currently is studying Software Engineering in UPM. He likes to share what he has learnt with the others.</p>
-    </div>
-
-
-
-    
-<div class="p-4 mb-3 bg-primary text-white rounded shadow">
-  <h3>Tags</h3>
-  <p>
-    
-    <a class="text-white" href="/tags/AI/" style="font-size: 23px">
-      AI</a>
-    
-    <a class="text-white" href="/tags/Academic-Writing/" style="font-size: 15px">
-      Academic Writing</a>
-    
-    <a class="text-white" href="/tags/Algorithm/" style="font-size: 21px">
-      Algorithm</a>
-    
-    <a class="text-white" href="/tags/Apache-Tomcat/" style="font-size: 15px">
-      Apache Tomcat</a>
-    
-    <a class="text-white" href="/tags/CMD/" style="font-size: 17px">
-      CMD</a>
-    
-    <a class="text-white" href="/tags/ChatterBot/" style="font-size: 15px">
-      ChatterBot</a>
-    
-    <a class="text-white" href="/tags/Data-Structure/" style="font-size: 19px">
-      Data Structure</a>
-    
-    <a class="text-white" href="/tags/Database/" style="font-size: 21px">
-      Database</a>
-    
-    <a class="text-white" href="/tags/ERD/" style="font-size: 15px">
-      ERD</a>
-    
-    <a class="text-white" href="/tags/Eclipse/" style="font-size: 17px">
-      Eclipse</a>
-    
-    <a class="text-white" href="/tags/English/" style="font-size: 27px">
-      English</a>
-    
-    <a class="text-white" href="/tags/Game/" style="font-size: 15px">
-      Game</a>
-    
-    <a class="text-white" href="/tags/HTML/" style="font-size: 15px">
-      HTML</a>
-    
-    <a class="text-white" href="/tags/Hexo/" style="font-size: 17px">
-      Hexo</a>
-    
-    <a class="text-white" href="/tags/Html/" style="font-size: 15px">
-      Html</a>
-    
-    <a class="text-white" href="/tags/JUnit-5/" style="font-size: 15px">
-      JUnit 5</a>
-    
-    <a class="text-white" href="/tags/Java/" style="font-size: 30px">
-      Java</a>
-    
-    <a class="text-white" href="/tags/JavaFX/" style="font-size: 19px">
-      JavaFX</a>
-    
-    <a class="text-white" href="/tags/JavaScript/" style="font-size: 15px">
-      JavaScript</a>
-    
-    <a class="text-white" href="/tags/Lab/" style="font-size: 25px">
-      Lab</a>
-    
-    <a class="text-white" href="/tags/Maven/" style="font-size: 19px">
-      Maven</a>
-    
-    <a class="text-white" href="/tags/Music/" style="font-size: 15px">
-      Music</a>
-    
-    <a class="text-white" href="/tags/MySQL/" style="font-size: 15px">
-      MySQL</a>
-    
-    <a class="text-white" href="/tags/Notes/" style="font-size: 15px">
-      Notes</a>
-    
-    <a class="text-white" href="/tags/OS/" style="font-size: 15px">
-      OS</a>
-    
-    <a class="text-white" href="/tags/PracticalAI/" style="font-size: 21px">
-      PracticalAI</a>
-    
-    <a class="text-white" href="/tags/Project/" style="font-size: 23px">
-      Project</a>
-    
-    <a class="text-white" href="/tags/Python/" style="font-size: 25px">
-      Python</a>
-    
-    <a class="text-white" href="/tags/Spoken/" style="font-size: 23px">
-      Spoken</a>
-    
-    <a class="text-white" href="/tags/Statistics/" style="font-size: 21px">
-      Statistics</a>
-    
-    <a class="text-white" href="/tags/Studying/" style="font-size: 15px">
-      Studying</a>
-    
-    <a class="text-white" href="/tags/Symphony/" style="font-size: 15px">
-      Symphony</a>
-    
-    <a class="text-white" href="/tags/Tips/" style="font-size: 30px">
-      Tips</a>
-    
-    <a class="text-white" href="/tags/Txt/" style="font-size: 15px">
-      Txt</a>
-    
-    <a class="text-white" href="/tags/UIUX/" style="font-size: 30px">
-      UIUX</a>
-    
-    <a class="text-white" href="/tags/Voice-Assistant/" style="font-size: 15px">
-      Voice Assistant</a>
-    
-    <a class="text-white" href="/tags/Web-Crawler/" style="font-size: 15px">
-      Web Crawler</a>
-    
-    <a class="text-white" href="/tags/Web-app/" style="font-size: 17px">
-      Web-app</a>
-    
-    <a class="text-white" href="/tags/Writing/" style="font-size: 17px">
-      Writing</a>
-    
-  </p>
-</div>
-
-
-
-
-        </div>
+  <a class="btn btn-outline-secondary disabled" href="/">Previous</a>
+  
+</nav>
 
       </div>
 
