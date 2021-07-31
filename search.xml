@@ -6034,11 +6034,11 @@
   <entry>
     <title>Urllib in Python</title>
     <url>/2020/10/09/Urllib-in-Python/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><span id="more"></span>
-
-<h2><span id="introduction">Introduction</span></h2><h3><span id="what-is-urllib">What is Urllib?</span></h3><blockquote>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2><span id="introduction">Introduction</span></h2><h3><span id="what-is-urllib">What is Urllib?</span></h3><blockquote>
 <p><code>urllib</code> is a package that collects several modules for working with URLs</p>
 </blockquote>
+<span id="more"></span>
+
 <p>This package has 4 modules: <code>urllib.request</code>, <code>urllib.error</code>, <code>urllib.parse</code> and <code>urllib.robotparser</code>.</p>
 <ul>
 <li><code>urllib.request</code> for opening and reading URLs</li>
