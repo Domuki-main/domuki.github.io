@@ -19,3 +19,14 @@
 .blog-content p, ul, li{
   font-size: 1.2em;
 }
+
+.highlight pre{
+  background-color: #f8f8f8;
+}
+.gutter td{
+}
+.code td{
+  font-size: 0.8em;
+  background-color: #f8f8f8;
+  font-family: 'Roboto Mono', Monaco, courier, monospace;
+}
