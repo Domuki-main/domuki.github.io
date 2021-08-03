@@ -1,32 +1,24 @@
-.blog-content h1{
-  font-size: 3.4em;
+.highlight {
+    background: #343a40;;
+    padding: 10px 10px;
+    border-radius: 10px;
 }
-.blog-content h2{
-  font-size: 3em;
+pre .header, pre .inheritance, pre .ruby .symbol, pre .string, pre .value, pre .xml .cdata {
+    color: #1F6ED4;
 }
-.blog-content h3{
-  font-size: 2.6em;
+pre .line{
+  color: #fff;
 }
-.blog-content h4{
-  font-size: 2.2em;
+.gutter pre{
+  margin-left: 10px;
+  margin-right: 20px;
 }
-.blog-content h5{
-  font-size: 1.8em;
-}
-.blog-content h6{
-  font-size: 1.4em;
-}
-.blog-content p, ul, li{
-  font-size: 1.2em;
+.code pre{
 }
 
-.highlight pre{
-  background-color: #f8f8f8;
-}
-.gutter td{
-}
-.code td{
-  font-size: 0.8em;
-  background-color: #f8f8f8;
-  font-family: 'Roboto Mono', Monaco, courier, monospace;
+code {
+  background: #343a40;
+  color: #fff;
+  padding: 2px 2px 2px 2px;
+  border-radius: 5px;
 }
