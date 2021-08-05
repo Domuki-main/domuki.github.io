@@ -117,12 +117,12 @@
   <div class="card-body">
     <!-- Title -->
     <h1 class="card-title">
-      Create a Simple Register Page by using Jsp and HTML
+      How to Make a Simple Online Calculator
     </h1>
 
     <!-- Date and Author(item.author) -->
     <p class="card-text">
-      2021-04-11
+      2020-10-29
       
       by <a href="/">Domuki</a>
       
@@ -130,9 +130,92 @@
 
     <p class="card-text">
       <!-- Content -->
-      <span id="more"></span>
+      <h2 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h2><h3 id="Requested-Application"><a href="#Requested-Application" class="headerlink" title="Requested Application"></a>Requested Application</h3><ol>
+<li><a target="_blank" rel="noopener" href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads2133151.html">JDK 1.8</a> </li>
+<li><a target="_blank" rel="noopener" href="https://www.oracle.com/database/technologies/xe-downloads.html">Oracle Xe Version 18c</a></li>
+<li><a target="_blank" rel="noopener" href="https://tomcat.apache.org/download-90.cgi">Tomcat Apache 9</a>  </li>
+<li><a target="_blank" rel="noopener" href="https://www.oracle.com/tools/downloads/sqldev-v192-downloads.html">Oracle SQL Developer 19.2</a>  </li>
+<li><a target="_blank" rel="noopener" href="https://www.eclipse.org/downloads/packages/release/2019-06/r/eclipse-ide-enterprisejava-developers">Eclipse EE for Java Developers</a> </li>
+</ol>
+    </p>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+    <p>
+      <a class="btn btn-outline-secondary" type="button" href="/2020/10/29/How-to-Make-a-Simple-Online-Calculator/">
+        View this article
+      </a>
+    </p>
+    
 
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span> <span class="attr">dir</span>=<span class="string">&quot;ltr&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">validateInput</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">if</span> (<span class="built_in">document</span>.getElementById(<span class="string">&quot;username&quot;</span>).value == <span class="string">&quot;&quot;</span>)</span></span><br><span class="line"><span class="javascript">        alert(<span class="string">&#x27;username cannot be empty&#x27;</span>);</span></span><br><span class="line"><span class="javascript">      <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">document</span>.getElementById(<span class="string">&quot;password&quot;</span>).value == <span class="string">&quot;&quot;</span>)</span></span><br><span class="line"><span class="javascript">        alert(<span class="string">&#x27;username cannot be empty&#x27;</span>);</span></span><br><span class="line"><span class="javascript">      <span class="keyword">else</span> <span class="keyword">if</span> (!ValidateEmail(<span class="built_in">document</span>.getElementById(<span class="string">&quot;email&quot;</span>)))</span></span><br><span class="line"><span class="javascript">        alert(<span class="string">&#x27;email problem&#x27;</span>);</span></span><br><span class="line"><span class="javascript">      <span class="keyword">else</span></span></span><br><span class="line"><span class="javascript">        alert(<span class="string">&#x27;submit it&#x27;</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">ValidateEmail</span>(<span class="params">inputText</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">var</span> mailformat = <span class="regexp">/^[a-zA-Z0-9.!#$%&amp;&#x27;*+/=?^_`&#123;|&#125;~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/</span>;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">return</span> inputText.value.match(mailformat);</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;form_processor.php&quot;</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Username: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span> <span class="attr">id</span>=<span class="string">&quot;username&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Paaword: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span> <span class="attr">id</span>=<span class="string">&quot;password&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Email: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;email&quot;</span> <span class="attr">id</span>=<span class="string">&quot;email&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">name</span>=<span class="string">&quot;button&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;validateInput()&quot;</span>&gt;</span>Register<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;reset&quot;</span> <span class="attr">name</span>=<span class="string">&quot;button&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;validateInput()&quot;</span>&gt;</span>Reset<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+  </div>
+
+</div>
+
+    
+  </div>
+  <div class="row">
+    <div class="container items-center py-2">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        
+        <li class="page-item disabled">
+          <a class="page-link" href="/" tabindex="-1">Previous</a>
+        </li>
+        
+        <!--<li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>-->
+        
+        <li class="page-item disabled">
+          <a class="page-link" href="/" tabindex="-1">Next</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </div>
+
+  </div>
+</div>
+
+      <!--The body variable corresponds to the content rendered from the different page type templates (cf above).-->
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-white-50 bg-dark py-5">
+  <div class="container">
+    <p>Blog template built for <a class="text-white" target="_blank" rel="noopener" href="http://getbootstrap.com">Bootstrap</a> by <a class="text-white" target="_blank" rel="noopener" href="https://twitter.com/mdo">@mdo</a>.</p>
+    <p>Adapted to Hexo by <a class="text-white" target="_blank" rel="noopener" href="http://www.domuki.top/">Domuki</a>.</p>
+    <p><a href="/" type="button" class="btn btn-outline-light">Back to top</a></p>
+  </div>
+</footer>
+
+
+  <!-- After footer scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'klugjoTest';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
+
+</body>
+
+</html>
+uot;</span>)</span></span><br><span class="line"><span class="javascript">        alert(<span class="string">&#x27;username cannot be empty&#x27;</span>);</span></span><br><span class="line"><span class="javascript">      <span class="keyword">else</span> <span class="keyword">if</span> (!ValidateEmail(<span class="built_in">document</span>.getElementById(<span class="string">&quot;email&quot;</span>)))</span></span><br><span class="line"><span class="javascript">        alert(<span class="string">&#x27;email problem&#x27;</span>);</span></span><br><span class="line"><span class="javascript">      <span class="keyword">else</span></span></span><br><span class="line"><span class="javascript">        alert(<span class="string">&#x27;submit it&#x27;</span>);</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">ValidateEmail</span>(<span class="params">inputText</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">var</span> mailformat = <span class="regexp">/^[a-zA-Z0-9.!#$%&amp;&#x27;*+/=?^_`&#123;|&#125;~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/</span>;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">return</span> inputText.value.match(mailformat);</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;form_processor.php&quot;</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Username: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span> <span class="attr">id</span>=<span class="string">&quot;username&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Paaword: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span> <span class="attr">id</span>=<span class="string">&quot;password&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Email: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;email&quot;</span> <span class="attr">id</span>=<span class="string">&quot;email&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">name</span>=<span class="string">&quot;button&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;validateInput()&quot;</span>&gt;</span>Register<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;reset&quot;</span> <span class="attr">name</span>=<span class="string">&quot;button&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;validateInput()&quot;</span>&gt;</span>Reset<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
     </p>
@@ -186,13 +269,6 @@
   <!-- After footer scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-
-<script src="/bootstrap/js/bootstrap.min.js"></script>
-
-
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-
-<script src="/js/ie10-viewport-bug-workaround.js"></script>
 
 
 <!-- Disqus Comments -->
