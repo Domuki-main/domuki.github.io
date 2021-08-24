@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Domuki">
+
+
+
+
+
+<title>Part 1: Conversation Skills | Domuki</title>
+
+
+
+    <link rel="icon" href="/domukiico.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Domuki&#39;s Site</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Domuki&#39;s Site</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Part 1: Conversation Skills</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Domuki</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">October 2, 2020&nbsp;&nbsp;16:36:14</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Language-Learning/">Language Learning</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2><span id="1-introduction">1. Introduction</span></h2><p>We, as humans, communicate with various people every day. For someone, having a conversation with others, including strangers, does not seem to be a difficult task, However, for some people, it seems to be a stressful experience. For those who do not so well, there must be some useful skills.</p>
+<p>In this section, we’re going to talk about how to start, maintain, and end a conversation.</p>
+<span id="more"></span>
+
+<h2><span id="2-start-a-conversation">2. Start a Conversation</span></h2><p>Let’s see a few ways you can use in starting a discussion:</p>
+<ol>
+<li>Using greetings and introductions</li>
+<li>Talking about your surroundings</li>
+<li>Making a small talk</li>
+</ol>
+<h3><span id="21-using-greetings-and-introductions">2.1. Using greetings and introductions</span></h3><p>Simple and common greetings, like:</p>
+<ul>
+<li><em>Hello</em></li>
+<li><em>Good morning/ afternoon/ evening</em></li>
+<li><em>How are you?</em></li>
+<li><em>How do you do (formal way)</em></li>
+<li><em>What’s up (informal way)</em></li>
+</ul>
+<p>And you also can add some information about yourself, like:</p>
+<ul>
+<li><em>How do you do? I’m Apple.</em></li>
+<li><em>Pleased to meet you Apple. My name is Banana.</em></li>
+<li><em>Hello, I’m Mango. May I have your name?</em></li>
+<li><em>Hi, you look familiar. Have we met before?</em></li>
+</ul>
+<p>Introduction also can involve introducing people to each other.</p>
+<ul>
+<li><em>Apple, let me introduce you to Mango, my old classmate.</em></li>
+<li><em>This is Strawberry. He used to stay next door to me.</em></li>
+<li><em>I’d like to introduce you to Cheese. we are colleagues.</em></li>
+</ul>
+<h3><span id="22-talking-about-your-surroundings">2.2. Talking about your surroundings</span></h3><p>Talking about your surroundings is another way to start a conversation. The topics on the surroundings should be related to the context of your discussion.</p>
+<ul>
+<li><em>Such a long queue, isn’t it?</em></li>
+<li><em>Don’t you think the painting is pretty?</em></li>
+<li><em>What a noisy place, isn’t it?</em></li>
+</ul>
+<h3><span id="23-making-a-small-talk">2.3. Making a small talk</span></h3><p>One useful conversation skill we should learn is to start a discussion by making small talk. Normally accepted topics include work, study, the weather, news, and life.</p>
+<ul>
+<li>*Was the traffic heavy on the highway?<br>*</li>
+<li><em>Is there water rationing at your place?</em></li>
+<li><em>Did you hear about the news that…?</em></li>
+</ul>
+<h2><span id="3-maintain-a-conversation">3. Maintain a Conversation</span></h2><p>Once a conversation has been started, you should develop and maintain it.</p>
+<p>There are a few ways in remaining a conversation:</p>
+<ol>
+<li>Using fillers</li>
+<li>Using encouraging expressions</li>
+<li>Asking questions</li>
+<li>Highlighting what you have heard</li>
+<li>Disclosing information about yourself</li>
+</ol>
+<h3><span id="31-using-fillers">3.1. Using fillers</span></h3><p>Fillers can help you break the silence and stall for time while you search for ideas or the right words.</p>
+<ul>
+<li><em>Anyway…</em></li>
+<li><em>Well…</em></li>
+<li><em>You know…</em></li>
+<li>*I’m not sure, but… I think …<br>*</li>
+<li><em>Err, let me see…</em></li>
+<li><em>What I’m trying to tell you is…</em></li>
+</ul>
+<h3><span id="32-using-encouraging-expressions">3.2. Using encouraging expressions</span></h3><p>If the person you talking with is shy or introverted or lacks the motivation of talking, you should keep the talk going by encouraging them.</p>
+<ul>
+<li><em>Uh-huh…</em></li>
+<li><em>Mmm…</em></li>
+<li><em>Really?</em></li>
+<li><em>Is it?</em></li>
+<li><em>I see</em></li>
+<li><em>Is that right?</em></li>
+<li><em>Carry on</em></li>
+<li><em>You’re right</em></li>
+<li><em>That’s nice.</em></li>
+<li><em>How interesting (interesting)</em></li>
+<li><em>You’ve got the point there.</em></li>
+</ul>
+<h3><span id="33-asking-questions">3.3. Asking questions</span></h3><p>There are 2 types of questions: open-ended and close-ended questions.</p>
+<p>Open-ended questions beginning with What, How and Why encourage the others you talking with to give more information.</p>
+<ul>
+<li><em>What do you think about this course?</em></li>
+<li><em>How was your summer holiday?</em></li>
+<li><em>Why did you come for that activity?</em></li>
+</ul>
+<p>Close-ended questions only require ‘Yes’ or ‘No’ or one-word or two-word responses as an answer.</p>
+<ul>
+<li><em>Do you like this course?</em></li>
+<li><em>When did you come to Malaysia?</em></li>
+<li><em>How long have you been doing this job?</em></li>
+</ul>
+<h3><span id="34-highlighting">3.4. Highlighting</span></h3><p>You can catch the point that the people are interested in and refer them to discuss the topic deeper.</p>
+<ul>
+<li><em>Earlier you seemed interested when I told you about…</em></li>
+<li><em>A moment ago I heard you say… (I’ve just heard that…)</em></li>
+</ul>
+<p>or just repeat the keyword or phrase of what the people just said.</p>
+<ul>
+<li><em>I’m doing a course in Landscaping and Design. - <strong>Landscaping and Design</strong>?</em></li>
+</ul>
+<p>or auxiliaries:</p>
+<ul>
+<li><em>do/don’t, does/doesn’t, have/haven’t, can/can’t …</em></li>
+<li><em>I didn’t take any notes during the sessions. - Didn’t you?</em></li>
+</ul>
+<h3><span id="35-disclosing-information-about-yourself">3.5. Disclosing information about yourself</span></h3><p>You can just share your information about your personal thought or experience which are directly related to the topic in the current conversation.</p>
+<ul>
+<li><em>A: Where are you from?</em></li>
+<li><em>B: Arizona, USA. It’s hot there all year long, but very dry.</em></li>
+<li><em>A: Oh, I heard about that place. I have a friend studying there but I’ve never been there before. I’d like to visit her someday.</em></li>
+</ul>
+<h2><span id="4-close-a-conversation">4. Close a Conversation</span></h2><p>In some situations, there are some signals that tell us to end the conversation naturally, for example, when the bus/subway/train arrives, or a meeting/class/course/lecture/appointment begins.</p>
+<ul>
+<li><em>Oh, here’s the bus!</em></li>
+<li><em>Seems the meeting is starting now</em></li>
+</ul>
+<p>In other situations where we do not have such signals for natural closing, we may think about how to close a conversation more comfortable. A politely ending usually involves 3 steps:</p>
+<ol>
+<li>Pre-closing</li>
+<li>Closing</li>
+<li>Taking leave</li>
+</ol>
+<h3><span id="41-pre-closing">4.1. Pre-closing</span></h3><ul>
+<li><em>Well…</em></li>
+<li><em>So, …</em></li>
+<li><em>Well, okay …</em></li>
+<li><em>Look at the tie…</em></li>
+<li><em>I know you’re busy …</em></li>
+</ul>
+<h3><span id="42-closing">4.2. Closing</span></h3><ul>
+<li><em>I gotta go.</em></li>
+<li><em>I really need to leave now.</em></li>
+<li><em>I’m afraid I’ve got to leave now. It’s getting late.</em></li>
+<li><em>I’ve to get back to work/ meet someone/ take my course now</em></li>
+</ul>
+<h3><span id="43-taking-leave">4.3. Taking leave</span></h3><ul>
+<li><em>Good-bye</em></li>
+<li><em>See you later/ next time/ tomorrow</em></li>
+<li><em>Good day (formal)</em></li>
+<li><em>Have a nice day!</em></li>
+</ul>
+<p>If you are in a formal situation, you can end the conversation by the steps below:</p>
+<ol>
+<li>Summarising the content</li>
+<li>Give the reasons for leaving</li>
+<li>Showing your appreciation</li>
+<li>Expressing interest to meet again</li>
+</ol>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Tomorrow will be better.</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/English/"># English</a>
+                    
+                        <a href="/tags/Spoken/"># Spoken</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2020/10/02/Part-2-Group-Discussion/">Part 2: Group Discussion</a>
+            
+            
+            <a class="next" rel="next" href="/2020/09/18/How-to-make-your-own-Voice-Assistant/">How to make your own Voice Assistant</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Domuki | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

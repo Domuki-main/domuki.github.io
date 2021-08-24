@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Domuki">
+
+
+
+
+
+<title>How to use Hexo to write a document | Domuki</title>
+
+
+
+    <link rel="icon" href="/domukiico.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Domuki&#39;s Site</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Domuki&#39;s Site</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">How to use Hexo to write a document</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Domuki</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">February 12, 2020&nbsp;&nbsp;17:01:47</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Hexo-Study/">Hexo Study</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h1><span id="1-creating-original-file">1. Creating original file</span></h1><p>Open git bash.exe in site file folder, then input the commit below to create a new file named “doc”</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;doc&quot;</span></span><br></pre></td></tr></table></figure>
+<p>the file will be create under the folder <em>source/_post</em> named “doc”.<br>this is the original file using to record the content of document which will be shared to the website.</p>
+<span id="more"></span>
+
+
+<h1><span id="2-start-writingbase-on-markdown">2. Start writing(base on Markdown)</span></h1><h2><span id="21-what-is-markdown">2.1. What is Markdown?</span></h2><blockquote>
+<p>Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).</p>
+</blockquote>
+<h2><span id="22-grammar">2.2. Grammar</span></h2><p>There’s a tool using to edit Markdown must be recommended: <strong>Typora</strong><br>simple, but powerful<br>here’s the download website has been wrote down for you: <a target="_blank" rel="noopener" href="https://www.typora.io/">https://www.typora.io/</a>.</p>
+<h3><span id="221-title">2.2.1. Title</span></h3><p><strong>Markdown Grammar:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#			title 1</span></span><br><span class="line"><span class="comment">##			title 2</span></span><br><span class="line"><span class="comment">###			title 3</span></span><br><span class="line"><span class="comment">####			title 4</span></span><br><span class="line"><span class="comment">#####			title 5</span></span><br><span class="line"><span class="comment">######			title 6</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Typora Hot-key:</strong></p>
+<p>Ctrl+1: title 1<br>Ctrl+2: title 2<br>Ctrl+3: title 3<br>Ctrl+4: title 4<br>Ctrl+5: title 5<br>Ctrl+6: title 6<br>Ctrl+0: paragraph</p>
+<h3><span id="222-bold-italic-strikethrough-and-underline">2.2.2. Bold, italic, strikethrough, and underline</span></h3><p><strong>Markdown Grammar:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*italic*</span><br><span class="line">**bold**</span><br><span class="line">***bold&amp;italic***</span><br><span class="line">~~strikethrough~~</span><br></pre></td></tr></table></figure>
+
+<p><strong>Typora Hot-key:</strong></p>
+<p>Ctrl+I: Italic<br>Ctrl+B: Bold<br>Ctrl+U: Underline<br>Alt+Shift+5: Strikethrough</p>
+<h3><span id="223-quote">2.2.3. Quote</span></h3><p><strong>Markdown Grammar:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; word quote</span><br></pre></td></tr></table></figure>
+
+<p><strong>Typora Hot-key:</strong> Ctrl+Shift+Q</p>
+<h3><span id="224-code-block">2.2.4. Code Block</span></h3><p><strong>Markdown Grammar:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`code inside the sentences`</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">multi-line</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+
+<p>Typora Hot-key:**</p>
+<p>Inside: Ctrl+Shift+`<br>Multi-line: Ctrl+Shift+K</p>
+<h3><span id="225-formula-block">2.2.5. Formula Block</span></h3><p><strong>Markdown Grammar:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">math formula</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+
+<p><strong>Typora Hot-key:</strong> Ctrl+Shift+M</p>
+<h3><span id="226-dividing-line">2.2.6. Dividing Line</span></h3><p><strong>Markdown Grammar:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">method 1: ---</span><br><span class="line">method 2: +++</span><br><span class="line">method 3: ***</span><br></pre></td></tr></table></figure>
+
+<h3><span id="227-list">2.2.7. List</span></h3><p><strong>Markdown Grammar:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.	An ordered list</span><br><span class="line"></span><br><span class="line">*	Unordered list</span><br><span class="line">+</span><br><span class="line">-</span><br></pre></td></tr></table></figure>
+
+<p><strong>Typora Hot-key:</strong><br>An ordered list:    Ctrl+Shift+[<br>Unordered list:        Ctrl+Shift+]</p>
+<h3><span id="228-form">2.2.8. Form</span></h3><p><strong>Markdown Grammar:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">head 1|head 2</span><br><span class="line">-|-|-</span><br><span class="line">cont. 11|cont. 12</span><br><span class="line">cont. 21|cont. 22</span><br></pre></td></tr></table></figure>
+
+<p><strong>Typora Hot-key:</strong> Ctrl+T</p>
+<h3><span id="229-link">2.2.9. Link</span></h3><p><strong>Markdown Grammar:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">method 1: [word](address <span class="string">&quot;description&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> example: [exampleLink](https://www.example.net/ <span class="string">&quot;Example Link&quot;</span>)</span><br><span class="line"></span><br><span class="line">method 2: &lt;address&gt;</span><br><span class="line"><span class="keyword">for</span> example: &lt;https://www.example.net/&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Typora Hot-key:</strong> Ctrl+K</p>
+<h3><span id="2210-picture">2.2.10. Picture</span></h3><p><strong>Markdown Grammar:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![photo text](photo address <span class="string">&quot;description&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> example: ![example photo](https://www.example.net/example.PNG <span class="string">&quot;example photo&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>Typora Hot-key:</strong> Ctrl+Shift+I</p>
+<p>**Notices: **</p>
+<ol>
+<li>value of <code>post_asset_folder</code> in site folder should be <em>true</em></li>
+<li>open git bash in site folder, then input the command: <code>npm install hexo-asset-image --save</code></li>
+<li>It’ll create a folder named “doc” as long as you command <code>hexo new doc</code> to create a doc. We just need to put image in this folder and call it by Markdown Grammar.</li>
+</ol>
+<h2><span id="33-advanced-setting">3.3. Advanced Setting</span></h2><h3><span id="331-frame-setting">3.3.1. Frame Setting</span></h3><p>When we using <code>hexo new &quot;doc&quot;</code> to create file, Hexo will initialize new document according to <code>/scaffolder/post.md</code> .<br>In other words, <code>/scaffolder/post.md</code> is the framework of new doc. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; doc &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags: </span><br><span class="line">categories: </span><br></pre></td></tr></table></figure>
+
+<h3><span id="332-head-setting">3.3.2. Head Setting</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: doc</span><br><span class="line">date: YYYY-MM-DD HH:MM:SS</span><br><span class="line">tags: [tag1, tag2, ...]</span><br><span class="line">categories: category</span><br></pre></td></tr></table></figure>
+
+<h3><span id="333-homepage-display">3.3.3. Homepage Display</span></h3><p>The document we wrote is quite long, sometimes.<br>However, when using Hexo framework to construct a blog, the homepage will display the content of whole document by default and the page will looks weird.<br>In this situation, we just put <code>&lt;!--more--&gt;</code> in the position where you wanna stop showing on the homepage</p>
+<h1><span id="3-publish">3. Publish</span></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Tomorrow will be better.</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/Hexo/"># Hexo</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2020/02/12/Java-Learning-Chapter-1-Introduction/">Java Learning Chapter 1 Introduction</a>
+            
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Domuki | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

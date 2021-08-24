@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Domuki">
+
+
+
+
+
+<title>Basic Python | Domuki</title>
+
+
+
+    <link rel="icon" href="/domukiico.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Domuki&#39;s Site</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Domuki&#39;s Site</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Basic Python</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Domuki</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">July 31, 2021&nbsp;&nbsp;14:56:09</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>In this article, I will simply introduce some basic knowledge about Python.</p>
+<span id="more"></span>
+
+<h1><span id="intro">Intro</span></h1><h2><span id="what-is-python">What is Python?</span></h2><blockquote>
+<p>Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.</p>
+</blockquote>
+<p>Usages:</p>
+<ol>
+<li>web development</li>
+<li>software development</li>
+<li>maths</li>
+<li>AI</li>
+</ol>
+<h2><span id="why-python">Why Python</span></h2><ul>
+<li>Python works on many different platforms (Windows, Mac, Linux, Raspberry Pi, etc).</li>
+<li>Python has a simple syntax similar to English language</li>
+<li>write programs with fewer lines than some other languages.</li>
+<li>Python can be treated in a procedural way, an <strong>object-oriented</strong> way or a functional way.</li>
+</ul>
+<h1><span id="initial">Initial</span></h1><h2><span id="install">Install</span></h2><p>open cmd then type “python”</p>
+<p>the windows store will jump out for asking if I want to install it.</p>
+<p>then, just install it in to local</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python --version</span><br></pre></td></tr></table></figure>
+
+<p>the result will be:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Python 3.9.6 (tags&#x2F;v3.9.6:db3ff76, Jun 28 2021, 15:26:21) [MSC v.1929 64 bit (AMD64)] on win32</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br></pre></td></tr></table></figure>
+
+<h2><span id="hello-world">Hello world</span></h2><p>create a .py file on desktop. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&quot;Hello, World!&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>hen use cmd to run it.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python helloworld.py</span><br></pre></td></tr></table></figure>
+
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello, World!</span><br></pre></td></tr></table></figure>
+
+<p>or just directly use cmd without create a new file:</p>
+<p>type <code>py</code> or <code>python</code> then input code:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print(&quot;Hello, World!&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>once finished, input cmd:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit()</span><br></pre></td></tr></table></figure>
+
+<h1><span id="syntax">Syntax</span></h1><h2><span id="indentation">Indentation</span></h2><p>Python uses indentation to indicate a block of code.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="number">3</span> &gt; <span class="number">1</span>:</span><br><span class="line">  print(<span class="string">&quot;Five is greater than two!&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>The number of spaces is up to you as a programmer, but it has to be at least one.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="number">3</span> &gt; <span class="number">1</span>:</span><br><span class="line">  				print(<span class="string">&quot;Five is greater than two!&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2><span id="variables">Variables</span></h2><p>only names</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">5</span></span><br><span class="line">y = <span class="string">&quot;Hello&quot;</span></span><br><span class="line">z = <span class="string">&quot;, World!&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3><span id="casting">Casting</span></h3><p>If you want to specify the data type of a variable, this can be done with casting.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="built_in">str</span>(<span class="number">1</span>)    <span class="comment"># x will be &#x27;1&#x27;</span></span><br><span class="line">y = <span class="built_in">int</span>(<span class="number">1</span>)    <span class="comment"># y will be 1</span></span><br><span class="line">z = <span class="built_in">float</span>(<span class="number">1</span>)  <span class="comment"># z will be 1.0</span></span><br></pre></td></tr></table></figure>
+
+<h3><span id="get-type">Get type</span></h3><p><code>type()</code> function.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">15</span></span><br><span class="line">y = <span class="string">&quot;John&quot;</span></span><br><span class="line">print(<span class="built_in">type</span>(x))</span><br><span class="line">print(<span class="built_in">type</span>(y))</span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string"><span class="meta">&gt;&gt;&gt; </span>print(type(x))</span></span><br><span class="line"><span class="string">&lt;class &#x27;int&#x27;&gt;</span></span><br><span class="line"><span class="string"><span class="meta">&gt;&gt;&gt; </span>print(type(y))</span></span><br><span class="line"><span class="string">&lt;class &#x27;str&#x27;&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>(“John” is same as ‘John’)</p>
+<h2><span id="case-sensitive">Case-Sensitive</span></h2><p>A and a are different</p>
+<h3><span id="assign-multiple-values">Assign Multiple Values</span></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Many Values to Multiple Variables</span></span><br><span class="line">x, y, z = <span class="string">&quot;one&quot;</span>, <span class="string">&quot;two&quot;</span>, <span class="string">&quot;three&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># One Value to Multiple Variables</span></span><br><span class="line">x = y = z = <span class="string">&quot;one&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Unpack a Collection</span></span><br><span class="line">fruits = [<span class="string">&quot;one&quot;</span>, <span class="string">&quot;two&quot;</span>, <span class="string">&quot;three&quot;</span>]</span><br><span class="line">x, y, z = fruits</span><br></pre></td></tr></table></figure>
+
+<h3><span id="output">Output</span></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="string">&quot;awesome&quot;</span></span><br><span class="line">y = <span class="string">&quot;Python is &quot;</span></span><br><span class="line">a = <span class="number">1</span></span><br><span class="line">b = <span class="number">2</span></span><br><span class="line">print(<span class="string">&quot;Python is &quot;</span> + x)</span><br><span class="line"></span><br><span class="line">print(y + x) <span class="comment"># Python is awesome</span></span><br><span class="line">print(a + b) <span class="comment"># 3</span></span><br><span class="line">print(y + b) <span class="comment">#an error</span></span><br><span class="line">print(y + <span class="built_in">str</span>(b)) <span class="comment"># Python is 2</span></span><br></pre></td></tr></table></figure>
+
+<h3><span id="global">Global</span></h3><p>Global variables can be used by everyone, both inside of functions and outside.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">n = <span class="string">&quot;114514&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">myfunc</span>():</span></span><br><span class="line">  print(<span class="string">&quot;amazing &quot;</span> + n)</span><br><span class="line"></span><br><span class="line">myfunc()</span><br></pre></td></tr></table></figure>
+
+<p>To create a global variable inside a function, you can use the <code>global</code> keyword.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">myfunc</span>():</span></span><br><span class="line">  <span class="keyword">global</span> n</span><br><span class="line">  n = <span class="string">&quot;deep, dark, fantasy&quot;</span></span><br><span class="line"></span><br><span class="line">myfunc()</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;Python is &quot;</span> + n)</span><br></pre></td></tr></table></figure>
+
+<p>use the <code>global</code> keyword if you want to change a global variable inside a function.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">n = <span class="string">&quot;114514&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">myfunc</span>():</span></span><br><span class="line">  <span class="keyword">global</span> n</span><br><span class="line">  n = <span class="string">&quot;deep, dark, fantasy&quot;</span></span><br><span class="line"></span><br><span class="line">myfunc()</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;Python is &quot;</span> + n)</span><br></pre></td></tr></table></figure>
+
+<h2><span id="comments">Comments</span></h2><p>Comments start with a #, and Python will render the rest of the line as a comment:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#This is a HelloWorld.</span></span><br><span class="line">print(<span class="string">&quot;Hello, World!&quot;</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&quot;Hello, World!&quot;</span>)<span class="comment">#This is a HelloWorld.</span></span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">This is a HelloWorld.</span></span><br><span class="line"><span class="string">This is a HelloWorld.</span></span><br><span class="line"><span class="string">This is a HelloWorld.</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">print(<span class="string">&quot;Hello, World!&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h1><span id="data-types">Data Types</span></h1><table>
+<thead>
+<tr>
+<th>Data Types</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Text Type:</td>
+<td><code>str</code></td>
+</tr>
+<tr>
+<td>Numeric Types:</td>
+<td><code>int</code>, <code>float</code>, <code>complex</code></td>
+</tr>
+<tr>
+<td>Sequence Types:</td>
+<td><code>list</code>, <code>tuple</code>, <code>range</code></td>
+</tr>
+<tr>
+<td>Mapping Type:</td>
+<td><code>dict</code></td>
+</tr>
+<tr>
+<td>Set Types:</td>
+<td><code>set</code>, <code>frozenset</code></td>
+</tr>
+<tr>
+<td>Boolean Type:</td>
+<td><code>bool</code></td>
+</tr>
+<tr>
+<td>Binary Types:</td>
+<td><code>bytes</code>, <code>bytearray</code>, <code>memoryview</code></td>
+</tr>
+</tbody></table>
+<h3><span id="numbers">Numbers</span></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">1</span>    <span class="comment"># int</span></span><br><span class="line">y = <span class="number">2.8</span>  <span class="comment"># float</span></span><br><span class="line">z = <span class="number">1j</span>   <span class="comment"># complex</span></span><br></pre></td></tr></table></figure>
+
+<p>can be showed by using <code>type()</code></p>
+<h4><span id="complex">Complex</span></h4><p>Complex numbers are written with a “j” as the imaginary part:</p>
+<h4><span id="random-number">Random Number</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">print(random.randrange(<span class="number">1</span>, <span class="number">10</span>))</span><br></pre></td></tr></table></figure>
+
+<h3><span id="string">String</span></h3><h4><span id="strings-are-arrays">Strings are Arrays</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&quot;Hello, World!&quot;</span></span><br><span class="line">print(a[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+
+<h4><span id="loop-through-a-string">Loop through a String</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="string">&quot;Hello, World!&quot;</span>:</span><br><span class="line">  print(x)</span><br></pre></td></tr></table></figure>
+
+<h4><span id="string-length">String length</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&quot;Hello, World!&quot;</span></span><br><span class="line">print(<span class="built_in">len</span>(a))</span><br></pre></td></tr></table></figure>
+
+<h4><span id="check-if-included-in">Check if included in</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">txt = <span class="string">&quot;The best things in life are free!&quot;</span></span><br><span class="line">print(<span class="string">&quot;free&quot;</span> <span class="keyword">in</span> txt)</span><br><span class="line"></span><br><span class="line">txt = <span class="string">&quot;The best things in life are free!&quot;</span></span><br><span class="line"><span class="keyword">if</span> <span class="string">&quot;free&quot;</span> <span class="keyword">in</span> txt:</span><br><span class="line">  print(<span class="string">&quot;Yes, &#x27;free&#x27; is present.&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># if not in</span></span><br><span class="line">txt = <span class="string">&quot;The best things in life are free!&quot;</span></span><br><span class="line"><span class="keyword">if</span> <span class="string">&quot;expensive&quot;</span> <span class="keyword">not</span> <span class="keyword">in</span> txt:</span><br><span class="line">  print(<span class="string">&quot;No, &#x27;expensive&#x27; is NOT present.&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4><span id="cut-a-part-from-string">Cut a part from String</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">b = <span class="string">&quot;Hello, World!&quot;</span></span><br><span class="line">print(b[<span class="number">2</span>:<span class="number">5</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># Slice From the Start</span></span><br><span class="line">b = <span class="string">&quot;Hello, World!&quot;</span></span><br><span class="line">print(b[:<span class="number">5</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># Slice To the End</span></span><br><span class="line">b = <span class="string">&quot;Hello, World!&quot;</span></span><br><span class="line">print(b[<span class="number">2</span>:])</span><br><span class="line"></span><br><span class="line"><span class="comment"># Indexing from right</span></span><br><span class="line">b = <span class="string">&quot;Hello, World!&quot;</span></span><br><span class="line">print(b[-<span class="number">5</span>:-<span class="number">2</span>])</span><br></pre></td></tr></table></figure>
+
+<h4><span id="letter-case">Letter Case</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Upper Case</span></span><br><span class="line">a = <span class="string">&quot;Hello, World!&quot;</span></span><br><span class="line">print(a.upper())</span><br><span class="line"></span><br><span class="line"><span class="comment"># Lower Case</span></span><br><span class="line">a = <span class="string">&quot;Hello, World!&quot;</span></span><br><span class="line">print(a.lower())</span><br></pre></td></tr></table></figure>
+
+<h4><span id="remove-whitespace">Remove Whitespace</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&quot; Hello, World! &quot;</span></span><br><span class="line">print(a.strip()) <span class="comment"># returns &quot;Hello, World!&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h4><span id="replace-string">Replace String</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&quot;Hello, World!&quot;</span></span><br><span class="line">print(a.replace(<span class="string">&quot;Hello&quot;</span>, <span class="string">&quot;F**k&quot;</span>))</span><br></pre></td></tr></table></figure>
+
+<h4><span id="split-string">Split String</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&quot;Hello, World!&quot;</span></span><br><span class="line">print(a.split(<span class="string">&quot;,&quot;</span>)) <span class="comment"># returns [&#x27;Hello&#x27;, &#x27; World!&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<h4><span id="concat">Concat</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&quot;Hello &quot;</span></span><br><span class="line">b = <span class="string">&quot;World&quot;</span></span><br><span class="line">c = a + b</span><br><span class="line">print(c)</span><br></pre></td></tr></table></figure>
+
+<h4><span id="string-format">String Format</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">quantity = <span class="number">3</span></span><br><span class="line">itemno = <span class="number">567</span></span><br><span class="line">price = <span class="number">49.95</span></span><br><span class="line">myorder = <span class="string">&quot;I want &#123;&#125; pieces of item &#123;&#125; for &#123;&#125; dollars.&quot;</span></span><br><span class="line">print(myorder.<span class="built_in">format</span>(quantity, itemno, price))</span><br><span class="line"><span class="comment"># return I want 3 pieces of item 567 for 49.95 dollars.</span></span><br><span class="line"></span><br><span class="line">myorder = <span class="string">&quot;I want to pay &#123;2&#125; dollars for &#123;0&#125; pieces of item &#123;1&#125;.&quot;</span></span><br><span class="line">print(myorder.<span class="built_in">format</span>(quantity, itemno, price))</span><br><span class="line"><span class="comment"># return I want to pay 49.95 dollars for 3 pieces of item 567.</span></span><br></pre></td></tr></table></figure>
+
+<h4><span id="escape-characters">Escape Characters</span></h4><table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">\‘</td>
+<td align="left">Single Quote</td>
+</tr>
+<tr>
+<td align="left">\\</td>
+<td align="left">Backslash</td>
+</tr>
+<tr>
+<td align="left">\n</td>
+<td align="left">New Line</td>
+</tr>
+<tr>
+<td align="left">\r</td>
+<td align="left">Carriage Return</td>
+</tr>
+<tr>
+<td align="left">\t</td>
+<td align="left">Tab</td>
+</tr>
+<tr>
+<td align="left">\b</td>
+<td align="left">Backspace</td>
+</tr>
+<tr>
+<td align="left">\f</td>
+<td align="left">Form Feed</td>
+</tr>
+<tr>
+<td align="left">\ooo</td>
+<td align="left">Octal value</td>
+</tr>
+<tr>
+<td align="left">\xhh</td>
+<td align="left">Hex value</td>
+</tr>
+</tbody></table>
+<h1><span id="operators">Operators</span></h1><h2><span id="arithmetic-operators">Arithmetic Operators</span></h2><table>
+<thead>
+<tr>
+<th align="left">Operator</th>
+<th align="left">Name</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">+</td>
+<td align="left">Addition</td>
+<td align="left">x + y</td>
+</tr>
+<tr>
+<td align="left">-</td>
+<td align="left">Subtraction</td>
+<td align="left">x - y</td>
+</tr>
+<tr>
+<td align="left">*</td>
+<td align="left">Multiplication</td>
+<td align="left">x * y</td>
+</tr>
+<tr>
+<td align="left">/</td>
+<td align="left">Division</td>
+<td align="left">x / y</td>
+</tr>
+<tr>
+<td align="left">%</td>
+<td align="left">Modulus</td>
+<td align="left">x % y</td>
+</tr>
+<tr>
+<td align="left">**</td>
+<td align="left">Exponentiation</td>
+<td align="left">x ** y</td>
+</tr>
+<tr>
+<td align="left">//</td>
+<td align="left">Floor division</td>
+<td align="left">x // y</td>
+</tr>
+</tbody></table>
+<h2><span id="assignment-operators">Assignment Operators</span></h2><table>
+<thead>
+<tr>
+<th align="left">Operator</th>
+<th align="left">Example</th>
+<th align="left">Same As</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">=</td>
+<td align="left">x = 5</td>
+<td align="left">x = 5</td>
+</tr>
+<tr>
+<td align="left">+=</td>
+<td align="left">x += 3</td>
+<td align="left">x = x + 3</td>
+</tr>
+<tr>
+<td align="left">-=</td>
+<td align="left">x -= 3</td>
+<td align="left">x = x - 3</td>
+</tr>
+<tr>
+<td align="left">*=</td>
+<td align="left">x *= 3</td>
+<td align="left">x = x * 3</td>
+</tr>
+<tr>
+<td align="left">/=</td>
+<td align="left">x /= 3</td>
+<td align="left">x = x / 3</td>
+</tr>
+<tr>
+<td align="left">%=</td>
+<td align="left">x %= 3</td>
+<td align="left">x = x % 3</td>
+</tr>
+<tr>
+<td align="left">//=</td>
+<td align="left">x //= 3</td>
+<td align="left">x = x // 3</td>
+</tr>
+<tr>
+<td align="left">**=</td>
+<td align="left">x **= 3</td>
+<td align="left">x = x ** 3</td>
+</tr>
+<tr>
+<td align="left">&amp;=</td>
+<td align="left">x &amp;= 3</td>
+<td align="left">x = x &amp; 3</td>
+</tr>
+<tr>
+<td align="left">|=</td>
+<td align="left">x |= 3</td>
+<td align="left">x = x | 3</td>
+</tr>
+<tr>
+<td align="left">^=</td>
+<td align="left">x ^= 3</td>
+<td align="left">x = x ^ 3</td>
+</tr>
+<tr>
+<td align="left">&gt;&gt;=</td>
+<td align="left">x &gt;&gt;= 3</td>
+<td align="left">x = x &gt;&gt; 3</td>
+</tr>
+<tr>
+<td align="left">&lt;&lt;=</td>
+<td align="left">x &lt;&lt;= 3</td>
+<td align="left">x = x &lt;&lt; 3</td>
+</tr>
+</tbody></table>
+<h1><span id="lists">Lists</span></h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">mylist = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;cherry&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># List Length</span></span><br><span class="line">print(<span class="built_in">len</span>(thislist))</span><br><span class="line"></span><br><span class="line"><span class="comment"># A list can contain different data types</span></span><br><span class="line">list1 = [<span class="string">&quot;abc&quot;</span>, <span class="number">34</span>, <span class="literal">True</span>, <span class="number">40</span>, <span class="string">&quot;male&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># list() Constructor</span></span><br><span class="line">thislist = <span class="built_in">list</span>((<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;cherry&quot;</span>)) <span class="comment"># note the double round-brackets</span></span><br></pre></td></tr></table></figure>
+
+<h2><span id="access-items">Access Items</span></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">thislist = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;cherry&quot;</span>]</span><br><span class="line">print(thislist[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+
+<h2><span id="negative-indexing">Negative Indexing</span></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">thislist = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;cherry&quot;</span>]</span><br><span class="line">print(thislist[-<span class="number">1</span>])</span><br><span class="line"><span class="comment"># -1 refers to the last item, -2 refers to the second last item etc.</span></span><br></pre></td></tr></table></figure>
+
+<h2><span id="range-of-indexes">Range of Indexes</span></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># same as String</span></span><br><span class="line">thislist = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;cherry&quot;</span>, <span class="string">&quot;orange&quot;</span>, <span class="string">&quot;kiwi&quot;</span>, <span class="string">&quot;melon&quot;</span>, <span class="string">&quot;mango&quot;</span>]</span><br><span class="line">print(thislist[<span class="number">2</span>:<span class="number">5</span>])</span><br><span class="line"></span><br><span class="line">thislist = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;cherry&quot;</span>, <span class="string">&quot;orange&quot;</span>, <span class="string">&quot;kiwi&quot;</span>, <span class="string">&quot;melon&quot;</span>, <span class="string">&quot;mango&quot;</span>]</span><br><span class="line">print(thislist[:<span class="number">5</span>])</span><br><span class="line"></span><br><span class="line">thislist = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;cherry&quot;</span>, <span class="string">&quot;orange&quot;</span>, <span class="string">&quot;kiwi&quot;</span>, <span class="string">&quot;melon&quot;</span>, <span class="string">&quot;mango&quot;</span>]</span><br><span class="line">print(thislist[<span class="number">2</span>:])</span><br></pre></td></tr></table></figure>
+
+<h2><span id="check-if-item-exists">Check if Item Exists</span></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">thislist = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;cherry&quot;</span>]</span><br><span class="line"><span class="keyword">if</span> <span class="string">&quot;apple&quot;</span> <span class="keyword">in</span> thislist:</span><br><span class="line">  print(<span class="string">&quot;Yes, &#x27;apple&#x27; is in the fruits list&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2><span id="change-item-value">Change Item Value</span></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">thislist = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;cherry&quot;</span>]</span><br><span class="line">thislist[<span class="number">1</span>] = <span class="string">&quot;blackcurrant&quot;</span></span><br><span class="line">print(thislist)</span><br></pre></td></tr></table></figure>
+
+<h2><span id="change-a-range-of-item-values">Change a Range of Item Values</span></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Change the values &quot;banana&quot; and &quot;cherry&quot; with the values &quot;blackcurrant&quot; and &quot;watermelon&quot;</span></span><br><span class="line">thislist = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;cherry&quot;</span>, <span class="string">&quot;orange&quot;</span>, <span class="string">&quot;kiwi&quot;</span>, <span class="string">&quot;mango&quot;</span>]</span><br><span class="line">thislist[<span class="number">1</span>:<span class="number">3</span>] = [<span class="string">&quot;blackcurrant&quot;</span>, <span class="string">&quot;watermelon&quot;</span>]</span><br><span class="line">print(thislist)</span><br></pre></td></tr></table></figure>
+
+<h2><span id="insert-items">Insert Items</span></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">thislist = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;cherry&quot;</span>]</span><br><span class="line">thislist.insert(<span class="number">2</span>, <span class="string">&quot;watermelon&quot;</span>)</span><br><span class="line">print(thislist)</span><br></pre></td></tr></table></figure>
+
+<h2><span id="append-items">Append Items</span></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">thislist = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;cherry&quot;</span>]</span><br><span class="line">thislist.append(<span class="string">&quot;orange&quot;</span>)</span><br><span class="line">print(thislist)</span><br></pre></td></tr></table></figure>
+
+<h2><span id="extend-list">Extend List</span></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">thislist = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;cherry&quot;</span>]</span><br><span class="line">tropical = [<span class="string">&quot;mango&quot;</span>, <span class="string">&quot;pineapple&quot;</span>, <span class="string">&quot;papaya&quot;</span>]</span><br><span class="line">thislist.extend(tropical)</span><br><span class="line">print(thislist)</span><br></pre></td></tr></table></figure>
+
+<h2><span id="add-any-iterable">Add any Iterable</span></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">thislist = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;cherry&quot;</span>]</span><br><span class="line">thistuple = (<span class="string">&quot;kiwi&quot;</span>, <span class="string">&quot;orange&quot;</span>)</span><br><span class="line">thislist.extend(thistuple)</span><br><span class="line">print(thislist)</span><br></pre></td></tr></table></figure>
+
+<h2><span id="remove">Remove</span></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Remove Specified Item</span></span><br><span class="line">thislist = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;cherry&quot;</span>]</span><br><span class="line">thislist.remove(<span class="string">&quot;banana&quot;</span>)</span><br><span class="line">print(thislist)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Remove Specified Index</span></span><br><span class="line">thislist = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;cherry&quot;</span>]</span><br><span class="line">thislist.pop(<span class="number">1</span>)</span><br><span class="line">print(thislist)</span><br><span class="line"></span><br><span class="line"><span class="comment"># If no index, the pop() removes the last item.</span></span><br><span class="line">thislist = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;cherry&quot;</span>]</span><br><span class="line">thislist.pop()</span><br><span class="line">print(thislist)</span><br><span class="line"></span><br><span class="line"><span class="comment"># The del keyword also removes the specified index</span></span><br><span class="line">thislist = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;cherry&quot;</span>]</span><br><span class="line"><span class="keyword">del</span> thislist[<span class="number">0</span>]</span><br><span class="line">print(thislist)</span><br><span class="line"></span><br><span class="line"><span class="comment"># The del keyword also removes the whole list</span></span><br><span class="line"><span class="keyword">del</span> thislist</span><br></pre></td></tr></table></figure>
+
+<h2><span id="clear">Clear</span></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">thislist = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;cherry&quot;</span>]</span><br><span class="line">thislist.clear()</span><br><span class="line">print(thislist)</span><br></pre></td></tr></table></figure>
+
+<h2><span id="loop-of-list">Loop of List</span></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># for loop:</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> thislist:</span><br><span class="line">  print(x)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(thislist)):</span><br><span class="line">  print(thislist[i])</span><br><span class="line"></span><br><span class="line">[print(x) <span class="keyword">for</span> x <span class="keyword">in</span> thislist]</span><br><span class="line"></span><br><span class="line"><span class="comment"># While Loop:</span></span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> i &lt; <span class="built_in">len</span>(thislist):</span><br><span class="line">  print(thislist[i])</span><br><span class="line">  i = i + <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h2><span id="list-comprehension">List Comprehension</span></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># condition</span></span><br><span class="line">newlist = [x <span class="keyword">for</span> x <span class="keyword">in</span> fruits <span class="keyword">if</span> <span class="string">&quot;a&quot;</span> <span class="keyword">in</span> x] <span class="comment">#The return value is a new list, leaving the old list unchanged.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># range</span></span><br><span class="line">newlist = [x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>)]</span><br><span class="line"></span><br><span class="line"><span class="comment"># changes of elements</span></span><br><span class="line">newlist = [x.upper() <span class="keyword">for</span> x <span class="keyword">in</span> fruits]</span><br></pre></td></tr></table></figure>
+
+<h2><span id="list-sorting">List Sorting</span></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Sort the list alphabetically:</span></span><br><span class="line"><span class="comment"># Sort the list numerically:</span></span><br><span class="line">thislist.sort()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Sort Descending</span></span><br><span class="line">thislist.sort(reverse = <span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Customize Sort Function</span></span><br><span class="line"><span class="comment"># The function will return a number that will be used to sort the list (the lowest number first)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">myfunc</span>(<span class="params">n</span>):</span></span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">abs</span>(n - <span class="number">50</span>)</span><br><span class="line"></span><br><span class="line">thislist = [<span class="number">100</span>, <span class="number">50</span>, <span class="number">65</span>, <span class="number">82</span>, <span class="number">23</span>]</span><br><span class="line">thislist.sort(key = myfunc)</span><br><span class="line">print(thislist)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Reverse Order</span></span><br><span class="line">thislist = [<span class="string">&quot;banana&quot;</span>, <span class="string">&quot;Orange&quot;</span>, <span class="string">&quot;Kiwi&quot;</span>, <span class="string">&quot;cherry&quot;</span>]</span><br><span class="line">thislist.reverse()</span><br><span class="line">print(thislist)</span><br></pre></td></tr></table></figure>
+
+<h2><span id="copy-list">Copy List</span></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># You cannot copy a list simply by typing list2 = list1, because: list2 will only be a reference to list1, and changes made in list1 will automatically also be made in list2.</span></span><br><span class="line">mylist = thislist.copy()</span><br><span class="line">mylist = <span class="built_in">list</span>(thislist)</span><br></pre></td></tr></table></figure>
+
+<h2><span id="join-list">Join List</span></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>]</span><br><span class="line">list2 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line">list3 = list1 + list2</span><br><span class="line">print(list3) <span class="comment">#[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,1,2,3]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Append list2 into list1:</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> list2:</span><br><span class="line">  list1.append(x)</span><br><span class="line">  </span><br><span class="line"><span class="comment"># Use the extend()</span></span><br><span class="line">list1.extend(list2)</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Tomorrow will be better.</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/Python/"># Python</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2021/07/02/User-Interface-and-User-Experience-Week-13/">User Interface and User Experience Week 13</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Domuki | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

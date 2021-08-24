@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Domuki">
+
+
+
+
+
+<title>PracticalAI Note 3: NumPy | Domuki</title>
+
+
+
+    <link rel="icon" href="/domukiico.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Domuki&#39;s Site</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Domuki&#39;s Site</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">PracticalAI Note 3: NumPy</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Domuki</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">October 8, 2020&nbsp;&nbsp;9:35:50</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Artificial-Intelligence/">Artificial Intelligence</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <blockquote>
+<p>the basics of numerical analysis using the NumPy package.</p>
+</blockquote>
+<span id="more"></span>
+
+<h3><span id="numpy-basic">NumPy basic</span></h3><h4><span id="seed">Seed</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># import the package</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># set seed for reproducability</span></span><br><span class="line">np.random.seed(seed=<span class="number">1234</span>)</span><br><span class="line">x = np.random.rand(<span class="number">5</span>)</span><br><span class="line"><span class="built_in">print</span> (x)</span><br><span class="line"></span><br><span class="line">x = np.random.rand(<span class="number">5</span>)</span><br><span class="line"><span class="built_in">print</span> (x)</span><br><span class="line"></span><br><span class="line">np.random.seed(seed=<span class="number">1234</span>)</span><br><span class="line">x = np.random.rand(<span class="number">5</span>)</span><br><span class="line"><span class="built_in">print</span> (x)</span><br></pre></td></tr></table></figure>
+
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[0.19151945 0.62210877 0.43772774 0.78535858 0.77997581]</span><br><span class="line">[0.27259261 0.27646426 0.80187218 0.95813935 0.87593263]</span><br><span class="line">[0.19151945 0.62210877 0.43772774 0.78535858 0.77997581]</span><br></pre></td></tr></table></figure>
+
+<p>as the result showing, the lists (1&amp;3) will be same as long as we set the <strong>seed</strong> of <code>np.random</code> </p>
+<h4><span id="scalars">Scalars</span></h4><blockquote>
+<p><em>Scalars</em>, an element of a field, which is used to define a vector space, usually the field of real numbers</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># scalars</span></span><br><span class="line">x = np.array(<span class="number">6</span>) <span class="comment"># scalar</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x: &quot;</span>, x)</span><br><span class="line">print(<span class="string">&quot;x ndim: &quot;</span>, x.ndim) <span class="comment"># dimension</span></span><br><span class="line">print(<span class="string">&quot;x shape:&quot;</span>, x.shape)</span><br><span class="line">print(<span class="string">&quot;x size: &quot;</span>, x.size)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x dtype: &quot;</span>, x.dtype)</span><br></pre></td></tr></table></figure>
+
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x:  6</span><br><span class="line">x ndim:  0</span><br><span class="line">x shape: ()</span><br><span class="line">x size:  1</span><br><span class="line">x dtype:  int64</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>int64: 64 bit integer</p>
+</blockquote>
+<h4><span id="n-d-array">n-D Array</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1-D array</span></span><br><span class="line">x = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2-D array</span></span><br><span class="line">x = np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3-D array</span></span><br><span class="line">x = np.array([[[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>], [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>], [<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]]])</span><br></pre></td></tr></table></figure>
+
+<p>the <code>ndim</code> actually depends on the number of <em>[ ]</em>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">x = np.array(<span class="number">0</span>)</span><br><span class="line">print(<span class="string">&quot;x ndim: &quot;</span>, x.ndim)</span><br><span class="line"></span><br><span class="line">x = np.array([<span class="number">0</span>])</span><br><span class="line">print(<span class="string">&quot;x ndim: &quot;</span>, x.ndim)</span><br><span class="line"></span><br><span class="line">x = np.array([[[<span class="number">0</span>]]])</span><br><span class="line">print(<span class="string">&quot;x ndim: &quot;</span>, x.ndim)</span><br><span class="line"></span><br><span class="line">x = np.array([[[[<span class="number">0</span>]]]])</span><br><span class="line">print(<span class="string">&quot;x ndim: &quot;</span>, x.ndim)</span><br></pre></td></tr></table></figure>
+
+<p>the output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x ndim:  0</span><br><span class="line">x ndim:  1</span><br><span class="line">x ndim:  3</span><br><span class="line">x ndim:  4</span><br></pre></td></tr></table></figure>
+
+<h4><span id="functions">Functions</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span> (<span class="string">&quot;np.zeros((3,2)):\n&quot;</span>, np.zeros((<span class="number">3</span>,<span class="number">2</span>)))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;np.zeros((2,3)):\n&quot;</span>, np.zeros((<span class="number">2</span>,<span class="number">3</span>)))</span><br></pre></td></tr></table></figure>
+
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">np.zeros((3,2)):</span><br><span class="line"> [[0. 0.]</span><br><span class="line"> [0. 0.]</span><br><span class="line"> [0. 0.]]</span><br><span class="line">np.zeros((2,3)):</span><br><span class="line"> [[0. 0. 0.]</span><br><span class="line"> [0. 0. 0.]]</span><br></pre></td></tr></table></figure>
+
+<p>so the parameters in brackets are <strong>row</strong> and <strong>column</strong> </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span> (<span class="string">&quot;np.zeros((2,2)):\n&quot;</span>, np.zeros((<span class="number">2</span>,<span class="number">2</span>)))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;np.ones((2,2)):\n&quot;</span>, np.ones((<span class="number">2</span>,<span class="number">2</span>)))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;np.eye((2)):\n&quot;</span>, np.eye((<span class="number">2</span>)))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;np.random.random((2,2)):\n&quot;</span>, np.random.random((<span class="number">2</span>,<span class="number">2</span>)))</span><br></pre></td></tr></table></figure>
+
+<p>output: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">np.zeros((2,2)):</span><br><span class="line"> [[0. 0.]</span><br><span class="line"> [0. 0.]]</span><br><span class="line">np.ones((2,2)):</span><br><span class="line"> [[1. 1.]</span><br><span class="line"> [1. 1.]]</span><br><span class="line">np.eye((2)):</span><br><span class="line"> [[1. 0.]</span><br><span class="line"> [0. 1.]]</span><br><span class="line">np.random.random((2,2)):</span><br><span class="line"> [[0.19151945 0.62210877]</span><br><span class="line"> [0.43772774 0.78535858]]</span><br></pre></td></tr></table></figure>
+
+<h4><span id="indexing">Indexing</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Indexing</span></span><br><span class="line">x = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x[0]: &quot;</span>, x[<span class="number">0</span>])</span><br><span class="line">x[<span class="number">0</span>] = <span class="number">0</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x: &quot;</span>, x)</span><br><span class="line"><span class="built_in">print</span> ()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Slicing</span></span><br><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>], [<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>], [<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>]])</span><br><span class="line"><span class="built_in">print</span> (x)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x column 1: &quot;</span>, x[:, <span class="number">1</span>]) </span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x row 0: &quot;</span>, x[<span class="number">0</span>, :]) </span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x rows 0,1,2 &amp; cols 1,2: \n&quot;</span>, x[:<span class="number">3</span>, <span class="number">1</span>:<span class="number">3</span>]) </span><br></pre></td></tr></table></figure>
+
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">x[0]:  1</span><br><span class="line">x:  [0 2 3]</span><br><span class="line"></span><br><span class="line">[[ 1  2  3  4]</span><br><span class="line"> [ 5  6  7  8]</span><br><span class="line"> [ 9 10 11 12]]</span><br><span class="line">x column 1:  [ 2  6 10]</span><br><span class="line">x row 0:  [1 2 3 4]</span><br><span class="line">x rows 0,1,2 &amp; cols 1,2: </span><br><span class="line"> [[ 2  3]</span><br><span class="line"> [ 6  7]</span><br><span class="line"> [10 11]]</span><br></pre></td></tr></table></figure>
+
+<p>and there’s a way how to get row and columns:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">rows = <span class="built_in">len</span>(x)</span><br><span class="line">columns = <span class="built_in">len</span>(x[<span class="number">0</span>])</span><br><span class="line">total_elements = rows * columns</span><br><span class="line"><span class="built_in">print</span> (total_elements)</span><br><span class="line"><span class="built_in">print</span> ()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Integer array indexing</span></span><br><span class="line">rows_to_get = np.arange(rows)</span><br><span class="line">cols_to_get = np.array([<span class="number">0</span>, <span class="number">2</span>, <span class="number">1</span>])</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;rows_to_get: &quot;</span>, rows_to_get)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;cols_to_get: &quot;</span>, cols_to_get)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;indexed values: &quot;</span>, x[rows_to_get, cols_to_get])</span><br></pre></td></tr></table></figure>
+
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">12</span><br><span class="line"></span><br><span class="line">rows_to_get:  [0 1 2]</span><br><span class="line">cols_to_get:  [0 2 1]</span><br><span class="line">indexed values:  [ 1  7 10]</span><br></pre></td></tr></table></figure>
+
+<p>Boolean array indexing:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>], [<span class="number">5</span>, <span class="number">6</span>]])</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x:\n&quot;</span>, x)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x &gt; 2:\n&quot;</span>, x &gt; <span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x[x &gt; 2]:\n&quot;</span>, x[x &gt; <span class="number">2</span>])</span><br></pre></td></tr></table></figure>
+
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">x:</span><br><span class="line"> [[1 2]</span><br><span class="line"> [3 4]</span><br><span class="line"> [5 6]]</span><br><span class="line">x &gt; 2:</span><br><span class="line"> [[False False]</span><br><span class="line"> [ True  True]</span><br><span class="line"> [ True  True]]</span><br><span class="line">x[x &gt; 2]:</span><br><span class="line"> [3 4 5 6]</span><br></pre></td></tr></table></figure>
+
+<h4><span id="math">Math</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Basic math</span></span><br><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>], [<span class="number">3</span>,<span class="number">4</span>]], dtype=np.float64)</span><br><span class="line">y = np.array([[<span class="number">1</span>,<span class="number">2</span>], [<span class="number">3</span>,<span class="number">4</span>]], dtype=np.float64)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x + y:\n&quot;</span>, np.add(x, y)) <span class="comment"># or x + y</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x - y:\n&quot;</span>, np.subtract(x, y)) <span class="comment"># or x - y</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x * y:\n&quot;</span>, np.multiply(x, y)) <span class="comment"># or x * y</span></span><br></pre></td></tr></table></figure>
+
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">x + y:</span><br><span class="line"> [[2. 4.]</span><br><span class="line"> [6. 8.]]</span><br><span class="line">x - y:</span><br><span class="line"> [[0. 0.]</span><br><span class="line"> [0. 0.]]</span><br><span class="line">x * y:</span><br><span class="line"> [[ 1.  4.]</span><br><span class="line"> [ 9. 16.]]</span><br></pre></td></tr></table></figure>
+
+<p>Dot product</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Dot product</span></span><br><span class="line">a = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>], [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]], dtype=np.float64) <span class="comment"># we can specify dtype</span></span><br><span class="line">b = np.array([[<span class="number">7</span>,<span class="number">8</span>], [<span class="number">9</span>,<span class="number">10</span>], [<span class="number">11</span>, <span class="number">12</span>]], dtype=np.float64)</span><br><span class="line"><span class="built_in">print</span> (a.dot(b))</span><br></pre></td></tr></table></figure>
+
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[[ 58.  64.]</span><br><span class="line"> [139. 154.]]</span><br></pre></td></tr></table></figure>
+
+<p>Sum across a dimension</p>
+<p>add numbers in rows or columns</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Sum across a dimension</span></span><br><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>]])</span><br><span class="line"><span class="built_in">print</span> (x)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;sum all: &quot;</span>, np.<span class="built_in">sum</span>(x)) <span class="comment"># adds all elements</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;sum by col: &quot;</span>, np.<span class="built_in">sum</span>(x, axis=<span class="number">0</span>)) <span class="comment"># add numbers in each column</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;sum by row: &quot;</span>, np.<span class="built_in">sum</span>(x, axis=<span class="number">1</span>)) <span class="comment"># add numbers in each row</span></span><br></pre></td></tr></table></figure>
+
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[[1 2]</span><br><span class="line"> [3 4]]</span><br><span class="line">sum all:  10</span><br><span class="line">sum by col:  [4 6]</span><br><span class="line">sum by row:  [3 7]</span><br></pre></td></tr></table></figure>
+
+<p>Transposing</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x:\n&quot;</span>, x)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x.T:\n&quot;</span>, x.T)</span><br></pre></td></tr></table></figure>
+
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x:</span><br><span class="line"> [[1 2]</span><br><span class="line"> [3 4]]</span><br><span class="line">x.T:</span><br><span class="line"> [[1 3]</span><br><span class="line"> [2 4]]</span><br></pre></td></tr></table></figure>
+
+<h3><span id="advanced">Advanced</span></h3><h4><span id="tile">Tile</span></h4><blockquote>
+<p>numpy.tile(<em>A</em>, <em>reps</em>)</p>
+<p>Parameters:</p>
+<ul>
+<li><p><strong>A</strong>: array_like</p>
+<p>The input array.</p>
+</li>
+<li><p><strong>reps</strong>: array_like</p>
+<p>The number of repetitions of <em>A</em> along each axis.</p>
+</li>
+</ul>
+<p>Return: The tiled output array</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Tile</span></span><br><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>], [<span class="number">3</span>,<span class="number">4</span>]])</span><br><span class="line">y = np.array([<span class="number">5</span>, <span class="number">6</span>])</span><br><span class="line">addent = np.tile(y, (<span class="built_in">len</span>(x), <span class="number">1</span>))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;addent: \n&quot;</span>, addent)</span><br><span class="line">z = x + addent</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;z:\n&quot;</span>, z)</span><br></pre></td></tr></table></figure>
+
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">addent: </span><br><span class="line"> [[5 6]</span><br><span class="line"> [5 6]]</span><br><span class="line">z:</span><br><span class="line"> [[ 6  8]</span><br><span class="line"> [ 8 10]]</span><br></pre></td></tr></table></figure>
+
+<h4><span id="broadcasting">Broadcasting</span></h4><p>kinda of addition</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>], [<span class="number">3</span>,<span class="number">4</span>]])</span><br><span class="line">y = np.array([<span class="number">5</span>, <span class="number">6</span>])</span><br><span class="line">z = x + y</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;z:\n&quot;</span>, z)</span><br></pre></td></tr></table></figure>
+
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">z:</span><br><span class="line"> [[ 6  8]</span><br><span class="line"> [ 8 10]]</span><br></pre></td></tr></table></figure>
+
+<h4><span id="reshaping">Reshaping</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>], [<span class="number">3</span>,<span class="number">4</span>], [<span class="number">5</span>,<span class="number">6</span>]])</span><br><span class="line"><span class="built_in">print</span> (x)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x.shape: &quot;</span>, x.shape)</span><br><span class="line">y = np.reshape(x, (<span class="number">2</span>, <span class="number">3</span>))</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;y.shape: &quot;</span>, y.shape)</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;y: \n&quot;</span>, y)</span><br></pre></td></tr></table></figure>
+
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[[1 2]</span><br><span class="line"> [3 4]</span><br><span class="line"> [5 6]]</span><br><span class="line">x.shape:  (3, 2)</span><br><span class="line">y.shape:  (2, 3)</span><br><span class="line">y: </span><br><span class="line"> [[1 2 3]</span><br><span class="line"> [4 5 6]]</span><br></pre></td></tr></table></figure>
+
+<h4><span id="removing-dimensions">Removing Dimensions</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([[[<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>]],[[<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>]]])</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x.shape: &quot;</span>, x.shape)</span><br><span class="line">y = np.squeeze(x, <span class="number">1</span>) <span class="comment"># squeeze dim 1</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;y.shape: &quot;</span>, y.shape) </span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;y: \n&quot;</span>, y)</span><br></pre></td></tr></table></figure>
+
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x.shape:  (2, 1, 3)</span><br><span class="line">y.shape:  (2, 3)</span><br><span class="line">y: </span><br><span class="line"> [[1 2 1]</span><br><span class="line"> [2 2 3]]</span><br></pre></td></tr></table></figure>
+
+<h4><span id="adding-dimensions">Adding Dimensions</span></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>],[<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>]])</span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;x.shape: &quot;</span>, x.shape)</span><br><span class="line">y = np.expand_dims(x, <span class="number">1</span>) <span class="comment"># expand dim 1</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;y.shape: &quot;</span>, y.shape) </span><br><span class="line"><span class="built_in">print</span> (<span class="string">&quot;y: \n&quot;</span>, y)</span><br></pre></td></tr></table></figure>
+
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x.shape:  (2, 3)</span><br><span class="line">y.shape:  (2, 1, 3)</span><br><span class="line">y: </span><br><span class="line"> [[[1 2 1]]</span><br><span class="line"></span><br><span class="line"> [[2 2 3]]]</span><br></pre></td></tr></table></figure>
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Tomorrow will be better.</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/Python/"># Python</a>
+                    
+                        <a href="/tags/AI/"># AI</a>
+                    
+                        <a href="/tags/PracticalAI/"># PracticalAI</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2020/10/09/PracticalAI-Note-4-Pandas/">PracticalAI Note 4: Pandas</a>
+            
+            
+            <a class="next" rel="next" href="/2020/10/07/PracticalAI-Notes-1-The-Notebooks/">PracticalAI Notes 1: The Notebooks</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Domuki | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

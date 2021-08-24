@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Domuki">
+
+
+
+
+
+<title>Part 4: Oral Presentation | Domuki</title>
+
+
+
+    <link rel="icon" href="/domukiico.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Domuki&#39;s Site</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Domuki&#39;s Site</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Part 4: Oral Presentation</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Domuki</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">October 2, 2020&nbsp;&nbsp;16:50:55</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Language-Learning/">Language Learning</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2><span id="preparing-your-presentation">Preparing your presentation</span></h2><h4><span id="1-assessing-the-situation">1. Assessing the situation</span></h4><ul>
+<li>Topic in your area</li>
+<li>Topic that interests and that we want to know more about</li>
+</ul>
+<span id="more"></span>
+
+<h4><span id="2-brainstorming">2. Brainstorming</span></h4><blockquote>
+<p>Brainstorming is a situation where a group of people meet to generate new ideas and solutions around a specific domain of interest by removing inhibitions. People are able to think more freely and they suggest as many spontaneous new ideas as possible.</p>
+</blockquote>
+<p>2.1. Listing</p>
+<p>to list all the ideas</p>
+<p>2.2. Idea Mapping</p>
+<p>to show the relationships and directions</p>
+<h4><span id="3-organising-your-idea">3. Organising your idea</span></h4><p>to make a story line in a tree diagram or an outline</p>
+<p>Developing the body of presentation, to make a detail outline and organising the information</p>
+<h4><span id="4-introducing-your-speech-to-engage-the-audience">4. Introducing your speech to engage the audience</span></h4><ul>
+<li>getting audience’s attention</li>
+<li>telling audience the topic</li>
+</ul>
+<h4><span id="5-developing-the-body-of-your-presentation">5. Developing the body of your presentation</span></h4><ul>
+<li>make a detailed outline</li>
+<li>organising information according to some basic patterns</li>
+</ul>
+<h4><span id="6-closing-your-presentation-effectively">6. Closing your presentation effectively</span></h4><ul>
+<li>summarising your central idea and main points</li>
+<li>using a memorable quotation</li>
+<li>making a dramatic statement</li>
+</ul>
+<h4><span id="7-revising-your-draft-presentation">7. Revising your draft presentation</span></h4><p><strong>7.1. Sentence construction</strong></p>
+<ul>
+<li>keep the sentences short. Short sentences are easier to follow and understand.</li>
+<li>use the active construction rather than the passive construction.</li>
+<li>use direct sentences. avoid beating about bush.</li>
+</ul>
+<p><strong>7.2. Word choice</strong></p>
+<p>make it more simple and easier</p>
+<p><strong>7.3. Transitions &amp; Intentions</strong></p>
+<p>illustration signals:</p>
+<blockquote>
+<p>An example of … is …</p>
+<p>To begin with, let me …</p>
+</blockquote>
+<p>time signals:</p>
+<blockquote>
+<p>In conclusion, I would like …</p>
+<p>Earlier, I have … now I would like …</p>
+<p>At this point, …</p>
+</blockquote>
+<p>change-of-direction signals:</p>
+<blockquote>
+<p>However,</p>
+<p>In contrast,</p>
+<p>On the other hand,</p>
+</blockquote>
+<p>comparison signals:</p>
+<blockquote>
+<p>Similarly,</p>
+<p>Likewise,</p>
+<p>In comparison,</p>
+</blockquote>
+<p>conclusion signals:</p>
+<blockquote>
+<p>As a result,</p>
+<p>In summary,</p>
+</blockquote>
+<p>addition signals:</p>
+<blockquote>
+<p>In addition,</p>
+<p>Moreover,</p>
+</blockquote>
+<p>emphasizers:</p>
+<blockquote>
+<p>In fact,</p>
+<p>Actually,</p>
+<p>To repeat,</p>
+</blockquote>
+<h2><span id="the-outline">The outline</span></h2><h4><span id="1-head-beginning-of-speech">1. Head (Beginning of speech)</span></h4><p>Greetings: we need greet people before we formally start our speech. </p>
+<blockquote>
+<p>Hello, everyone! (in a short way)<br>Good morning/afternoon/evening! It’s my pleasure to give you a short speech here. (in a long way)</p>
+</blockquote>
+<p>Self-introduction: self intro should be simple and direct</p>
+<blockquote>
+<p>I’m Alex, a student studying in faculty of Computer Science. (in a long way)</p>
+<p>I’m Bob. (in a short way)</p>
+</blockquote>
+<h4><span id="2-body">2. Body</span></h4><p>Firstly, raise our opinion:</p>
+<blockquote>
+<p>Today, we’re going to talk about …</p>
+<p>My topic is …</p>
+<p>What I wanna say is …</p>
+</blockquote>
+<p>If there are many subtopics in your topic, you’d better to introduce them to the audience in order.</p>
+<blockquote>
+<p>This is the outline of what we’re going to discuss.</p>
+<p>Firstly, …</p>
+<p>Secondly, …</p>
+<p>and …</p>
+<p>Finally, …</p>
+</blockquote>
+<p>We need to confirm our ideas which is correct and valuable by showing the evidence we collected to the audience.</p>
+<blockquote>
+<p>You know …</p>
+<p>As we all know, …</p>
+<p>The evidence as the page shows that …</p>
+<p>You can see this statistic chart which shows that …</p>
+</blockquote>
+<p>When everything expressed clearly, we need draw a simple conclusion.</p>
+<blockquote>
+<p>So, what we discussed today is that …</p>
+<p>Therefore, my conclusion is …</p>
+</blockquote>
+<h4><span id="3-tail-ending-of-speech">3. Tail (Ending of speech)</span></h4><p>Thank to audience:</p>
+<blockquote>
+<p>Thank you very much for your attention.</p>
+<p>Thanks for listening.</p>
+</blockquote>
+<h2><span id="delivering-your-speech">Delivering your speech</span></h2><ol>
+<li>Pronunciation</li>
+<li>Body language</li>
+<li>Degree of formality</li>
+<li>Pacing</li>
+</ol>
+<h2><span id="preparing-visuals">Preparing Visuals</span></h2><p>I wouldn’t recommend you to make everything about PPT, even patterns. There are many resources available on the internet, and they are completely free to everyone. Therefore, you the only thing you need do is to copy your information on the basis of completing the speech draft to the template you downloaded, and revise a appropriate layout.</p>
+<p>But working with a template doesn’t mean everything will be all right. Here are some things that need your attention:</p>
+<p><strong>1. Choose the correct size</strong></p>
+<p>try to set the size fit in the electronic equipment you will use for display, and ensure that your pictures and text will not fly over the screen.</p>
+<p><strong>2. Avoid the use of “text points” and try to replace it with different pictures</strong></p>
+<p>Wait, why? Because IIBC proves that pictures are more acceptable than texts. </p>
+<p><strong>3. use pictures and diagrams as many as possible</strong></p>
+<p>Compared with text, images are easier to understand and analyse</p>
+<p><strong>4. Choose the style you like</strong></p>
+<p><strong>5. Put the text in the upper position</strong></p>
+<p>Sometimes, you can see some students standing up to read the PPT content in class that because some texts are too low so the audience at the back of room may not be able to see it clearly.</p>
+<p><strong>6. You need a “progress bar” or page number to display the PPT</strong></p>
+<p>It can show you and the audience where your speech has progressed.</p>
+<p><strong>7. Highlight the most important part of the text</strong></p>
+<p><strong>8. The screen goes black when telling a story</strong></p>
+<p>in order to create an atmosphere for the audience to listen to the story attentively</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Tomorrow will be better.</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/English/"># English</a>
+                    
+                        <a href="/tags/Spoken/"># Spoken</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2020/10/02/The-Silent-Letters/">The Silent Letters</a>
+            
+            
+            <a class="next" rel="next" href="/2020/10/02/Part-3-Negotiating-Effectively/">Part 3: Negotiating Effectively</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Domuki | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

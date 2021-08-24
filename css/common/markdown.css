@@ -23,10 +23,9 @@
   text-decoration: none;
   overflow-wrap: break-word;
   cursor: pointer;
-  border-bottom: 0px solid var(--third-text-color);
+  border-bottom: 1px solid var(--third-text-color);
   box-sizing: border-box;
   padding-bottom: 2px;
-  color: #221a12;
 }
 .markdown-body a .fas,
 .markdown-body a .far,
@@ -37,7 +36,6 @@
   font-size: 0.88rem;
 }
 .markdown-body a:hover {
-  color: #1f6ed4;
   text-decoration: underline;
 }
 .markdown-body a:hover::after {
@@ -83,37 +81,36 @@
 .markdown-body h6 {
   color: var(--second-text-color);
   line-height: 1.5;
-  letter-spacing: 1px;
 keep-tablet()
 }
 .markdown-body h1 {
   font-size: 1.8rem;
-  font-weight: 650;
+  font-weight: 600;
 keep-tablet()
 }
 .markdown-body h2 {
   font-size: 1.7rem;
-  font-weight: 550;
+  font-weight: 600;
 keep-tablet()
 }
 .markdown-body h3 {
   font-size: 1.6rem;
-  font-weight: 450;
+  font-weight: 550;
 keep-tablet()
 }
 .markdown-body h4 {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 550;
 keep-tablet()
 }
 .markdown-body h5 {
-  font-size: 1.4rem;
-  font-weight: 350;
+  font-size: 1.28rem;
+  font-weight: 500;
 keep-tablet()
 }
 .markdown-body h6 {
-  font-size: 1.3rem;
-  font-weight: 350;
+  font-size: 1.2rem;
+  font-weight: 500;
   line-height: 1.2;
 keep-tablet()
 }

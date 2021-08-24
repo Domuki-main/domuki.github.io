@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Domuki">
+
+
+
+
+
+<title>Introduction Of MySQL | Domuki</title>
+
+
+
+    <link rel="icon" href="/domukiico.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Domuki&#39;s Site</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Domuki&#39;s Site</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Introduction Of MySQL</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Domuki</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">June 12, 2021&nbsp;&nbsp;16:57:18</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Database/">Database</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>In this Blog, I simply introduced some basic knowledge about MySQL</p>
+<span id="more"></span>
+
+<h1><span id="databases-and-mysql">Databases and MySQL</span></h1><h2><span id="structured-query-language">Structured Query Language</span></h2><p>the language that we use to issue commands to the database</p>
+<ul>
+<li>Create/Insert</li>
+<li>Read/Select</li>
+<li>Update</li>
+<li>Delete</li>
+</ul>
+<h2><span id="terminology">Terminology</span></h2><h3><span id="database">Database</span></h3><p>Contains one or more tables</p>
+<h3><span id="table-or-relation">Table (or relation)</span></h3><p>contains tuples (row) and attributes (column/field)</p>
+<h3><span id="tuple">Tuple</span></h3><p>a set of fields which generally represent an “object” like a person or a music track</p>
+<h3><span id="attribute">Attribute</span></h3><p>one of possibly many elements of data corresponding to the object represented by the row</p>
+<h2><span id="common-dbsm">Common DBSM</span></h2><ul>
+<li><p>Oracle</p>
+<p>Large, commercial, enterprise-scale, very tweakable</p>
+<ul>
+<li><p>MySQL</p>
+<p>Simpler but very fast and scalable - commercial open source</p>
+</li>
+<li><p>SqlServer</p>
+<p>Very nice - from Microsoft (also Access)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1><span id="basic-sql-operations">Basic SQL Operations</span></h1><h2><span id="command-line">Command Line</span></h2><ul>
+<li><p>Macintosh</p>
+<p><code>/Applications/MAMP/Library/bin/mysql --host=localhost -uroot –p</code></p>
+<p>Enter “root” when prompted for the password</p>
+</li>
+<li><p>Windows</p>
+<p><code>c:\xampp\mysql\bin\mysql.exe -u root –p</code></p>
+<p>Press enter when prompted for password</p>
+</li>
+</ul>
+<h3><span id="show-database">Show Database</span></h3><p>the function to print out the content of the database.</p>
+<h3><span id="create-database">Create Database</span></h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> DATABASE student;</span><br><span class="line">USE student;</span><br></pre></td></tr></table></figure>
+
+<p>to create new database</p>
+<h3><span id="create-table">Create Table</span></h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> Users( </span><br><span class="line">  name <span class="type">VARCHAR</span>(<span class="number">128</span>), </span><br><span class="line">  email <span class="type">VARCHAR</span>(<span class="number">128</span>)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">DESCRIBE</span> Users;</span><br></pre></td></tr></table></figure>
+
+<p>to create a new table</p>
+<h3><span id="drop-table">Drop Table</span></h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> Users;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="insert-row">Insert Row</span></h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Users (name, email) <span class="keyword">VALUES</span> (<span class="string">&#x27;Chuck&#x27;</span>, <span class="string">&#x27;csev@umich.edu&#x27;</span>) ;</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Users (name, email) <span class="keyword">VALUES</span> (<span class="string">&#x27;Somesh&#x27;</span>, <span class="string">&#x27;somesh@umich.edu&#x27;</span>) ;</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Users (name, email) <span class="keyword">VALUES</span> (<span class="string">&#x27;Caitlin&#x27;</span>, <span class="string">&#x27;cait@umich.edu&#x27;</span>) ;</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Users (name, email) <span class="keyword">VALUES</span> (<span class="string">&#x27;Ted&#x27;</span>, <span class="string">&#x27;ted@umich.edu&#x27;</span>) ;</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Users (name, email) <span class="keyword">VALUES</span> (<span class="string">&#x27;Sally&#x27;</span>, <span class="string">&#x27;sally@umich.edu&#x27;</span>) ;</span><br></pre></td></tr></table></figure>
+
+<p>The INSERT statement inserts a row into a table</p>
+<h3><span id="delete-row">Delete Row</span></h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> Users <span class="keyword">WHERE</span> email<span class="operator">=</span><span class="string">&#x27;ted@umich.edu&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>Deletes a row in a table based on selection criteria</p>
+<h3><span id="update-row">Update Row</span></h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UPDATE Users <span class="keyword">SET</span> name<span class="operator">=</span><span class="string">&#x27;Charles&#x27;</span> <span class="keyword">WHERE</span> email<span class="operator">=</span><span class="string">&#x27;csev@umich.edu&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>Allows the updating of a field with a WHERE clause</p>
+<h3><span id="select-row">Select Row</span></h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Users</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Users <span class="keyword">WHERE</span> email<span class="operator">=</span><span class="string">&#x27;csev@umich.edu&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>Retrieves a group of records - you can either retrieve all the records or a subset of the records with a WHERE clause</p>
+<h3><span id="order-by">Order By</span></h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Users <span class="keyword">ORDER</span> <span class="keyword">BY</span> email <span class="keyword">ASC</span>;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Users <span class="keyword">ORDER</span> <span class="keyword">BY</span> email <span class="keyword">DESC</span>;</span><br></pre></td></tr></table></figure>
+
+<p>You can add an ORDER BY clause to SELECT statements to get the results sorted in ascending or descending order</p>
+<h3><span id="like">like</span></h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Users <span class="keyword">WHERE</span> name <span class="keyword">LIKE</span> <span class="string">&#x27;%e%&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>We can do wildcard matching in a WHERE clause using the LIKE operator</p>
+<h3><span id="limit">Limit</span></h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Users <span class="keyword">ORDER</span> <span class="keyword">BY</span> email <span class="keyword">DESC</span> LIMIT <span class="number">2</span>;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Users <span class="keyword">ORDER</span> <span class="keyword">BY</span> email LIMIT <span class="number">1</span>,<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+
+<p><code>LIMIT 2</code> is same as <code>LIMIT 0,2</code></p>
+<p><code>LIMIT n,m</code> ‘n’ means the select begin from n index in table; ‘m’ means how many number of rows will be selected after n index.</p>
+<h3><span id="count">Count()</span></h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">FROM</span> Users;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">FROM</span> Users <span class="keyword">WHERE</span> email<span class="operator">=</span><span class="string">&#x27;csev@umich.edu&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>return the number of selected items</p>
+<h2><span id="data-types">Data Types</span></h2><h3><span id="string-fields">String Fields</span></h3><ul>
+<li>CHAR allocates the entire space (faster for small strings where length is known)</li>
+<li>VARCHAR allocates a variable amount of space depending on the data length (less space)</li>
+</ul>
+<h3><span id="text-fields">Text Fields</span></h3><ul>
+<li> TINYTEXT up to 255 characters</li>
+<li> TEXT up to 65K</li>
+<li> MEDIUMTEXT up to 16M</li>
+<li> LONGTEXT up to 4G</li>
+</ul>
+<h3><span id="binary-types">Binary Types</span></h3><ul>
+<li>BYTE(n) up to 255 bytes</li>
+<li>VARBINARY(n) up to 65K bytes</li>
+</ul>
+<h3><span id="binary-large-object">Binary Large Object</span></h3><ul>
+<li>TINYBLOB(n) - up to 255</li>
+<li>BLOB(n) - up to 65K</li>
+<li>MEDIUMBLOB(n) - up to 16M</li>
+<li>LONGBLOB(n) - up to 4G</li>
+</ul>
+<h3><span id="integer-numbers">Integer Numbers</span></h3><ul>
+<li> TINYINT (-128, 128)</li>
+<li> SMALLINT (-32768, +32768)</li>
+<li> INT or INTEGER (2 Billion)</li>
+<li> BIGINT - (10**18 ish)</li>
+</ul>
+<h3><span id="floating-point-numbers">Floating Point Numbers</span></h3><ul>
+<li> FLOAT (32-bit) 10**38 with seven digits of accuracy</li>
+<li> DOUBLE (64-bit) 10**308 with 14 digits of accuracy</li>
+</ul>
+<h3><span id="dates">Dates</span></h3><ul>
+<li>TIMESTAMP - ‘YYYY-MM-DD HH:MM:SS’ (1970, 2037)</li>
+<li>DATETIME - ‘YYYY-MM-DD HH:MM:SS’</li>
+<li>DATE - ‘YYYY-MM-DD’</li>
+<li>TIME - ‘HH:MM:SS’</li>
+</ul>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Tomorrow will be better.</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/Database/"># Database</a>
+                    
+                        <a href="/tags/MySQL/"># MySQL</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2021/06/24/User-Interface-and-User-Experience-Week-12/">User Interface and User Experience Week 12</a>
+            
+            
+            <a class="next" rel="next" href="/2021/06/08/User-Interface-and-User-Experience-Week-11/">User Interface and User Experience Week 11</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Domuki | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

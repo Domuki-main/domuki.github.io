@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Domuki">
+
+
+
+
+
+<title>Java Learning Chapter 7 Arrays | Domuki</title>
+
+
+
+    <link rel="icon" href="/domukiico.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Domuki&#39;s Site</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Domuki&#39;s Site</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Java Learning Chapter 7 Arrays</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Domuki</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">February 14, 2020&nbsp;&nbsp;21:26:05</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Java-Study/">Java Study</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h4><span id="learning-outcome">Learning Outcome</span></h4><p><em>Construct program  from flowchart (C3, P4)</em><br><em>Construct program  using array (C3, P4)</em><br><em>Explain the basic concepts and usage of array (C2, A3)</em><br><em>Analyse and solve programming problem using array(P3, CTPS)</em></p>
+<span id="more"></span>
+
+
+
+<h2><span id="1-what-is-array">1. What is Array</span></h2><blockquote>
+<p>Array is a data structure that represents a collection of the same types of data.</p>
+</blockquote>
+<img src="/2020/02/14/Java-Learning-Chapter-7-Arrays/001.png" style="zoom: 50%;">
+
+<p>Well, you can think an array as an apartment which has many independent rooms. Each room of the apartment has its own address(reference) and room number(index). For example: </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Room[] apartment = <span class="keyword">new</span> Room[<span class="number">10</span>];</span><br></pre></td></tr></table></figure>
+
+<p>There’s a Room array which named apartment and has 10 independent rooms.</p>
+<p>So there’re 10 rooms for people to live. (10 places for data to store)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">apartment[<span class="number">0</span>] = <span class="string">&quot;Bob&quot;</span>;		<span class="comment">//room 0 for Bob</span></span><br><span class="line">apartment[<span class="number">1</span>] = <span class="string">&quot;Bill&quot;</span>;</span><br><span class="line">apartment[<span class="number">2</span>] = <span class="string">&quot;Alex&quot;</span>;</span><br><span class="line">...</span><br><span class="line">apartment[<span class="number">9</span>] = <span class="string">&quot;Mark&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2><span id="2-difference-of-using-arrays-or-not">2. Difference of using Arrays or not</span></h2><p>Here’s an example:</p>
+<blockquote>
+<p>Write a program to calculate the average of five integer numbers, then print the value of each number and their average.</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//without array</span></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NoArray</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> number;  		</span><br><span class="line">		<span class="keyword">int</span> sum = <span class="number">0</span>; 		 	</span><br><span class="line">		<span class="keyword">double</span> average = <span class="number">0.0</span> ;	</span><br><span class="line"></span><br><span class="line">		Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;Enter a number: &quot;</span>);</span><br><span class="line">			number = input.nextInt();</span><br><span class="line">			sum += number;</span><br><span class="line">			System.out.println(number);	</span><br><span class="line">		&#125;</span><br><span class="line">		average = sum / <span class="number">5</span>;</span><br><span class="line">		System.out.println(<span class="string">&quot;The average is &quot;</span> + average);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//with array</span></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Array</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span>[] number = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>];  		</span><br><span class="line">		<span class="keyword">int</span> sum = <span class="number">0</span>; 		 	</span><br><span class="line">		<span class="keyword">double</span> average = <span class="number">0.0</span> ;	</span><br><span class="line"></span><br><span class="line">		Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;Enter a number: &quot;</span>);</span><br><span class="line">			number[i] = input.nextInt();</span><br><span class="line">			sum += number[i];</span><br><span class="line">			System.out.println(number[i]);	</span><br><span class="line">		&#125;</span><br><span class="line">		average = sum / <span class="number">5</span>;</span><br><span class="line">		System.out.println(<span class="string">&quot;The average is &quot;</span> + average);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="3-declaring-array-variables">3. Declaring Array Variables</span></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">datatype[] arrayRefVar;</span><br><span class="line">	Example: </span><br><span class="line">    <span class="keyword">double</span>[] myList;</span><br><span class="line"></span><br><span class="line">datatype arrayRefVar[]; <span class="comment">// This style is allowed, but not preferred</span></span><br><span class="line">	Example: </span><br><span class="line">    <span class="keyword">double</span> myList[];</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">datatype[] arrayRefVar = <span class="keyword">new</span> datatype[arraySize];<span class="comment">//creating an array</span></span><br><span class="line"></span><br><span class="line">datatype arrayRefVar[] = <span class="keyword">new</span> datatype[arraySize];</span><br><span class="line"></span><br><span class="line">arrayRefVar = <span class="keyword">new</span> datatype[arraySize];</span><br><span class="line"></span><br><span class="line">datatype[] arrayRefVar = &#123;...&#125;</span><br></pre></td></tr></table></figure>
+
+<p>example:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">myList = <span class="keyword">new</span> <span class="keyword">double</span>[<span class="number">10</span>];</span><br></pre></td></tr></table></figure>
+
+<p>myList[0] references the first element in the array.</p>
+<p>myList[9] references the last element in the array.</p>
+<p><strong>CAUTION</strong></p>
+<p>Using the shorthand notation, you have to declare, create, and initialize the array all in one statement. Splitting it would cause a syntax error. For example, the following is wrong:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span>[] myList;</span><br><span class="line">myList = &#123;<span class="number">1.9</span>, <span class="number">2.9</span>, <span class="number">3.4</span>, <span class="number">3.5</span>&#125;; <span class="comment">//wrong</span></span><br></pre></td></tr></table></figure>
+
+<h2><span id="4-processing-arrays">4. Processing Arrays</span></h2><h3><span id="41-initializing-arrays">4.1. Initializing Arrays</span></h3><p>Initializing arrays with random values</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; myList.length; i++)&#123;</span><br><span class="line">	myList[i] = Math.random() * <span class="number">100</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Initializing arrays with input values</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">java.util.Scanner input = <span class="keyword">new</span> java.util.Scanner(System.in);</span><br><span class="line">System.out.print(<span class="string">&quot;Enter &quot;</span> + myList.length + <span class="string">&quot; values: &quot;</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; myList.length; i++) </span><br><span class="line">  myList[i] = input.nextDouble();</span><br></pre></td></tr></table></figure>
+
+<h3><span id="42-printing-arrays">4.2. Printing Arrays</span></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; myList.length; i++)&#123;</span><br><span class="line">	System.out.println(myList[i] + “ “);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="43-summing-all-elements">4.3. Summing all elements</span></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> total = myList[<span class="number">0</span>] + myList[<span class="number">1</span>] + ... + myList[i];</span><br></pre></td></tr></table></figure>
+
+<p>Or:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> total = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; myList.length; i++) &#123;</span><br><span class="line">		total += myList[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="44-finding-the-largest-element-and-the-smallest-element">4.4. Finding the largest element and the smallest element</span></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> max = myList[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; myList.length; i++) </span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span>(myList[i] &gt; max)</span><br><span class="line">		max = myList[i];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">double</span> min = myList[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; myList.length; i++) </span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span>(myList[i] &lt; min)</span><br><span class="line">		min = myList[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3><span id="45-finding-the-smallest-index-of-the-largest-element">4.5. Finding the smallest index of the largest element</span></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> max = myList[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; myList.length; i++) </span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span>(myList[i] &gt; max) &#123;</span><br><span class="line">		max = myList[i];</span><br><span class="line">		index = i;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2><span id="5-copying-arrays">5. Copying Arrays</span></h2><p>Often, in a program, you need to duplicate an array or a part of an array. In such cases you could attempt to use the assignment statement (=), as follows: <code>list2 = list1;</code></p>
+<img src="/2020/02/14/Java-Learning-Chapter-7-Arrays/002.png" style="zoom:50%;">
+
+<p>So, <code>(list1 == list2) = true</code> because they have the same reference.</p>
+<p>After reference assigning, The <em>Contents of list2</em> will be delete soon.</p>
+<p>But, what should do if you want to copy an arrays with same contents but different references from origin copy array?</p>
+<ol>
+<li>Using a loop</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] sourceArray = &#123;<span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">10</span>&#125;;</span><br><span class="line"><span class="keyword">int</span>[] targetArray = <span class="keyword">new</span> <span class="keyword">int</span>[sourceArray.length];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; sourceArrays.length; i++)</span><br><span class="line">   targetArray[i] = sourceArray[i];</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>The arraycopy Utility</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">arraycopy(sourceArray, src_pos, targetArray, tar_pos, length);</span><br><span class="line"></span><br><span class="line"><span class="comment">//Examples:</span></span><br><span class="line">System.arraycopy(sourceArray, <span class="number">0</span>, targetArray, <span class="number">0</span>, sourceArray.length); </span><br><span class="line">System.arraycopy(sourceArray, <span class="number">2</span>, targetArray, <span class="number">0</span>, <span class="number">3</span>); </span><br></pre></td></tr></table></figure>
+
+
+
+<h2><span id="6-passing-arrays-to-methods">6. Passing Arrays to Methods</span></h2><p>Example:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">   <span class="keyword">int</span>[] list = &#123;<span class="number">3</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">6</span>, <span class="number">4</span>, <span class="number">2</span>&#125;;</span><br><span class="line">   printArray(list);</span><br><span class="line">    <span class="comment">//or write like this: printArray(new int[]&#123;3, 1, 2, 6, 4, 2&#125;);</span></span><br><span class="line">    <span class="comment">//it&#x27;s called &quot;Anonymous Array&quot;</span></span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printArray</span><span class="params">(<span class="keyword">int</span>[] array)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123;</span><br><span class="line">    System.out.print(array[i] + <span class="string">&quot; &quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p><strong>Anonymous Array</strong>: </p>
+<blockquote>
+<p>There is no explicit reference variable for the array. </p>
+<p>Such array is called an <em>anonymous array</em>. </p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> dataType[]&#123;literal0, literal1, ..., literalk&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2><span id="7-length-of-array">7. Length of Array</span></h2><p>For One-Dimensional Arrays:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arrayRefVar.length;</span><br></pre></td></tr></table></figure>
+
+<p>For Two-Dimensional Arrays:</p>
+<img src="/2020/02/14/Java-Learning-Chapter-7-Arrays/003.png" style="zoom: 33%;">
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;int[][] x &#x3D; new int[3][4];</span><br><span class="line">int[][] array &#x3D; &#123;</span><br><span class="line">  &#123;1, 2, 3&#125;,</span><br><span class="line">  &#123;4, 5, 6&#125;,</span><br><span class="line">  &#123;7, 8, 9&#125;,</span><br><span class="line">  &#123;10, 11, 12&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>you can use: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">array.length;</span><br><span class="line">array[0].length;</span><br><span class="line">array[1].length;</span><br><span class="line">array[2].length;</span><br><span class="line">array[3].length;</span><br></pre></td></tr></table></figure>
+
+<p>be careful with <code>array[4].length</code> or you’ll get <em>ArrayIndexOutOfBoundsException</em></p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Tomorrow will be better.</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/Java/"># Java</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2020/02/15/Java-Learning-Chapter-8-String/">Java Learning Chapter 8 String</a>
+            
+            
+            <a class="next" rel="next" href="/2020/02/14/Java-Learning-Chapter-6-Method/">Java Learning Chapter 6 Method</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Domuki | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

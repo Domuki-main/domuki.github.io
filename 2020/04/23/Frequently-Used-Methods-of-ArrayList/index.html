@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Domuki">
+
+
+
+
+
+<title>Frequently Used Methods of ArrayList | Domuki</title>
+
+
+
+    <link rel="icon" href="/domukiico.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Domuki&#39;s Site</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Domuki&#39;s Site</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Frequently Used Methods of ArrayList</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Domuki</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">April 23, 2020&nbsp;&nbsp;10:48:21</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Programming-Tips/">Programming Tips</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>array’s length cannot be changed<br>but length of array list can be changed<br>we know ArrayList<e>, but what’s the meaning of <e>？<br>you can think it as the type of all data in array list.<br>creating:<br><code>ArrayList();</code><br>notice: for array list, you cannot get reference when you try to print it</e></e></p>
+<span id="more"></span>
+
+<h2><span id="1-creating">1. Creating</span></h2><p>creating is one of the most simple part which seems like calling class.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">I created an arrayList named al which inside is full of String type data</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line">ArrayList&lt;String&gt; al = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">System.out.println(al); <span class="comment">// [] is the result</span></span><br></pre></td></tr></table></figure>
+
+<h2><span id="2-adding">2. Adding</span></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">the way to add new data to list</span></span><br><span class="line"><span class="comment">the type of the data you wanna add must same as the type of list</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">//1. add(o)</span></span><br><span class="line"></span><br><span class="line">al.add(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">al.add(<span class="string">&quot;2&quot;</span>);</span><br><span class="line">al.add(<span class="string">&quot;3&quot;</span>);</span><br><span class="line"></span><br><span class="line">System.out.println(al); <span class="comment">//the result will become to [1, 2, 3]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2. add(index, o)</span></span><br><span class="line"></span><br><span class="line">al.add(<span class="number">0</span>, <span class="string">&quot;1&quot;</span>);</span><br><span class="line">al.add(<span class="number">1</span>, <span class="string">&quot;2&quot;</span>);</span><br><span class="line">al.add(<span class="number">2</span>, <span class="string">&quot;3&quot;</span>);</span><br><span class="line"></span><br><span class="line">System.out.println(al); <span class="comment">//the result will become to [1, 2, 3]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2><span id="3-deleting">3. Deleting</span></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">al.remove(<span class="number">1</span>);</span><br><span class="line">al.remove(<span class="string">&quot;1&quot;</span>);</span><br><span class="line"></span><br><span class="line">System.out.println(al); <span class="comment">//the result will become to [ 3 ]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//void clear(): This method is used to remove all the elements from any list.</span></span><br><span class="line">al.clear();</span><br></pre></td></tr></table></figure>
+
+
+
+<h2><span id="4-getting">4. Getting</span></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//get(index)</span></span><br><span class="line"></span><br><span class="line">System.out.println(al.get(<span class="number">0</span>)); <span class="comment">////the result will be 3</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2><span id="5-size">5. Size</span></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(al.size());</span><br></pre></td></tr></table></figure>
+
+
+
+<h2><span id="6-to-string">6. To String</span></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//it&#x27;s don&#x27;t has the method like that. so if you wanna print the list justwrite the name of object in the &quot;sout&quot;</span></span><br><span class="line"></span><br><span class="line">System.out.println(al);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2><span id="remarks">Remarks</span></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">if you wanna store the data in basic type(like int, double) you need use wrapper class corresponding to the type</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">basic type  	wrapper class</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">byte        	Byte</span></span><br><span class="line"><span class="comment">short       	Short</span></span><br><span class="line"><span class="comment">int         	Integer</span></span><br><span class="line"><span class="comment">long        	Long</span></span><br><span class="line"><span class="comment">flout       	Flout</span></span><br><span class="line"><span class="comment">double      	Double</span></span><br><span class="line"><span class="comment">char        	Character</span></span><br><span class="line"><span class="comment">boolean    		Boolean</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Tomorrow will be better.</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/Java/"># Java</a>
+                    
+                        <a href="/tags/Tips/"># Tips</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2020/04/23/Frequently-Used-Methods-of-Vector/">Frequently Used Methods of Vector</a>
+            
+            
+            <a class="next" rel="next" href="/2020/04/01/Memory-partition-in-Java/">Memory partition in Java</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Domuki | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

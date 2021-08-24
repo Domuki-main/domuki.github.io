@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Domuki">
+
+
+
+
+
+<title>Chapter 1: Paragraph Structure | Domuki</title>
+
+
+
+    <link rel="icon" href="/domukiico.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Domuki&#39;s Site</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Domuki&#39;s Site</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Chapter 1: Paragraph Structure</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Domuki</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">May 16, 2021&nbsp;&nbsp;11:28:10</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Academic-Writing/">Academic Writing</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h1><span id="parts-of-a-paragraph">Parts of a Paragraph</span></h1><p>Paragraphs normally contain 3 parts:</p>
+<ol>
+<li><strong>topic sentence</strong></li>
+<li><strong>supporting sentences</strong></li>
+<li><strong>concluding sentence</strong> (most paragraph have)</li>
+</ol>
+<span id="more"></span>
+
+<h2><span id="the-topic-sentence">The Topic Sentence</span></h2><blockquote>
+<p>the most important in a paragraph</p>
+</blockquote>
+<h3><span id="here-are-3-important-points-about-ts">Here are 3 important points about TS:</span></h3><ol>
+<li><p>a TS is a complete sentence</p>
+</li>
+<li><p>a TS contains 2 parts: a <strong>topic</strong> and a <strong>controlling idea</strong>.</p>
+<p><strong>Improving online social networks(topic)</strong> <em>can help professionals communicate.(controlling idea)</em></p>
+</li>
+<li><p>a TS is <strong>the most general statement</strong> in the paragraph and it doesn’t give any specific details. (but cannot be too general, it needs to show what the paragraph will be about)</p>
+</li>
+</ol>
+<h3><span id="the-position-of-topic-sentences">The Position of Topic Sentences</span></h3><p>the TS usually is the first sentence in a paragraph. </p>
+<p>Experienced writers sometimes put TS in other locations; however, <u>the best spot is usually right at the beginning</u>.</p>
+<p>At times, a TS may come at the end of the paragraph. In this case, the paragraph might begin with a series of examples or facts.</p>
+<p>then the TS at end would be the conclusion drawn from these examples or facts.</p>
+<h2><span id="supporting-sentences">Supporting Sentences</span></h2><blockquote>
+<p>Supporting sentences explain or prove the topic sentence.</p>
+</blockquote>
+<p>There are many kinds of specific supporting details such as examples, facts and statistics, and quotations.</p>
+<h3><span id="different-between-opinions-and-facts">Different between Opinions and Facts</span></h3><ol>
+<li><strong>opinion</strong>: Photographs of ultrathin fashion models send the wrong message to girls and young women.</li>
+<li><strong>fact but need to be proofed</strong>: Fashion models are extremely thin.</li>
+<li><strong>specific supporting detail</strong>: The average model weighs 23 percent less than the average woman of the same height.</li>
+</ol>
+<h2><span id="concluding-sentence">Concluding Sentence</span></h2><blockquote>
+<p>its function just as its name</p>
+</blockquote>
+<p>CS serves 2 purposes:</p>
+<ol>
+<li>it signal the end of paragraph, and remind reader the important idea.</li>
+<li>it can do the summarizing (paraphrasing the topic sentence).</li>
+</ol>
+<h3><span id="end-of-paragraph-signals">End-of-Paragraph Signals</span></h3><table>
+<thead>
+<tr>
+<th>with comma</th>
+<th>without comma</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>In brief,</td>
+<td>the evidence suggests that…</td>
+</tr>
+<tr>
+<td>Lastly,</td>
+<td>there can be no doubt that …</td>
+</tr>
+<tr>
+<td>In conclusion,</td>
+<td>These examples show that…</td>
+</tr>
+<tr>
+<td>Therefore,</td>
+<td>we can see that…</td>
+</tr>
+</tbody></table>
+<h2><span id="the-writing-process">The Writing Process</span></h2><ol>
+<li><p>Prewrite to get ideas (<strong>listing</strong>)</p>
+<p>to choose a topic and generate ideas</p>
+</li>
+<li><p>Organize your ideas</p>
+<p>to decide which ideas to use and how you will organize them</p>
+</li>
+<li><p>Write the first draft</p>
+<p>to write a first draft following by the plan</p>
+</li>
+<li><p>Revise the draft</p>
+<p>to change what you have written to improve it by checking the content and organization. it is helpful to have another person’s perspective on your writing (<strong>peer reviewer</strong>)</p>
+</li>
+<li><p>Edit and proofread the draft</p>
+<p>to check for possible mistakes in grammar, punctuation, spelling, and sentence structure.</p>
+</li>
+<li><p>Write a new draft</p>
+<p>continuous writing, revising, and rewriting until you are satisfied with the final product</p>
+</li>
+</ol>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Tomorrow will be better.</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/Academic-Writing/"># Academic Writing</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2021/05/18/User-Interface-and-User-Experience-Week-8/">User Interface and User Experience Week 8</a>
+            
+            
+            <a class="next" rel="next" href="/2021/05/12/User-Interface-and-User-Experience-Week-6/">User Interface and User Experience Week 6</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Domuki | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

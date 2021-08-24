@@ -1,23 +1,23 @@
 .article-content-container .article-title {
   color: var(--second-text-color);
-  font-weight: 60;
-  font-size: 4rem;
+  font-weight: 600;
+  font-size: 1.6rem;
 keep-tablet()
 keep-mobile()
 }
 .article-content-container .article-header {
   position: relative;
-  padding-left: 60px;
+  padding-left: 46px;
   width: 100%;
-  height: 60px;
+  height: 46px;
   box-sizing: border-box;
 }
 .article-content-container .article-header .avatar {
   position: absolute;
   top: 0;
   left: 0;
-  width: 60px;
-  height: 60px;
+  width: 46px;
+  height: 46px;
   padding: 1px;
   box-sizing: border-box;
   border: 1px solid var(--border-color);
@@ -41,7 +41,7 @@ keep-mobile()
 }
 .article-content-container .article-header .info .author {
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.18rem;
   display: flex;
   align-items: center;
 }
@@ -74,7 +74,7 @@ keep-tablet()
   width: 100%;
 }
 .article-content-container .article-nav {
-  height: 30px;
+  height: 40px;
   margin-top: $component-spacing-value;
 }
 .article-content-container .article-nav .article-prev,

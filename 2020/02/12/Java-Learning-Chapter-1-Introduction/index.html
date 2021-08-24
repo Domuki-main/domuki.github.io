@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Domuki">
+
+
+
+
+
+<title>Java Learning Chapter 1 Introduction | Domuki</title>
+
+
+
+    <link rel="icon" href="/domukiico.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Domuki&#39;s Site</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Domuki&#39;s Site</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Java Learning Chapter 1 Introduction</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Domuki</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">February 12, 2020&nbsp;&nbsp;21:10:25</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Java-Study/">Java Study</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h4><span id="learning-outcome">Learning Outcome</span></h4><p>​    At the end of this chapter, student should be able to:</p>
+<ul>
+<li><em>Describe the basic of computer components (A1)</em></li>
+<li><em>Differentiate types of programming languages (C1)</em></li>
+<li><em>Compile and execute the sample given. Identify types of error (P3)</em></li>
+</ul>
+<span id="more"></span>
+
+<h2><span id="what-is-a-computer">What is a Computer?</span></h2><p>    A computer is an electronic device that performs computations, logical operations, or more generally, data manipulation according to some prescribed sequence of instructions called a computer program.</p>
+<p>    The physical components of a computer are termed hardware and the programs software. </p>
+<p>    In general, hardware = physical aspect = can be seen；software = programs = invisible instructions that control the hardware and make it perform specific tasks. (S -&gt; H)<br>    Computer programming consists of writing instructions for computers to perform. </p>
+<p>    You can learn a programming language without knowing computer hardware, but you will be better able to understand the effect of the instructions in the program if you do. </p>
+<p>    A computer consists of a CPU, memory, hard disk, floppy disk, monitor, printer, and communication devices.</p>
+<h2><span id="computer-hardware">Computer Hardware</span></h2><p>The major hardware components:</p>
+<p>    The central processing unit (CPU)‏</p>
+<p>    Primary or random access memory (RAM)‏</p>
+<p>    Secondary or long-term memory</p>
+<p>    Input and output devices (I/O devices)‏</p>
+<p>    Communication devices</p>
+<h2><span id="categories-of-computers-and-computer-software">Categories of Computers and Computer Software</span></h2><p>Computers are classified into two:</p>
+<ol>
+<li><p>A special-purpose computer</p>
+<blockquote>
+<p>Is a computer designed for a particular function, executing the same stored set of instructions whenever requested.</p>
+</blockquote>
+<p>For example<br>    microwave ovens</p>
+<p>    washing machine</p>
+<p>    medical diagnostic equipment</p>
+<p>    General-Purpose Computers</p>
+</li>
+<li><p>A general-purpose computer</p>
+<blockquote>
+<p>Is a computer that can be used for solving many different types of problems.<br>Available in many sizes and a wide range of capabilities. </p>
+</blockquote>
+<p>Can be classified as follows:</p>
+</li>
+<li><p>Microcomputers</p>
+<p>​    a. Laptop computers</p>
+<p>​    b. Desktop computers</p>
+<p>​    c. Workstations</p>
+</li>
+<li><p>Minicomputers</p>
+</li>
+<li><p>Mainframe computers</p>
+</li>
+<li><p>Supercomputers </p>
+</li>
+</ol>
+<h2><span id="computer-software">Computer Software</span></h2><h4><span id="a-application-software">A.    Application Software:</span></h4><p>    Refers to programs that are developed to solve some specific problems.</p>
+<p>    There are two types of application software:</p>
+<p>    application program to solve special classes of problems</p>
+<p>    Application programs that you can write to solve your own problems.</p>
+<p>Examples of application software:</p>
+<ol>
+<li>   word processing</li>
+<li>   database programs</li>
+<li>   spreadsheets</li>
+<li>   graphic programs</li>
+</ol>
+<h4><span id="b-system-software">B.    System Software:</span></h4><p>    Refers to programs that make the computer usable and accessible to the developers and programmers of applications software.</p>
+<p>Examples of system software:</p>
+<ol>
+<li>   Operating systems</li>
+<li>   Language translator</li>
+<li>   Linker</li>
+<li>   Loader</li>
+<li>   Pre-processors</li>
+</ol>
+<h2><span id="programming-languages">Programming Languages</span></h2><p>    Programming Language is an agreed upon format of symbols that allow a programmer to instruct a computer to perform certain predefined tasks.</p>
+<p>    Provide features to support the data processing activities, which include declaring variables, evaluating numeric expressions, assigning values to variables, reading and writing data to devices, looping and making decisions.</p>
+<ol>
+<li><h4><span id="machine-languages">Machine Languages</span></h4><p>    natural of computer.</p>
+<p>    not need to translate<br>Machine language instruction is a binary string of 0s and 1s.</p>
+<p>0101  1000  0001  0000  1100  0000  0001  0000</p>
+<p>Are machine-dependent - each computer type has its own machine language.</p>
+<p>Programs written in machine languages are not portable because programs written in for one type of computer cannot be run on another type </p>
+</li>
+<li><h4><span id="assembly-languages">Assembly Languages</span></h4><p>    Consists of English-like abbreviations.</p>
+<p>    Easier to understand.</p>
+<p>L    1, GROSSPAY</p>
+<p>S    1, TAX</p>
+<p>ST    1, NETPAY</p>
+<p>    Program written in assembly languages cannot be directly processed by a computer.</p>
+<p>    Must use language translators, called assemblers, to convert them to machine code.<br>Disadvantages:</p>
+<p>    In general, each assembly language instruction corresponds to one machine language instruction. Therefore, the programs written in them are lengthy.</p>
+<p>    Because of variations in assembly languages, programs written using them are not portable. </p>
+</li>
+<li><h4><span id="high-level-languages">High-Level languages</span></h4><p>Instructions are quite English-like, and a single instruction can be written to correspond to many operations at the machine level.</p>
+<p>For example:</p>
+<p>Netpay = grossPay – tax</p>
+<p>Are easier to learn than machine or assembly languages.</p>
+<p>Have to be converted to machine languages</p>
+</li>
+</ol>
+<h2><span id="programs">Programs</span></h2><p>    Computer programs, known as software, are instructions to the computer.</p>
+<p>    You tell a computer what to do through programs. Without programs, a computer is an empty machine. Computers do not understand human languages, so you need to use computer languages to communicate with them.</p>
+<p>    Programs are written using programming languages.</p>
+<h4><span id="interpretingcompiling-source-code">Interpreting/Compiling Source Code</span></h4><p>A program written in a high-level language is called a source program or source code. </p>
+<p>Since a computer cannot understand a source program, a source program must be translated into machine code for execution. The translation can be done using another programming tool called an interpreter or a compiler. </p>
+<p>A compiler is a program used to translate the source program into a machine language program called an object program. </p>
+<p>The object program is often then linked with other supporting library code before the object can be executed on the machine.</p>
+<h4><span id="interpreting-source-code">Interpreting Source Code</span></h4><p>An interpreter reads one statement from the source code, translates it to the machine code or virtual machine code, and then executes it right away, as shown in the following figure. </p>
+<p>Note that a statement from the source code may be translated into several machine instructions.</p>
+<h4><span id="compiling-source-code">Compiling Source Code</span></h4><p>A compiler translates the entire source code into a machine-code file, and the machine-code file is then executed, as shown in the following figure.</p>
+<p>The different between Interpreter and compiler?</p>
+<p>    Compiler creates Object file after it translates the entire source code, but Interpreter can not.</p>
+<p>    Interpreter translates the source file one by on sentence, but Compiler translates totally.</p>
+<h4><span id="operating-systems">Operating Systems</span></h4><p>The operating system (OS) is a program that manages and controls a computer’s activities. You are probably using Windows 98, NT, 2000, XP, or ME. Windows is currently the most popular PC operating system. Application programs such as an Internet browser and a word processor cannot run without an operating system. </p>
+<h2><span id="java">Java</span></h2><blockquote>
+<p>a general purpose programming language. </p>
+<p>Internet programming language.</p>
+<p>Java, Web, and Beyond</p>
+<p>develop Web applications.</p>
+<p>Applets</p>
+<p>Web Applications</p>
+<p>develop applications for hand-held devices such as Palm and cell phones</p>
+</blockquote>
+<h4><span id="a-simple-java-program">A Simple Java Program：</span></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// “public” means “shared”. It’s used to define sth. which can be visited by its class or any others.</span></span><br><span class="line"><span class="comment">// “private” as opposed to “public” only can be visited by its own class (to protect the data)</span></span><br><span class="line"><span class="comment">// “protected” only can be visited by its own class and the son class it included.</span></span><br><span class="line"><span class="comment">// “class” to define a class</span></span><br><span class="line"><span class="comment">// “Welcome” means the name of the class</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Welcome</span> </span>&#123; <span class="comment">// to define a public class, named Welcome</span></span><br><span class="line"><span class="comment">// body (of the class)</span></span><br><span class="line"><span class="comment">// in class body, java texts are not allowed to write. (except declare variable)</span></span><br><span class="line"><span class="comment">// System.out.println( “Hello World!” );</span></span><br><span class="line"><span class="comment">/*	</span></span><br><span class="line"><span class="comment">main means the name of method is “main”</span></span><br><span class="line"><span class="comment">	(String[] args) is a formal parameter list of main method</span></span><br><span class="line"><span class="comment">	Need to remember: the main method is the program’s running entrance</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123; <span class="comment">//to define a public static void main method</span></span><br><span class="line">		<span class="comment">// body of the method</span></span><br><span class="line"><span class="comment">// body of the method</span></span><br><span class="line"><span class="comment">// body of the method</span></span><br><span class="line"><span class="comment">// java text, ending -&gt; ;</span></span><br><span class="line"><span class="comment">//REMEMBER: the text below used to send (output) a string (message) to console</span></span><br><span class="line">		System.out.println( “Hello World!” );</span><br><span class="line">		<span class="comment">// output “Hello Jack!”</span></span><br><span class="line">		System.out.println( “Hello Jack!” );</span><br><span class="line">		<span class="comment">// output again</span></span><br><span class="line">		System.out.println( “Hello …” );</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ol>
+<li><h4><span id="comments-1st-text">Comments (1st text)</span></h4><p>    <code>//…</code>     (one line), or </p>
+<p>    <code>/* ... */</code>  (for one or multiple lines)</p>
+<p>    (only exist in source code.. / not in .class)</p>
+<p>    Javadoc (can be read by Javadoc.exe and output the assistance text)</p>
+</li>
+<li><h4><span id="enter-main-method-3rd-text">Enter main method (3rd text)</span></h4><p>    In order to run a class, the class must contain a method named main. </p>
+<p>    The program is executed from the main method.</p>
+</li>
+<li><h4><span id="execute-statement-4th-text">Execute statement (4th text)</span></h4><p>    A statement represents an action or a sequence of actions. </p>
+<p>    The statement </p>
+<p>display the greeting “Welcome to Java!“.</p>
+<p>-&gt; print a message to the console</p>
+<p>Every statement in Java ends with a semicolon (;).</p>
+</li>
+<li><h4><span id="-gt-string-argument">“ …… ” -&gt; string argument</span></h4></li>
+</ol>
+<h4><span id="anatomy-of-a-java-program">Anatomy of a Java Program</span></h4><p>​    •    Comments = explain text</p>
+<p>​    •    Reserved words = keywords</p>
+<p>​    •    Class name</p>
+<p>​    •    Methods</p>
+<p>​    •    Main method = main function</p>
+<p>​    •    Statements</p>
+<p>​    •    Statement terminator = ending sign</p>
+<p>​    •    Blocks = { }</p>
+<h4><span id="the-difference-between-class-and-public-class">The difference between “class” and “public class”</span></h4><p>    You can define many classes in one java source text (JST)</p>
+<p>    Public class in JST is not necessarily</p>
+<p>    One class in code can be created to a class file (XXX. class)</p>
+<p>    When there’s a public class, the name of public class must be same as the name of java source text file.</p>
+<p>    Each class can define the main method which act as the entrance of the program. </p>
+<p>    Each class must have a main method used as entrance of program, or it doesn’t work.</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Tomorrow will be better.</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/Java/"># Java</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2020/02/12/Java-Learning-Chapter-2-Problem-Analyse/">Java Learning Chapter 2 Problem Analyse</a>
+            
+            
+            <a class="next" rel="next" href="/2020/02/12/How-to-use-hexo-to-write-a-document/">How to use Hexo to write a document</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Domuki | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Domuki">
+
+
+
+
+
+<title>Part 3: Negotiating Effectively | Domuki</title>
+
+
+
+    <link rel="icon" href="/domukiico.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Domuki&#39;s Site</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Domuki&#39;s Site</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/categories">Categories</a>
+                
+                    <a class="menu-item" href="/tags">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Part 3: Negotiating Effectively</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Domuki</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">October 2, 2020&nbsp;&nbsp;16:48:21</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Language-Learning/">Language Learning</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p><strong>What is negotiation?</strong> </p>
+<p>Negotiation is the communication process that include two or more parties meet with hope of getting something from the other party or parties. </p>
+<p>When we negotiate we try to get what we want from the other party by offering something in exchanging. We would meet with to find out what the other party wants and to discuss how these interests can be met.</p>
+<span id="more"></span>
+
+<p>Simply, you can use the following patterns to help you plan for success in negotiation:</p>
+<ul>
+<li>Understand the issues involved</li>
+<li>Know yourself totally, whatever the strengths or weakness</li>
+<li>Know your opponents as better as possible including strengths and weakness</li>
+<li>Understand the process of negotiation</li>
+<li>Use the power of verbal and non-verbal communication</li>
+</ul>
+<h2><span id="first-of-all-preparing-for-negotiation">First of All: Preparing for Negotiation</span></h2><h3><span id="1-identifying-issues-for-negotiation">1. Identifying issues for negotiation</span></h3><blockquote>
+<p>Issues are the content of negotiation.</p>
+</blockquote>
+<p>As an effective negotiator, you need to be able to identify the obvious issues and other related ones for discussion. you also need to predict issues of concern to the other party. </p>
+<p><img src="https://imglf6.lf127.net/img/TDhpTXREcklsWUx0VGVZcjFsQ1F4ckNTbDFreUcwaGM1UFBuSEdCeWlYMFdSRlpMT2VGenVnPT0.jpg?imageView" alt="img"></p>
+<h3><span id="2-considering-time-and-effort-to-be-invested">2. Considering time and effort to be invested</span></h3><p>Apart from identifying the issues, you need to think about the time and effort that you wish to spend for negotiation. If the negotiation held to long, goodwill and possible opportunities for you to gain more interests are lost.</p>
+<p>However, it’s not means all negotiations should be just short. But, normally, the longer negotiation you hold, the greater risks of losing morale, trust and goodwill between you and other you take.</p>
+<h3><span id="3-gathering-information-and-identifying-negotiation-strategies">3. Gathering information and identifying negotiation strategies</span></h3><p>Your Positions:</p>
+<ul>
+<li>What strategies can I use?</li>
+<li>What are the obstacles involved?</li>
+<li>How can I persuade them to see my point of view?</li>
+</ul>
+<p>The Other Party’s Positions:</p>
+<ul>
+<li>What strategies would they use?</li>
+<li>What defence would they use?</li>
+<li>What information might they use against me?</li>
+</ul>
+<h2><span id="managing-different-phases-of-negotiation">Managing Different Phases of Negotiation</span></h2><p>Negotiators often goes through a number of phases in attempting to reach agreement considering on particular issues. The following are some of the phrases:</p>
+<h3><span id="setting-the-stage-for-cooperation">Setting the Stage for Cooperation</span></h3><h4><span id="1-paying-attention">1. Paying attention</span></h4><p>These are discussed in Maintaining a conversation (Part 1)</p>
+<p><a target="_blank" rel="noopener" href="https://www.lofter.com/lpost/30b2f25a_1ca90d646">https://www.lofter.com/lpost/30b2f25a_1ca90d646</a></p>
+<h4><span id="2-initiating-and-participating-in-a-casual-conversation">2. Initiating and participating in a casual conversation</span></h4><p>Here are some useful expressions for greetings and carry out a conversation:</p>
+<blockquote>
+<p>Hello, … Nice to meet you again. How are your wife and children? I haven’t seen … for almost a year now. </p>
+</blockquote>
+<blockquote>
+<p>Good morning. You must be Mr./Ms… I’m … Pleased to meet you. I’ve read so much about you. I’ve always wanted to meet you in person.</p>
+</blockquote>
+<blockquote>
+<p>How do you do? Thank you for allowing us to meet you on such short notice.</p>
+</blockquote>
+<h4><span id="3-making-an-opening-statement">3. Making an opening statement</span></h4><p>Here are some examples:</p>
+<blockquote>
+<p>Right, shall we get started? I’ve mentioned on the phone that I would like to..</p>
+<p>So, I’ll like to discuss with you our three main concerns about…</p>
+</blockquote>
+<blockquote>
+<p>So, let’s agree on our agenda today, shall we? I’d like to present our position and I hope you could also let us know …</p>
+</blockquote>
+<h3><span id="exploring-needs-and-alternatives">Exploring Needs and Alternatives</span></h3><h4><span id="1-asking-opening-questions">1. Asking opening questions</span></h4><p>Please refer to: <a target="_blank" rel="noopener" href="https://www.lofter.com/lpost/30b2f25a_1ca92ab35">https://www.lofter.com/lpost/30b2f25a_1ca92ab35</a></p>
+<h4><span id="2-listening-actively">2. Listening actively</span></h4><p>Please refer to Maintaining a conversation and discussing options (Part 1 and 2):</p>
+<p><a target="_blank" rel="noopener" href="https://www.lofter.com/lpost/30b2f25a_1ca90d646">https://www.lofter.com/lpost/30b2f25a_1ca90d646</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.lofter.com/lpost/30b2f25a_1ca92ab35">https://www.lofter.com/lpost/30b2f25a_1ca92ab35</a></p>
+<h3><span id="inviting-and-forwarding-proposals">Inviting and Forwarding Proposals</span></h3><h4><span id="1-inviting-proposals">1. Inviting proposals</span></h4><blockquote>
+<p>So, how do you suggest we solve this problem?</p>
+<p>So, what do you have in mind? </p>
+<p>What are you trying to say here?</p>
+<p>What are we talking about here?</p>
+</blockquote>
+<h4><span id="2-presenting-initial-demandsproposal">2. Presenting initial demands/proposal</span></h4><blockquote>
+<p>I would like …</p>
+<p>If you don’t mind, …</p>
+<p>I will agree to … as long as  …</p>
+<p>I won’t accept … unless …</p>
+<p>Is it possible to have … ?</p>
+</blockquote>
+<h4><span id="3-checking-for-understanding">3. Checking for Understanding</span></h4><p>Please refer to: <a target="_blank" rel="noopener" href="https://www.lofter.com/lpost/30b2f25a_1ca92ab35">https://www.lofter.com/lpost/30b2f25a_1ca92ab35</a></p>
+<h3><span id="bargaining-and-conceding">Bargaining and Conceding</span></h3><h4><span id="1-expressing-conditions">1. Expressing conditions</span></h4><blockquote>
+<p>If you could … we would consider …</p>
+<p>If you can agree with … then we can …</p>
+<p>That’s not possible unless …</p>
+<p>We cannot accept that if …</p>
+</blockquote>
+<h4><span id="2-justifying-your-position">2. Justifying your position</span></h4><p>Disagreements and conflicts may occur at the phrase. Therefore, handling such situations efficiently is highly crucial to the success of the negotiation. What is necessary to disagree or reject the demand, reasons or clarification of the situation is often given to justify your position. A counter-proposal could also be made.</p>
+<h4><span id="3-expressing-agreement-or-disagreement">3. Expressing agreement or disagreement</span></h4><p>To show agreement:</p>
+<blockquote>
+<p>That’s possible.</p>
+<p>OK. That’s probably all right.</p>
+<p>That seems acceptable.</p>
+<p>That’s fine with me.</p>
+</blockquote>
+<p>To show disagreement:</p>
+<blockquote>
+<p>That’s impossible.</p>
+<p>I’m afraid we can’t agree with that.</p>
+<p>Unfortunately …</p>
+</blockquote>
+<h3><span id="ending-the-negotiation">Ending the Negotiation</span></h3><h4><span id="1-summarizing-progressespoints-of-agreement">1. Summarizing progresses/points of agreement</span></h4><p>Please refer to: <a target="_blank" rel="noopener" href="https://www.lofter.com/lpost/30b2f25a_1ca92ab35">https://www.lofter.com/lpost/30b2f25a_1ca92ab35</a></p>
+<p>the section of drawing a conclusion.</p>
+<h4><span id="2-closing-the-deal">2. Closing the deal</span></h4><p>This is done when you have come to the end of the successful negotiation. The clothing is often brief and the parties involved may engage in the short session of small talk to bring the negotiation to a cordial end.</p>
+<p>Like a easy talk. You can just chat something about you and other, like travelling, etc.</p>
+<h4><span id="3-adjourning-the-negotiation">3. Adjourning the negotiation</span></h4><p>Here are some expressions to help you adjourning the negotiation:</p>
+<blockquote>
+<p>We don’t seem to be getting anywhere.</p>
+<p>Perhaps we could adjourn for a while.</p>
+<p>I think we’re both tired. It has been a long day.</p>
+</blockquote>
+<p>When the intention to adjourn has been expressed, you can end negotiation by summarising the points of agreement and establishing the agenda for the next negotiation session Here are some useful expressions for this purpose:</p>
+<blockquote>
+<p>Shall we summarize the progress that we’ve made?</p>
+<p>Let’s go through the points that we’ve agreed on?</p>
+<p>I hope we can work out something of mutual benefit to both parties in our next meeting.</p>
+</blockquote>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Tomorrow will be better.</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/English/"># English</a>
+                    
+                        <a href="/tags/Spoken/"># Spoken</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2020/10/02/Part-4-Oral-Presentation/">Part 4: Oral Presentation</a>
+            
+            
+            <a class="next" rel="next" href="/2020/10/02/Part-2-Group-Discussion/">Part 2: Group Discussion</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Domuki | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
